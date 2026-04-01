@@ -10,15 +10,16 @@
 <body class="antialiased font-sans gradient-bg min-h-screen overflow-x-hidden">
 
     {{-- NAVBAR --}}
-    <nav class="fixed top-4 left-4 right-4 z-50 glass rounded-2xl px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
+    <nav aria-label="Primary" class="fixed top-4 left-0 right-0 z-50 px-4">
+        <div class="glass rounded-2xl px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
         {{-- Logo --}}
         <a href="/" class="flex items-center gap-2 cursor-pointer">
             <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg class="w-5 h-5 text-white" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
             </div>
-            <span class="text-xl font-bold text-indigo-900" style="font-family: 'Baloo 2', cursive;">MinLish</span>
+            <span class="text-xl font-bold text-indigo-900 font-display">MinLish</span>
         </a>
 
         {{-- Nav links (desktop) --}}
@@ -32,9 +33,9 @@
         <div class="flex items-center gap-3">
             @if (Route::has('login'))
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200 cursor-pointer">Dashboard</a>
+                    <a href="{{ route('dashboard') }}" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 rounded">Dashboard</a>
                 @else
-                    <a href="{{ route('login') }}" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200 cursor-pointer">Đăng nhập</a>
+                    <a href="{{ route('login') }}" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 rounded">Đăng nhập</a>
                     @if (Route::has('register'))
                         <a href="{{ route('register') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-xl transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
                             Bắt đầu miễn phí
@@ -43,7 +44,10 @@
                 @endauth
             @endif
         </div>
+        </div>
     </nav>
+
+    {{-- TODO: Add mobile navigation menu (requires Alpine.js or JS) --}}
 
     {{-- PAGE CONTENT ADDED IN TASKS 3-6 --}}
 
