@@ -380,5 +380,83 @@
         </div>
     </section>
 
+    {{-- CTA BANNER --}}
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 to-purple-700 p-12 text-center text-white">
+                {{-- Background decoration --}}
+                <div class="absolute top-0 left-0 w-full h-full pointer-events-none" aria-hidden="true">
+                    <div class="absolute top-4 left-8 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="absolute bottom-4 right-8 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+
+                <div class="relative space-y-6">
+                    <h2 class="text-4xl lg:text-5xl font-bold font-display">
+                        Bắt đầu hành trình<br>tiếng Anh của bạn ngay hôm nay
+                    </h2>
+                    <p class="text-indigo-200 text-lg max-w-2xl mx-auto">
+                        Miễn phí hoàn toàn. Không cần thẻ tín dụng. Chỉ cần đăng ký và bắt đầu học trong vòng 2 phút.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}"
+                           class="inline-flex items-center gap-2 bg-white text-indigo-700 hover:bg-indigo-50 font-bold px-8 py-4 rounded-2xl text-lg transition-colors duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-700">
+                            <svg class="w-5 h-5" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                            Đăng ký miễn phí
+                        </a>
+                        @endif
+                        @if (Route::has('login'))
+                        <a href="{{ route('login') }}"
+                           class="inline-flex items-center gap-2 border-2 border-white/50 hover:border-white text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-700">
+                            Đã có tài khoản? Đăng nhập
+                        </a>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- FOOTER --}}
+    <footer class="py-12 px-4 border-t border-indigo-200/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                {{-- Logo --}}
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center" aria-hidden="true">
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-indigo-900 font-display">MinLish</span>
+                </a>
+
+                {{-- Nav links --}}
+                <nav aria-label="Footer" class="flex flex-wrap items-center gap-6 text-sm text-indigo-600">
+                    <a href="#features" class="hover:text-indigo-900 transition-colors duration-200">Tính năng</a>
+                    <a href="#how-it-works" class="hover:text-indigo-900 transition-colors duration-200">Cách học</a>
+                    <a href="#testimonials" class="hover:text-indigo-900 transition-colors duration-200">Đánh giá</a>
+                    @if(Route::has('login'))
+                        <a href="{{ route('login') }}" class="hover:text-indigo-900 transition-colors duration-200">Đăng nhập</a>
+                    @endif
+                    @if(Route::has('register'))
+                        <a href="{{ route('register') }}" class="hover:text-indigo-900 transition-colors duration-200">Đăng ký</a>
+                    @endif
+                </nav>
+
+                {{-- Copyright --}}
+                <p class="text-sm text-indigo-400">
+                    &copy; {{ date('Y') }} MinLish. Made with
+                    <svg class="inline w-4 h-4 text-red-400 mx-0.5 -mt-0.5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                    </svg>
+                    in Vietnam
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
