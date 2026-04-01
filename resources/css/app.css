@@ -13,8 +13,10 @@
     --color-text: #312E81;
   }
 
-  html {
-    scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
@@ -33,11 +35,11 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 40%, #C7D2FE 100%);
+    background: linear-gradient(135deg, var(--color-bg) 0%, #E0E7FF 40%, #C7D2FE 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #4F46E5, #818CF8);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
