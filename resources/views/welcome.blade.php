@@ -180,5 +180,92 @@
         </div>
     </section>
 
+    {{-- STATS SECTION --}}
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass rounded-3xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <p class="text-5xl font-bold text-gradient font-display">2,000+</p>
+                    <p class="text-indigo-600 mt-2 font-medium">Học viên đang học</p>
+                </div>
+                <div class="md:border-x border-indigo-200">
+                    <p class="text-5xl font-bold text-gradient font-display">10,000+</p>
+                    <p class="text-indigo-600 mt-2 font-medium">Từ vựng trong hệ thống</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-bold text-gradient font-display">94%</p>
+                    <p class="text-indigo-600 mt-2 font-medium">Tỷ lệ ghi nhớ dài hạn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- FEATURES SECTION --}}
+    <section id="features" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-sm font-bold text-indigo-500 uppercase tracking-widest">Tính năng nổi bật</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-indigo-900 font-display">
+                    Mọi thứ bạn cần để<br>
+                    <span class="text-gradient">giỏi tiếng Anh</span>
+                </h2>
+                <p class="text-indigo-600 max-w-2xl mx-auto text-lg">
+                    MinLish kết hợp khoa học ghi nhớ và trải nghiệm học tập thú vị để giúp bạn đạt kết quả tốt nhất.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach([
+                    [
+                        'title' => 'Spaced Repetition (SRS)',
+                        'desc' => 'Thuật toán thông minh nhắc bạn ôn đúng lúc, đúng từ — giúp ghi nhớ lâu dài hơn 3 lần so với học thông thường.',
+                        'color' => 'indigo',
+                        'icon' => 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z',
+                    ],
+                    [
+                        'title' => 'Bộ từ vựng cá nhân hoá',
+                        'desc' => 'Tạo và quản lý bộ từ vựng theo chủ đề riêng. Nhập từ thủ công hoặc import từ file Excel.',
+                        'color' => 'purple',
+                        'icon' => 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+                    ],
+                    [
+                        'title' => 'Theo dõi tiến độ',
+                        'desc' => 'Dashboard trực quan cho thấy số từ đã học, tỷ lệ nhớ, và streak hàng ngày. Nhìn thấy sự tiến bộ mỗi ngày.',
+                        'color' => 'blue',
+                        'icon' => 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+                    ],
+                    [
+                        'title' => 'Mục tiêu hàng ngày',
+                        'desc' => 'Đặt mục tiêu học từng ngày. Nhắc nhở thông minh giúp bạn duy trì thói quen học đều đặn.',
+                        'color' => 'green',
+                        'icon' => 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+                    ],
+                    [
+                        'title' => 'Streak & Gamification',
+                        'desc' => 'Duy trì streak liên tiếp để tạo động lực. Huy hiệu và phần thưởng khuyến khích bạn học đều mỗi ngày.',
+                        'color' => 'orange',
+                        'icon' => 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z',
+                    ],
+                    [
+                        'title' => 'Nhật ký học tập',
+                        'desc' => 'Xem lại lịch sử học tập chi tiết. Phân tích điểm mạnh, yếu để tập trung vào những gì cần cải thiện.',
+                        'color' => 'pink',
+                        'icon' => 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01',
+                    ],
+                ] as $feature)
+                <div class="glass rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 group">
+                    <div class="w-12 h-12 rounded-xl bg-{{ $feature['color'] }}-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-{{ $feature['color'] }}-600" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="{{ $feature['icon'] }}" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-900 mb-2 font-display">{{ $feature['title'] }}</h3>
+                    <p class="text-indigo-600 text-sm leading-relaxed">{{ $feature['desc'] }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
