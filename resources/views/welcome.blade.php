@@ -267,5 +267,118 @@
         </div>
     </section>
 
+    {{-- HOW IT WORKS SECTION --}}
+    <section id="how-it-works" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-sm font-bold text-indigo-500 uppercase tracking-widest">Đơn giản và hiệu quả</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-indigo-900 font-display">
+                    Cách học hiệu quả<br>
+                    <span class="text-gradient">chỉ 3 bước</span>
+                </h2>
+            </div>
+
+            <div class="space-y-8">
+                @foreach([
+                    [
+                        'step' => '01',
+                        'title' => 'Thêm từ vựng vào bộ học của bạn',
+                        'desc' => 'Tạo bộ từ vựng theo chủ đề mình cần (IELTS, giao tiếp, công việc...). Nhập thủ công hoặc import file Excel nhanh chóng.',
+                        'color' => 'indigo',
+                        'reverse' => false,
+                    ],
+                    [
+                        'step' => '02',
+                        'title' => 'Học với flashcard thông minh',
+                        'desc' => 'Hệ thống SRS sẽ lên lịch ôn tập tối ưu cho từng từ. Bạn chỉ cần học đúng những từ cần ôn — không lãng phí thời gian.',
+                        'color' => 'purple',
+                        'reverse' => true,
+                    ],
+                    [
+                        'step' => '03',
+                        'title' => 'Theo dõi tiến độ và duy trì streak',
+                        'desc' => 'Dashboard cập nhật real-time giúp bạn thấy sự tiến bộ. Duy trì streak hàng ngày để tạo thói quen học bền vững.',
+                        'color' => 'green',
+                        'reverse' => false,
+                    ],
+                ] as $step)
+                <div class="glass rounded-3xl p-8 flex flex-col md:flex-row {{ $step['reverse'] ? 'md:flex-row-reverse' : '' }} items-center gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 rounded-2xl bg-{{ $step['color'] }}-100 flex items-center justify-center">
+                            <span class="text-3xl font-black text-{{ $step['color'] }}-600 font-display">{{ $step['step'] }}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-3 font-display">{{ $step['title'] }}</h3>
+                        <p class="text-indigo-600 leading-relaxed">{{ $step['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- TESTIMONIALS SECTION --}}
+    <section id="testimonials" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-sm font-bold text-indigo-500 uppercase tracking-widest">Học viên nói gì</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-indigo-900 font-display">
+                    Được tin dùng bởi<br>
+                    <span class="text-gradient">hàng nghìn học viên</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                @foreach([
+                    [
+                        'name' => 'Nguyễn Minh Anh',
+                        'role' => 'Sinh viên Đại học Ngoại Thương',
+                        'text' => 'MinLish giúp mình chuẩn bị IELTS vocabulary hiệu quả hơn nhiều. Sau 2 tháng dùng, mình đã nhớ hơn 800 từ học thuật. Streak 45 ngày rồi!',
+                        'stars' => 5,
+                        'bg' => 'indigo',
+                    ],
+                    [
+                        'name' => 'Trần Quốc Huy',
+                        'role' => 'Kỹ sư phần mềm tại FPT',
+                        'text' => 'Mình dùng MinLish để học từ vựng chuyên ngành IT bằng tiếng Anh. Tính năng tạo bộ từ riêng rất tiện, và SRS hoạt động cực kỳ khoa học.',
+                        'stars' => 5,
+                        'bg' => 'purple',
+                    ],
+                    [
+                        'name' => 'Lê Thị Hương',
+                        'role' => 'Giáo viên tiếng Anh',
+                        'text' => 'Mình recommend MinLish cho tất cả học sinh của mình. Giao diện đẹp, dễ dùng và phương pháp học thực sự hiệu quả. Điểm số của các em đã cải thiện rõ rệt!',
+                        'stars' => 5,
+                        'bg' => 'blue',
+                    ],
+                ] as $review)
+                <div class="glass rounded-2xl p-6 space-y-4">
+                    {{-- Stars --}}
+                    <div class="flex gap-1" aria-label="5 sao" role="img">
+                        @for($i = 0; $i < $review['stars']; $i++)
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        @endfor
+                    </div>
+                    {{-- Quote --}}
+                    <blockquote class="text-indigo-700 leading-relaxed italic">"{{ $review['text'] }}"</blockquote>
+                    {{-- Author --}}
+                    <div class="flex items-center gap-3 pt-2 border-t border-indigo-100">
+                        <div class="w-10 h-10 rounded-full bg-{{ $review['bg'] }}-200 flex items-center justify-center font-bold text-{{ $review['bg'] }}-700 select-none" aria-hidden="true">
+                            {{ mb_substr($review['name'], 0, 1) }}
+                        </div>
+                        <div>
+                            <p class="font-bold text-indigo-900 text-sm">{{ $review['name'] }}</p>
+                            <p class="text-xs text-indigo-500">{{ $review['role'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
