@@ -9,10 +9,19 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
+    // Safelist dynamic color classes used in Blade loops (Tailwind purges assembled strings)
+    safelist: [
+        { pattern: /^bg-(indigo|purple|blue|green|orange|pink|yellow)-(100|200|400)$/ },
+        { pattern: /^text-(indigo|purple|blue|green|orange|pink|yellow)-(500|600|700)$/ },
+        { pattern: /^border-(indigo|purple|blue|green|orange|pink|yellow)-(200|300)$/ },
+    ],
+
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                // Replace Figtree with project fonts; fallback to system sans
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                display: ['Baloo 2', 'cursive'],
             },
         },
     },
