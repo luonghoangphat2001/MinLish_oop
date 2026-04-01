@@ -11,7 +11,7 @@ export default {
 
     // Safelist dynamic color classes used in Blade loops (Tailwind purges assembled strings)
     safelist: [
-        { pattern: /^bg-(indigo|purple|blue|green|orange|pink|yellow)-(100|200|400)$/ },
+        { pattern: /^bg-(indigo|purple|blue|green|orange|pink|yellow|gray)-(100|200|400)$/ },
         { pattern: /^text-(indigo|purple|blue|green|orange|pink|yellow)-(500|600|700)$/ },
         { pattern: /^border-(indigo|purple|blue|green|orange|pink|yellow)-(200|300)$/ },
     ],
