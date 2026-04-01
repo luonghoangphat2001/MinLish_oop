@@ -2,7 +2,7 @@
 
 Ứng dụng web học từ vựng tiếng Anh với thuật toán SRS (SM-2), Flashcard, và theo dõi tiến độ học.
 
-**Tech Stack:** PHP 8.2+, Laravel 11, Livewire 3, Tailwind CSS 3, AlpineJS 3, MySQL 8
+**Tech Stack:** PHP 8.2+, Laravel 11, Livewire 3, Tailwind CSS 3, AlpineJS 3, SQLite
 
 ---
 
@@ -11,7 +11,7 @@
 - PHP >= 8.2
 - Composer >= 2.x
 - Node.js >= 18.x + npm
-- MySQL >= 8.0
+- SQLite (có sẵn trong PHP, không cần cài thêm)
 
 ---
 
@@ -38,26 +38,17 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 4. Cấu hình Database trong `.env`
+### 4. Kiểm tra cấu hình Database trong `.env`
+
+Mặc định dùng **SQLite** — không cần cài MySQL:
 
 ```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=minlish
-DB_USERNAME=root
-DB_PASSWORD=your_password
+DB_CONNECTION=sqlite
 ```
 
-### 5. Tạo Database
+File DB sẽ tự tạo tại `database/database.sqlite`.
 
-Tạo database trước (trong MySQL):
-
-```sql
-CREATE DATABASE minlish CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-### 6. Chạy migrations
+### 5. Chạy migrations
 
 ```bash
 php artisan migrate
@@ -71,13 +62,13 @@ Migrations sẽ tạo các bảng:
 - `study_logs` — lịch sử học
 - `daily_goals` — mục tiêu học hàng ngày
 
-### 7. Build assets
+### 6. Build assets
 
 ```bash
 npm run build
 ```
 
-### 8. Chạy ứng dụng
+### 7. Chạy ứng dụng
 
 ```bash
 php artisan serve
