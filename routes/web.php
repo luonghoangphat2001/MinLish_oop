@@ -3,16 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Auth\ProfileEdit;
 use App\Http\Controllers\GoogleController;
+use App\Livewire\Learning\FlashCard;
+use App\Livewire\Vocabulary\VocabularyIndex;
+use App\Livewire\Dashboard\ProgressDashboard;
 
 Route::view('/', 'welcome');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
-});
-
 Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', ProgressDashboard::class)->name('dashboard');
     Route::get('profile', ProfileEdit::class)->name('profile');
     Route::view('vocabulary/sets', 'vocabulary.sets')->name('vocabulary.sets');
+    Route::get('vocabulary/sets/{set}/words', VocabularyIndex::class)->name('vocabulary.words');
+    Route::get('learning/sets/{set}/flashcards', FlashCard::class)->name('learning.flashcards');
 });
 
 
