@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Auth\ProfileEdit;
+use App\Http\Livewire\Dashboard\ProgressDashboard;
 use App\Http\Controllers\GoogleController;
 
 Route::view('/', 'welcome');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::get('dashboard', ProgressDashboard::class)->name('dashboard');
 });
 
 Route::middleware(['auth'])->group(function () {
