@@ -2,10 +2,11 @@
 
 namespace App\Livewire\Vocabulary;
 
-use Livewire\Component;
-use Livewire\WithPagination;
 use App\Models\VocabularySet;
+use App\Services\StarterVocabularyService;
+use Livewire\Component;
 use Livewire\Attributes\On;
+use Livewire\WithPagination;
 
 class VocabularySetIndex extends Component
 {
@@ -47,5 +48,19 @@ class VocabularySetIndex extends Component
     {
         $set = auth()->user()->vocabularySets()->findOrFail($id);
         $set->delete();
+    }
+
+    public function createStarterSets(StarterVocabularyService $starterVocabularyService): void
+    {
+        $user = auth()->user();
+
+        if ($user->vocabularySets()->exists()) {
+            session()->flash('message', 'Tài khoản đã có bộ từ. Bạn có thể tạo bộ mới thủ công.');
+            return;
+        }
+
+        $starterVocabularyService->seedDefaultForUser($user);
+
+        session()->flash('message', 'Đã tạo 2 bộ mặc định Learning và Working.');
     }
 }
