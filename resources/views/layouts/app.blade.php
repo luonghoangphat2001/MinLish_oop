@@ -13,6 +13,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body class="font-sans antialiased bg-gray-50">
         <div class="min-h-screen flex">
@@ -73,7 +74,7 @@
                 @if (isset($header))
                     <header class="bg-white shadow-sm">
                         <div class="px-6 py-4">
-                            {{ $header }}
+                            {!! $header !!}
                         </div>
                     </header>
                 @endif

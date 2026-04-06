@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Auth\ProfileEdit;
+use App\Http\Livewire\Dashboard\ProgressDashboard;
 use App\Http\Controllers\GoogleController;
 use App\Livewire\Learning\FlashCard;
 use App\Livewire\Vocabulary\VocabularyIndex;
@@ -9,6 +10,13 @@ use App\Livewire\Dashboard\ProgressDashboard;
 
 Route::view('/', 'welcome');
 
+<<<<<<< HEAD
+=======
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', ProgressDashboard::class)->name('dashboard');
+});
+
+>>>>>>> main
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', ProgressDashboard::class)->name('dashboard');
     Route::get('profile', ProfileEdit::class)->name('profile');

@@ -62,6 +62,46 @@ class SpacedRepetitionService
         return $this->buildResult($newEaseFactor, $newInterval, $newRepetitions, $status);
     }
 
+    /**
+     * Khởi tạo tiến độ SRS cho toàn bộ vocabulary trong bộ khi user bắt đầu học.
+     * Không tạo trùng: chỉ chèn những từ chưa có record của user.
+     */
+    public function initializeProgress(User $user, VocabularySet $set): void
+    {
+        $vocabIds = $set->vocabularies()->pluck('id');
+
+        if ($vocabIds->isEmpty()) {
+            return;
+        }
+
+        $existing = SrsProgress::where('user_id', $user->id)
+            ->whereIn('vocabulary_id', $vocabIds)
+            ->pluck('vocabulary_id');
+
+        $newIds = $vocabIds->diff($existing);
+
+        if ($newIds->isEmpty()) {
+            return;
+        }
+
+        $now = Carbon::now();
+
+        $payload = $newIds->map(fn ($vocabId) => [
+            'user_id'        => $user->id,
+            'vocabulary_id'  => $vocabId,
+            'ease_factor'    => 2.5,
+            'interval_days'  => 1,
+            'repetitions'    => 0,
+            'status'         => 'new',
+            'next_review_at' => null,
+            'last_reviewed_at' => null,
+            'created_at'     => $now,
+            'updated_at'     => $now,
+        ])->all();
+
+        SrsProgress::insert($payload);
+    }
+
     private function buildResult(float $easeFactor, int $intervalDays, int $repetitions, string $status): array
     {
         return [
