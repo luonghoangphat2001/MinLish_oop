@@ -13,25 +13,8 @@
                 class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
                 Học flashcard
             </a>
-            <button wire:click="openImportModal" type="button"
-                class="rounded-md bg-green-600 px-3 py-2 text-sm font-medium text-white hover:bg-green-700">
-                <svg class="-ml-1 mr-1 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12a2 2 0 01-2 2H9a2 2 0 01-2-2v-12m16 0v12a2 2 0 01-2 2H9a2 2 0 01-2-2v-12m16 0h-4m0 0l-4-4m4 4l4-4" />
-                </svg>
-                Import Excel
-            </button>
-            {{-- T19: Export button --}}
-            <button wire:click="exportSet" type="button"
-                class="rounded-md bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700">
-                <svg class="-ml-1 mr-1 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10l-5.5 5.5m0 0L12 21l5.5-5.5m-5.5 5.5V8a1 1 0 012 0v8.5" />
-                </svg>
-                Export Excel
-            </button>
         </div>
     </div>
-
-    @livewire('vocabulary.vocabulary-importer', ['setId' => $set->id])
 
     <div class="grid gap-6 lg:grid-cols-3">
         <div class="rounded-xl border bg-white p-5 shadow-sm lg:col-span-1">
