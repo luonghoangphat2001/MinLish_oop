@@ -20,10 +20,11 @@
             <aside class="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0 hidden lg:flex">
                 {{-- Logo --}}
                 <div class="px-6 py-5 border-b border-gray-100">
-                    <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-2">
+                    <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-2 mr-4">
                         <span class="text-xl font-bold text-indigo-600">MinLish</span>
                         <span class="text-xs text-gray-400 font-medium">Learn Vocab</span>
                     </a>
+                    @livewire('global-search')
                 </div>
 
                 {{-- Nav --}}

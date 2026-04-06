@@ -1,4 +1,4 @@
-﻿"title","assignee","day","deps","sprint","desc","checklist"
+"title","assignee","day","deps","sprint","desc","checklist"
 "T01 — Khởi tạo Laravel Project & GitHub","Dev 1","1","—","sprint-1","Tạo Laravel 11 project mới, cài Laravel Breeze (Livewire stack), cấu hình `.env`, kết nối GitHub repo `MinLish_oop`. Push commit đầu tiên lên `main`. Đây là task nền tảng, mọi task khác phụ thuộc vào.","- [ ] Tạo Laravel project mới với `composer create-project`
 - [ ] Cài Laravel Breeze với `breeze:install livewire`
 - [ ] Cài thêm packages: `livewire/livewire`, `maatwebsite/excel`
@@ -99,14 +99,14 @@
 - [ ] `firstOrCreate` DailyGoal khi user save
 - [ ] Validation: new_words min 1 max 100, review_words min 0 max 200
 - [ ] Hiển thị current values khi load trang"
-"T18 — Import Vocabulary từ Excel/CSV","Dev 2","8","T11","sprint-3","Cài `maatwebsite/excel` (đã trong composer). Tạo Livewire component upload file Excel/CSV. Tạo `VocabularyImport` class xử lý từng row, validate (word required, meaning required), insert batch vào DB. Cung cấp file template Excel mẫu để user tải về.","- [ ] Tạo `app/Imports/VocabularyImport.php` implements `ToModel`, `WithHeadingRow`, `WithValidation`
+"T18 — Import Vocabulary từ Excel/CSV","BLACKBOXAI - done","8","T11","sprint-3"
 - [ ] Column mapping: word, pronunciation, meaning, description_en, example, collocation, related_words, note
 - [ ] Validation rules per row: word required, meaning required
 - [ ] Livewire component với file upload, progress, kết quả (X imported, Y errors)
 - [ ] Tạo file template `storage/app/templates/vocabulary-template.xlsx`
 - [ ] Nút download template
 - [ ] Route và link từ trang VocabularyIndex (T11)"
-"T19 — Export Vocabulary Set ra Excel","Dev 2","8","T11","sprint-3","Tạo `VocabularyExport` class. Thêm nút ""Export Excel"" vào trang danh sách từ (T11). Export toàn bộ vocabulary của một set kèm đầy đủ các field. Dùng cùng package `maatwebsite/excel` với T18.","- [ ] Tạo `app/Exports/VocabularyExport.php` implements `FromCollection`, `WithHeadings`
+"T19 — Export Vocabulary Set ra Excel","BLACKBOXAI - done","8","T11","sprint-3"
 - [ ] Export: id, word, pronunciation, meaning, description_en, example, collocation, related_words, note
 - [ ] Thêm method `export()` vào `VocabularyIndex` component
 - [ ] Download trả về file `{set-name}-vocabulary.xlsx`"
@@ -134,7 +134,8 @@
 - [ ] `config/queue.php` QUEUE_CONNECTION=database
 - [ ] `php artisan queue:table && php artisan migrate`
 - [ ] Test bằng `php artisan queue:work` local"
-"T24 — Notification: Review Reminder","Dev 4","9","T23","sprint-3","Tạo `Notifications/ReviewWordsReminder.php` và `Jobs/SendReviewReminderJob.php`. Gửi email khi user có từ quá hạn review (`next_review_at < now() - 24h`). Schedule chạy mỗi ngày 6h chiều. Phụ thuộc T23 vì dùng chung infrastructure Queue.","- [ ] `php artisan make:notification ReviewWordsReminder`
+"T24 — Notification: Review Reminder","BLACKBOXAI - done","9","T23","sprint-3"
+
 - [ ] `php artisan make:job SendReviewReminderJob`
 - [ ] Email nội dung: số từ quá hạn, danh sách set có từ cần ôn
 - [ ] Schedule `->dailyAt('18:00')`
@@ -145,7 +146,7 @@
 - [ ] Không thể clone set của chính mình
 - [ ] Route `/explore`
 - [ ] Link ""Khám phá"" trong sidebar"
-"T26 — Search Từ Vựng Global","Dev 3","10","T11","sprint-3","Thêm thanh search trong header cho phép tìm kiếm từ vựng trong tất cả set của user (và public sets). Dùng Livewire component nhúng vào header layout, debounce 300ms. Kết quả hiển thị inline dropdown với tên từ, nghĩa, set chứa từ đó.","- [ ] Livewire component `GlobalSearch` nhúng vào `app.blade.php`
+"T26 — Search Từ Vựng Global","BLACKBOXAI - done","10","T11","sprint-3"
 - [ ] Search query >= 2 ký tự mới bắt đầu query
 - [ ] Debounce 300ms với `wire:model.live.debounce.300ms`
 - [ ] Kết quả: top 10 matches, hiển thị word + meaning + set name

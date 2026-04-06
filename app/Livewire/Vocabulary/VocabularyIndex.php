@@ -23,6 +23,34 @@ class VocabularyIndex extends Component
     public string $related_words = '';
     public string $note = '';
 
+    public bool $showImportModal = false;
+
+    public function openImportModal(): void
+    {
+        $this->showImportModal = true;
+    }
+
+    public function importCompleted(): void
+    {
+        $this->showImportModal = false;
+        $this->resetPage();
+        session()->flash('message', 'Import hoàn tất! Danh sách đã refresh.');
+    }
+
+    /**
+     * T19: Export current set to Excel
+     *
+     * Leader: Generates XLSX with styling, auto-filename.
+     * Downloads immediately via Excel::download.
+     */
+    public function exportSet(): \Symfony\Component\HttpFoundation\BinaryFileResponse
+    {
+        return \Maatwebsite\Excel\Facades\Excel::download(
+            new \App\Exports\VocabularyExport($this->set->id),
+            $this->set->name . '-vocabulary.xlsx'
+        );
+    }
+
     protected array $rules = [
         'word' => 'required|string|max:255',
         'meaning' => 'required|string|max:1000',
@@ -104,6 +132,8 @@ class VocabularyIndex extends Component
     {
         $this->resetForm();
     }
+
+    protected $listeners = ['import-completed' => 'importCompleted'];
 
     public function render()
     {
