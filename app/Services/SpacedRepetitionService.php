@@ -3,7 +3,8 @@
 namespace App\Services;
 
 use Carbon\Carbon;
-
+use App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
 /**
  * SpacedRepetitionService
  *
@@ -57,5 +58,18 @@ class SpacedRepetitionService
             'next_review_at' => Carbon::now()->addDays($intervalDays),
             'status'         => $status,
         ];
+    }
+    public function getWordsForReview($user): Collection
+    {
+        return $user->srsProgresses()
+            ->where('next_review_at', '<=', Carbon::now())
+            ->get();
+    }
+    public function getNewWords($user, int $limit): Collection
+    {
+        return $user->srsProgresses()
+        ->where('status','new')
+        ->limit($limit)
+        ->get();
     }
 }
