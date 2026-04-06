@@ -108,6 +108,10 @@ class VocabularyIndex extends Component
     public function render()
     {
         $words = Vocabulary::where('set_id', $this->set->id)
+            ->with(['srsProgress' => function ($query) {
+                $query->where('user_id', auth()->id())
+                    ->select('id', 'vocabulary_id', 'status');
+            }])
             ->when($this->search, function ($query) {
                 $query->where(function ($sub) {
                     $sub->where('word', 'like', '%' . $this->search . '%')
@@ -142,4 +146,3 @@ class VocabularyIndex extends Component
         return $trimmed === '' ? null : $trimmed;
     }
 }
-

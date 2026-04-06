@@ -240,3 +240,204 @@ Ngay cap nhat: 2026-04-04
 
 - Da chay: `php artisan test`
 - Ket qua: `37 passed (93 assertions)`
+
+## 6) Fix loi layout bi trung/de len nhau (double sidebar)
+
+### Hien tuong
+- Trang dashboard, vocabulary words, flashcard bi hien thi 2 layout/2 sidebar de len nhau.
+
+### Nguyen nhan goc
+- Cac trang Livewire full-page moi da duoc Livewire boc layout ngoai.
+- Trong view cua component lai tiep tuc boc them `<x-app-layout>` ben trong.
+- Ket qua: layout long layout (double render).
+
+### Sua gi
+1. Bo wrapper `<x-app-layout>` trong 3 view full-page moi:
+- `resources/views/livewire/dashboard/progress-dashboard.blade.php`
+- `resources/views/livewire/vocabulary/vocabulary-index.blade.php`
+- `resources/views/livewire/learning/flash-card.blade.php`
+
+2. Chuyen phan header thanh card top cua noi dung trang (khong dung slot header noi bo nua) de tranh phu thuoc nested component.
+
+### Cach hoat dong sau khi sua
+- Moi page chi render 1 layout ngoai (layout cua full-page Livewire), noi dung ben trong la 1 `div` duy nhat.
+- Khong con nested `<x-app-layout>`, nen khong con lap sidebar.
+
+### Cach khac co the dung
+- Cach 1: Tao layout rieng cho full-page Livewire va chi dinh `#[Layout(...)]` ro rang.
+- Cach 2: Giu `<x-app-layout>` trong view, nhung doi livewire full-page layout thanh layout trong (blank) de tranh boc 2 lan.
+- Cach 3: Chuyen cac page thanh route blade thuong + embed component ben trong.
+
+### OOP va ky thuat
+- Van giu phan tach trach nhiem:
+  - Component class xu ly state/query.
+  - Blade chi render UI.
+- Fix nay la sua composition layer (view composition), khong thay doi domain logic.
+
+## 7) Tao san 2 bo tu default khi user dang ky moi: Learning + Working
+
+### Muc tieu
+- User vua dang ky xong la da co du lieu de hoc ngay, khong can tao bo thu cong.
+
+### Sua gi (chi tiet file)
+1. Them service moi:
+- `app/Services/StarterVocabularyService.php`
+- Nhiem vu:
+  - `seedDefaultForUser(User $user)`
+  - Tao 2 set mac dinh `Learning`, `Working`
+  - Moi set co 6 tu mau (word, meaning, pronunciation, example)
+  - Co guard: neu user da co set thi khong tao trung
+
+2. Dang ky listener cho su kien dang ky:
+- `app/Providers/AppServiceProvider.php`
+- Trong `boot()`:
+  - `Event::listen(Registered::class, fn($event) => app(StarterVocabularyService::class)->seedDefaultForUser($event->user));`
+- Nghia la: khi user register thanh cong (event `Registered`) -> auto seed 2 bo default.
+
+3. Refactor nut "Tao bo mau nhanh" dung chung service:
+- `app/Livewire/Vocabulary/VocabularySetIndex.php`
+- Method `createStarterSets(...)` da goi `StarterVocabularyService` thay vi hardcode arrays trong component.
+- Loi ich: 1 nguon du lieu duy nhat, de bao tri va mo rong.
+
+### Cach hoat dong end-to-end
+1. User submit dang ky.
+2. He thong tao user + fire event `Registered`.
+3. Listener trong AppServiceProvider bat event.
+4. Goi `StarterVocabularyService::seedDefaultForUser($user)`.
+5. Tao 2 set + tu mau.
+6. User vao dashboard/bo tu thay ngay Learning + Working.
+
+### OOP giai thich de thuyet trinh
+- Service Object Pattern:
+  - `StarterVocabularyService` dong goi logic tao du lieu default, khong de logic nay nam trong controller/component.
+- Single Responsibility:
+  - Provider chi lo wiring event.
+  - Service chi lo business logic seed du lieu.
+  - Component vocabulary chi lo thao tac UI.
+- Reuse:
+  - Cung 1 service duoc dung cho 2 context:
+    - tu dong khi register
+    - tao mau thu cong tu button
+
+### Phuong thuc/ham dung
+- Event system:
+  - `Event::listen(Registered::class, closure)`
+- Eloquent:
+  - `vocabularySets()->exists()`
+  - `VocabularySet::create(...)`
+  - `Vocabulary::insert([...])`
+
+### Runtime verification
+- Da chay lai `php artisan test`
+- Ket qua: `37 passed (93 assertions)`
+
+## 8) Sửa cụm nút đánh giá Flashcard bị khó thấy/như bị ẩn
+
+### Vấn đề
+- Khu vực 4 nút đánh giá trên trang flashcard hiển thị không rõ, dễ tưởng là bị ẩn.
+
+### Sửa
+- File: `resources/views/livewire/learning/flash-card.blade.php`
+- Cập nhật cụm nút đánh giá:
+  - Tăng độ rõ bằng `shadow`, `focus:ring`, `min-h-11`, `inline-flex`, `w-full`.
+  - Đổi nhãn sang tiếng Việt có dấu: `1 · Lại`, `2 · Khó`, `3 · Tốt`, `4 · Dễ`.
+  - Chỉnh toàn bộ text trên trang flashcard sang Unicode tiếng Việt có dấu.
+
+### Cách hoạt động
+- Nút vẫn gọi cùng method cũ `submitRating('again|hard|good|easy')`.
+- Chỉ thay phần hiển thị/UX, không đổi logic SRS.
+
+## 9) Chuẩn hóa Unicode tiếng Việt ở các trang mới
+
+### File đã chuẩn hóa text có dấu
+- `resources/views/livewire/learning/flash-card.blade.php`
+- `resources/views/livewire/dashboard/progress-dashboard.blade.php`
+- `resources/views/livewire/vocabulary/vocabulary-index.blade.php`
+- `resources/views/livewire/vocabulary/vocabulary-set-index.blade.php`
+- `app/Livewire/Vocabulary/VocabularySetIndex.php` (flash message)
+- `app/Services/StarterVocabularyService.php` (description + meaning mặc định)
+
+### Lưu ý kỹ thuật quan trọng
+- Khi ghi lại `StarterVocabularyService.php`, phải lưu UTF-8 **không BOM**.
+- Nếu có BOM, PHP sẽ báo lỗi:
+  - `Namespace declaration statement has to be the very first statement...`
+
+### Runtime verification
+- Đã chạy lại full test sau khi sửa encoding + UI text.
+- Kết quả: `37 passed (93 assertions)`.
+
+## 10) Fix màu Tailwind không áp dụng ở nút đánh giá Flashcard
+
+### Triệu chứng
+- Nút đánh giá có class `bg-red-500/bg-amber-500/bg-emerald-500/bg-blue-500` nhưng giao diện không lên màu.
+
+### Nguyên nhân gốc
+- CSS đang dùng bản build cũ trong `public/build/assets` nên chưa chứa class mới.
+- Tailwind purge cũng có thể loại bớt class biến thể (focus ring) nếu không khớp content/safelist.
+
+### Đã sửa
+1. Cập nhật `tailwind.config.js` safelist:
+- Thêm pattern cho:
+  - `bg-(red|amber|emerald|blue)-(500|600)`
+  - `text-(red|amber|emerald|blue)-700`
+  - `ring-(red|amber|emerald|blue)-300` + `variants: ['focus']`
+
+2. Build lại assets:
+- `npm run build`
+- File CSS mới: `public/build/assets/app-Cz0F05UJ.css`
+
+### Cách hoạt động
+- Laravel đọc `public/build/manifest.json` để lấy file CSS hash mới.
+- Sau build, class màu của Flashcard đã có trong CSS output.
+
+### Lưu ý khi demo
+- Nếu trình duyệt vẫn không đổi màu, nhấn hard refresh `Ctrl + F5` để bỏ cache.
+- Nếu đang code liên tục, có thể chạy `npm run dev` để Vite cập nhật ngay.
+
+## 11) Hoàn thiện thêm theo nhóm task hiện tại (T10/T11/T12/T13/T15/T20)
+
+### T11 - Vocabulary CRUD trong Set
+- File: `app/Livewire/Vocabulary/VocabularyIndex.php`
+  - Thêm eager-load trạng thái SRS theo user hiện tại:
+    - `with(['srsProgress' => fn($q) => $q->where('user_id', auth()->id()) ... ])`
+- File: `resources/views/livewire/vocabulary/vocabulary-index.blade.php`
+  - Thêm cột `SRS` với badge trạng thái: New / Learning / Review / Mastered.
+
+### T12 - SpacedRepetitionService
+- File: `app/Services/SpacedRepetitionService.php`
+  - Cập nhật mapping chất lượng gần spec task:
+    - again=0, hard=2, good=4, easy=5
+  - Logic trạng thái:
+    - again -> learning
+    - hard -> learning
+    - good -> review
+    - easy -> mastered
+  - Bổ sung nhánh xử lý riêng cho `hard` để interval tăng chậm.
+
+### T15 - Flashcard Component
+- File: `resources/views/livewire/learning/flash-card.blade.php`
+  - Thêm animation lật thẻ 3D bằng Alpine + CSS transform (`rotateY`).
+  - Giữ nguyên keyboard shortcuts Space, 1-4.
+
+### T20 - Progress Dashboard
+- File: `app/Livewire/Dashboard/ProgressDashboard.php`
+  - Thêm tính toán `todayTarget`, `todayProgressPercent` theo `daily_goals`.
+  - Tính `% hoàn thành` theo từng bộ từ gần đây.
+- File: `resources/views/livewire/dashboard/progress-dashboard.blade.php`
+  - Thêm progress bar hôm nay X/Y.
+  - Thêm progress bar `% hoàn thành` cho từng bộ từ.
+
+## 12) Cập nhật tasks.csv theo yêu cầu "(Khôi - done)"
+- Đã set `assignee = Khôi - done` cho các task đã mình thực hiện:
+  - T08, T10, T11, T12, T13, T15, T20
+- Cách cập nhật: chỉnh trực tiếp file `tasks.csv`.
+
+## 13) Sửa lỗi build frontend phát sinh
+
+### Lỗi gặp
+- `npm run build` fail vì `tailwind.config.js` có ký tự rác `=` chèn vào file.
+
+### Đã sửa
+- File: `tailwind.config.js`
+  - Xóa ký tự `=` sai cú pháp.
+- Build lại thành công, CSS mới tạo trong `public/build/assets`.

@@ -17,22 +17,32 @@ class SpacedRepetitionService
 {
     private const RATING_TO_QUALITY = [
         'again' => 0,
-        'hard'  => 1,
-        'good'  => 3,
+        'hard'  => 2,
+        'good'  => 4,
         'easy'  => 5,
     ];
 
-    private const MASTERED_INTERVAL_THRESHOLD = 21;
-
     public function calculate(float $easeFactor, int $intervalDays, int $repetitions, string $rating): array
     {
-        $quality = self::RATING_TO_QUALITY[$rating] ?? 3;
+        $quality = self::RATING_TO_QUALITY[$rating] ?? 4;
 
-        if ($quality < 3) {
+        if ($rating === 'again') {
             return $this->buildResult(
                 easeFactor: max(1.3, $easeFactor - 0.2),
                 intervalDays: 1,
                 repetitions: 0,
+                status: 'learning'
+            );
+        }
+
+        if ($rating === 'hard') {
+            $newEaseFactor = max(1.3, $easeFactor - 0.15);
+            $newInterval = max(1, (int) round($intervalDays * 1.2));
+
+            return $this->buildResult(
+                easeFactor: $newEaseFactor,
+                intervalDays: $newInterval,
+                repetitions: max(1, $repetitions),
                 status: 'learning'
             );
         }
@@ -47,7 +57,7 @@ class SpacedRepetitionService
         $newEaseFactor = max(1.3, $newEaseFactor);
 
         $newRepetitions = $repetitions + 1;
-        $status = $newInterval >= self::MASTERED_INTERVAL_THRESHOLD ? 'mastered' : 'review';
+        $status = $rating === 'easy' ? 'mastered' : 'review';
 
         return $this->buildResult($newEaseFactor, $newInterval, $newRepetitions, $status);
     }
