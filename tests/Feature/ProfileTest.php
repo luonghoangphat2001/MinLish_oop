@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Http\Livewire\Auth\ProfileEdit;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
@@ -19,9 +20,7 @@ class ProfileTest extends TestCase
 
         $response
             ->assertOk()
-            ->assertSeeVolt('profile.update-profile-information-form')
-            ->assertSeeVolt('profile.update-password-form')
-            ->assertSeeVolt('profile.delete-user-form');
+            ->assertSeeLivewire(ProfileEdit::class);
     }
 
     public function test_profile_information_can_be_updated(): void

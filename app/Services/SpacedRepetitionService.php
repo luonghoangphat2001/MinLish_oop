@@ -2,9 +2,12 @@
 
 namespace App\Services;
 
-use Carbon\Carbon;
+use App\Models\SrsProgress;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Collection;
+use App\Models\VocabularySet;
+use Carbon\Carbon;
+use Illuminate\Support\Collection;
+
 /**
  * SpacedRepetitionService
  *
@@ -14,22 +17,32 @@ class SpacedRepetitionService
 {
     private const RATING_TO_QUALITY = [
         'again' => 0,
-        'hard'  => 1,
-        'good'  => 3,
+        'hard'  => 2,
+        'good'  => 4,
         'easy'  => 5,
     ];
 
-    private const MASTERED_INTERVAL_THRESHOLD = 21;
-
     public function calculate(float $easeFactor, int $intervalDays, int $repetitions, string $rating): array
     {
-        $quality = self::RATING_TO_QUALITY[$rating] ?? 3;
+        $quality = self::RATING_TO_QUALITY[$rating] ?? 4;
 
-        if ($quality < 3) {
+        if ($rating === 'again') {
             return $this->buildResult(
                 easeFactor: max(1.3, $easeFactor - 0.2),
                 intervalDays: 1,
                 repetitions: 0,
+                status: 'learning'
+            );
+        }
+
+        if ($rating === 'hard') {
+            $newEaseFactor = max(1.3, $easeFactor - 0.15);
+            $newInterval = max(1, (int) round($intervalDays * 1.2));
+
+            return $this->buildResult(
+                easeFactor: $newEaseFactor,
+                intervalDays: $newInterval,
+                repetitions: max(1, $repetitions),
                 status: 'learning'
             );
         }
@@ -44,7 +57,7 @@ class SpacedRepetitionService
         $newEaseFactor = max(1.3, $newEaseFactor);
 
         $newRepetitions = $repetitions + 1;
-        $status = $newInterval >= self::MASTERED_INTERVAL_THRESHOLD ? 'mastered' : 'review';
+        $status = $rating === 'easy' ? 'mastered' : 'review';
 
         return $this->buildResult($newEaseFactor, $newInterval, $newRepetitions, $status);
     }
@@ -59,17 +72,64 @@ class SpacedRepetitionService
             'status'         => $status,
         ];
     }
-    public function getWordsForReview($user): Collection
+
+    public function initializeProgress(User $user, VocabularySet $set): void
     {
-        return $user->srsProgresses()
-            ->where('next_review_at', '<=', Carbon::now())
+        $existingIds = SrsProgress::where('user_id', $user->id)
+            ->whereIn('vocabulary_id', $set->vocabularies()->pluck('id'))
+            ->pluck('vocabulary_id')
+            ->all();
+
+        $insertData = [];
+
+        foreach ($set->vocabularies as $vocabulary) {
+            if (in_array($vocabulary->id, $existingIds, true)) {
+                continue;
+            }
+
+            $insertData[] = [
+                'user_id' => $user->id,
+                'vocabulary_id' => $vocabulary->id,
+                'ease_factor' => 2.5,
+                'interval_days' => 1,
+                'repetitions' => 0,
+                'status' => 'new',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+
+        if (!empty($insertData)) {
+            SrsProgress::insert($insertData);
+        }
+    }
+
+    public function getWordsForReview(User $user, ?int $setId = null): Collection
+    {
+        return SrsProgress::query()
+            ->with('vocabulary')
+            ->where('user_id', $user->id)
+            ->when($setId, function ($query) use ($setId) {
+                $query->whereHas('vocabulary', fn ($q) => $q->where('set_id', $setId));
+            })
+            ->where(function ($query) {
+                $query->where('status', '!=', 'new')
+                    ->whereNotNull('next_review_at')
+                    ->where('next_review_at', '<=', now());
+            })
             ->get();
     }
-    public function getNewWords($user, int $limit): Collection
+
+    public function getNewWords(User $user, int $limit = 20, ?int $setId = null): Collection
     {
-        return $user->srsProgresses()
-        ->where('status','new')
-        ->limit($limit)
-        ->get();
+        return SrsProgress::query()
+            ->with('vocabulary')
+            ->where('user_id', $user->id)
+            ->when($setId, function ($query) use ($setId) {
+                $query->whereHas('vocabulary', fn ($q) => $q->where('set_id', $setId));
+            })
+            ->where('status', 'new')
+            ->limit($limit)
+            ->get();
     }
 }
