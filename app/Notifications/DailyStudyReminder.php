@@ -5,51 +5,33 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Lang;
+use App\Models\User;
 
-class DailyStudyReminder extends Notification implements ShouldQueue
+class DailyStudyReminder extends Notification
 {
     use Queueable;
 
-    public int $reviewCount;
-
     /**
-     * T23 - Ghi chú Lead: Template EMAIL nhắc học HÀNG NGÀY.
-     *
-     * **Nội dung động:**
-     * - reviewCount: Số từ SRS quá hạn
-     * - Chào tên user
-     * - Link dashboard CTA
-     *
-     * **Kênh:** Mail queue (infra T23)
-     * **Phong cách:** Thân thiện, động viên
+     * T23 - Daily reminder template
      */
-    public function __construct(int $reviewCount)
-    {
-        $this->reviewCount = $reviewCount;
-    }
 
-    public function via($notifiable): array
+    public function via(User $notifiable)
     {
         return ['mail'];
     }
 
-    public function toMail($notifiable): MailMessage
+    public function toMail(User $notifiable)
     {
-        $appUrl = config('app.url');
-        $reviewText = $this->reviewCount > 0
-            ? "Bạn có {$this->reviewCount} từ cần ôn tập hôm nay!"
-            : "Hãy học một vài từ mới để duy trì streak nhé!";
+        $reviewsToday = $notifiable->srsProgress()->where('next_review_at', '<=', now())->count();
 
         return (new MailMessage)
-            ->subject('🧠 Nhắc học MinLish - ' . now()->format('d/m'))
+            ->subject('🔔 Nhắc học MinLish hôm nay!')
             ->greeting('Chào ' . $notifiable->name . '!')
-            ->line('Cảm ơn bạn đã sử dụng MinLish để học từ vựng.')
-            ->line($reviewText)
-            ->line('Học đều đặn 15-30 phút mỗi ngày sẽ giúp bạn nhớ lâu hơn!')
-            ->action('Học ngay hôm nay', $appUrl . '/dashboard')
-            ->line('Streak của bạn đang chờ bạn tiếp tục...')
-            ->line('Trân trọng,')
+            ->line("Bạn chưa học từ vựng hôm nay. Có {$reviewsToday} từ cần ôn.")
+            ->line('Chỉ 15 phút thôi! Mở app và bắt đầu ngay.')
+            ->action('Học ngay', url('/learning/today'))
+            ->line('Cố lên nhé! 💪')
             ->line('MinLish Team');
     }
 }

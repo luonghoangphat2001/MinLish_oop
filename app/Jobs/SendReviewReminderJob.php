@@ -4,68 +4,38 @@ namespace App\Jobs;
 
 use App\Models\User;
 use App\Models\SrsProgress;
-use App\Models\VocabularySet;
 use App\Notifications\ReviewWordsReminder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Notification;
 
 class SendReviewReminderJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
-     * T24 - Ghi chú Lead (Tiếng Việt): Job nhắc ÔN TẬP quá hạn lúc **18h (6h tối)**.
-     *
-     * **Điều kiện gửi:**
-     * • Từ SRS: `next_review_at < hôm qua` + status != mastered
-     * • User: `chưa học hôm nay` (study_logs.studied_at != today)
-     *
-     * **Luồng:**
-     * 1. Chunk users 100 (perf safe)
-     * 2. Per user: count overdue + list sets
-     * 3. Notify nếu >0 overdue
-     * 4. Log chi tiết
-     *
-     * **Lên lịch:** Kernel dailyAt('18:00')
-     * **An toàn:** ChunkById, no memory leak
+     * T24 - Review reminder at 6PM for overdue words (next_review_at <= now)
      */
-    public function handle(): void
+
+    public function handle()
     {
-        $cutoff = now()->subDay();
+        $users = User::whereHas('srsProgress', function ($query) {
+            $query->where('next_review_at', '<=', now());
+        })->whereDate('last_study_date', '<', today())->get();
 
-        User::whereHas('srsProgress', fn($q) => $q->where('next_review_at', '<', $cutoff)
-                                                   ->where('status', '!=', 'mastered'))
-            ->whereDoesntHave('studyLogs', fn($q) => $q->whereDate('studied_at', today()))
-            ->chunkById(100, function ($users) {
-                foreach ($users as $user) {
-                    $overdueCount = $user->srsProgress()
-                        ->where('next_review_at', '<', $cutoff)
-                        ->where('status', '!=', 'mastered')
-                        ->count();
+        foreach ($users as $user) {
+            $overdueSets = $user->srsProgress()
+                ->where('next_review_at', '<=', now())
+                ->with('vocabulary.set')
+                ->get()
+                ->pluck('vocabulary.set')
+                ->unique('id');
 
-                    if ($overdueCount > 0) {
-                        $sets = SrsProgress::where('user_id', $user->id)
-                            ->where('next_review_at', '<', $cutoff)
-                            ->join('vocabularies', 'srs_progress.vocabulary_id', '=', 'vocabularies.id')
-                            ->join('vocabulary_sets', 'vocabularies.set_id', '=', 'vocabulary_sets.id')
-                            ->select('vocabulary_sets.*')
-                            ->distinct()
-                            ->get();
-
-                        $user->notify(new ReviewWordsReminder($overdueCount, $sets->toArray()));
-
-                        Log::info("Review reminder sent", [
-                            'user_id' => $user->id,
-                            'overdue' => $overdueCount,
-                            'sets_count' => $sets->count()
-                        ]);
-                    }
-                }
-            });
+            Notification::send($user, new ReviewWordsReminder($overdueSets));
+        }
     }
 }
 

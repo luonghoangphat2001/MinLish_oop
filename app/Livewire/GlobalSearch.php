@@ -2,61 +2,42 @@
 
 namespace App\Livewire;
 
-use App\Models\Vocabulary;
-use App\Models\VocabularySet;
 use Livewire\Component;
+use App\Models\Vocabulary;
+use Livewire\Attributes\On;
 
 class GlobalSearch extends Component
 {
-    public string $query = '';
+    public string $search = '';
     public array $results = [];
+    public bool $showResults = false;
 
-    protected $listeners = [];
-
-    public function updatedQuery(): void
+    public function updatedSearch()
     {
-        if (strlen($this->query) < 2) {
-            $this->results = [];
-            return;
-        }
+        $this->showResults = strlen($this->search) >= 2;
 
-        $this->search();
+        if ($this->showResults) {
+            $this->results = Vocabulary::with('set')
+                ->where('word', 'like', '%' . $this->search . '%')
+                ->orWhere('meaning', 'like', '%' . $this->search . '%')
+                ->limit(10)
+                ->get()
+                ->map(fn($v) => [
+                    'word' => $v->word,
+                    'meaning' => $v->meaning,
+                    'set' => $v->set->name,
+                    'url' => route('vocabulary.set.words', $v->set_id)
+                ])->toArray();
+        } else {
+            $this->results = [];
+        }
     }
 
-    /**
-     * T26 - Ghi chú Lead: Core search logic global vocab.
-     *
-     * Query: User vocab (word OR meaning LIKE query)
-     * Scope: auth()->id() sets only
-     * Perf: Join + limit 10 + eager
-     * Min 2 chars + debounce.300ms (wire)
-     */
-    public function search(): void
+    #[On('close-search')]
+    public function closeDropdown()
     {
-        if (strlen($this->query) < 2) {
-            $this->results = [];
-            return;
-        }
-
-        $this->results = Vocabulary::query()
-            ->join('vocabulary_sets', 'vocabularies.set_id', '=', 'vocabulary_sets.id')
-            ->where(function ($q) {
-                $q->where('vocabularies.word', 'like', '%' . $this->query . '%')
-                  ->orWhere('vocabularies.meaning', 'like', '%' . $this->query . '%');
-            })
-            ->where('vocabulary_sets.user_id', auth()->id()) // User sets only
-            ->select('vocabularies.*', 'vocabulary_sets.name as set_name', 'vocabulary_sets.id as set_id')
-            ->limit(10)
-            ->get()
-            ->toArray();
-    }
-
-    public function selectResult($index)
-    {
-        $result = $this->results[$index];
-        $this->query = $result['word'];
-        $this->dispatch('search-selected', $result);
-        $this->results = [];
+        $this->showResults = false;
+        $this->search = '';
     }
 
     public function render()
