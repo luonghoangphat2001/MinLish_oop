@@ -1,122 +1,84 @@
-@php
-    $labels = $labels ?? [];
-    $barData = $barData ?? [];
-    $statusCounts = $statusCounts ?? [];
-@endphp
-
-<div
-    x-data="activityChart({
-        labels: @js($labels),
-        barData: @js($barData),
-        status: @js($statusCounts),
-    })"
-    x-init="init()"
-    class="space-y-6"
->
-    <div class="bg-white border border-gray-100 rounded-xl shadow-sm p-6">
-        <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-semibold text-gray-900">Hoạt động 30 ngày</h3>
-            <p class="text-sm text-gray-500">Số từ đã học mỗi ngày</p>
-        </div>
-        <div class="relative">
-            <canvas id="activity-bar"></canvas>
-        </div>
-    </div>
-
-    <div class="bg-white border border-gray-100 rounded-xl shadow-sm p-6">
-        <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-semibold text-gray-900">Trạng thái SRS</h3>
-            <p class="text-sm text-gray-500">Phân bổ theo trạng thái</p>
-        </div>
-        <div class="w-full max-w-md mx-auto">
-            <canvas id="status-pie"></canvas>
-        </div>
-    </div>
-</div>
-
-<script>
-    function activityChart(initial) {
-        return {
-            barChart: null,
-            pieChart: null,
-            data: initial,
+<div class="grid gap-6 lg:grid-cols-2">
+    {{-- Hoạt động 30 ngày --}}
+    <div class="rounded-xl border bg-white p-5 shadow-sm"
+        x-data="{
+            labels: @js($activityLabels),
+            values: @js($activityValues),
+            chart: null,
             init() {
-                this.renderCharts();
-                window.addEventListener('activity-chart-refresh', (event) => {
-                    this.data.labels  = event.detail.labels;
-                    this.data.barData = event.detail.barData;
-                    this.data.status  = event.detail.status;
-                    this.updateCharts();
-                });
-            },
-            renderCharts() {
-                const ctxBar = document.getElementById('activity-bar').getContext('2d');
-                this.barChart = new Chart(ctxBar, {
+                this.chart = new Chart(this.$refs.canvas, {
                     type: 'bar',
                     data: {
-                        labels: this.data.labels,
+                        labels: this.labels,
                         datasets: [{
-                            label: 'Từ đã học',
-                            data: this.data.barData,
-                            backgroundColor: 'rgba(99, 102, 241, 0.7)',
+                            label: 'Số từ đã học',
+                            data: this.values,
+                            backgroundColor: '#4f46e5',
                             borderRadius: 4,
-                        }],
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            x: { ticks: { color: '#6b7280' } },
-                            y: { ticks: { color: '#6b7280' }, beginAtZero: true },
-                        },
-                    },
-                });
-
-                const ctxPie = document.getElementById('status-pie').getContext('2d');
-                this.pieChart = new Chart(ctxPie, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['New', 'Learning', 'Review', 'Mastered'],
-                        datasets: [{
-                            data: this.statusArray(),
-                            backgroundColor: [
-                                'rgba(251, 146, 60, 0.8)',   // amber
-                                'rgba(59, 130, 246, 0.8)',  // blue
-                                'rgba(99, 102, 241, 0.8)',  // indigo
-                                'rgba(16, 185, 129, 0.8)',  // emerald
-                            ],
-                        }],
+                        }]
                     },
                     options: {
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { position: 'bottom', labels: { color: '#374151' } },
+                            legend: { display: false }
                         },
-                        cutout: '55%',
-                    },
+                        scales: {
+                            y: { beginAtZero: true, ticks: { stepSize: 1 } },
+                            x: { grid: { display: false } }
+                        }
+                    }
                 });
-            },
-            updateCharts() {
-                if (this.barChart) {
-                    this.barChart.data.labels = this.data.labels;
-                    this.barChart.data.datasets[0].data = this.data.barData;
-                    this.barChart.update();
-                }
-                if (this.pieChart) {
-                    this.pieChart.data.datasets[0].data = this.statusArray();
-                    this.pieChart.update();
-                }
-            },
-            statusArray() {
-                const s = this.data.status || {};
-                return [
-                    s['new'] ?? 0,
-                    s['learning'] ?? 0,
-                    s['review'] ?? 0,
-                    s['mastered'] ?? 0,
-                ];
-            },
-        };
-    }
-</script>
+
+                this.$wire.on('refreshCharts', () => {
+                    this.chart.data.labels = this.$wire.activityLabels;
+                    this.chart.data.datasets[0].data = this.$wire.activityValues;
+                    this.chart.update();
+                });
+            }
+        }">
+        <h3 class="mb-4 text-base font-semibold text-gray-900">Hoạt động 30 ngày qua</h3>
+        <div class="h-64">
+            <canvas x-ref="canvas"></canvas>
+        </div>
+    </div>
+
+    {{-- Phân bổ trạng thái SRS --}}
+    <div class="rounded-xl border bg-white p-5 shadow-sm"
+        x-data="{
+            labels: @js($statusLabels),
+            values: @js($statusValues),
+            chart: null,
+            init() {
+                this.chart = new Chart(this.$refs.canvas, {
+                    type: 'doughnut',
+                    data: {
+                        labels: this.labels,
+                        datasets: [{
+                            data: this.values,
+                            backgroundColor: ['#94a3b8', '#6366f1', '#fbbf24', '#10b981'],
+                            borderWidth: 0,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+
+                this.$wire.on('refreshCharts', () => {
+                    this.chart.data.labels = this.$wire.statusLabels;
+                    this.chart.data.datasets[0].data = this.$wire.statusValues;
+                    this.chart.update();
+                });
+            }
+        }">
+        <h3 class="mb-4 text-base font-semibold text-gray-900">Phân bổ trạng thái</h3>
+        <div class="h-64">
+            <canvas x-ref="canvas"></canvas>
+        </div>
+    </div>
+</div>

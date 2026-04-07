@@ -43,6 +43,8 @@
             <div class="h-2.5 rounded-full bg-indigo-600 transition-all" style="width: {{ $todayProgressPercent }}%">
             </div>
         </div>
+    <div class="mt-6">
+        <livewire:dashboard.activity-chart />
     </div>
 
     <div class="mt-6 grid gap-6 lg:grid-cols-3">
