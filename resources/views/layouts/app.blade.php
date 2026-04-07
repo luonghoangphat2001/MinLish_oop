@@ -108,7 +108,7 @@
                         </div>
                         <span class="text-lg font-black text-slate-900 uppercase">MinLish</span>
                     </div>
-                    <livewire:layout.navigation />
+                    <livewire:global-search mobile />
                 </header>
 
                 {{-- Page Content --}}

@@ -14,13 +14,37 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex flex-wrap items-center gap-3">
             <a href="{{ route('vocabulary.sets') }}" class="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-black text-slate-500 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors uppercase tracking-widest">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
                 </svg>
                 QUAY LẠI
             </a>
+
+            {{-- Export & Import Section --}}
+            <div class="flex items-center gap-2">
+                <button wire:click="export" class="px-6 py-3 text-[12px] font-black text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 transition-all shadow-lg active:scale-95 uppercase tracking-widest flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10l-5.5 5.5m0 0L12 21l5.5-5.5m-5.5 5.5V8a1 1 0 012 0v8.5"/>
+                    </svg>
+                    Export Excel
+                </button>
+
+                <div class="flex items-center gap-2">
+                    <input type="file" wire:model="importFile" accept=".xlsx,.xls,.csv" class="hidden" id="import-file">
+                    <label for="import-file" class="px-6 py-3 text-[12px] font-black text-white bg-amber-500 rounded-xl hover:bg-amber-600 transition-all shadow-lg active:scale-95 uppercase tracking-widest cursor-pointer flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                        </svg>
+                        Import Excel
+                    </label>
+                    <button wire:click="downloadTemplate" class="px-4 py-3 text-[12px] font-black text-slate-500 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors uppercase tracking-widest flex items-center gap-1">
+                        📄
+                    </button>
+                </div>
+            </div>
+
             <a href="{{ route('learning.flashcards', $set) }}" class="px-8 py-3 text-[12px] font-black text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all shadow-lg active:scale-95 uppercase">
                 HỌC FLASHCARD
             </a>
