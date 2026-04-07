@@ -9,20 +9,28 @@
 
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">Tổng số từ</p>
+            <p class="text-sm text-gray-500">Total Words</p>
             <p class="mt-2 text-3xl font-bold text-gray-900">{{ $totalWords }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">Đã học hôm nay</p>
-            <p class="mt-2 text-3xl font-bold text-gray-900">{{ $todayStudied }}</p>
+            <p class="text-sm text-gray-500">Mastered</p>
+            <p class="mt-2 text-3xl font-bold text-emerald-600">{{ $statusCounts['mastered'] }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">Cần ôn tập ngay</p>
-            <p class="mt-2 text-3xl font-bold text-amber-600">{{ $reviewDue }}</p>
+            <p class="text-sm text-gray-500">In Review</p>
+            <p class="mt-2 text-3xl font-bold text-indigo-600">{{ $inReview }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
+            <p class="text-sm text-gray-500">New</p>
+            <p class="mt-2 text-3xl font-bold text-amber-600">{{ $statusCounts['new'] }}</p>
+        </div>
+    </div>
+
+    <div class="mt-6 flex items-center gap-4 rounded-xl border bg-white p-5 shadow-sm">
+        <div class="text-4xl">🔥</div>
+        <div>
             <p class="text-sm text-gray-500">Streak hiện tại</p>
-            <p class="mt-2 text-3xl font-bold text-rose-600">{{ auth()->user()->streak_days ?? 0 }} ngày</p>
+            <p class="text-2xl font-bold text-gray-900">{{ auth()->user()->streak_days ?? 0 }} ngày</p>
         </div>
     </div>
 

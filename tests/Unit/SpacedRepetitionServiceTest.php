@@ -4,10 +4,13 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Services\SpacedRepetitionService;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use PHPUnit\Framework\Attributes\Test;
 
 class SpacedRepetitionServiceTest extends TestCase
 {
+    use RefreshDatabase;
+
     private SpacedRepetitionService $srs;
 
     protected function setUp(): void
@@ -67,5 +70,22 @@ class SpacedRepetitionServiceTest extends TestCase
         $result = $this->srs->calculate(easeFactor: 2.5, intervalDays: 21, repetitions: 5, rating: 'easy');
 
         $this->assertEquals('mastered', $result['status']);
+    }
+
+    #[Test]
+    public function it_initializes_progress_for_a_vocabulary_set()
+    {
+        $user = \App\Models\User::factory()->create();
+        $set = \App\Models\VocabularySet::factory()->create(['user_id' => $user->id]);
+        \App\Models\Vocabulary::factory()->count(5)->create(['set_id' => $set->id]);
+
+        $this->srs->initializeProgress($user, $set);
+
+        $this->assertEquals(5, \App\Models\SrsProgress::where('user_id', $user->id)->count());
+        $this->assertEquals(5, \App\Models\SrsProgress::where('status', 'new')->count());
+
+        // Test duplicate avoidance
+        $this->srs->initializeProgress($user, $set);
+        $this->assertEquals(5, \App\Models\SrsProgress::where('user_id', $user->id)->count());
     }
 }
