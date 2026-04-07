@@ -24,6 +24,9 @@ export default {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 display: ['Baloo 2', 'cursive'],
             },
+            maxWidth: {
+                'screen-content': '1380px',
+            },
         },
     },
 
