@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $usersData = [
             ['name' => 'Pham Nhat Hoang',   'email' => 'phamnhathoang@gmail.com'],
             ['name' => 'To Minh Khoi',      'email' => 'tominhkhoi@gmail.com'],
-            ['name' => 'Bui Xuan Nhat Long','email' => 'buixuannhatlong@gmail.com'],
+            ['name' => 'Bui Xuan Nhat Long', 'email' => 'buixuannhatlong@gmail.com'],
             ['name' => 'Luong Hoang Phat',  'email' => 'luonghoangphat@gmail.com'],
             ['name' => 'Lu Thanh Phuc',     'email' => 'luthanhphuc@gmail.com'],
         ];

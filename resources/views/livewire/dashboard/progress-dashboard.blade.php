@@ -59,38 +59,38 @@
             </div>
 
             @if ($recentSets->isEmpty())
-            <div class="rounded-lg border border-dashed border-gray-300 p-6 text-center">
-                <p class="text-sm text-gray-600">Bạn chưa có bộ từ nào. Tạo bộ từ mẫu ở trang "Bộ từ vựng" để xem nhanh.
-                </p>
-                <a href="{{ route('vocabulary.sets') }}"
-                    class="mt-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
-                    Đi tới trang bộ từ
-                </a>
-            </div>
-            @else
-            <div class="grid gap-3 md:grid-cols-2">
-                @foreach ($recentSets as $set)
-                <div class="rounded-lg border p-4">
-                    <p class="font-semibold text-gray-900">{{ $set->name }}</p>
-                    <p class="mt-1 text-xs text-gray-500">{{ $set->vocabularies_count }} từ</p>
-                    <div class="mt-2 h-2 w-full rounded-full bg-gray-100">
-                        <div class="h-2 rounded-full bg-emerald-500" style="width: {{ $set->completion_percent }}%">
-                        </div>
-                    </div>
-                    <p class="mt-1 text-[11px] text-gray-500">Hoàn thành {{ $set->completion_percent }}%</p>
-                    <div class="mt-3 flex gap-2">
-                        <a href="{{ route('vocabulary.words', $set) }}"
-                            class="rounded-md border px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50">
-                            Quản lý từ
-                        </a>
-                        <a href="{{ route('learning.flashcards', $set) }}"
-                            class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700">
-                            Học flashcard
-                        </a>
-                    </div>
+                <div class="rounded-lg border border-dashed border-gray-300 p-6 text-center">
+                    <p class="text-sm text-gray-600">Bạn chưa có bộ từ nào. Tạo bộ từ mẫu ở trang "Bộ từ vựng" để xem nhanh.
+                    </p>
+                    <a href="{{ route('vocabulary.sets') }}"
+                        class="mt-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
+                        Đi tới trang bộ từ
+                    </a>
                 </div>
-                @endforeach
-            </div>
+            @else
+                <div class="grid gap-3 md:grid-cols-2">
+                    @foreach ($recentSets as $set)
+                        <div class="rounded-lg border p-4">
+                            <p class="font-semibold text-gray-900">{{ $set->name }}</p>
+                            <p class="mt-1 text-xs text-gray-500">{{ $set->vocabularies_count }} từ</p>
+                            <div class="mt-2 h-2 w-full rounded-full bg-gray-100">
+                                <div class="h-2 rounded-full bg-emerald-500" style="width: {{ $set->completion_percent }}%">
+                                </div>
+                            </div>
+                            <p class="mt-1 text-[11px] text-gray-500">Hoàn thành {{ $set->completion_percent }}%</p>
+                            <div class="mt-3 flex gap-2">
+                                <a href="{{ route('vocabulary.words', $set) }}"
+                                    class="rounded-md border px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50">
+                                    Quản lý từ
+                                </a>
+                                <a href="{{ route('learning.flashcards', $set) }}"
+                                    class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700">
+                                    Học flashcard
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             @endif
         </div>
     </div>
