@@ -4,84 +4,118 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>{{ config('app.name', 'MinLish') }} — Học từ vựng</title>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gray-50">
+
+    <body class="font-sans antialiased bg-[#EEF2FF] text-slate-800">
         <div class="min-h-screen flex">
-            {{-- Sidebar --}}
-            <aside class="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0 hidden lg:flex">
+
+            {{-- ═══════════════ SIDEBAR ═══════════════ --}}
+            <aside class="w-96 bg-white flex flex-col flex-shrink-0 hidden lg:flex shadow-sm border-r border-slate-100">
+
                 {{-- Logo --}}
-                <div class="px-6 py-5 border-b border-gray-100">
-                    <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-2">
-                        <span class="text-xl font-bold text-indigo-600">MinLish</span>
-                        <span class="text-xs text-gray-400 font-medium">Learn Vocab</span>
+                <div class="px-6 py-6 border-b border-slate-50">
+                    <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-200">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xl font-black text-slate-900 tracking-tight uppercase">MinLish</span>
+                            <span class="block text-[10px] text-slate-400 font-black uppercase tracking-widest">ECOSYSTEM</span>
+                        </div>
                     </a>
                 </div>
 
                 {{-- Nav --}}
-                <nav class="flex-1 px-4 py-4 space-y-1">
-                    <a href="{{ route('dashboard') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                        Dashboard
-                    </a>
+                <nav class="flex-1 px-4 py-8 space-y-2">
+                    @php
+                        // Đưa 'Bộ từ vựng' lên đầu làm chủ chốt
+                        $navLinks = [
+                            [
+                                'route' => 'dashboard',
+                                'label' => 'BẢNG ĐIỀU KHIỂN',
+                                'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>',
+                                'primary' => false
+                            ],
+                            [
+                                'route' => 'vocabulary.sets',
+                                'label' => 'QUẢN LÝ BỘ TỪ',
+                                'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>',
+                                'primary' => true
+                            ],
+                            [
+                                'route' => 'profile',
+                                'label' => 'HỒ SƠ CÁ NHÂN',
+                                'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>',
+                                'primary' => false
+                            ],
+                        ];
+                    @endphp
 
-                    <a href="{{ route('profile') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                        Hồ sơ
-                    </a>
-
-                    <a href="{{ route('vocabulary.sets') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        Bộ từ vựng
-                    </a>
+                    @foreach($navLinks as $link)
+                        @php $active = request()->routeIs($link['route']); @endphp
+                        <a href="{{ route($link['route']) }}" wire:navigate
+                            class="flex items-center gap-4 px-5 py-4 rounded-2xl text-[13px] font-black transition-all duration-300 group
+                                {{ $active
+                                    ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-200'
+                                    : 'text-slate-500 hover:bg-indigo-50 hover:text-indigo-700' }}">
+                            <div class="flex-shrink-0 {{ $active ? 'text-white' : 'text-slate-400 group-hover:text-indigo-600' }}">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    {!! $link['icon'] !!}
+                                </svg>
+                            </div>
+                            <span class="tracking-widest">{{ $link['label'] }}</span>
+                        </a>
+                    @endforeach
                 </nav>
 
-                {{-- User + Logout --}}
-                <div class="px-4 py-4 border-t border-gray-100">
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-600 truncate">{{ auth()->user()->name }}</span>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="text-xs text-gray-400 hover:text-red-500 transition-colors cursor-pointer">
-                                Đăng xuất
-                            </button>
-                        </form>
+                {{-- User Section --}}
+                <div class="px-4 py-6 border-t border-slate-100">
+                    <div class="flex items-center gap-4 px-4 py-4 rounded-3xl bg-slate-50 border border-slate-100">
+                        <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-[14px] font-black text-white shadow-lg shadow-indigo-100">
+                            {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[13px] font-black text-slate-800 truncate uppercase">{{ auth()->user()->name }}</p>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="text-[10px] font-black text-slate-400 hover:text-red-500 uppercase tracking-widest mt-0.5">ĐĂNG XUẤT</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </aside>
 
-            {{-- Main content --}}
-            <div class="flex-1 flex flex-col min-w-0">
-                {{-- Top bar for mobile --}}
-                <div class="lg:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-                    <span class="text-lg font-bold text-indigo-600">MinLish</span>
-                    <livewire:layout.navigation />
-                </div>
+            {{-- ═══════════════ MAIN ═══════════════ --}}
+            <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
 
-                {{-- Page Heading --}}
-                @if (isset($header))
-                    <header class="bg-white shadow-sm">
-                        <div class="px-6 py-4">
-                            {!! $header !!}
+                {{-- Mobile topbar --}}
+                <header class="lg:hidden bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
                         </div>
-                    </header>
-                @endif
+                        <span class="text-lg font-black text-slate-900 uppercase">MinLish</span>
+                    </div>
+                    <livewire:layout.navigation />
+                </header>
 
                 {{-- Page Content --}}
-                <main class="flex-1 p-6">
-                    {{ $slot }}
+                <main class="flex-1 overflow-y-auto">
+                    <div class="max-w-screen-content mx-auto p-6 sm:p-8 lg:p-10">
+                        {{ $slot }}
+                    </div>
                 </main>
             </div>
         </div>
