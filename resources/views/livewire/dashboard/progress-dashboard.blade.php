@@ -9,28 +9,20 @@
 
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">Total Words</p>
+            <p class="text-sm text-gray-500">Tổng số từ</p>
             <p class="mt-2 text-3xl font-bold text-gray-900">{{ $totalWords }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">Mastered</p>
-            <p class="mt-2 text-3xl font-bold text-emerald-600">{{ $statusCounts['mastered'] }}</p>
+            <p class="text-sm text-gray-500">Đã học hôm nay</p>
+            <p class="mt-2 text-3xl font-bold text-gray-900">{{ $todayStudied }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">In Review</p>
-            <p class="mt-2 text-3xl font-bold text-indigo-600">{{ $inReview }}</p>
+            <p class="text-sm text-gray-500">Cần ôn tập ngay</p>
+            <p class="mt-2 text-3xl font-bold text-amber-600">{{ $reviewDue }}</p>
         </div>
         <div class="rounded-xl border bg-white p-5 shadow-sm">
-            <p class="text-sm text-gray-500">New</p>
-            <p class="mt-2 text-3xl font-bold text-amber-600">{{ $statusCounts['new'] }}</p>
-        </div>
-    </div>
-
-    <div class="mt-6 flex items-center gap-4 rounded-xl border bg-white p-5 shadow-sm">
-        <div class="text-4xl">🔥</div>
-        <div>
             <p class="text-sm text-gray-500">Streak hiện tại</p>
-            <p class="text-2xl font-bold text-gray-900">{{ auth()->user()->streak_days ?? 0 }} ngày</p>
+            <p class="mt-2 text-3xl font-bold text-rose-600">{{ auth()->user()->streak_days ?? 0 }} ngày</p>
         </div>
     </div>
 
@@ -43,8 +35,6 @@
             <div class="h-2.5 rounded-full bg-indigo-600 transition-all" style="width: {{ $todayProgressPercent }}%">
             </div>
         </div>
-    <div class="mt-6">
-        <livewire:dashboard.activity-chart />
     </div>
 
     <div class="mt-6 grid gap-6 lg:grid-cols-3">
@@ -69,38 +59,38 @@
             </div>
 
             @if ($recentSets->isEmpty())
-                <div class="rounded-lg border border-dashed border-gray-300 p-6 text-center">
-                    <p class="text-sm text-gray-600">Bạn chưa có bộ từ nào. Tạo bộ từ mẫu ở trang "Bộ từ vựng" để xem nhanh.
-                    </p>
-                    <a href="{{ route('vocabulary.sets') }}"
-                        class="mt-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
-                        Đi tới trang bộ từ
-                    </a>
-                </div>
+            <div class="rounded-lg border border-dashed border-gray-300 p-6 text-center">
+                <p class="text-sm text-gray-600">Bạn chưa có bộ từ nào. Tạo bộ từ mẫu ở trang "Bộ từ vựng" để xem nhanh.
+                </p>
+                <a href="{{ route('vocabulary.sets') }}"
+                    class="mt-3 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
+                    Đi tới trang bộ từ
+                </a>
+            </div>
             @else
-                <div class="grid gap-3 md:grid-cols-2">
-                    @foreach ($recentSets as $set)
-                        <div class="rounded-lg border p-4">
-                            <p class="font-semibold text-gray-900">{{ $set->name }}</p>
-                            <p class="mt-1 text-xs text-gray-500">{{ $set->vocabularies_count }} từ</p>
-                            <div class="mt-2 h-2 w-full rounded-full bg-gray-100">
-                                <div class="h-2 rounded-full bg-emerald-500" style="width: {{ $set->completion_percent }}%">
-                                </div>
-                            </div>
-                            <p class="mt-1 text-[11px] text-gray-500">Hoàn thành {{ $set->completion_percent }}%</p>
-                            <div class="mt-3 flex gap-2">
-                                <a href="{{ route('vocabulary.words', $set) }}"
-                                    class="rounded-md border px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50">
-                                    Quản lý từ
-                                </a>
-                                <a href="{{ route('learning.flashcards', $set) }}"
-                                    class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700">
-                                    Học flashcard
-                                </a>
-                            </div>
+            <div class="grid gap-3 md:grid-cols-2">
+                @foreach ($recentSets as $set)
+                <div class="rounded-lg border p-4">
+                    <p class="font-semibold text-gray-900">{{ $set->name }}</p>
+                    <p class="mt-1 text-xs text-gray-500">{{ $set->vocabularies_count }} từ</p>
+                    <div class="mt-2 h-2 w-full rounded-full bg-gray-100">
+                        <div class="h-2 rounded-full bg-emerald-500" style="width: {{ $set->completion_percent }}%">
                         </div>
-                    @endforeach
+                    </div>
+                    <p class="mt-1 text-[11px] text-gray-500">Hoàn thành {{ $set->completion_percent }}%</p>
+                    <div class="mt-3 flex gap-2">
+                        <a href="{{ route('vocabulary.words', $set) }}"
+                            class="rounded-md border px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50">
+                            Quản lý từ
+                        </a>
+                        <a href="{{ route('learning.flashcards', $set) }}"
+                            class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700">
+                            Học flashcard
+                        </a>
+                    </div>
                 </div>
+                @endforeach
+            </div>
             @endif
         </div>
     </div>
