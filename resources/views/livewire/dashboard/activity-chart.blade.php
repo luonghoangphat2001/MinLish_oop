@@ -1,7 +1,6 @@
 <div class="grid gap-6 lg:grid-cols-2">
     {{-- Hoạt động 30 ngày --}}
-    <div class="rounded-xl border bg-white p-5 shadow-sm"
-        x-data="{
+    <div class="rounded-xl border bg-white p-5 shadow-sm" x-data="{
             labels: @js($activityLabels),
             values: @js($activityValues),
             chart: null,
@@ -44,8 +43,7 @@
     </div>
 
     {{-- Phân bổ trạng thái SRS --}}
-    <div class="rounded-xl border bg-white p-5 shadow-sm"
-        x-data="{
+    <div class="rounded-xl border bg-white p-5 shadow-sm" x-data="{
             labels: @js($statusLabels),
             values: @js($statusValues),
             chart: null,
