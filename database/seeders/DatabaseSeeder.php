@@ -84,7 +84,7 @@ class DatabaseSeeder extends Seeder
                     return [
                         'user_id'       => $set->user_id,
                         'vocabulary_id' => $vocab->id,
-                        'rating'        => rand(1, 5),
+                        'rating'        => collect(['again', 'hard', 'good', 'easy'])->random(),
                         'studied_at'    => $now,
                         'created_at'    => $now,
                         'updated_at'    => $now,

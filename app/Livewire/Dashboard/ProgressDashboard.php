@@ -47,6 +47,13 @@ class ProgressDashboard extends Component
             return $set;
         });
 
+        $statusCounts = [
+            'new' => (int) ($statusCounts['new'] ?? 0),
+            'learning' => (int) ($statusCounts['learning'] ?? 0),
+            'review' => (int) ($statusCounts['review'] ?? 0),
+            'mastered' => (int) ($statusCounts['mastered'] ?? 0),
+        ];
+
         return view('livewire.dashboard.progress-dashboard', [
             'totalWords' => $totalWords,
             'todayStudied' => $todayStudied,
@@ -56,12 +63,8 @@ class ProgressDashboard extends Component
             'todayProgressPercent' => $todayTarget > 0
                 ? min(100, (int) round(($todayStudied / $todayTarget) * 100))
                 : 0,
-            'statusCounts' => [
-                'new' => (int) ($statusCounts['new'] ?? 0),
-                'learning' => (int) ($statusCounts['learning'] ?? 0),
-                'review' => (int) ($statusCounts['review'] ?? 0),
-                'mastered' => (int) ($statusCounts['mastered'] ?? 0),
-            ],
+            'statusCounts' => $statusCounts,
+            'inReview' => $statusCounts['learning'] + $statusCounts['review'],
         ]);
     }
 }

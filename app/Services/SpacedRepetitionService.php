@@ -64,42 +64,36 @@ class SpacedRepetitionService
 
     /**
      * Khởi tạo tiến độ SRS cho toàn bộ vocabulary trong bộ khi user bắt đầu học.
-     * Không tạo trùng: chỉ chèn những từ chưa có record của user.
+     * Sử dụng upsert để tối ưu hóa hiệu suất và tránh trùng lặp bản ghi.
      */
     public function initializeProgress(User $user, VocabularySet $set): void
     {
-        $vocabIds = $set->vocabularies()->pluck('id');
+        $vocabularies = $set->vocabularies;
 
-        if ($vocabIds->isEmpty()) {
+        if ($vocabularies->isEmpty()) {
             return;
         }
 
-        $existing = SrsProgress::where('user_id', $user->id)
-            ->whereIn('vocabulary_id', $vocabIds)
-            ->pluck('vocabulary_id');
-
-        $newIds = $vocabIds->diff($existing);
-
-        if ($newIds->isEmpty()) {
-            return;
-        }
-
-        $now = Carbon::now();
-
-        $payload = $newIds->map(fn ($vocabId) => [
-            'user_id'        => $user->id,
-            'vocabulary_id'  => $vocabId,
-            'ease_factor'    => 2.5,
-            'interval_days'  => 1,
-            'repetitions'    => 0,
-            'status'         => 'new',
-            'next_review_at' => null,
-            'last_reviewed_at' => null,
-            'created_at'     => $now,
-            'updated_at'     => $now,
+        $now = now();
+        $data = $vocabularies->map(fn ($vocab) => [
+            'user_id'       => $user->id,
+            'vocabulary_id' => $vocab->id,
+            'ease_factor'   => 2.5,
+            'interval_days' => 1,
+            'repetitions'   => 0,
+            'status'        => 'new',
+            'created_at'    => $now,
+            'updated_at'    => $now,
         ])->all();
 
-        SrsProgress::insert($payload);
+        // Sử dụng upsert để chèn dữ liệu. 
+        // Phải đảm bảo database có unique constraint trên [user_id, vocabulary_id].
+        // Ở đây chúng ta chỉ chèn mới nếu chưa có, hoặc cập nhật lại timestamp nếu đã có (tùy chọn).
+        SrsProgress::upsert(
+            $data, 
+            ['user_id', 'vocabulary_id'], 
+            ['updated_at'] // Chỉ cập nhật updated_at nếu đã tồn tại để tránh ghi đè tiến độ cũ
+        );
     }
 
     private function buildResult(float $easeFactor, int $intervalDays, int $repetitions, string $status): array
@@ -108,40 +102,9 @@ class SpacedRepetitionService
             'ease_factor'    => round($easeFactor, 4),
             'interval_days'  => $intervalDays,
             'repetitions'    => $repetitions,
-            'next_review_at' => Carbon::now()->addDays($intervalDays),
+            'next_review_at' => now()->addDays($intervalDays),
             'status'         => $status,
         ];
-    }
-
-    public function initializeProgress(User $user, VocabularySet $set): void
-    {
-        $existingIds = SrsProgress::where('user_id', $user->id)
-            ->whereIn('vocabulary_id', $set->vocabularies()->pluck('id'))
-            ->pluck('vocabulary_id')
-            ->all();
-
-        $insertData = [];
-
-        foreach ($set->vocabularies as $vocabulary) {
-            if (in_array($vocabulary->id, $existingIds, true)) {
-                continue;
-            }
-
-            $insertData[] = [
-                'user_id' => $user->id,
-                'vocabulary_id' => $vocabulary->id,
-                'ease_factor' => 2.5,
-                'interval_days' => 1,
-                'repetitions' => 0,
-                'status' => 'new',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ];
-        }
-
-        if (!empty($insertData)) {
-            SrsProgress::insert($insertData);
-        }
     }
 
     public function getWordsForReview(User $user, ?int $setId = null): Collection
