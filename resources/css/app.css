@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,42 +6,71 @@
 
 @layer base {
   :root {
-    --color-primary: #4F46E5;
+    /* ─── Brand tokens gốc ─── */
+    --color-primary:   #4F46E5;
     --color-secondary: #818CF8;
-    --color-cta: #22C55E;
-    --color-bg: #EEF2FF;
-    --color-text: #312E81;
+    --color-cta:       #22C55E;
+    --color-bg:        #EEF2FF;
+    --color-text:      #312E81;
+  }
+
+  /* Font mặc định 14px theo yêu cầu mới nhất */
+  html {
+    font-size: 14px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   }
 
   body {
+    font-size: 1rem; /* 14px */
+    line-height: 1.5;
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: 'Inter', 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Tiêu đề 18px mặc định cho các thẻ heading chính */
+  h1, h2, h3 {
+    font-size: 1.285rem; /* ~18px khi gốc là 14px */
+    font-weight: 800;
   }
 }
 
 @layer utilities {
-  .glass {
-    @apply backdrop-blur-md bg-white/60 border border-white/30 shadow-lg;
+  /* ─── 3D Card Flip (flashcard) ─── */
+  .card-flip-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
-  .glass-dark {
-    @apply backdrop-blur-md bg-indigo-900/60 border border-indigo-700/30 shadow-lg;
+  .card-flip-inner.flipped { transform: rotateY(180deg); }
+  .card-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
+  .card-face-back { transform: rotateY(180deg); }
 
-  .gradient-bg {
-    background: linear-gradient(135deg, var(--color-bg) 0%, #E0E7FF 40%, #C7D2FE 100%);
-  }
-
+  /* ─── Text gradient ─── */
   .text-gradient {
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* ─── Glass helpers ─── */
+  .glass {
+    @apply backdrop-blur-md bg-white/60 border border-white/30 shadow-lg;
+  }
+  .glass-dark {
+    @apply backdrop-blur-md bg-indigo-900/60 border border-indigo-700/30 shadow-lg;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--color-bg) 0%, #E0E7FF 40%, #C7D2FE 100%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-flip-inner { transition: none; }
   }
 }

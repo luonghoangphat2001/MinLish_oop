@@ -62,40 +62,6 @@ class SpacedRepetitionService
         return $this->buildResult($newEaseFactor, $newInterval, $newRepetitions, $status);
     }
 
-    /**
-     * Khởi tạo tiến độ SRS cho toàn bộ vocabulary trong bộ khi user bắt đầu học.
-     * Sử dụng upsert để tối ưu hóa hiệu suất và tránh trùng lặp bản ghi.
-     */
-    public function initializeProgress(User $user, VocabularySet $set): void
-    {
-        $vocabularies = $set->vocabularies;
-
-        if ($vocabularies->isEmpty()) {
-            return;
-        }
-
-        $now = now();
-        $data = $vocabularies->map(fn ($vocab) => [
-            'user_id'       => $user->id,
-            'vocabulary_id' => $vocab->id,
-            'ease_factor'   => 2.5,
-            'interval_days' => 1,
-            'repetitions'   => 0,
-            'status'        => 'new',
-            'created_at'    => $now,
-            'updated_at'    => $now,
-        ])->all();
-
-        // Sử dụng upsert để chèn dữ liệu. 
-        // Phải đảm bảo database có unique constraint trên [user_id, vocabulary_id].
-        // Ở đây chúng ta chỉ chèn mới nếu chưa có, hoặc cập nhật lại timestamp nếu đã có (tùy chọn).
-        SrsProgress::upsert(
-            $data, 
-            ['user_id', 'vocabulary_id'], 
-            ['updated_at'] // Chỉ cập nhật updated_at nếu đã tồn tại để tránh ghi đè tiến độ cũ
-        );
-    }
-
     private function buildResult(float $easeFactor, int $intervalDays, int $repetitions, string $status): array
     {
         return [
@@ -105,6 +71,41 @@ class SpacedRepetitionService
             'next_review_at' => now()->addDays($intervalDays),
             'status'         => $status,
         ];
+    }
+
+    /**
+     * Khởi tạo tiến độ SRS cho toàn bộ vocabulary trong bộ khi user bắt đầu học.
+     * Không tạo trùng: chỉ chèn những từ chưa có record của user.
+     */
+    public function initializeProgress(User $user, VocabularySet $set): void
+    {
+        $existingIds = SrsProgress::where('user_id', $user->id)
+            ->whereIn('vocabulary_id', $set->vocabularies()->pluck('id'))
+            ->pluck('vocabulary_id')
+            ->all();
+
+        $insertData = [];
+
+        foreach ($set->vocabularies as $vocabulary) {
+            if (in_array($vocabulary->id, $existingIds, true)) {
+                continue;
+            }
+
+            $insertData[] = [
+                'user_id' => $user->id,
+                'vocabulary_id' => $vocabulary->id,
+                'ease_factor' => 2.5,
+                'interval_days' => 1,
+                'repetitions' => 0,
+                'status' => 'new',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+
+        if (!empty($insertData)) {
+            SrsProgress::insert($insertData);
+        }
     }
 
     public function getWordsForReview(User $user, ?int $setId = null): Collection
