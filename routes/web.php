@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Auth\ProfileEdit;
+use App\Livewire\Auth\ProfileEdit;
 use App\Http\Controllers\GoogleController;
 use App\Livewire\Learning\LearningSession;
 use App\Livewire\Learning\FlashCard;
