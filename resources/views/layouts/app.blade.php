@@ -24,10 +24,10 @@
 
         <div class="px-6 py-6 border-b border-slate-50">
 
-            {{-- 🔍 SEARCH BUTTON --}}
+            {{-- 🔍 SEARCH BUTTON (FIX PR WARNING) --}}
             <div class="pb-4">
                 <button 
-                    @click="$dispatch('open-search')"
+                    wire:click="$set('showResults', true)"
                     class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-sm font-bold transition"
                     aria-label="Open search"
                 >
@@ -102,8 +102,9 @@
 
             <span class="font-black">MinLish</span>
 
+            {{-- 🔍 MOBILE SEARCH --}}
             <button 
-                @click="$dispatch('open-search')"
+                wire:click="$set('showResults', true)"
                 class="px-3 py-2 bg-indigo-100 text-indigo-700 rounded"
                 aria-label="Open search"
             >
