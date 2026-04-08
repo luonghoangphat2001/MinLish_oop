@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Auth\ProfileEdit;
 use App\Http\Controllers\GoogleController;
+use App\Livewire\Learning\LearningSession;
 use App\Livewire\Learning\FlashCard;
 use App\Livewire\Vocabulary\VocabularyIndex;
 use App\Livewire\Dashboard\ProgressDashboard;
@@ -20,5 +21,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+Route::get('/learning/session', LearningSession::class)->middleware('auth')->name('learning.session');
 
 require __DIR__ . '/auth.php';
