@@ -39,7 +39,8 @@ class GlobalSearch extends Component
 
     public function goToResult($id)
     {
-        return redirect()->route('vocabulary.show', $id);
+        $vocab = Vocabulary::findOrFail($id);
+        return redirect()->route('vocabulary.words', $vocab->set_id);
     }
 
     public function render()
