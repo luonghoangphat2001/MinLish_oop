@@ -16,6 +16,7 @@ Route::middleware(['auth'])->group(function () {
     Route::view('vocabulary/sets', 'vocabulary.sets')->name('vocabulary.sets');
     Route::get('vocabulary/sets/{set}/words', VocabularyIndex::class)->name('vocabulary.words');
     Route::get('learning/sets/{set}/flashcards', FlashCard::class)->name('learning.flashcards');
+    Route::get('learning/sets/{set}/context', \App\Livewire\Learning\ContextLearning::class)->name('learning.context');
 });
 
 
