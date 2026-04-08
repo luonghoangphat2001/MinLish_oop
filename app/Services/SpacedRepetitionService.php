@@ -73,6 +73,10 @@ class SpacedRepetitionService
         ];
     }
 
+    /**
+     * Khởi tạo tiến độ SRS cho toàn bộ vocabulary trong bộ khi user bắt đầu học.
+     * Không tạo trùng: chỉ chèn những từ chưa có record của user.
+     */
     public function initializeProgress(User $user, VocabularySet $set): void
     {
         $existingIds = SrsProgress::where('user_id', $user->id)
