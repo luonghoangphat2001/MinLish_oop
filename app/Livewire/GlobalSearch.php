@@ -2,69 +2,44 @@
 
 namespace App\Livewire;
 
-use App\Models\Vocabulary;
-use App\Models\VocabularySet;
 use Livewire\Component;
-use Livewire\Attributes\On;
+use App\Models\Vocabulary;
 
 class GlobalSearch extends Component
 {
-    public string $query = '';
-    public bool $showResults = false;
-    public array $results = [];
+    public $query = '';
+    public $results = [];
+    public $showResults = false;
 
-    public function updatedQuery(): void
+    public function updatedQuery()
     {
-        $this->debouncedSearch();
+        if (trim($this->query) === '') {
+            $this->results = [];
+            return;
+        }
+
+        $this->results = Vocabulary::where('word', 'like', '%' . $this->query . '%')
+            ->limit(10)
+            ->get()
+            ->map(function ($item) {
+                return [
+                    'id' => $item->id,
+                    'word' => $item->word,
+                    'meaning' => $item->meaning,
+                ];
+            });
     }
 
-    #[On('close-search')]
-    public function closeSearch(): void
+    public function closeSearch()
     {
         $this->showResults = false;
         $this->query = '';
         $this->results = [];
     }
 
-    public function goToResult($vocabularyId): void
+    public function goToResult($id)
     {
-        $vocabulary = Vocabulary::findOrFail($vocabularyId);
-        $this->dispatch('navigate', url: route('vocabulary.words', $vocabulary->set));
-        $this->closeSearch();
-    }
-
-    public function debouncedSearch()
-    {
-        if (strlen($this->query) < 2) {
-            $this->results = [];
-            $this->showResults = false;
-            return;
-        }
-
-        $this->results = Vocabulary::where(function ($query) {
-                $query->where('word', 'like', '%' . $this->query . '%')
-                      ->orWhere('meaning', 'like', '%' . $this->query . '%');
-            })
-            ->with(['set.user:id,name'])
-            ->whereHas('set.user', function ($q) {
-                $q->where('id', auth()->id());
-            })
-            ->orWhereHas('set', function ($q) {
-                $q->where('is_public', true);
-            })
-            ->limit(10)
-            ->get()
-            ->map(fn($v) => [
-                'id' => $v->id,
-                'word' => $v->word,
-                'meaning' => $v->meaning,
-                'set' => $v->set->name,
-                'author' => $v->set->user?->name ?? 'Public',
-                'url' => route('vocabulary.words', $v->set)
-            ])
-            ->toArray();
-
-        $this->showResults = count($this->results) > 0;
+        return redirect()->route('vocabulary.show', $id);
     }
 
     public function render()
