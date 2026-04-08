@@ -1,4 +1,4 @@
-﻿"title","assignee","day","deps","sprint","desc","checklist"
+"title","assignee","day","deps","sprint","desc","checklist"
 "T01 — Khởi tạo Laravel Project & GitHub","Dev 1","1","—","sprint-1","Tạo Laravel 11 project mới, cài Laravel Breeze (Livewire stack), cấu hình `.env`, kết nối GitHub repo `MinLish_oop`. Push commit đầu tiên lên `main`. Đây là task nền tảng, mọi task khác phụ thuộc vào.","- [ ] Tạo Laravel project mới với `composer create-project`
 - [ ] Cài Laravel Breeze với `breeze:install livewire`
 - [ ] Cài thêm packages: `livewire/livewire`, `maatwebsite/excel`
@@ -99,17 +99,17 @@
 - [ ] `firstOrCreate` DailyGoal khi user save
 - [ ] Validation: new_words min 1 max 100, review_words min 0 max 200
 - [ ] Hiển thị current values khi load trang"
-"T18 — Import Vocabulary từ Excel/CSV","Dev 2","8","T11","sprint-3","Cài `maatwebsite/excel` (đã trong composer). Tạo Livewire component upload file Excel/CSV. Tạo `VocabularyImport` class xử lý từng row, validate (word required, meaning required), insert batch vào DB. Cung cấp file template Excel mẫu để user tải về.","- [ ] Tạo `app/Imports/VocabularyImport.php` implements `ToModel`, `WithHeadingRow`, `WithValidation`
-- [ ] Column mapping: word, pronunciation, meaning, description_en, example, collocation, related_words, note
-- [ ] Validation rules per row: word required, meaning required
-- [ ] Livewire component với file upload, progress, kết quả (X imported, Y errors)
-- [ ] Tạo file template `storage/app/templates/vocabulary-template.xlsx`
-- [ ] Nút download template
-- [ ] Route và link từ trang VocabularyIndex (T11)"
-"T19 — Export Vocabulary Set ra Excel","Dev 2","8","T11","sprint-3","Tạo `VocabularyExport` class. Thêm nút ""Export Excel"" vào trang danh sách từ (T11). Export toàn bộ vocabulary của một set kèm đầy đủ các field. Dùng cùng package `maatwebsite/excel` với T18.","- [ ] Tạo `app/Exports/VocabularyExport.php` implements `FromCollection`, `WithHeadings`
-- [ ] Export: id, word, pronunciation, meaning, description_en, example, collocation, related_words, note
-- [ ] Thêm method `export()` vào `VocabularyIndex` component
-- [ ] Download trả về file `{set-name}-vocabulary.xlsx`"
+"T18 — Import Vocabulary từ Excel/CSV","Phúc - done","8","T11","sprint-3","Cài `maatwebsite/excel` (đã trong composer). Tạo Livewire component upload file Excel/CSV. Tạo `VocabularyImport` class xử lý từng row, validate (word required, meaning required), insert batch vào DB. Cung cấp file template Excel mẫu để user tải về.","- [x] Tạo `app/Imports/VocabularyImport.php` implements `ToModel`, `WithHeadingRow`, `WithValidation`
+- [x] Column mapping: word, pronunciation, meaning, description_en, example, collocation, related_words, note
+- [x] Validation rules per row: word required, meaning required
+- [x] Livewire component với file upload, progress, kết quả (X imported, Y errors)
+- [x] Tạo file template `storage/app/templates/vocabulary-template.xlsx`
+- [x] Nút download template
+- [x] Route và link từ trang VocabularyIndex (T11)"
+"T19 — Export Vocabulary Set ra Excel","Phúc - done","8","T11","sprint-3","Tạo `VocabularyExport` class. Thêm nút ""Export Excel"" vào trang danh sách từ (T11). Export toàn bộ vocabulary của một set kèm đầy đủ các field. Dùng cùng package `maatwebsite/excel` với T18.","- [x] Tạo `app/Exports/VocabularyExport.php` implements `FromCollection`, `WithHeadings`
+- [x] Export: id, word, pronunciation, meaning, description_en, example, collocation, related_words, note
+- [x] Thêm method `export()` vào `VocabularyIndex` component
+- [x] Download trả về file `{set-name}-vocabulary.xlsx`"
 "T20 — Progress Dashboard (Livewire)","Khôi - done","8–9","T16","sprint-3","Tạo `Dashboard/ProgressDashboard.php` hiển thị tổng quan tiến độ học: tổng số từ theo từng status (new/learning/review/mastered), streak hiện tại, số từ học hôm nay vs mục tiêu, tổng số từ trong tất cả sets. Cần T16 có dữ liệu thực sau khi học.","- [ ] `php artisan make:livewire Dashboard/ProgressDashboard`
 - [ ] Stats cards: Total Words, Mastered, In Review, New
 - [ ] Streak display với fire icon
@@ -127,30 +127,30 @@
 - [ ] Gọi sau khi LearningSession kết thúc (ít nhất 1 từ đã được học)
 - [ ] Hiển thị streak trên header (layout app.blade.php T02)
 - [ ] Hiển thị streak trên màn hình kết quả phiên học (T16)"
-"T23 — Notification: Daily Reminder (Email)","Dev 4","8","T05","sprint-3","Tạo `Notifications/DailyStudyReminder.php` và `Jobs/SendDailyReminderJob.php`. Schedule job chạy mỗi ngày 8h sáng, gửi email cho user nào có `last_study_date != today` (chưa học hôm nay). Cấu hình queue database driver.","- [ ] `php artisan make:notification DailyStudyReminder`
-- [ ] `php artisan make:job SendDailyReminderJob`
-- [ ] Email nội dung: lời nhắc học, số từ cần review hôm nay, link đến app
-- [ ] `App\Console\Kernel` schedule: `->dailyAt('08:00')`
-- [ ] `config/queue.php` QUEUE_CONNECTION=database
-- [ ] `php artisan queue:table && php artisan migrate`
-- [ ] Test bằng `php artisan queue:work` local"
-"T24 — Notification: Review Reminder","Dev 4","9","T23","sprint-3","Tạo `Notifications/ReviewWordsReminder.php` và `Jobs/SendReviewReminderJob.php`. Gửi email khi user có từ quá hạn review (`next_review_at < now() - 24h`). Schedule chạy mỗi ngày 6h chiều. Phụ thuộc T23 vì dùng chung infrastructure Queue.","- [ ] `php artisan make:notification ReviewWordsReminder`
-- [ ] `php artisan make:job SendReviewReminderJob`
-- [ ] Email nội dung: số từ quá hạn, danh sách set có từ cần ôn
-- [ ] Schedule `->dailyAt('18:00')`
-- [ ] Không gửi nếu user đã học hôm nay (last_study_date = today)"
+"T23 — Notification: Daily Reminder (Email)","Phúc - done","8","T05","sprint-3","Tạo `Notifications/DailyStudyReminder.php` và `Jobs/SendDailyReminderJob.php`. Schedule job chạy mỗi ngày 8h sáng, gửi email cho user nào có `last_study_date != today` (chưa học hôm nay). Cấu hình queue database driver.","- [x] `php artisan make:notification DailyStudyReminder`
+- [x] `php artisan make:job SendDailyReminderJob`
+- [x] Email nội dung: lời nhắc học, số từ cần review hôm nay, link đến app
+- [x] `App\Console\Kernel` schedule: `->dailyAt('08:00')`
+- [x] `config/queue.php` QUEUE_CONNECTION=database
+- [x] `php artisan queue:table && php artisan migrate`
+- [x] Test bằng `php artisan queue:work` local"
+"T24 — Notification: Review Reminder","Phúc - done","9","T23","sprint-3","Tạo `Notifications/ReviewWordsReminder.php` và `Jobs/SendReviewReminderJob.php`. Gửi email khi user có từ quá hạn review (`next_review_at < now() - 24h`). Schedule chạy mỗi ngày 6h chiều. Phụ thuộc T23 vì dùng chung infrastructure Queue.","- [x] `php artisan make:notification ReviewWordsReminder`
+- [x] `php artisan make:job SendReviewReminderJob`
+- [x] Email nội dung: số từ quá hạn, danh sách set có từ cần ôn
+- [x] Schedule `->dailyAt('18:00')`
+- [x] Không gửi nếu user đã học hôm nay (last_study_date = today)"
 "T25 — Public Vocabulary Sets (Browse & Clone)","Dev 2","10","T10","sprint-3","Tạo trang ""Khám phá"" liệt kê tất cả set có `is_public = true`. Cho phép user clone set của người khác về tài khoản mình (deep copy: tạo set mới + copy toàn bộ vocabulary). Phụ thuộc T10 vì dùng chung VocabularySet model và UI patterns.","- [ ] Livewire component `Vocabulary/PublicSetBrowser` với search + filter tags
 - [ ] Hiển thị: tên set, tác giả, số từ, tags
 - [ ] Method `cloneSet(VocabularySet $set): void` — tạo VocabularySet mới + copy vocabularies
 - [ ] Không thể clone set của chính mình
 - [ ] Route `/explore`
 - [ ] Link ""Khám phá"" trong sidebar"
-"T26 — Search Từ Vựng Global","Dev 3","10","T11","sprint-3","Thêm thanh search trong header cho phép tìm kiếm từ vựng trong tất cả set của user (và public sets). Dùng Livewire component nhúng vào header layout, debounce 300ms. Kết quả hiển thị inline dropdown với tên từ, nghĩa, set chứa từ đó.","- [ ] Livewire component `GlobalSearch` nhúng vào `app.blade.php`
-- [ ] Search query >= 2 ký tự mới bắt đầu query
-- [ ] Debounce 300ms với `wire:model.live.debounce.300ms`
-- [ ] Kết quả: top 10 matches, hiển thị word + meaning + set name
-- [ ] Click kết quả → điều hướng đến set chứa từ đó
-- [ ] Đóng dropdown khi click outside (AlpineJS)"
+"T26 — Search Từ Vựng Global","Phúc - done","10","T11","sprint-3","Thêm thanh search trong header cho phép tìm kiếm từ vựng trong tất cả set của user (và public sets). Dùng Livewire component nhúng vào header layout, debounce 300ms. Kết quả hiển thị inline dropdown với tên từ, nghĩa, set chứa từ đó.","- [x] Livewire component `GlobalSearch` nhúng vào `app.blade.php`
+- [x] Search query >= 2 ký tự mới bắt đầu query
+- [x] Debounce 300ms với `wire:model.live.debounce.300ms`
+- [x] Kết quả: top 10 matches, hiển thị word + meaning + set name
+- [x] Click kết quả → điều hướng đến set chứa từ đó
+- [x] Đóng dropdown khi click outside (AlpineJS)"
 "T27 — QC: Viết Test Cases & Test Sprint 1–2","QC","8–9","T09, T16","sprint-3","Viết test cases manual cho: đăng ký/đăng nhập, tạo vocabulary set, thêm từ, chạy một phiên học FlashCard đến hết. Dùng dữ liệu seeder từ T09. Report bugs vào GitHub Issues với label `bug`, `priority`. Cần T16 hoàn thành để có full user flow.","- [ ] Viết test plan document trong `docs/test-plan-sprint1-2.md`
 - [ ] Test auth: register, login, logout, profile edit
 - [ ] Test vocab: tạo set, thêm từ, sửa từ, xóa từ
