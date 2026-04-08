@@ -25,9 +25,5 @@ Homestead.yaml
 Thumbs.db
 docs
 .agent
-<<<<<<< HEAD
-vendor
-=======
 vendor
 DO-FIX
->>>>>>> 7ef4268b3ffbd68cac2db2a0eb2de9478d18e60b
