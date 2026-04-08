@@ -68,7 +68,7 @@ class SpacedRepetitionService
             'ease_factor'    => round($easeFactor, 4),
             'interval_days'  => $intervalDays,
             'repetitions'    => $repetitions,
-            'next_review_at' => Carbon::now()->addDays($intervalDays),
+            'next_review_at' => now()->addDays($intervalDays),
             'status'         => $status,
         ];
     }
