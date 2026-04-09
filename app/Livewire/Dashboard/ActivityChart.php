@@ -11,17 +11,26 @@ use Livewire\Component;
 
 class ActivityChart extends Component
 {
-    public function render()
+    public $labels = [];
+    public $barData = [];
+    public $statusCounts = [];
+
+    public function mount()
+    {
+        $this->refreshData();
+    }
+
+    public function refreshData()
     {
         $activityData = $this->getActivityData();
-        $statusData = $this->getStatusData();
+        $this->labels = $activityData['labels'];
+        $this->barData = $activityData['values'];
+        $this->statusCounts = $this->getSrsDistributionData();
+    }
 
-        return view('livewire.dashboard.activity-chart', [
-            'activityLabels' => $activityData['labels'],
-            'activityValues' => $activityData['values'],
-            'statusLabels'   => $statusData['labels'],
-            'statusValues'   => $statusData['values'],
-        ]);
+    public function render()
+    {
+        return view('livewire.dashboard.activity-chart');
     }
 
     private function getActivityData(): array
@@ -30,7 +39,7 @@ class ActivityChart extends Component
         $endDate = Carbon::today();
         $startDate = Carbon::today()->subDays(29);
 
-        // Query study logs grouped by date
+        // Query study logs grouped by date within the last 30 days
         $logs = StudyLog::where('user_id', $user->id)
             ->whereDate('studied_at', '>=', $startDate)
             ->select(DB::raw('DATE(studied_at) as date'), DB::raw('COUNT(*) as count'))
@@ -38,7 +47,7 @@ class ActivityChart extends Component
             ->pluck('count', 'date')
             ->all();
 
-        // Fill in missing dates with zero
+        // Ensure all 30 days are present
         $labels = [];
         $values = [];
         $period = CarbonPeriod::create($startDate, $endDate);
@@ -55,35 +64,12 @@ class ActivityChart extends Component
         ];
     }
 
-    private function getStatusData(): array
+    private function getSrsDistributionData(): array
     {
-        $user = auth()->user();
-        
-        $counts = SrsProgress::where('user_id', $user->id)
+        return SrsProgress::where('user_id', auth()->id())
             ->selectRaw('status, COUNT(*) as total')
             ->groupBy('status')
             ->pluck('total', 'status')
-            ->all();
-
-        // Standard order and labels
-        $statusMap = [
-            'new'      => 'Mới',
-            'learning' => 'Đang học',
-            'review'   => 'Ôn tập',
-            'mastered' => 'Đã thuộc',
-        ];
-
-        $labels = [];
-        $values = [];
-
-        foreach ($statusMap as $key => $label) {
-            $labels[] = $label;
-            $values[] = $counts[$key] ?? 0;
-        }
-
-        return [
-            'labels' => $labels,
-            'values' => $values,
-        ];
+            ->toArray();
     }
 }

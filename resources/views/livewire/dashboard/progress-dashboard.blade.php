@@ -47,6 +47,9 @@
         <p class="mt-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">{{ $todayProgressPercent }}% HOÀN THÀNH</p>
     </div>
 
+    {{-- ── Activity & SRS Charts ── --}}
+    <livewire:dashboard.activity-chart />
+
     {{-- ── SRS status + Recent sets ── --}}
     <div class="grid gap-5 lg:grid-cols-3">
 
