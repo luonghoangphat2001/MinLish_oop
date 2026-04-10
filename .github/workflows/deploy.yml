@@ -57,6 +57,7 @@ jobs:
                   script: |
                       cd ${{ secrets.REMOTE_PATH }}
                       rm -f .htaccess index.php
+                      rm -f database/migrations/*.php
 
             # 8. Upload code (Optimized)
             - name: 🚚 Upload to Server
