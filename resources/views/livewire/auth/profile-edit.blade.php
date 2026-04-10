@@ -1,6 +1,6 @@
 <div class="max-w-xl mx-auto py-6 px-4 sm:px-0">
 
-    <h2 class="text-[18px] font-black text-slate-900 uppercase tracking-tight mb-6">HỒ SƠ CỦA TÔI</h2>
+    <h2 class="text-[18px] font-black text-slate-900 uppercase tracking-tight mb-6">Hồ sơ của tôi</h2>
 
     @if (session()->has('message'))
         <div class="mb-5 flex items-center gap-3 rounded-[20px] bg-emerald-50 border border-emerald-100 px-5 py-4 shadow-sm">
@@ -15,19 +15,18 @@
 
     <form wire:submit.prevent="save" class="bg-white rounded-[24px] border border-slate-100 shadow-sm divide-y divide-slate-50">
 
-        {{-- Basic info --}}
         <div class="px-6 py-6 space-y-4">
-            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400">THÔNG TIN CƠ BẢN</h3>
+            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Thông tin cơ bản</h3>
 
             <div>
-                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">HỌ VÀ TÊN</label>
+                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Họ và tên</label>
                 <input wire:model.defer="name" type="text" placeholder="Nguyen Van A"
                     class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
                 @error('name') <p class="mt-1.5 text-[11px] font-black text-red-500 uppercase tracking-tight">{{ $message }}</p> @enderror
             </div>
 
             <div>
-                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">TRÌNH ĐỘ HIỆN TẠI</label>
+                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Trình độ hiện tại</label>
                 <select wire:model.defer="level"
                     class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
                     @foreach (['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as $lvl)
@@ -37,36 +36,41 @@
             </div>
 
             <div>
-                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">MỤC TIÊU HỌC</label>
+                <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Mục tiêu học</label>
                 <input wire:model.defer="goal" type="text" placeholder="IELTS, Giao tiếp, Business..."
                     class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
             </div>
         </div>
 
-        {{-- Daily goal --}}
         <div class="px-6 py-6 space-y-4">
-            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400">MỤC TIÊU HÀNG NGÀY</h3>
+            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Mục tiêu hằng ngày</h3>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div>
-                    <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">TỪ MỚI / NGÀY</label>
+                    <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Từ mới / ngày</label>
                     <input wire:model.defer="new_words" type="number" min="1" max="100"
                         class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
                     @error('new_words') <p class="mt-1.5 text-[11px] font-black text-red-500 uppercase tracking-tight">{{ $message }}</p> @enderror
                 </div>
                 <div>
-                    <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">TỪ ÔN / NGÀY</label>
+                    <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Từ ôn / ngày</label>
                     <input wire:model.defer="review_words" type="number" min="1" max="200"
                         class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
+                    @error('review_words') <p class="mt-1.5 text-[11px] font-black text-red-500 uppercase tracking-tight">{{ $message }}</p> @enderror
+                </div>
+                <div>
+                    <label class="block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-2">Quiz / ngày</label>
+                    <input wire:model.defer="daily_quiz_words" type="number" min="5" max="100"
+                        class="w-full px-5 py-3 text-[14px] font-black border border-slate-50 rounded-xl bg-slate-50/50 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/5 outline-none transition-all">
+                    @error('daily_quiz_words') <p class="mt-1.5 text-[11px] font-black text-red-500 uppercase tracking-tight">{{ $message }}</p> @enderror
                 </div>
             </div>
         </div>
 
-        {{-- Submit --}}
         <div class="px-6 py-5">
             <button type="submit"
                 class="w-full py-4 text-[12px] font-black text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-all shadow-xl shadow-indigo-600/20 active:scale-95 uppercase tracking-widest cursor-pointer">
-                LƯU HỒ SƠ
+                Lưu hồ sơ
             </button>
         </div>
     </form>
