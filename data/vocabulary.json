@@ -3,120 +3,160 @@
         "word": "apple",
         "pronunciation": "/ˈæp.əl/",
         "meaning": "quả táo",
-        "example": "She eats an apple every morning."
+        "description_en": "A round fruit with red or green skin and a whitish interior.",
+        "example": "She eats an apple every morning.",
+        "note": "Common fruit often used in pies."
     },
     {
         "word": "river",
         "pronunciation": "/ˈrɪv.ər/",
         "meaning": "dòng sông",
-        "example": "The river runs through the city center."
+        "description_en": "A large natural stream of water flowing in a channel to the sea.",
+        "example": "The river runs through the city center.",
+        "note": "Important for transportation and irrigation."
     },
     {
         "word": "mountain",
         "pronunciation": "/ˈmaʊn.tən/",
         "meaning": "ngọn núi",
-        "example": "They climbed a high mountain last summer."
+        "description_en": "A large natural elevation of the earth's surface rising abruptly from the surrounding level.",
+        "example": "They climbed a high mountain last summer.",
+        "note": "Everest is the highest mountain."
     },
     {
         "word": "library",
         "pronunciation": "/ˈlaɪ.brər.i/",
         "meaning": "thư viện",
-        "example": "I borrowed this book from the library."
+        "description_en": "A building or room containing collections of books and periodicals for use or borrowing.",
+        "example": "I borrowed this book from the library.",
+        "note": "Most universities have a large library."
     },
     {
         "word": "journey",
         "pronunciation": "/ˈdʒɜː.ni/",
         "meaning": "chuyến đi",
-        "example": "Our journey took three hours by train."
+        "description_en": "An act of traveling from one place to another.",
+        "example": "Our journey took three hours by train.",
+        "note": "Often used for long or significant trips."
     },
     {
         "word": "coffee",
         "pronunciation": "/ˈkɒf.i/",
         "meaning": "cà phê",
-        "example": "He drinks black coffee without sugar."
+        "description_en": "A hot drink made from the roasted and ground seeds of a tropical shrub.",
+        "example": "He drinks black coffee without sugar.",
+        "note": "Contains caffeine which helps stay awake."
     },
     {
         "word": "sunrise",
         "pronunciation": "/ˈsʌn.raɪz/",
         "meaning": "bình minh",
-        "example": "We watched the sunrise on the beach."
+        "description_en": "The time in the morning when the sun appears.",
+        "example": "We watched the sunrise on the beach.",
+        "note": "The opposite of sunset."
     },
     {
         "word": "island",
         "pronunciation": "/ˈaɪ.lənd/",
         "meaning": "hòn đảo",
-        "example": "This island is famous for its coral reefs."
+        "description_en": "A piece of land surrounded by water.",
+        "example": "This island is famous for its coral reefs.",
+        "note": "Australia is sometimes called an island continent."
     },
     {
         "word": "garden",
         "pronunciation": "/ˈɡɑː.dən/",
         "meaning": "khu vườn",
-        "example": "The roses in the garden are blooming."
+        "description_en": "A piece of ground adjoining a house used for growing flowers, fruit, or vegetables.",
+        "example": "The roses in the garden are blooming.",
+        "note": "Gardening is a popular hobby."
     },
     {
         "word": "engineer",
         "pronunciation": "/ˌen.dʒɪˈnɪər/",
         "meaning": "kỹ sư",
-        "example": "Her father is a software engineer."
+        "description_en": "A person who designs, builds, or maintains engines, machines, or public works.",
+        "example": "Her father is a software engineer.",
+        "note": "Requires strong skills in math and science."
     },
     {
         "word": "balance",
         "pronunciation": "/ˈbæl.əns/",
         "meaning": "sự cân bằng",
-        "example": "Work-life balance is important."
+        "description_en": "An even distribution of weight enabling someone or something to remain upright and steady.",
+        "example": "Work-life balance is important.",
+        "note": "Essential for both physical and mental health."
     },
     {
         "word": "harvest",
         "pronunciation": "/ˈhɑː.vɪst/",
         "meaning": "mùa thu hoạch",
-        "example": "Farmers celebrate the rice harvest."
+        "description_en": "The process or period of gathering in crops.",
+        "example": "Farmers celebrate the rice harvest.",
+        "note": "Occurs in autumn for many crops."
     },
     {
         "word": "museum",
         "pronunciation": "/mjuːˈziː.əm/",
         "meaning": "bảo tàng",
-        "example": "The museum closes at 6 p.m."
+        "description_en": "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited.",
+        "example": "The museum closes at 6 p.m.",
+        "note": "Great place for educational trips."
     },
     {
         "word": "festival",
         "pronunciation": "/ˈfes.tɪ.vəl/",
         "meaning": "lễ hội",
-        "example": "We joined the lantern festival."
+        "description_en": "A day or period of celebration, typically a religious commemoration.",
+        "example": "We joined the lantern festival.",
+        "note": "Usually involves music, food, and dancing."
     },
     {
         "word": "compass",
         "pronunciation": "/ˈkʌm.pəs/",
         "meaning": "la bàn",
-        "example": "The compass helped them find the way."
+        "description_en": "An instrument containing a magnetized pointer which shows the direction of magnetic north.",
+        "example": "The compass helped them find the way.",
+        "note": "Used for navigation in the wilderness."
     },
     {
         "word": "notebook",
         "pronunciation": "/ˈnəʊt.bʊk/",
         "meaning": "sổ tay",
-        "example": "She writes ideas in a small notebook."
+        "description_en": "A small book with blank or ruled pages for writing notes in.",
+        "example": "She writes ideas in a small notebook.",
+        "note": "Handy for students and workers."
     },
     {
         "word": "energy",
         "pronunciation": "/ˈen.ə.dʒi/",
         "meaning": "năng lượng",
-        "example": "Solar energy is becoming popular."
+        "description_en": "The strength and vitality required for sustained physical or mental activity.",
+        "example": "Solar energy is becoming popular.",
+        "note": "The world is moving towards renewable energy."
     },
     {
         "word": "patient",
         "pronunciation": "/ˈpeɪ.ʃənt/",
         "meaning": "bệnh nhân; kiên nhẫn",
-        "example": "The doctor spoke kindly to the patient."
+        "description_en": "A person receiving or registered to receive medical treatment.",
+        "example": "The doctor spoke kindly to the patient.",
+        "note": "Also an adjective meaning able to accept delay."
     },
     {
         "word": "climate",
         "pronunciation": "/ˈklaɪ.mət/",
         "meaning": "khí hậu",
-        "example": "The climate here is mild all year."
+        "description_en": "The weather conditions prevailing in an area in general or over a long period.",
+        "example": "The climate here is mild all year.",
+        "note": "Global climate change is a major concern."
     },
     {
         "word": "culture",
         "pronunciation": "/ˈkʌl.tʃər/",
         "meaning": "văn hóa",
-        "example": "Food is a big part of local culture."
+        "description_en": "The arts and other manifestations of human intellectual achievement regarded collectively.",
+        "example": "Food is a big part of local culture.",
+        "note": "Every nation has its unique culture."
     }
 ]
