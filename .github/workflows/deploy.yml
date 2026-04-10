@@ -54,7 +54,7 @@ jobs:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   port: ${{ secrets.SSH_PORT || 22 }}
-                  source: "./"
+                  source: "*"
                   strip_components: 1
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
