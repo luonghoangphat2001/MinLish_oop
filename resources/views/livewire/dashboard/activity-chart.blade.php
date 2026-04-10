@@ -96,7 +96,7 @@
     }" class="space-y-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {{-- Activity Bar Chart --}}
-        <div class="bg-white rounded-[32px] border border-slate-100 shadow-sm p-8">
+        <div class="bg-white mt-6 rounded-[32px] border border-slate-100 shadow-sm p-8">
             <div class="flex items-center justify-between mb-8">
                 <div>
                     <h3 class="text-[15px] font-black text-slate-900 uppercase tracking-tight">HOẠT ĐỘNG 30 NGÀY</h3>
@@ -116,7 +116,7 @@
         </div>
 
         {{-- SRS Status Doughnut Chart --}}
-        <div class="bg-white rounded-[32px] border border-slate-100 shadow-sm p-8">
+        <div class="bg-white mt-6 rounded-[32px] border border-slate-100 shadow-sm p-8">
             <div class="flex items-center justify-between mb-8">
                 <div>
                     <h3 class="text-[15px] font-black text-slate-900 uppercase tracking-tight">PHÂN BỔ SRS</h3>

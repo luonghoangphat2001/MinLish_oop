@@ -16,11 +16,25 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="font-sans antialiased bg-[#EEF2FF] text-slate-800">
+<body class="font-sans antialiased bg-slate-50 text-slate-800" x-data="{ mobileSidebarOpen: false }">
 
-    <div class="min-h-screen flex">
-        <aside class="w-96 bg-white flex flex-col flex-shrink-0 hidden lg:flex shadow-sm border-r border-slate-100">
-            <div class="px-6 py-6 border-b border-slate-50">
+    <div class="min-h-screen flex relative">
+        {{-- Mobile Sidebar Overlay --}}
+        <div x-show="mobileSidebarOpen" 
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             @click="mobileSidebarOpen = false"
+             class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 lg:hidden"></div>
+
+        {{-- Sidebar --}}
+        <aside :class="mobileSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
+               class="fixed inset-y-0 left-0 w-80 bg-white flex flex-col z-50 transform transition-transform duration-300 lg:relative lg:w-80 lg:z-auto shadow-xl lg:shadow-none border-r border-slate-100">
+            
+            <div class="px-8 py-8 border-b border-slate-50 flex items-center justify-between">
                 <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-200">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -28,13 +42,16 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-xl font-black text-slate-900 tracking-tight uppercase">MinLish</span>
-                        <span class="block text-[10px] text-slate-400 font-black uppercase tracking-widest">Ecosystem</span>
+                        <span class="text-[20px] font-black text-slate-900 tracking-tight uppercase leading-none block">MinLish</span>
+                        <span class="block text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1 tracking-tighter">Ecosystem</span>
                     </div>
                 </a>
+                <button @click="mobileSidebarOpen = false" class="lg:hidden p-2 text-slate-400 hover:text-indigo-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
             </div>
 
-            <nav class="flex-1 px-4 py-8 space-y-2">
+            <nav class="flex-1 px-4 py-8 space-y-2 overflow-y-auto">
                 @php
                 $navLinks = [
                     ['route' => 'dashboard','label' => 'Bảng điều khiển','icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />'],
@@ -46,47 +63,47 @@
 
                 @foreach($navLinks as $link)
                     @php $active = request()->routeIs($link['route']); @endphp
-                    <a href="{{ route($link['route']) }}" wire:navigate
-                       class="flex items-center gap-4 px-5 py-4 rounded-2xl text-[13px] font-black transition-all {{ $active ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-200' : 'text-slate-500 hover:bg-indigo-50 hover:text-indigo-700' }}">
+                    <a href="{{ route($link['route']) }}" wire:navigate @click="mobileSidebarOpen = false"
+                       class="flex items-center gap-4 px-6 py-4 rounded-[16px] text-[14px] font-black transition-all {{ $active ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-600/20' : 'text-slate-500 hover:bg-slate-50 hover:text-indigo-700' }}">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor">{!! $link['icon'] !!}</svg>
                         <span class="tracking-widest uppercase">{{ $link['label'] }}</span>
                     </a>
                 @endforeach
             </nav>
 
-            <div class="px-4 py-6 border-t border-slate-100">
-                <div class="flex items-center gap-4 px-4 py-4 rounded-3xl bg-slate-50 border">
-                    <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-black">
+            <div class="px-4 py-8 border-t border-slate-100">
+                <div class="flex items-center gap-4 px-4 py-4 rounded-[20px] bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-black shadow-sm">
                         {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
                     </div>
-                    <div class="flex-1">
-                        <p class="text-sm font-black uppercase">{{ auth()->user()->name }}</p>
+                    <div class="flex-1 overflow-hidden">
+                        <p class="text-[13px] font-black uppercase truncate">{{ auth()->user()->name }}</p>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button class="text-xs text-slate-400 hover:text-red-500 uppercase">Đăng xuất</button>
+                            <button class="text-[10px] text-slate-400 hover:text-red-500 font-black uppercase tracking-widest">Đăng xuất</button>
                         </form>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <div class="flex-1 flex flex-col">
-            <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-slate-100 px-6 py-4">
+        {{-- Main Content --}}
+        <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+            <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-100 px-4 sm:px-8 py-4">
                 <div class="flex items-center justify-between gap-4">
                     <div class="flex items-center gap-4">
-                        <span class="lg:hidden font-black text-indigo-600 text-lg uppercase tracking-tight">MinLish</span>
-                        <h2 class="hidden lg:block text-sm font-black text-slate-400 uppercase tracking-widest">@yield('title', 'Hệ sinh thái học tập')</h2>
+                        <button @click="mobileSidebarOpen = true" class="lg:hidden p-2 -ml-2 text-slate-500 hover:text-indigo-600">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        </button>
+                        <span class="lg:hidden font-black text-indigo-600 text-xl uppercase tracking-tighter">MinLish</span>
+                        <h2 class="hidden lg:block text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">@yield('title', 'Hệ sinh thái học tập')</h2>
                     </div>
 
                     <div class="flex items-center gap-3">
-                        <button
-                            @click="$dispatch('open-search-modal')"
-                            class="group flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-100 transition-all duration-300">
-                            <span class="text-indigo-500 group-hover:scale-110 transition-transform duration-300">🔍</span>
-                            <span class="text-[13px] font-black text-slate-500 group-hover:text-indigo-600 uppercase tracking-tight">Tìm từ vựng...</span>
-                            <div class="hidden sm:flex items-center gap-1 ml-4 bg-white px-2 py-1 rounded-lg border border-slate-100 text-[10px] font-black text-slate-400 shadow-sm">
-                                <span class="text-[8px]">⌘</span> K
-                            </div>
+                        <button @click="$dispatch('open-search-modal')"
+                            class="group flex items-center justify-center sm:justify-start gap-3 p-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-indigo-100 transition-all duration-300">
+                            <span class="text-indigo-500">🔍</span>
+                            <span class="hidden sm:inline text-[13px] font-black text-slate-400 group-hover:text-indigo-600 uppercase tracking-tight">Tìm kiếm...</span>
                         </button>
 
                         <livewire:dashboard.notification-bell />
@@ -94,7 +111,7 @@
                 </div>
             </header>
 
-            <main class="flex-1 overflow-y-auto p-6">
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
                 {{ $slot }}
             </main>
         </div>

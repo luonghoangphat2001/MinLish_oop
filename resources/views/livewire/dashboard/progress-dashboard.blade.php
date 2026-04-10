@@ -58,7 +58,7 @@
         <div class="rounded-xl border bg-white p-5 shadow-sm lg:col-span-2">
             <div class="mb-4 flex items-center justify-between">
                 <h3 class="text-base font-semibold text-gray-900">Bộ từ gần đây</h3>
-                <span class="text-xs text-gray-500">Nhấn vào bộ từ để thêm từ hoặc học flashcard</span>
+                <span class="text-sm text-gray-500">Nhấn vào bộ từ để thêm từ hoặc học flashcard</span>
             </div>
 
             @if ($recentSets->isEmpty())
@@ -74,18 +74,18 @@
                     @foreach ($recentSets as $set)
                         <div class="rounded-lg border p-4">
                             <p class="font-semibold text-gray-900">{{ $set->name }}</p>
-                            <p class="mt-1 text-xs text-gray-500">{{ $set->vocabularies_count }} từ</p>
+                            <p class="mt-1 text-sm text-gray-500">{{ $set->vocabularies_count }} từ</p>
                             <div class="mt-2 h-2 w-full rounded-full bg-gray-100">
                                 <div class="h-2 rounded-full bg-emerald-500" style="width: {{ $set->completion_percent }}%"></div>
                             </div>
                             <p class="mt-1 text-[11px] text-gray-500">Hoàn thành {{ $set->completion_percent }}%</p>
                             <div class="mt-3 flex gap-2">
                                 <a href="{{ route('vocabulary.words', $set) }}"
-                                   class="rounded-md border px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50">
+                                   class="rounded-md border px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
                                     Quản lý từ
                                 </a>
                                 <a href="{{ route('learning.flashcards', $set) }}"
-                                   class="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700">
+                                   class="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700">
                                     Học flashcard
                                 </a>
                             </div>

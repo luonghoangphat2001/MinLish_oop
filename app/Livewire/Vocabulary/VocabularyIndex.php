@@ -127,6 +127,15 @@ class VocabularyIndex extends Component
     {
         if (!$this->importFile) return;
 
+        if (!class_exists('ZipArchive')) {
+            $extension = strtolower($this->importFile->getClientOriginalExtension());
+            if ($extension !== 'csv') {
+                $this->dispatch('notify', ['type' => 'error', 'message' => 'Hệ thống thiếu extension ZIP. Vui lòng chuyển file sang định dạng .CSV để import!']);
+                $this->importFile = null;
+                return;
+            }
+        }
+
         try {
             \Maatwebsite\Excel\Facades\Excel::import(
                 new \App\Imports\VocabularyImport($this->set->id),
@@ -144,9 +153,19 @@ class VocabularyIndex extends Component
 
     public function export()
     {
+        $fileName = $this->set->name . '-vocabulary';
+        
+        if (!class_exists('ZipArchive')) {
+            return \Maatwebsite\Excel\Facades\Excel::download(
+                new \App\Exports\VocabularyExport($this->set->id),
+                $fileName . '.csv',
+                \Maatwebsite\Excel\Excel::CSV
+            );
+        }
+
         return \Maatwebsite\Excel\Facades\Excel::download(
             new \App\Exports\VocabularyExport($this->set->id),
-            $this->set->name . '-vocabulary.xlsx'
+            $fileName . '.xlsx'
         );
     }
 
