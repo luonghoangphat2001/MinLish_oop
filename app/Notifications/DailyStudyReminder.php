@@ -19,7 +19,7 @@ class DailyStudyReminder extends Notification
 
     public function via($notifiable): array
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     public function toMail($notifiable): MailMessage
@@ -30,13 +30,17 @@ class DailyStudyReminder extends Notification
             ->where('status', '!=', 'mastered')
             ->count();
 
+        $streak = $notifiable->streak_days ?? 0;
+        $streakText = $streak > 0 ? "Chuỗi **{$streak} ngày** của bạn đang chờ được nối tiếp!" : "Bắt đầu hành trình chinh phục tiếng Anh ngay hôm nay!";
+
         return (new MailMessage)
-            ->subject('🔔 Nhắc nhở học từ vựng hàng ngày - MinLish')
+            ->subject('🔥 Đừng để chuỗi ngày học của bạn bị đứt quãng!')
             ->greeting('Chào ' . $notifiable->name . '!')
-            ->line('Bạn chưa học từ vựng hôm nay. Hãy dành 15 phút để ôn tập nhé!')
-            ->line("Có **{$reviewCount}** từ cần ôn tập đang chờ bạn.")
-            ->action('Học ngay', url('/dashboard'))
-            ->line('Cảm ơn bạn đã sử dụng MinLish!')
+            ->line('Vẫy tay chào ngày mới! ' . $streakText)
+            ->line('Một chút nỗ lực mỗi ngày sẽ mang lại thành công lớn. Hãy dành 10-15 phút để ôn tập nhé!')
+            ->line("Hiện có **{$reviewCount}** từ vựng đang chờ bạn ôn luyện.")
+            ->action('Học ngay thôi nào!', url('/dashboard'))
+            ->line('Hẹn gặp lại bạn trong bài học!')
             ->line('Team MinLish');
     }
 }
