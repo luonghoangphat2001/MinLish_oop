@@ -1,0 +1,402 @@
+[
+    {
+        "word": "aerobic",
+        "pronunciation": "/erˈoʊ.bɪk/",
+        "meaning": "hiếu khí",
+        "description_en": "Relating to, involving, or requiring free oxygen.",
+        "example": "Aerobic exercise is great for cardiovascular health.",
+        "note": "Commonly refers to cardio workouts."
+    },
+    {
+        "word": "antioxidant",
+        "pronunciation": "/ˌæn.tiˈɒk.sɪ.dənt/",
+        "meaning": "chất chống oxy hóa",
+        "description_en": "A substance that inhibits oxidation, especially one used to counteract the deterioration of stored food products.",
+        "example": "Berries are rich in antioxidants.",
+        "note": "Helps protect cells from damage."
+    },
+    {
+        "word": "blood pressure",
+        "pronunciation": "/ˈblʌd ˌpreʃ.ər/",
+        "meaning": "huyết áp",
+        "description_en": "The pressure of the blood in the circulatory system.",
+        "example": "High blood pressure can increase the risk of heart disease.",
+        "note": "Measured in mmHg."
+    },
+    {
+        "word": "calorie",
+        "pronunciation": "/ˈkæl.ər.i/",
+        "meaning": "calo",
+        "description_en": "The energy needed to raise the temperature of 1 gram of water through 1 °C.",
+        "example": "You need to burn more calories than you consume to lose weight.",
+        "note": "Unit of energy in nutrition."
+    },
+    {
+        "word": "carbohydrate",
+        "pronunciation": "/ˌkɑː.bəʊˈhaɪ.dreɪt/",
+        "meaning": "tinh bột; đường",
+        "description_en": "Large group of organic compounds occurring in foods and living tissues.",
+        "example": "Bread and pasta are high in carbohydrates.",
+        "note": "Often shortened to 'carbs'."
+    },
+    {
+        "word": "cardiovascular",
+        "pronunciation": "/ˌkɑː.di.əʊˈvæs.kjə.lər/",
+        "meaning": "thuộc tim mạch",
+        "description_en": "Relating to the heart and blood vessels.",
+        "example": "Running improves cardiovascular fitness.",
+        "note": "Core focus of endurance training."
+    },
+    {
+        "word": "cholesterol",
+        "pronunciation": "/kəˈles.tə.rɒl/",
+        "meaning": "cholesterol",
+        "description_en": "A compound found in Most body tissues, including the blood and the nerves.",
+        "example": "Lowering your cholesterol can improve heart health.",
+        "note": "Divided into HDL (good) and LDL (bad)."
+    },
+    {
+        "word": "metabolism",
+        "pronunciation": "/məˈtæb.əl.ɪ.zəm/",
+        "meaning": "sự trao đổi chất",
+        "description_en": "The chemical processes that occur within a living organism in order to maintain life.",
+        "example": "Drinking water can help boost your metabolism.",
+        "note": "Affects how fast you burn energy."
+    },
+    {
+        "word": "nutrient",
+        "pronunciation": "/ˈnjuː.tri.ənt/",
+        "meaning": "chất dinh dưỡng",
+        "description_en": "A substance that provides nourishment essential for growth and the maintenance of life.",
+        "example": "Vegetables are packed with essential nutrients.",
+        "note": "Includes vitamins, minerals, etc."
+    },
+    {
+        "word": "obesity",
+        "pronunciation": "/əʊˈbiː.sə.ti/",
+        "meaning": "béo phì",
+        "description_en": "The state of being grossly fat or overweight.",
+        "example": "Obesity is a major health concern in many developed countries.",
+        "note": "Linked to various chronic diseases."
+    },
+    {
+        "word": "protein",
+        "pronunciation": "/ˈprəʊ.tiːn/",
+        "meaning": "chất đạm",
+        "description_en": "Large molecules composed of one or more long chains of amino acids.",
+        "example": "Protein is essential for muscle repair and growth.",
+        "note": "Found in meat, eggs, and beans."
+    },
+    {
+        "word": "supplement",
+        "pronunciation": "/ˈsʌp.lɪ.mənt/",
+        "meaning": "thực phẩm bổ sung",
+        "description_en": "Something that completes or enhances something else when added to it.",
+        "example": "She takes a vitamin D supplement every day.",
+        "note": "Should not replace a balanced diet."
+    },
+    {
+        "word": "vaccination",
+        "pronunciation": "/ˌvæk.sɪˈneɪ.ʃən/",
+        "meaning": "tiêm chủng",
+        "description_en": "Treatment with a vaccine to produce immunity against a disease.",
+        "example": "Vaccination has eradicated several deadly diseases.",
+        "note": "Essential for public health."
+    },
+    {
+        "word": "vitamin",
+        "pronunciation": "/ˈvɪt.ə.mɪn/",
+        "meaning": "vitamin",
+        "description_en": "Organic compounds which are essential for normal growth and nutrition.",
+        "example": "Oranges are a great source of vitamin C.",
+        "note": "Essential micronutrients."
+    },
+    {
+        "word": "wellness",
+        "pronunciation": "/ˈwel.nəs/",
+        "meaning": "sức khỏe toàn diện",
+        "description_en": "The state of being in good health, especially as an actively pursued goal.",
+        "example": "The company offers a workplace wellness program.",
+        "note": "Includes physical and mental health."
+    },
+    {
+        "word": "allergic",
+        "pronunciation": "/əˈlɜː.dʒɪk/",
+        "meaning": "dị ứng",
+        "description_en": "Caused by or relating to an allergy.",
+        "example": "I am allergic to peanuts.",
+        "note": "Can range from mild to severe."
+    },
+    {
+        "word": "antibiotic",
+        "pronunciation": "/ˌæn.ti.baɪˈɒt.ɪk/",
+        "meaning": "kháng sinh",
+        "description_en": "A medicine that inhibits the growth of or destroys microorganisms.",
+        "example": "Antibiotics are only effective against bacterial infections.",
+        "note": "Use only when prescribed by a doctor."
+    },
+    {
+        "word": "anxiety",
+        "pronunciation": "/æŋˈzaɪ.ə.ti/",
+        "meaning": "lo âu",
+        "description_en": "A feeling of worry, nervousness, or unease.",
+        "example": "Exercise can help reduce symptoms of anxiety.",
+        "note": "A common mental health condition."
+    },
+    {
+        "word": "dehydration",
+        "pronunciation": "/ˌdiː.haɪˈdreɪ.ʃən/",
+        "meaning": "mất nước",
+        "description_en": "A harmful reduction in the amount of water in the body.",
+        "example": "Dehydration can lead to dizziness and fatigue.",
+        "note": "Drink plenty of fluids during exercise."
+    },
+    {
+        "word": "diabetes",
+        "pronunciation": "/ˌdaɪ.əˈbiː.tiːz/",
+        "meaning": "bệnh tiểu đường",
+        "description_en": "A disease in which the body’s ability to produce or respond to the hormone insulin is impaired.",
+        "example": "He manages his diabetes with insulin and diet.",
+        "note": "Type 1 and Type 2 are the main forms."
+    },
+    {
+        "word": "digestion",
+        "pronunciation": "/daɪˈdʒes.tʃən/",
+        "meaning": "sự tiêu hóa",
+        "description_en": "The process of breaking down food by mechanical and enzymatic action.",
+        "example": "Fiber is important for healthy digestion.",
+        "note": "Begins in the mouth."
+    },
+    {
+        "word": "epidemic",
+        "pronunciation": "/ˌep.ɪˈdem.ɪk/",
+        "meaning": "dịch bệnh",
+        "description_en": "A widespread occurrence of an infectious disease in a community at a particular time.",
+        "example": "The flu epidemic spread rapidly across the city.",
+        "note": "Health authorities monitor these closely."
+    },
+    {
+        "word": "fatigue",
+        "pronunciation": "/fəˈtiːɡ/",
+        "meaning": "mệt mỏi",
+        "description_en": "Extreme tiredness resulting from mental or physical exertion or illness.",
+        "example": "Chronic fatigue can be a symptom of an underlying health problem.",
+        "note": "Rest and sleep are essential for recovery."
+    },
+    {
+        "word": "glucose",
+        "pronunciation": "/ˈɡluː.kəʊs/",
+        "meaning": "đường huyết",
+        "description_en": "A simple sugar which is an important energy source in living organisms.",
+        "example": "The body converts carbohydrates into glucose.",
+        "note": "Main source of energy for cells."
+    },
+    {
+        "word": "hypertension",
+        "pronunciation": "/ˌhaɪ.pəˈten.ʃən/",
+        "meaning": "cao huyết áp",
+        "description_en": "Abnormally high blood pressure.",
+        "example": "Hypertension is often called a silent killer.",
+        "note": "Medical term for high blood pressure."
+    },
+    {
+        "word": "immunity",
+        "pronunciation": "/ɪˈmjuː.nə.ti/",
+        "meaning": "sự miễn dịch",
+        "description_en": "The ability of an organism to resist a particular infection or toxin.",
+        "example": "Breastfeeding provides natural immunity to infants.",
+        "note": "Can be natural or acquired through vaccines."
+    },
+    {
+        "word": "inflammation",
+        "pronunciation": "/ˌɪn.fləˈmeɪ.ʃən/",
+        "meaning": "sự viêm nhiễm",
+        "description_en": "A physical condition in which part of the body becomes reddened, swollen, hot, and often painful.",
+        "example": "Ice can help reduce inflammation after an injury.",
+        "note": "The body's response to injury or infection."
+    },
+    {
+        "word": "insomnia",
+        "pronunciation": "/ɪnˈsɒm.ni.ə/",
+        "meaning": "mất ngủ",
+        "description_en": "Habitual sleeplessness; inability to sleep.",
+        "example": "Stress is a common cause of insomnia.",
+        "note": "Affects millions of people worldwide."
+    },
+    {
+        "word": "muscle",
+        "pronunciation": "/ˈmʌs.əl/",
+        "meaning": "cơ bắp",
+        "description_en": "A band or bundle of fibrous tissue in a human or animal body that has the ability to contract.",
+        "example": "Resistance training helps build muscle mass.",
+        "note": "Essential for movement and strength."
+    },
+    {
+        "word": "nutrition",
+        "pronunciation": "/njuːˈtrɪʃ.ən/",
+        "meaning": "dinh dưỡng",
+        "description_en": "The process of providing or obtaining the food necessary for health and growth.",
+        "example": "Good nutrition is key to a long and healthy life.",
+        "note": "Studied by dietitians."
+    },
+    {
+        "word": "parasite",
+        "pronunciation": "/ˈpær.ə.saɪt/",
+        "meaning": "ký sinh trùng",
+        "description_en": "An organism which lives in or on another organism and benefits by deriving nutrients at the host's expense.",
+        "example": "The water source was contaminated with parasites.",
+        "note": "Can cause various diseases."
+    },
+    {
+        "word": "prescription",
+        "pronunciation": "/prɪˈskrɪp.ʃən/",
+        "meaning": "đơn thuốc",
+        "description_en": "An instruction written by a medical practitioner that authorizes a patient to Bechuanas medicine.",
+        "example": "You need a prescription to buy these pills.",
+        "note": "Must be followed exactly as written."
+    },
+    {
+        "word": "recovery",
+        "pronunciation": "/rɪˈkʌv.ər.i/",
+        "meaning": "sự hồi phục",
+        "description_en": "A return to a normal state of health, mind, or strength.",
+        "example": "Fast recovery is important for athletes.",
+        "note": "Rest and proper care aid recovery."
+    },
+    {
+        "word": "rehabilitation",
+        "pronunciation": "/ˌriː.həˌbɪl.ɪˈteɪ.ʃən/",
+        "meaning": "sự phục hồi chức năng",
+        "description_en": "The action of restoring someone to health or normal life through training and therapy.",
+        "example": "Physical therapy is part of his rehabilitation program.",
+        "note": "Often shortened to 'rehab'."
+    },
+    {
+        "word": "respiration",
+        "pronunciation": "/ˌres.pɪˈreɪ.ʃən/",
+        "meaning": "sự hô hấp",
+        "description_en": "The action of breathing.",
+        "example": "The doctor checked the patient's respiration rate.",
+        "note": "Involves inhaling and exhaling."
+    },
+    {
+        "word": "sedentary",
+        "pronunciation": "/ˈsed.ən.tər.i/",
+        "meaning": "ít vận động",
+        "description_en": "Tending to spend Much time seated; somewhat inactive.",
+        "example": "A sedentary lifestyle increases the risk of obesity.",
+        "note": "Opposite of active."
+    },
+    {
+        "word": "symptom",
+        "pronunciation": "/ˈsɪmp.təm/",
+        "meaning": "triệu chứng",
+        "description_en": "A physical or mental feature which is regarded as indicating a condition of disease.",
+        "example": "A high fever is a common symptom of the flu.",
+        "note": "Should be discussed with a doctor."
+    },
+    {
+        "word": "therapy",
+        "pronunciation": "/ˈθer.ə.pi/",
+        "meaning": "trị liệu",
+        "description_en": "Treatment intended to relieve or heal a disorder.",
+        "example": "Cognitive behavioral therapy is effective for depression.",
+        "note": "Can be physical, mental, or occupational."
+    },
+    {
+        "word": "toxic",
+        "pronunciation": "/ˈtɒk.sɪk/",
+        "meaning": "độc hại",
+        "description_en": "Poisonous.",
+        "example": "The factory released toxic chemicals into the river.",
+        "note": "Harmful to living organisms."
+    },
+    {
+        "word": "trauma",
+        "pronunciation": "/ˈtrɔː.mə/",
+        "meaning": "chấn thương",
+        "description_en": "A deeply distressing or disturbing experience.",
+        "example": "He is still recovering from the emotional trauma of the accident.",
+        "note": "Can be physical or psychological."
+    },
+    {
+        "word": "ultraviolet",
+        "pronunciation": "/ˌʌl.trəˈvaɪə.lət/",
+        "meaning": "tia cực tím",
+        "description_en": "Having a wavelength shorter than that of the violet end of the visible spectrum.",
+        "example": "UV radiation can damage your skin.",
+        "note": "Abbreviated as UV."
+    },
+    {
+        "word": "virus",
+        "pronunciation": "/ˈvaɪə.rəs/",
+        "meaning": "virus",
+        "description_en": "An infective agent that typically consists of a nucleic acid molecule in a protein coat.",
+        "example": "Antibiotics do not work against viruses.",
+        "note": "Smaller than bacteria."
+    },
+    {
+        "word": "workload",
+        "pronunciation": "/ˈwɜːk.ləʊ/",
+        "meaning": "khối lượng công việc",
+        "description_en": "The amount of work to be done by someone or something.",
+        "example": "A heavy workload can lead to stress and burnout.",
+        "note": "Balance is necessary for mental health."
+    },
+    {
+        "word": "yeast",
+        "pronunciation": "/jiːst/",
+        "meaning": "men nấm",
+        "description_en": "A microscopic fungus consisting of single oval cells.",
+        "example": "Yeast is used to make bread rise.",
+        "note": "Used in baking and brewing."
+    },
+    {
+        "word": "zinc",
+        "pronunciation": "/zɪŋk/",
+        "meaning": "kẽm",
+        "description_en": "A silvery-white metal that is an essential trace element for humans.",
+        "example": "Zinc is important for immune system function.",
+        "note": "A common mineral in supplements."
+    },
+    {
+        "word": "backbone",
+        "pronunciation": "/ˈbæk.bəʊn/",
+        "meaning": "xương sống",
+        "description_en": "The series of vertebrae extending from the skull to the pelvis.",
+        "example": "Yoga can help improve the flexibility of your backbone.",
+        "note": "Also known as the spine."
+    },
+    {
+        "word": "brainstorming",
+        "pronunciation": "/ˈbreɪn.stɔː.mɪŋ/",
+        "meaning": "động não",
+        "description_en": "A group discussion to produce ideas or solve problems.",
+        "example": "Brainstorming sessions can spark creativity.",
+        "note": "Good for mental exercise."
+    },
+    {
+        "word": "calcium",
+        "pronunciation": "/ˈkæl.si.əm/",
+        "meaning": "canxi",
+        "description_en": "A silvery-white metal that is essential for healthy bones and teeth.",
+        "example": "Milk is a high-calcium food.",
+        "note": "Essential for bone density."
+    },
+    {
+        "word": "diet",
+        "pronunciation": "/ˈdaɪ.ət/",
+        "meaning": "chế độ ăn uống",
+        "description_en": "The kinds of food that a person, animal, or community habitually eats.",
+        "example": "A balanced diet is essential for maintaining health.",
+        "note": "Not just for losing weight."
+    },
+    {
+        "word": "enzyme",
+        "pronunciation": "/ˈen.zaɪm/",
+        "meaning": "men tiêu hóa",
+        "description_en": "A substance produced by a living organism which acts as a catalyst to bring about a specific biochemical reaction.",
+        "example": "Digestive enzymes help break down food.",
+        "note": "Crucial for metabolism."
+    }
+]

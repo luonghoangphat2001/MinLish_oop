@@ -1,0 +1,402 @@
+[
+    {
+        "word": "astronomy",
+        "pronunciation": "/əˈstrɒn.ə.mi/",
+        "meaning": "thiên văn học",
+        "description_en": "The branch of science that deals with celestial objects, space, and the physical universe as a whole.",
+        "example": "His interest in astronomy began when he received a telescope for his birthday.",
+        "note": "Study of stars and planets."
+    },
+    {
+        "word": "biology",
+        "pronunciation": "/baɪˈɒl.ə.dʒi/",
+        "meaning": "sinh học",
+        "description_en": "The study of living organisms, divided into many specialized fields.",
+        "example": "Molecular biology explores the fundamental building blocks of life.",
+        "note": "Study of life."
+    },
+    {
+        "word": "catalyst",
+        "pronunciation": "/ˈkæt.əl.ɪst/",
+        "meaning": "chất xúc tác",
+        "description_en": "A substance that increases the rate of a chemical reaction without itself undergoing any permanent chemical change.",
+        "example": "The enzyme acts as a biological catalyst in the digestion process.",
+        "note": "Speeds up chemical reactions."
+    },
+    {
+        "word": "dimension",
+        "pronunciation": "/ˌdaɪˈmen.ʃən/",
+        "meaning": "chiều; kích thước",
+        "description_en": "A measurable extent of some kind, such as length, breadth, depth, or height.",
+        "example": "The scientists are exploring the possibility of other dimensions beyond our own.",
+        "note": "Measurement or plane of existence."
+    },
+    {
+        "word": "evolution",
+        "pronunciation": "/ˌiː.vəˈluː.ʃən/",
+        "meaning": "sự tiến hóa",
+        "description_en": "The process by which different kinds of living organisms are thought to have developed and diversified from earlier forms.",
+        "example": "Darwin's theory of evolution changed our understanding of life on Earth.",
+        "note": "Gradual development of species."
+    },
+    {
+        "word": "fossil",
+        "pronunciation": "/ˈfɒs.əl/",
+        "meaning": "hóa thạch",
+        "description_en": "The remains or impression of a prehistoric organism preserved in petrified form or as a mold or cast in rock.",
+        "example": "The archaeologists discovered a dinosaur fossil in the desert.",
+        "note": "Ancient biological remains."
+    },
+    {
+        "word": "gravity",
+        "pronunciation": "/ˈɡræv.ə.ti/",
+        "meaning": "trọng lực",
+        "description_en": "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
+        "example": "Gravity is the force that keeps the planets in orbit around the sun.",
+        "note": "Universal force of attraction."
+    },
+    {
+        "word": "hypothesis",
+        "pronunciation": "/haɪˈpɒθ.ə.sɪs/",
+        "meaning": "giả thuyết",
+        "description_en": "A proposed explanation made on the basis of limited evidence as a starting point for further investigation.",
+        "example": "The research team developed a hypothesis to explain the strange data.",
+        "note": "Testable scientific idea."
+    },
+    {
+        "word": "isotope",
+        "pronunciation": "/ˈaɪ.sə.təʊp/",
+        "meaning": "đồng vị",
+        "description_en": "Each of two or more forms of the same element that contain equal numbers of protons but different numbers of neutrons.",
+        "example": "Carbon-14 is a radioactive isotope used for dating old objects.",
+        "note": "Variants of chemical elements."
+    },
+    {
+        "word": "journal",
+        "pronunciation": "/ˈdʒɜː.nəl/",
+        "meaning": "tạp chí khoa học; nhật ký",
+        "description_en": "A newspaper or magazine that deals with a particular subject or professional activity.",
+        "example": "The study was published in the world's leading medical journal.",
+        "note": "Where research is officially shared."
+    },
+    {
+        "word": "kinetic",
+        "pronunciation": "/kɪˈnet.ɪk/",
+        "meaning": "thuộc động năng",
+        "description_en": "Relating to or resulting from motion.",
+        "example": "The car converts chemical energy into kinetic energy to move.",
+        "note": "Energy of motion."
+    },
+    {
+        "word": "laboratory",
+        "pronunciation": "/ləˈbɒr.ə.tər.i/",
+        "meaning": "phòng thí nghiệm",
+        "description_en": "A room or building equipped for scientific experiments, research, or teaching.",
+        "example": "The new lab has state-of-the-art equipment for genetic research.",
+        "note": "Often shortened to 'lab'."
+    },
+    {
+        "word": "molecule",
+        "pronunciation": "/ˈmɒl.ɪ.kjuːl/",
+        "meaning": "phân tử",
+        "description_en": "A group of atoms bonded together, representing the smallest fundamental unit of a chemical compound.",
+        "example": "A water molecule consists of two hydrogen atoms and one oxygen atom.",
+        "note": "Smallest unit of a compound."
+    },
+    {
+        "word": "nebula",
+        "pronunciation": "/ˈneb.jə.lə/",
+        "meaning": "tinh vân",
+        "description_en": "A cloud of gas and dust in outer space, visible in the night sky as an indistinct bright patch or as a dark silhouette.",
+        "example": "The Orion Nebula is a famous star-forming region.",
+        "note": "Space gas cloud."
+    },
+    {
+        "word": "organism",
+        "pronunciation": "/ˈɔː.ɡən.ɪ.zəm/",
+        "meaning": "sinh vật",
+        "description_en": "An individual animal, plant, or single-celled life form.",
+        "example": "Thousands of tiny organisms live in a single drop of pond water.",
+        "note": "Any living thing."
+    },
+    {
+        "word": "physics",
+        "pronunciation": "/ˈfɪz.ɪks/",
+        "meaning": "vật lý học",
+        "description_en": "The branch of science concerned with the nature and properties of matter and energy.",
+        "example": "Physics helps us understand how the universe works at a fundamental level.",
+        "note": "Study of matter and energy."
+    },
+    {
+        "word": "quantum",
+        "pronunciation": "/ˈkwɒn.təm/",
+        "meaning": "lượng tử",
+        "description_en": "A discrete quantity of energy proportional in magnitude to the frequency of the radiation it represents.",
+        "example": "Quantum mechanics explores the behavior of matter at the atomic level.",
+        "note": "Smallest unit in physics."
+    },
+    {
+        "word": "radiation",
+        "pronunciation": "/ˌreɪ.diˈeɪ.ʃən/",
+        "meaning": "phóng xạ; bức xạ",
+        "description_en": "The emission of energy as electromagnetic waves or as moving subatomic particles.",
+        "example": "Too Much exposure to ultraviolet radiation can damage the skin.",
+        "note": "Energy traveling through space."
+    },
+    {
+        "word": "simulation",
+        "pronunciation": "/ˌsɪm.jəˈleɪ.ʃən/",
+        "meaning": "sự mô phỏng",
+        "description_en": "Imitation of a situation or process.",
+        "example": "Scientists use computer simulations to model climate change.",
+        "note": "Using models to study real-world scenarios."
+    },
+    {
+        "word": "theory",
+        "pronunciation": "/ˈθɪə.ri/",
+        "meaning": "lý thuyết; học thuyết",
+        "description_en": "A system of ideas intended to explain something.",
+        "example": "Einstein's theory of relativity revolutionized the field of physics.",
+        "note": "Well-substantiated explanation."
+    },
+    {
+        "word": "universe",
+        "pronunciation": "/ˈjuː.nɪ.vɜːs/",
+        "meaning": "vũ trụ",
+        "description_en": "All existing matter and space considered as a whole.",
+        "example": "The universe is estimated to be around 13.8 billion years old.",
+        "note": "The cosmos."
+    },
+    {
+        "word": "velocity",
+        "pronunciation": "/vəˈlɒs.ə.ti/",
+        "meaning": "vận tốc",
+        "description_en": "The speed of something in a given direction.",
+        "example": "The escape velocity needed to leave Earth is very high.",
+        "note": "Speed plus direction."
+    },
+    {
+        "word": "wavelength",
+        "pronunciation": "/ˈweɪv.leŋθ/",
+        "meaning": "bước sóng",
+        "description_en": "The distance between successive crests of a wave.",
+        "example": "Red light has a longer wavelength than blue light.",
+        "note": "Measure for light and sound waves."
+    },
+    {
+        "word": "xenon",
+        "pronunciation": "/ˈzen.ɒn/",
+        "meaning": "xe-non (nguyên tố hóa học)",
+        "description_en": "A heavy, colorless, odorless noble gas.",
+        "example": "Xenon is used in some specialized high-intensity lamps.",
+        "note": "Noble gas, atomic number 54."
+    },
+    {
+        "word": "yield",
+        "pronunciation": "/jiːld/",
+        "meaning": "hiệu suất; sản lượng",
+        "description_en": "The amount of an agricultural or industrial product.",
+        "example": "The chemical reaction yielded a high amount of pure substance.",
+        "note": "Measurement of output."
+    },
+    {
+        "word": "zoology",
+        "pronunciation": "/zuːˈɒl.ə.dʒi/",
+        "meaning": "động vật học",
+        "description_en": "The scientific study of animals.",
+        "example": "Zoology is essential for understanding wildlife conservation.",
+        "note": "Study of the animal kingdom."
+    },
+    {
+        "word": "acceleration",
+        "pronunciation": "/əkˌsel.əˈreɪ.ʃən/",
+        "meaning": "sự gia tốc",
+        "description_en": "A vehicle's capacity to gain speed within a short time.",
+        "example": "The rocket's acceleration was incredible during launch.",
+        "note": "Rate of change of velocity."
+    },
+    {
+        "word": "biotechnology",
+        "pronunciation": "/ˌbaɪ.əʊ.tekˈnɒl.ə.dʒi/",
+        "meaning": "công nghệ sinh học",
+        "description_en": "The exploitation of biological processes for industrial and other purposes.",
+        "example": "Biotechnology is used to develop new medicines and vaccines.",
+        "note": "Application of biology in tech."
+    },
+    {
+        "word": "chemical",
+        "pronunciation": "/ˈkem.ɪ.kəl/",
+        "meaning": "hóa chất; thuộc hóa học",
+        "description_en": "A distinct compound or substance, especially one which has been artificially prepared or purified.",
+        "example": "Be careful when handling hazardous chemicals in the lab.",
+        "note": "Matter with a definite composition."
+    },
+    {
+        "word": "discovery",
+        "pronunciation": "/dɪˈskʌv.ər.i/",
+        "meaning": "sự khám phá",
+        "description_en": "The action or process of discovering or being discovered.",
+        "example": "The discovery of penicillin was a major breakthrough in medicine.",
+        "note": "Finding something new."
+    },
+    {
+        "word": "experiment",
+        "pronunciation": "/ɪkˈsper.ɪ.mənt/",
+        "meaning": "thí nghiệm",
+        "description_en": "A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact.",
+        "example": "We conducted an experiment to test the effects of heat on the metal.",
+        "note": "Practical scientific test."
+    },
+    {
+        "word": "fluid",
+        "pronunciation": "/ˈfluː.ɪd/",
+        "meaning": "chất lưu (lỏng hoặc khí)",
+        "description_en": "A substance that has no fixed shape and yields easily to external pressure.",
+        "example": "Water and air are both classified as fluids in physics.",
+        "note": "Includes liquids and gases."
+    },
+    {
+        "word": "genetics",
+        "pronunciation": "/dʒəˈnet.ɪks/",
+        "meaning": "di truyền học",
+        "description_en": "The study of heredity and the variation of inherited characteristics.",
+        "example": "Genetics plays a huge role in determining our physical traits.",
+        "note": "Study of genes and heredity."
+    },
+    {
+        "word": "hologram",
+        "pronunciation": "/ˈhɒl.ə.ɡræm/",
+        "meaning": "ảnh ba chiều",
+        "description_en": "A three-dimensional image formed by the interference of light beams from a laser or other coherent light source.",
+        "example": "The museum uses holograms to display fragile artifacts.",
+        "note": "3D light projection."
+    },
+    {
+        "word": "inertia",
+        "pronunciation": "/ɪˈnɜː.ʃə/",
+        "meaning": "quán tính",
+        "description_en": "A tendency to do nothing or to remain unchanged.",
+        "example": "The heavy ball has more inertia than the light one.",
+        "note": "Resistance to change in motion."
+    },
+    {
+        "word": "jupiter",
+        "pronunciation": "/ˈdʒuː.pɪ.tər/",
+        "meaning": "sao Mộc",
+        "description_en": "The largest planet in our solar system.",
+        "example": "Jupiter is a gas giant with a famous Great Red Spot.",
+        "note": "The fifth planet from the sun."
+    },
+    {
+        "word": "kilowatt",
+        "pronunciation": "/ˈkɪl.ə.wɒt/",
+        "meaning": "ki-lô-oát",
+        "description_en": "A unit of power equal to 1,000 watts.",
+        "example": "The new solar panels can generate up to 5 kilowatts of power.",
+        "note": "Measurement of electrical power."
+    },
+    {
+        "word": "logic",
+        "pronunciation": "/ˈlɒdʒ.ɪk/",
+        "meaning": "lô-gic; lý luận",
+        "description_en": "Reasoning conducted or assessed according to strict principles of validity.",
+        "example": "Scientific research must follow the rules of formal logic.",
+        "note": "Rational and structured thinking."
+    },
+    {
+        "word": "microscope",
+        "pronunciation": "/ˈmaɪ.krə.skəʊp/",
+        "meaning": "kính hiển vi",
+        "description_en": "An optical instrument used for viewing very small objects.",
+        "example": "Looking through a microscope revealed a world of tiny bacteria.",
+        "note": "Used to see things invisible to the naked eye."
+    },
+    {
+        "word": "neutron",
+        "pronunciation": "/ˈnjuː.trɒn/",
+        "meaning": "nơ-tron",
+        "description_en": "A subatomic particle of about the same mass as a proton but without an electric charge.",
+        "example": "The nucleus of an atom consists of protons and neutrons.",
+        "note": "Neutral subatomic particle."
+    },
+    {
+        "word": "observation",
+        "pronunciation": "/ˌɒb.zəˈveɪ.ʃən/",
+        "meaning": "sự quan sát",
+        "description_en": "The action or process of observing something or someone carefully in order to gain information.",
+        "example": "Careful observation is the first step in the scientific method.",
+        "note": "Gathering data through senses or instruments."
+    },
+    {
+        "word": "phenomenon",
+        "pronunciation": "/fəˈnɒm.ɪ.nən/",
+        "meaning": "hiện tượng",
+        "description_en": "A fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question.",
+        "example": "The Northern Lights are a spectacular natural phenomenon.",
+        "note": "Observable event."
+    },
+    {
+        "word": "quark",
+        "pronunciation": "/kwɔːk/",
+        "meaning": "hạt quark",
+        "description_en": "Any of a number of subatomic particles carrying a fractional electric charge.",
+        "example": "Protons and neutrons are made up of even smaller particles called quarks.",
+        "note": "Fundamental building block of matter."
+    },
+    {
+        "word": "reaction",
+        "pronunciation": "/riˈæk.ʃən/",
+        "meaning": "phản ứng",
+        "description_en": "A process that involves rearrangement of the molecular or ionic structure of a substance.",
+        "example": "Combining vinegar and baking soda produces a fizzy chemical reaction.",
+        "note": "Change of substances into new ones."
+    },
+    {
+        "word": "satellite",
+        "pronunciation": "/ˈsæt.əl.aɪt/",
+        "meaning": "vệ tinh",
+        "description_en": "An artificial body placed in orbit around the earth or moon or another planet in order to collect information or for communication.",
+        "example": "The GPS system relies on a network of orbiting satellites.",
+        "note": "Includes natural moons and man-made systems."
+    },
+    {
+        "word": "telescope",
+        "pronunciation": "/ˈtel.ɪ.skəʊp/",
+        "meaning": "kính thiên văn",
+        "description_en": "An optical instrument designed to make distant objects appear nearer.",
+        "example": "The Hubble Space Telescope has provided amazing images of distant galaxies.",
+        "note": "Used for astronomical observation."
+    },
+    {
+        "word": "ultraviolet",
+        "pronunciation": "/ˌʌl.trəˈvaɪə.lət/",
+        "meaning": "tia cực tím",
+        "description_en": "Electromagnetic radiation with a wavelength shorter than that of visible light.",
+        "example": "UV light is used for sterilization and identifying fake money.",
+        "note": "Invisible light beyond violet."
+    },
+    {
+        "word": "vacuum",
+        "pronunciation": "/ˈvæk.juːm/",
+        "meaning": "chân không",
+        "description_en": "A space entirely devoid of matter.",
+        "example": "Outer space is nearly a perfect vacuum.",
+        "note": "Empty space without air or matter."
+    },
+    {
+        "word": "wavelength",
+        "pronunciation": "/ˈweɪv.leŋθ/",
+        "meaning": "bước sóng",
+        "description_en": "Distance over which the wave's shape repeats.",
+        "example": "Scientists can identify chemical elements by their unique light wavelengths.",
+        "note": "Also indicates radio frequency."
+    },
+    {
+        "word": "zygote",
+        "pronunciation": "/ˈzaɪ.ɡəʊt/",
+        "meaning": "hợp tử",
+        "description_en": "The cell formed by the union of two gametes.",
+        "example": "The zygote divides many times to eventually form an embryo.",
+        "note": "First stage of a new organism's life cycle."
+    }
+]

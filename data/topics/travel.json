@@ -1,0 +1,402 @@
+[
+    {
+        "word": "accommodation",
+        "pronunciation": "/əˌkɒm.əˈdeɪ.ʃən/",
+        "meaning": "chỗ ở",
+        "description_en": "A room, group of rooms, or building in which someone may live or stay.",
+        "example": "Hotel accommodation is included in the tour price.",
+        "note": "Includes hotels, hostels, B&Bs."
+    },
+    {
+        "word": "itinerary",
+        "pronunciation": "/aɪˈtɪn.ər.ər.i/",
+        "meaning": "lịch trình",
+        "description_en": "A planned route or journey.",
+        "example": "The itinerary for our trip to Italy includes visits to Rome, Florence, and Venice.",
+        "note": "Lists dates, times, and locations."
+    },
+    {
+        "word": "destination",
+        "pronunciation": "/ˌdes.tɪˈneɪ.ʃən/",
+        "meaning": "điểm đến",
+        "description_en": "The place to which someone or something is going or being sent.",
+        "example": "Paris is one of the Most popular tourist destinations in the world.",
+        "note": "End goal of a journey."
+    },
+    {
+        "word": "sightseeing",
+        "pronunciation": "/ˈsaɪtˌsiː.ɪŋ/",
+        "meaning": "tham quan",
+        "description_en": "The activity of visiting places of interest in a particular location.",
+        "example": "We went sightseeing in the old town yesterday.",
+        "note": "Visiting landmarks and attractions."
+    },
+    {
+        "word": "souvenir",
+        "pronunciation": "/ˌsuː.vəˈnɪər/",
+        "meaning": "quà lưu niệm",
+        "description_en": "A thing that is kept as a reminder of a person, place, or event.",
+        "example": "I bought a small model of the Eiffel Tower as a souvenir.",
+        "note": "Memento of a trip."
+    },
+    {
+        "word": "baggage",
+        "pronunciation": "/ˈbæɡ.ɪdʒ/",
+        "meaning": "hành lý",
+        "description_en": "Suitcases and bags containing personal belongings packed for traveling.",
+        "example": "We checked our baggage at the airport counter.",
+        "note": "Also known as luggage."
+    },
+    {
+        "word": "embassy",
+        "pronunciation": "/ˈem.bə.si/",
+        "meaning": "đại sứ quán",
+        "description_en": "The official residence or offices of an ambassador.",
+        "example": "You need to apply for a visa at the embassy.",
+        "note": "Diplomatic representation of a country."
+    },
+    {
+        "word": "expedition",
+        "pronunciation": "/ˌek.spəˈdɪʃ.ən/",
+        "meaning": "cuộc thám hiểm",
+        "description_en": "A journey undertaken by a group of people with a particular purpose, especially that of exploration or research.",
+        "example": "The scientific expedition explored the deepest parts of the ocean.",
+        "note": "Usually implies a challenging journey."
+    },
+    {
+        "word": "hospitality",
+        "pronunciation": "/ˌhɒs.pɪˈtæl.ə.ti/",
+        "meaning": "lòng hiếu khách",
+        "description_en": "The friendly and generous reception and entertainment of guests, visitors, or strangers.",
+        "example": "We were touched by the warm hospitality of the locals.",
+        "note": "Industries like hotels and restaurants are part of hospitality."
+    },
+    {
+        "word": "layover",
+        "pronunciation": "/ˈleɪˌəʊ.vər/",
+        "meaning": "điểm dừng; thời gian chờ giữa các chuyến bay",
+        "description_en": "A period of rest or waiting before a further stage in a journey, especially between flights.",
+        "example": "We had a six-hour layover in Dubai.",
+        "note": "Common in international air travel."
+    },
+    {
+        "word": "passport",
+        "pronunciation": "/ˈpɑːs.pɔːt/",
+        "meaning": "hộ chiếu",
+        "description_en": "An official document issued by a government, certifying the holder's identity and citizenship and entitling them to travel under its protection to and from foreign countries.",
+        "example": "Make sure your passport is valid for at least six months.",
+        "note": "Essential for international travel."
+    },
+    {
+        "word": "reservation",
+        "pronunciation": "/ˌrez.əˈveɪ.ʃən/",
+        "meaning": "sự đặt chỗ",
+        "description_en": "The action of reserving something, especially a room or seat.",
+        "example": "I made a hotel reservation for three nights.",
+        "note": "Also called a booking."
+    },
+    {
+        "word": "terminal",
+        "pronunciation": "/ˈtɜː.mɪ.nəl/",
+        "meaning": "nhà ga; trạm cuối",
+        "description_en": "A building at an airport through which passengers arrive and depart.",
+        "example": "Our flight leaves from Terminal 3.",
+        "note": "Main hub for transport departures/arrivals."
+    },
+    {
+        "word": "tourist",
+        "pronunciation": "/ˈtʊə.rɪst/",
+        "meaning": "khách du lịch",
+        "description_en": "A person who is traveling or visiting a place for pleasure.",
+        "example": "The city gets very crowded with tourists during the summer.",
+        "note": "Drives the tourism industry."
+    },
+    {
+        "word": "traveler",
+        "pronunciation": "/ˈtræv.əl.ər/",
+        "meaning": "người du hành",
+        "description_en": "A person who is traveling or who often travels.",
+        "example": "Experienced travelers often pack light.",
+        "note": "Broad term for anyone on a journey."
+    },
+    {
+        "word": "visa",
+        "pronunciation": "/ˈviː.zə/",
+        "meaning": "thị thực",
+        "description_en": "An endorsement on a passport indicating that the holder is allowed to enter, leave, or stay for a specified period of time in a country.",
+        "example": "She applied for a student visa to study in London.",
+        "note": "Travel permit issued by a foreign country."
+    },
+    {
+        "word": "voyage",
+        "pronunciation": "/ˈvɔɪ.ɪdʒ/",
+        "meaning": "chuyến đi biển; hành trình dài",
+        "description_en": "A long journey involving travel by sea or in space.",
+        "example": "The ship is preparing for a three-month voyage across the Atlantic.",
+        "note": "Usually refers to sea travel."
+    },
+    {
+        "word": "backpacking",
+        "pronunciation": "/ˈbækˌpæk.ɪŋ/",
+        "meaning": "du lịch ba lô",
+        "description_en": "The activity of traveling for pleasure, usually with a backpack.",
+        "example": "He spent six months backpacking through South America.",
+        "note": "Budget-friendly way of traveling."
+    },
+    {
+        "word": "customs",
+        "pronunciation": "/ˈkʌs.təmz/",
+        "meaning": "hải quan",
+        "description_en": "The place at a port, airport, or frontier where officials check incoming goods, travelers, or luggage.",
+        "example": "It took an hour to go through customs at the airport.",
+        "note": "Controls entry of goods/people into a country."
+    },
+    {
+        "word": "departure",
+        "pronunciation": "/dɪˈpɑː.tʃər/",
+        "meaning": "sự khởi hành",
+        "description_en": "The action of leaving, especially to start a journey.",
+        "example": "Arrival and departure times are listed on the display board.",
+        "note": "Opposite of arrival."
+    },
+    {
+        "word": "excursion",
+        "pronunciation": "/ɪkˈskɜː.ʃən/",
+        "meaning": "chuyến tham quan ngắn",
+        "description_en": "A short journey or trip, especially one engaged in as a leisure activity.",
+        "example": "We took a day excursion to a nearby island.",
+        "note": "Often organized by hotels or tour operators."
+    },
+    {
+        "word": "landmark",
+        "pronunciation": "/ˈlænd.mɑːk/",
+        "meaning": "thắng cảnh; địa danh",
+        "description_en": "An object or feature of a landscape or town that is easily seen and recognized from a distance.",
+        "example": "The Statue of Liberty is a famous landmark in New York.",
+        "note": "Important for navigation and tourism."
+    },
+    {
+        "word": "monument",
+        "pronunciation": "/ˈmɒn.jə.mənt/",
+        "meaning": "đài tưởng niệm; di tích",
+        "description_en": "A statue, building, or other structure erected to commemorate a notable person or event.",
+        "example": "The war monument was built in honor of those who served.",
+        "note": "Historical significance."
+    },
+    {
+        "word": "resort",
+        "pronunciation": "/rɪˈzɔːt/",
+        "meaning": "khu nghỉ dưỡng",
+        "description_en": "A place that is a popular destination for vacations or recreation.",
+        "example": "We stayed at a luxury beach resort in Thailand.",
+        "note": "Often self-contained with various amenities."
+    },
+    {
+        "word": "route",
+        "pronunciation": "/ruːt/",
+        "meaning": "tuyến đường; lộ trình",
+        "description_en": "A way or course taken in getting from a starting point to a destination.",
+        "example": "The scenic route takes longer but offers beautiful views.",
+        "note": "Path followed on a map."
+    },
+    {
+        "word": "scenic",
+        "pronunciation": "/ˈsiː.nɪk/",
+        "meaning": "đẹp phong cảnh",
+        "description_en": "Providing or relating to views of impressive or beautiful natural scenery.",
+        "example": "We took a scenic flight over the Grand Canyon.",
+        "note": "Aesthetic value of a location."
+    },
+    {
+        "word": "trekking",
+        "pronunciation": "/ˈtrek.ɪŋ/",
+        "meaning": "đi bộ đường dài",
+        "description_en": "The activity of going on a long arduous journey, typically on foot.",
+        "example": "Himalayan trekking is a dream for many adventurers.",
+        "note": "Physically demanding travel."
+    },
+    {
+        "word": "vicinity",
+        "pronunciation": "/vɪˈsɪn.ə.ti/",
+        "meaning": "vùng lân cận",
+        "description_en": "The area near or surrounding a particular place.",
+        "example": "There are several good restaurants in the vicinity of the hotel.",
+        "note": "The immediate surroundings."
+    },
+    {
+        "word": "wanderlust",
+        "pronunciation": "/ˈwɒn.də.lʌst/",
+        "meaning": "niềm đam mê du lịch",
+        "description_en": "A strong desire to travel.",
+        "example": "Her wanderlust led her to visit over 50 countries.",
+        "note": "German origin word meaning 'travel desire'."
+    },
+    {
+        "word": "amenity",
+        "pronunciation": "/əˈmiː.nə.ti/",
+        "meaning": "tiện nghi",
+        "description_en": "A desirable or useful feature or facility of a building or place.",
+        "example": "The hotel offers several amenities, including a pool and a gym.",
+        "note": "Adds comfort and convenience."
+    },
+    {
+        "word": "boarding pass",
+        "pronunciation": "/ˈbɔː.dɪŋ ˌpɑːs/",
+        "meaning": "thẻ lên máy bay",
+        "description_en": "A card that a passenger must have in order to be allowed to board an aircraft.",
+        "example": "I've downloaded my boarding pass to my phone.",
+        "note": "Issued after check-in."
+    },
+    {
+        "word": "cancellation",
+        "pronunciation": "/ˌkæn.səlˈeɪ.ʃən/",
+        "meaning": "sự hủy bỏ",
+        "description_en": "The action of canceling something that has been arranged or planned.",
+        "example": "We had to pay a cancellation fee for the hotel room.",
+        "note": "Terminating a booking."
+    },
+    {
+        "word": "concierge",
+        "pronunciation": "/ˌkɒn.siˈeəʒ/",
+        "meaning": "người giúp việc ở khách sạn; quản gia",
+        "description_en": "A hotel staff member who assists guests by arranging tours, making reservations, etc.",
+        "example": "The concierge helped us book tickets for a Broadway show.",
+        "note": "French term for guest relations officer."
+    },
+    {
+        "word": "duration",
+        "pronunciation": "/dʒuˈreɪ.ʃən/",
+        "meaning": "thời lượng; thời gian kéo dài",
+        "description_en": "The time during which something continues.",
+        "example": "The duration of the flight is approximately ten hours.",
+        "note": "Length of time for an event."
+    },
+    {
+        "word": "fare",
+        "pronunciation": "/feər/",
+        "meaning": "giá vé",
+        "description_en": "The money a passenger on public transport has to pay.",
+        "example": "The train fare to London has gone up recently.",
+        "note": "Cost of transport usage."
+    },
+    {
+        "word": "gallery",
+        "pronunciation": "/ˈɡæl.ər.i/",
+        "meaning": "phòng triển lãm",
+        "description_en": "A room or building for the display or sale of works of art.",
+        "example": "The National Gallery has a famous collection of paintings.",
+        "note": "Must-visit for art lovers."
+    },
+    {
+        "word": "hostel",
+        "pronunciation": "/ˈhɒs.təl/",
+        "meaning": "nhà nghỉ tập thể",
+        "description_en": "An establishment which provides inexpensive food and lodging for a specific group of people.",
+        "example": "I'm staying at a youth hostel in Berlin.",
+        "note": "Budget accommodation often with shared rooms."
+    },
+    {
+        "word": "jet lag",
+        "pronunciation": "/ˈdʒet ˌlæɡ/",
+        "meaning": "sự mệt mỏi sau chuyến bay dài",
+        "description_en": "Extreme tiredness and other physical effects felt by a person after a long flight across different time zones.",
+        "example": "It took me three days to get over the jet lag.",
+        "note": "Due to disruption of circadian rhythm."
+    },
+    {
+        "word": "leisure",
+        "pronunciation": "/ˈleʒ.ər/",
+        "meaning": "thời gian rảnh rỗi",
+        "description_en": "Use of free time for enjoyment.",
+        "example": "The hotel is popular for both business and leisure travelers.",
+        "note": "Opposite of work."
+    },
+    {
+        "word": "museum",
+        "pronunciation": "/mjuːˈziː.əm/",
+        "meaning": "bảo tàng",
+        "description_en": "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited.",
+        "example": "The British Museum is one of the largest in the world.",
+        "note": "Important cultural institution."
+    },
+    {
+        "word": "outbound",
+        "pronunciation": "/ˈaʊt.baʊnd/",
+        "meaning": "chuyến đi đi",
+        "description_en": "Traveling away from a particular place, especially on the first leg of a round trip.",
+        "example": "Our outbound flight is scheduled for 8 a.m.",
+        "note": "Outgoing journey."
+    },
+    {
+        "word": "package tour",
+        "pronunciation": "/ˈpæk.ɪdʒ ˌtʊər/",
+        "meaning": "tour trọn gói",
+        "description_en": "A holiday organized by a travel agent, with arrangements for transport, accommodation, etc., made at an inclusive price.",
+        "example": "We booked a package tour to Japan for the cherry blossom season.",
+        "note": "Convenient but less flexible."
+    },
+    {
+        "word": "quay",
+        "pronunciation": "/kiː/",
+        "meaning": "bến cảng; cầu tàu",
+        "description_en": "A stone or metal platform lying alongside or projecting into water for loading and unloading ships.",
+        "example": "The ferry departs from the main quay.",
+        "note": "Dock area."
+    },
+    {
+        "word": "safari",
+        "pronunciation": "/səˈfɑː.ri/",
+        "meaning": "chuyến đi săn; quan sát động vật hoang dã",
+        "description_en": "An expedition to observe or hunt animals in their natural habitat, especially in East Africa.",
+        "example": "We went on a wildlife safari in Kenya.",
+        "note": "Popular in Africa for seeing big cats."
+    },
+    {
+        "word": "transit",
+        "pronunciation": "/ˈtræn.zɪt/",
+        "meaning": "quá cảnh",
+        "description_en": "The carry of people, goods, or materials from one place to another.",
+        "example": "We were in transit through Frankfurt airport.",
+        "note": "Passing through a place on the way to another."
+    },
+    {
+        "word": "unwind",
+        "pronunciation": "/ʌnˈwaɪnd/",
+        "meaning": "thư giãn",
+        "description_en": "Relax after a period of work or tension.",
+        "example": "A vacation is a great time to unwind and de-stress.",
+        "note": "Mental and physical relaxation."
+    },
+    {
+        "word": "wildlife",
+        "pronunciation": "/ˈwaɪld.laɪf/",
+        "meaning": "động vật hoang dã",
+        "description_en": "Wild animals collectively; the native fauna of a region.",
+        "example": "The national park is home to a variety of exotic wildlife.",
+        "note": "Focus of nature-based tourism."
+    },
+    {
+        "word": "yacht",
+        "pronunciation": "/jɒt/",
+        "meaning": "du thuyền",
+        "description_en": "A medium-sized sailboat equipped for cruising or racing.",
+        "example": "They spent their summer sailing on a luxury yacht in the Mediterranean.",
+        "note": "Often associated with wealth and high-end travel."
+    },
+    {
+        "word": "zoo",
+        "pronunciation": "/zuː/",
+        "meaning": "vườn thú",
+        "description_en": "An establishment which maintains a collection of wild animals, typically in a park or gardens, for study, conservation, or display to the public.",
+        "example": "The San Diego Zoo is world-famous for its panda enclosure.",
+        "note": "Exhibition of captive animals."
+    },
+    {
+        "word": "boarding",
+        "pronunciation": "/ˈbɔː.dɪŋ/",
+        "meaning": "lên tàu/máy bay",
+        "description_en": "The action of getting on or into a ship, aircraft, or other vehicle.",
+        "example": "Boarding will commence in twenty minutes at Gate 12.",
+        "note": "Part of the departure process."
+    }
+]

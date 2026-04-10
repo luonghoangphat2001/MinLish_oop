@@ -1,0 +1,402 @@
+[
+    {
+        "word": "acquisition",
+        "pronunciation": "/ˌæk.wɪˈzɪʃ.ən/",
+        "meaning": "sự mua lại",
+        "description_en": "An asset or object bought or obtained, typically by a library or museum.",
+        "example": "The company announced the acquisition of its main competitor.",
+        "note": "Common in M&A (Mergers and Acquisitions)."
+    },
+    {
+        "word": "bankruptcy",
+        "pronunciation": "/ˈbæŋ.krʌpt.si/",
+        "meaning": "sự phá sản",
+        "description_en": "The state of being bankrupt.",
+        "example": "The retail chain filed for bankruptcy after years of declining sales.",
+        "note": "Legal status of a person or entity that cannot repay debts."
+    },
+    {
+        "word": "capital",
+        "pronunciation": "/ˈkæp.ɪ.təl/",
+        "meaning": "vốn",
+        "description_en": "Wealth in the form of money or other assets owned by a person or organization.",
+        "example": "The startup raised $1 million in seed capital.",
+        "note": "Essential for starting or expanding a business."
+    },
+    {
+        "word": "dividend",
+        "pronunciation": "/ˈdɪv.ɪ.dend/",
+        "meaning": "cổ tức",
+        "description_en": "A sum of money paid regularly by a company to its shareholders out of its profits.",
+        "example": "The company decided to increase its annual dividend.",
+        "note": "Reward for shareholders."
+    },
+    {
+        "word": "equity",
+        "pronunciation": "/ˈek.wɪ.ti/",
+        "meaning": "vốn chủ sở hữu",
+        "description_en": "The value of the shares issued by a company.",
+        "example": "He owns 20% equity in the family business.",
+        "note": "Represents ownership interest."
+    },
+    {
+        "word": "fiscal",
+        "pronunciation": "/ˈfɪs.kəl/",
+        "meaning": "thuộc tài chính",
+        "description_en": "Relating to government revenue, especially taxes.",
+        "example": "The government's fiscal policy aims to reduce the national deficit.",
+        "note": "Often used in 'fiscal year'."
+    },
+    {
+        "word": "gross profit",
+        "pronunciation": "/ɡroʊs ˈprɒf.ɪt/",
+        "meaning": "lợi nhuận gộp",
+        "description_en": "The profit a company makes after deducting the costs associated with making and selling its products.",
+        "example": "Our gross profit margin improved this quarter.",
+        "note": "Calculated before taxes and expenses."
+    },
+    {
+        "word": "inflation",
+        "pronunciation": "/ɪnˈfleɪ.ʃən/",
+        "meaning": "lạm phát",
+        "description_en": "A general increase in prices and fall in the purchasing value of money.",
+        "example": "Central banks use interest rates to control inflation.",
+        "note": "Reduces purchasing power over time."
+    },
+    {
+        "word": "joint venture",
+        "pronunciation": "/ˌdʒɔɪnt ˈven.tʃər/",
+        "meaning": "liên doanh",
+        "description_en": "A commercial enterprise undertaken jointly by two or more parties which otherwise retain their distinct identities.",
+        "example": "They formed a joint venture to build a new factory in Asia.",
+        "note": "Shared risks and rewards."
+    },
+    {
+        "word": "liquidity",
+        "pronunciation": "/lɪˈkwɪd.ə.ti/",
+        "meaning": "tính thanh khoản",
+        "description_en": "The availability of liquid assets to a market or company.",
+        "example": "Maintaining high liquidity is important for meeting short-term obligations.",
+        "note": "Ease of converting assets into cash."
+    },
+    {
+        "word": "merger",
+        "pronunciation": "/ˈmɜː.dʒər/",
+        "meaning": "sự sáp nhập",
+        "description_en": "A combination of two things, especially companies, into one.",
+        "example": "The merger of the two banks was approved by regulators.",
+        "note": "Creates a single new entity."
+    },
+    {
+        "word": "net profit",
+        "pronunciation": "/net ˈprɒf.ɪt/",
+        "meaning": "lợi nhuận ròng",
+        "description_en": "The actual profit after working expenses not included in the calculation of gross profit have been paid.",
+        "example": "Our net profit doubled compared to last year.",
+        "note": "The 'bottom line'."
+    },
+    {
+        "word": "overhead",
+        "pronunciation": "/ˈəʊ.və.hed/",
+        "meaning": "chi phí cố định",
+        "description_en": "Business expenses, such as rent, that are not directly attributed to any specific business activity.",
+        "example": "We are trying to reduce our monthly overhead costs.",
+        "note": "Includes administration and facility costs."
+    },
+    {
+        "word": "portfolio",
+        "pronunciation": "/pɔːtˈfəʊ.li.əʊ/",
+        "meaning": "danh mục đầu tư",
+        "description_en": "A range of investments held by a person or organization.",
+        "example": "Diversifying your portfolio can help manage investment risk.",
+        "note": "Collection of stocks, bonds, etc."
+    },
+    {
+        "word": "revenue",
+        "pronunciation": "/ˈrev.ən.juː/",
+        "meaning": "doanh thu",
+        "description_en": "Income, especially when of a company or organization and of a substantial nature.",
+        "example": "The company's annual revenue reached $5 billion.",
+        "note": "Total amount of money brought in."
+    },
+    {
+        "word": "shareholder",
+        "pronunciation": "/ˈʃeəˌhəʊl.dər/",
+        "meaning": "cổ đông",
+        "description_en": "An owner of shares in a company.",
+        "example": "The company's performance has pleased the shareholders.",
+        "note": "Also known as a stockholder."
+    },
+    {
+        "word": "subsidiary",
+        "pronunciation": "/səbˈsɪd.i.ə.ri/",
+        "meaning": "công ty con",
+        "description_en": "A company controlled by a holding company.",
+        "example": "Google is a subsidiary of Alphabet Inc.",
+        "note": "The controlling company is the parent."
+    },
+    {
+        "word": "valuation",
+        "pronunciation": "/ˌvæl.juˈeɪ.ʃən/",
+        "meaning": "định giá",
+        "description_en": "An estimation of something's worth.",
+        "example": "The company's market valuation dropped after the news.",
+        "note": "Process of determining current worth."
+    },
+    {
+        "word": "venture capital",
+        "pronunciation": "/ˈven.tʃə ˌkæp.ɪ.təl/",
+        "meaning": "vốn mạo hiểm",
+        "description_en": "Capital invested in a project in which there is a substantial element of risk, typically a new or expanding business.",
+        "example": "The startup is looking for venture capital to scale its operations.",
+        "note": "Often invested by specialized firms."
+    },
+    {
+        "word": "wholesale",
+        "pronunciation": "/ˈhəʊl.seɪl/",
+        "meaning": "bán buôn",
+        "description_en": "The selling of goods in large quantities to be retailed by others.",
+        "example": "We buy our supplies at wholesale prices.",
+        "note": "Opposite of retail."
+    },
+    {
+        "word": "audit",
+        "pronunciation": "/ˈɔː.dɪt/",
+        "meaning": "kiểm toán",
+        "description_en": "An official inspection of an individual's or organization's accounts.",
+        "example": "The company underwent an independent audit last month.",
+        "note": "Ensures financial accuracy and compliance."
+    },
+    {
+        "word": "benchmark",
+        "pronunciation": "/ˈbentʃ.mɑːk/",
+        "meaning": "điểm chuẩn",
+        "description_en": "A standard or point of reference against which things may be compared or assessed.",
+        "example": "Our performance is measured against industry benchmarks.",
+        "note": "Used for comparison and goal setting."
+    },
+    {
+        "word": "commodity",
+        "pronunciation": "/kəˈmɒd.ə.ti/",
+        "meaning": "hàng hóa",
+        "description_en": "A raw material or primary agricultural product that can be bought and sold.",
+        "example": "Oil and gold are two of the most traded commodities.",
+        "note": "Includes metals, energy, and crops."
+    },
+    {
+        "word": "deflation",
+        "pronunciation": "/dɪˈfleɪ.ʃən/",
+        "meaning": "giảm phát",
+        "description_en": "Reduction of the general level of prices in an economy.",
+        "example": "The country experienced a period of deflation in the 1990s.",
+        "note": "Opposite of inflation."
+    },
+    {
+        "word": "diversification",
+        "pronunciation": "/daɪˌvɜː.sɪ.fɪˈkeɪ.ʃən/",
+        "meaning": "sự đa dạng hóa",
+        "description_en": "The process of a business enlarging or varying its range of products or field of operation.",
+        "example": "Diversification is a strategy to reduce business risk.",
+        "note": "Common in investment and business growth."
+    },
+    {
+        "word": "entrepreneur",
+        "pronunciation": "/ˌɒn.trə.prəˈnɜːr/",
+        "meaning": "doanh nhân; nhà khởi nghiệp",
+        "description_en": "A person who organizes and operates a business or businesses, taking on greater than normal financial risks.",
+        "example": "She is a successful tech entrepreneur.",
+        "note": "Innovation and risk-taking are key traits."
+    },
+    {
+        "word": "franchise",
+        "pronunciation": "/ˈfræn.tʃaɪz/",
+        "meaning": "nhượng quyền",
+        "description_en": "An authorization granted by a government or company to an individual or group enabling them to carry out specified commercial activities.",
+        "example": "McDonald's is one of the most famous franchises in the world.",
+        "note": "Involves fees and shared branding."
+    },
+    {
+        "word": "hedging",
+        "pronunciation": "/ˈhedʒ.ɪŋ/",
+        "meaning": "phòng ngừa rủi ro",
+        "description_en": "Protect oneself against loss on (a bet or investment) by making balancing or compensating transactions.",
+        "example": "The firm uses currency hedging to protect against exchange rate fluctuations.",
+        "note": "Investment strategy to limit risk."
+    },
+    {
+        "word": "insolvency",
+        "pronunciation": "/ɪnˈsɒl.vən.si/",
+        "meaning": "sự mất khả năng thanh toán",
+        "description_en": "The state of being unable to pay one's debts.",
+        "example": "The company was forced into insolvency due to lack of cash.",
+        "note": "Leading stage to bankruptcy."
+    },
+    {
+        "word": "leverage",
+        "pronunciation": "/ˈliː.vər.ɪdʒ/",
+        "meaning": "đòn bẩy",
+        "description_en": "The use of credit or borrowed funds to improve one's speculative capacity and increase the rate of return.",
+        "example": "The firm used high leverage to finance its expansion.",
+        "note": "Increases both potential profit and risk."
+    },
+    {
+        "word": "monopoly",
+        "pronunciation": "/məˈnɒp.əl.i/",
+        "meaning": "độc quyền",
+        "description_en": "The exclusive possession or control of the supply or trade in a commodity or service.",
+        "example": "Government laws prevent the creation of monopolies to ensure fair competition.",
+        "note": "Reduces choices and can inflate prices."
+    },
+    {
+        "word": "niche",
+        "pronunciation": "/niːʃ/",
+        "meaning": "thị trường ngách",
+        "description_en": "A specialized segment of the market for a particular kind of product or service.",
+        "example": "They found a profitable niche in organic baby food.",
+        "note": "Focuses on specific consumer needs."
+    },
+    {
+        "word": "outsourcing",
+        "pronunciation": "/ˈaʊtˌsɔː.sɪŋ/",
+        "meaning": " thuê ngoài",
+        "description_en": "Obtain goods or a service from an outside or foreign supplier, especially in place of an internal source.",
+        "example": "Many companies are outsourcing their customer support to save costs.",
+        "note": "Common in IT and manufacturing."
+    },
+    {
+        "word": "partnership",
+        "pronunciation": "/ˈpɑːt.nə.ʃɪp/",
+        "meaning": "quan hệ đối tác",
+        "description_en": "A business or firm owned and run by two or more partners.",
+        "example": "The two consultants formed a partnership last year.",
+        "note": "Shared profits and liabilities."
+    },
+    {
+        "word": "quota",
+        "pronunciation": "/ˈkwəʊ.tə/",
+        "meaning": "hạn ngạch",
+        "description_en": "A fixed share of something that a person or group is entitled to receive or is bound to contribute.",
+        "example": "The government imposed an import quota on luxury cars.",
+        "note": "Used in trade and sales targets."
+    },
+    {
+        "word": "recession",
+        "pronunciation": "/rɪˈseʃ.ən/",
+        "meaning": "sự suy thoái",
+        "description_en": "A period of temporary economic decline during which trade and industrial activity are reduced.",
+        "example": "The global economy was hit hard by the 2008 recession.",
+        "note": "Marked by two consecutive quarters of negative growth."
+    },
+    {
+        "word": "stakeholder",
+        "pronunciation": "/ˈsteɪkˌhəʊl.dər/",
+        "meaning": "bên liên quan",
+        "description_en": "A person with an interest or concern in something, especially a business.",
+        "example": "The company holds regular meetings with all its stakeholders.",
+        "note": "Includes employees, customers, and investors."
+    },
+    {
+        "word": "tariff",
+        "pronunciation": "/ˈtær.ɪf/",
+        "meaning": "thuế quan",
+        "description_en": "A tax or duty to be paid on a particular class of imports or exports.",
+        "example": "The new trade agreement will remove tariffs on agricultural products.",
+        "note": "Used to protect domestic industries."
+    },
+    {
+        "word": "underwriting",
+        "pronunciation": "/ˈʌn.dəˌraɪ.tɪŋ/",
+        "meaning": "bảo lãnh phát hành",
+        "description_en": "Sign and accept liability under (an insurance policy), thus guaranteeing payment in case loss or damage occurs.",
+        "example": "Investment banks handle the underwriting of initial public offerings (IPOs).",
+        "note": "Assessing and taking on financial risk."
+    },
+    {
+        "word": "volatility",
+        "pronunciation": "/ˌvɒl.əˈtɪl.ə.ti/",
+        "meaning": "biến động",
+        "description_en": "Liability to change rapidly and unpredictably, especially for the worse.",
+        "example": "The stock market volatility has increased recently.",
+        "note": "Measurement of risk in financial markets."
+    },
+    {
+        "word": "warranty",
+        "pronunciation": "/ˈwɒr.ən.ti/",
+        "meaning": "bảo hành",
+        "description_en": "A written guarantee, issued to the purchaser of an article by its manufacturer, promising to repair or replace it if necessary.",
+        "example": "The laptop comes with a two-year manufacturer's warranty.",
+        "note": "Consumer protection against defects."
+    },
+    {
+        "word": "yield",
+        "pronunciation": "/jiːld/",
+        "meaning": "lợi suất",
+        "description_en": "The income return on an investment, usually expressed as an annual percentage.",
+        "example": "High-yield bonds offer better returns but carry more risk.",
+        "note": "Important for income-focused investors."
+    },
+    {
+        "word": "broker",
+        "pronunciation": "/ˈbrəʊ.kər/",
+        "meaning": "người môi giới",
+        "description_en": "A person who buys and sells goods or assets for others.",
+        "example": "I contacted a stock broker to help manage my investments.",
+        "note": "Earns a commission on transactions."
+    },
+    {
+        "word": "depreciation",
+        "pronunciation": "/dɪˌpriː.ʃiˈeɪ.ʃən/",
+        "meaning": "sự khấu hao",
+        "description_en": "A reduction in the value of an asset over time, due in particular to wear and tear.",
+        "example": "The car's depreciation was much faster than I expected.",
+        "note": "Accounting method to distribute asset cost."
+    },
+    {
+        "word": "expenditure",
+        "pronunciation": "/ɪkˈspen.dɪ.tʃər/",
+        "meaning": "chi tiêu",
+        "description_en": "The action of spending funds.",
+        "example": "Government expenditure on education has increased this year.",
+        "note": "Total amount spent."
+    },
+    {
+        "word": "incentive",
+        "pronunciation": "/ɪnˈsen.tɪv/",
+        "meaning": "sự khuyến khích; ưu đãi",
+        "description_en": "A thing that motivates or encourages someone to do something.",
+        "example": "The company offers tax incentives for new investors.",
+        "note": "Used to drive desired behaviors."
+    },
+    {
+        "word": "margin",
+        "pronunciation": "/ˈmɑː.dʒɪn/",
+        "meaning": "biên lợi nhuận",
+        "description_en": "The difference between the seller's cost for acquiring a product and the selling price.",
+        "example": "Retailers often operate on thin profit margins.",
+        "note": "Indicator of financial health."
+    },
+    {
+        "word": "prospectus",
+        "pronunciation": "/prəˈspek.təs/",
+        "meaning": "bản cáo bạch",
+        "description_en": "A printed booklet advertising a school or university or a formal document that provides details about an investment offering.",
+        "example": "Investors should read the prospectus carefully before buying shares.",
+        "note": "Legal disclosure document."
+    },
+    {
+        "word": "solvency",
+        "pronunciation": "/ˈsɒl.vən.si/",
+        "meaning": "khả năng thanh toán",
+        "description_en": "The possession of assets in excess of liabilities; ability to pay one's debts.",
+        "example": "The central bank tests the solvency of commercial banks regularly.",
+        "note": "Indicates long-term financial stability."
+    },
+    {
+        "word": "transaction",
+        "pronunciation": "/trænˈzæk.ʃən/",
+        "meaning": "giao dịch",
+        "description_en": "An instance of buying or selling something.",
+        "example": "Online banking allows you to track all your transactions.",
+        "note": "Found in both retail and finance."
+    }
+]

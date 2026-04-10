@@ -1,0 +1,402 @@
+[
+    {
+        "word": "algorithm",
+        "pronunciation": "/ˈæl.ɡə.rɪ.ðəm/",
+        "meaning": "thuật toán",
+        "description_en": "A process or set of rules to be followed in calculations or other problem-solving operations.",
+        "example": "The search engine uses a complex algorithm to rank pages.",
+        "note": "Crucial for software engineering."
+    },
+    {
+        "word": "database",
+        "pronunciation": "/ˈdeɪ.tə.beɪs/",
+        "meaning": "cơ sở dữ liệu",
+        "description_en": "A structured set of data held in a computer, especially one that is accessible in various ways.",
+        "example": "We need to update the customer database.",
+        "note": "SQL and NoSQL are common types."
+    },
+    {
+        "word": "encryption",
+        "pronunciation": "/ɪnˈkrɪp.ʃən/",
+        "meaning": "mã hóa",
+        "description_en": "The process of converting information or data into a code, especially to prevent unauthorized access.",
+        "example": "All confidential files are protected by strong encryption.",
+        "note": "Vital for cybersecurity."
+    },
+    {
+        "word": "hardware",
+        "pronunciation": "/ˈhɑːd.weər/",
+        "meaning": "phần cứng",
+        "description_en": "Tools, machinery, and other durable equipment.",
+        "example": "The new software requires faster hardware to run smoothly.",
+        "note": "Opposite of software."
+    },
+    {
+        "word": "interface",
+        "pronunciation": "/ˈɪn.tə.feɪs/",
+        "meaning": "giao diện",
+        "description_en": "A point where two systems, subjects, organizations, etc., meet and interact.",
+        "example": "The user interface is very intuitive and easy to use.",
+        "note": "Often refers to UI/UX design."
+    },
+    {
+        "word": "network",
+        "pronunciation": "/ˈnet.wɜːk/",
+        "meaning": "mạng lưới",
+        "description_en": "A group or system of interconnected people or things.",
+        "example": "The office network was down for two hours this morning.",
+        "note": "Includes LAN, WAN, and the Internet."
+    },
+    {
+        "word": "protocol",
+        "pronunciation": "/ˈprəʊ.tə.kɒl/",
+        "meaning": "giao thức",
+        "description_en": "The official procedure or system of rules governing affairs of state or diplomatic occasions.",
+        "example": "HTTP is the standard protocol for web browsing.",
+        "note": "Ensures different systems can communicate."
+    },
+    {
+        "word": "server",
+        "pronunciation": "/ˈsɜː.vər/",
+        "meaning": "máy chủ",
+        "description_en": "A computer or computer program which manages access to a centralized resource or service in a network.",
+        "example": "The website is hosted on a high-speed server.",
+        "note": "Backend infrastructure."
+    },
+    {
+        "word": "software",
+        "pronunciation": "/ˈsɒft.weər/",
+        "meaning": "phần mềm",
+        "description_en": "The programs and other operating information used by a computer.",
+        "example": "You need to install the latest software updates.",
+        "note": "Includes applications and OS."
+    },
+    {
+        "word": "storage",
+        "pronunciation": "/ˈstɔː.rɪdʒ/",
+        "meaning": "lưu trữ",
+        "description_en": "The action or method of storing something for future use.",
+        "example": "The new smartphone has 128GB of internal storage.",
+        "note": "Commonly measured in GB or TB."
+    },
+    {
+        "word": "bandwidth",
+        "pronunciation": "/ˈbænd.wɪtθ/",
+        "meaning": "băng thông",
+        "description_en": "The range of frequencies within a given band, in particular that used for transmitting a signal.",
+        "example": "The video streaming requires a high-speed internet bandwidth.",
+        "note": "Affects download and upload speeds."
+    },
+    {
+        "word": "browser",
+        "pronunciation": "/ˈbraʊ.zər/",
+        "meaning": "trình duyệt",
+        "description_en": "A program with a graphical user interface for displaying HTML files.",
+        "example": "Chrome is my favorite web browser.",
+        "note": "Used to access the world wide web."
+    },
+    {
+        "word": "cache",
+        "pronunciation": "/kæʃ/",
+        "meaning": "bộ nhớ đệm",
+        "description_en": "A hardware or software component that stores data so that future requests for that data can be served faster.",
+        "example": "Clear the browser cache if you experience loading issues.",
+        "note": "Helps in performance optimization."
+    },
+    {
+        "word": "cloud",
+        "pronunciation": "/klaʊd/",
+        "meaning": "điện toán đám mây",
+        "description_en": "A network of remote servers hosted on the Internet and used to store, manage, and process data.",
+        "example": "Many companies are moving their data to the cloud.",
+        "note": "Examples: AWS, Azure, Google Cloud."
+    },
+    {
+        "word": "compiler",
+        "pronunciation": "/kəmˈpaɪ.lər/",
+        "meaning": "trình biên dịch",
+        "description_en": "A program that converts instructions into a machine-code or lower-level form so that they can be read and executed by a computer.",
+        "example": "The C++ compiler generated an error on line 50.",
+        "note": "Essential for languages like C, Java."
+    },
+    {
+        "word": "debugging",
+        "pronunciation": "/diːˈbʌɡ.ɪŋ/",
+        "meaning": "gỡ lỗi",
+        "description_en": "The process of identifying and removing errors from computer hardware or software.",
+        "example": "I spent all night debugging the new feature.",
+        "note": "A core part of the development cycle."
+    },
+    {
+        "word": "deployment",
+        "pronunciation": "/dɪˈplɔɪ.mənt/",
+        "meaning": "triển khai",
+        "description_en": "The action of bringing resources into effective action.",
+        "example": "The deployment to the production server was successful.",
+        "note": "Last stage of the release cycle."
+    },
+    {
+        "word": "firewall",
+        "pronunciation": "/ˈfaɪə.wɔːl/",
+        "meaning": "tường lửa",
+        "description_en": "A network security system that monitors and controls incoming and outgoing network traffic.",
+        "example": "Make sure your firewall is enabled to protect your PC.",
+        "note": "First line of network defense."
+    },
+    {
+        "word": "framework",
+        "pronunciation": "/ˈfreɪm.wɜːk/",
+        "meaning": "khung làm việc",
+        "description_en": "A basic structure underlying a system, concept, or text.",
+        "example": "Laravel is a popular PHP framework.",
+        "note": "Provides pre-built components for developers."
+    },
+    {
+        "word": "heuristic",
+        "pronunciation": "/hjuˈrɪs.tɪk/",
+        "meaning": "phương pháp phỏng đoán",
+        "description_en": "Enabling a person to discover or learn something for themselves.",
+        "example": "Antivirus software often use heuristic scanning for new threats.",
+        "note": "Common in AI and search algorithms."
+    },
+    {
+        "word": "iteration",
+        "pronunciation": "/ˌɪt.əˈreɪ.ʃən/",
+        "meaning": "vòng lặp",
+        "description_en": "The repetition of a process or utterance.",
+        "example": "The design improved significantly in the second iteration.",
+        "note": "Key concept in Agile development."
+    },
+    {
+        "word": "latency",
+        "pronunciation": "/ˈleɪ.tən.si/",
+        "meaning": "độ trễ",
+        "description_en": "The delay before a transfer of data begins following an instruction for its transfer.",
+        "example": "Low latency is critical for online gaming.",
+        "note": "Lower is better for performance."
+    },
+    {
+        "word": "middleware",
+        "pronunciation": "/ˈmɪd.əl.weər/",
+        "meaning": "phần mềm trung gian",
+        "description_en": "Software that acts as a bridge between an operating system or database and applications.",
+        "example": "The middleware handles user authentication for our API.",
+        "note": "Common in distributed systems."
+    },
+    {
+        "word": "optimization",
+        "pronunciation": "/ˌɒp.tɪ.maɪˈzeɪ.ʃən/",
+        "meaning": "sự tối ưu hóa",
+        "description_en": "The action of making the best or most effective use of a situation or resource.",
+        "example": "Code optimization can reduce the server response time.",
+        "note": "Improves performance and efficiency."
+    },
+    {
+        "word": "parameter",
+        "pronunciation": "/pəˈræm.ɪ.tər/",
+        "meaning": "tham số",
+        "description_en": "A numerical or other measurable factor forming one of a set that defines a system or sets the conditions of its operation.",
+        "example": "You need to pass the correct parameters to the function.",
+        "note": "Found in functions and APIs."
+    },
+    {
+        "word": "query",
+        "pronunciation": "/ˈkwɪə.ri/",
+        "meaning": "truy vấn",
+        "description_en": "A question, especially one addressed to an official or organization.",
+        "example": "The SQL query took five seconds to execute.",
+        "note": "Used to fetch data from databases."
+    },
+    {
+        "word": "repository",
+        "pronunciation": "/rɪˈpɒz.ɪ.tər.i/",
+        "meaning": "kho lưu trữ",
+        "description_en": "A central location in which data is stored and managed.",
+        "example": "I pushed my latest changes to the GitHub repository.",
+        "note": "Essential for version control."
+    },
+    {
+        "word": "scalability",
+        "pronunciation": "/ˌskeɪ.ləˈbɪl.ə.ti/",
+        "meaning": "khả năng mở rộng",
+        "description_en": "The capacity to be changed in size or scale.",
+        "example": "Our application was designed with horizontal scalability in mind.",
+        "note": "Important for growing user bases."
+    },
+    {
+        "word": "syntax",
+        "pronunciation": "/ˈsɪn.tæks/",
+        "meaning": "cú pháp",
+        "description_en": "The arrangement of words and phrases to create well-formed sentences in a language.",
+        "example": "Python has a clean and simple syntax.",
+        "note": "Rules of a programming language."
+    },
+    {
+        "word": "token",
+        "pronunciation": "/ˈtəʊ.kən/",
+        "meaning": "mã thông báo",
+        "description_en": "A thing serving as a visible or tangible representation of a fact, quality, feeling, etc.",
+        "example": "The API requires an authentication token in the header.",
+        "note": "Used in security and blockchain."
+    },
+    {
+        "word": "utility",
+        "pronunciation": "/juːˈtɪl.ə.ti/",
+        "meaning": "tiện ích",
+        "description_en": "The state of being useful, profitable, or beneficial.",
+        "example": "Disk Cleanup is a useful system utility.",
+        "note": "Small programs for specific tasks."
+    },
+    {
+        "word": "validation",
+        "pronunciation": "/ˌvæl.ɪˈdeɪ.ʃən/",
+        "meaning": "sự xác thực",
+        "description_en": "The action of checking or proving the validity or accuracy of something.",
+        "example": "Form validation prevents empty submissions.",
+        "note": "Ensures data integrity."
+    },
+    {
+        "word": "virtualization",
+        "pronunciation": "/ˌvɜː.tʃu.ə.laɪˈzeɪ.ʃən/",
+        "meaning": "ảo hóa",
+        "description_en": "The act of creating a virtual version of something, such as an operating system.",
+        "example": "Server virtualization helps reduce hardware costs.",
+        "note": "Common in cloud computing."
+    },
+    {
+        "word": "workflow",
+        "pronunciation": "/ˈwɜːk.fləʊ/",
+        "meaning": "quy trình làm việc",
+        "description_en": "The sequence of industrial, administrative, or other processes through which a piece of work passes from initiation to completion.",
+        "example": "Using Git simplified our team's internal workflow.",
+        "note": "Improves team productivity."
+    },
+    {
+        "word": "backend",
+        "pronunciation": "/ˈbæk.end/",
+        "meaning": "hậu phương",
+        "description_en": "The part of a computer system or application that is not directly accessed by the user.",
+        "example": "The backend was built using Node.js and MongoDB.",
+        "note": "Handles logic and database."
+    },
+    {
+        "word": "frontend",
+        "pronunciation": "/ˈfrʌnt.end/",
+        "meaning": "tiền phương",
+        "description_en": "The part of a computer system or application that is directly accessed by the user.",
+        "example": "A frontend developer works with HTML, CSS, and JS.",
+        "note": "The user-facing side of an app."
+    },
+    {
+        "word": "firmware",
+        "pronunciation": "/ˈfɜːm.weər/",
+        "meaning": "phần mềm hệ thống",
+        "description_en": "Permanent software programmed into a read-only memory.",
+        "example": "The router's firmware needs a security patch update.",
+        "note": "Low-level software for hardware."
+    },
+    {
+        "word": "bandwidth",
+        "pronunciation": "/ˈbænd.wɪtθ/",
+        "meaning": "băng thông",
+        "description_en": "The maximum rate of data transfer across a given path.",
+        "example": "Fiber optic offers much higher bandwidth than DSL.",
+        "note": "Essential for fast internet."
+    },
+    {
+        "word": "cookie",
+        "pronunciation": "/ˈkʊk.i/",
+        "meaning": "tệp tin lưu trữ",
+        "description_en": "A small piece of data sent from a website and stored on the user's computer.",
+        "example": "Cookies are used to remember your login session.",
+        "note": "Privacy regulations often require consent."
+    },
+    {
+        "word": "encryption",
+        "pronunciation": "/ɪnˈkrɪp.ʃən/",
+        "meaning": "mã hóa",
+        "description_en": "Process of encoding messages so only authorized parties can read it.",
+        "example": "End-to-end encryption ensures only you and the recipient can see messages.",
+        "note": "Crucial for modern apps."
+    },
+    {
+        "word": "filesystem",
+        "pronunciation": "/ˈfaɪl.sɪs.təm/",
+        "meaning": "hệ thống tệp",
+        "description_en": "How data is stored and retrieved from a storage medium.",
+        "example": "NTFS is the default filesystem for Windows.",
+        "note": "Manages files and directories."
+    },
+    {
+        "word": "gateway",
+        "pronunciation": "/ˈɡeɪt.weɪ/",
+        "meaning": "cổng kết nối",
+        "description_en": "A node in a computer network that serves as an entrance to another network.",
+        "example": "The default gateway is often the IP of your router.",
+        "note": "Route traffic between networks."
+    },
+    {
+        "word": "host",
+        "pronunciation": "/həʊst/",
+        "meaning": "máy chủ lưu trữ",
+        "description_en": "A computer that mediates multiple users' access to a computer network.",
+        "example": "Which company do you use to host your website?",
+        "note": "Provides resources to clients."
+    },
+    {
+        "word": "index",
+        "pronunciation": "/ˈɪn.deks/",
+        "meaning": "chỉ mục",
+        "description_en": "A database feature that speeds up data retrieval.",
+        "example": "Adding an index to the email column made searches much faster.",
+        "note": "Speeds up SELECT queries."
+    },
+    {
+        "word": "kernel",
+        "pronunciation": "/ˈkɜː.nəl/",
+        "meaning": "nhân hệ điều hành",
+        "description_en": "The core of a computer's operating system, having complete control over everything in the system.",
+        "example": "The Linux kernel is open source and very flexible.",
+        "note": "Bridge between software and hardware."
+    },
+    {
+        "word": "malware",
+        "pronunciation": "/ˈmæl.weər/",
+        "meaning": "phần mềm độc hại",
+        "description_en": "Software that is specifically designed to disrupt, damage, or gain unauthorized access.",
+        "example": "Don't click on suspicious links to avoid malware.",
+        "note": "Short for malicious software."
+    },
+    {
+        "word": "node",
+        "pronunciation": "/nəʊd/",
+        "meaning": "nút mạng",
+        "description_en": "Any device connected to a computer network.",
+        "example": "The blockchain network consists of thousands of independent nodes.",
+        "note": "Generic term for network devices."
+    },
+    {
+        "word": "operating system",
+        "pronunciation": "/ˈɒp.ə.reɪ.tɪŋ ˌsɪs.təm/",
+        "meaning": "hệ điều hành",
+        "description_en": "The software that supports a computer's basic functions.",
+        "example": "Windows and macOS are the most popular operating systems for PCs.",
+        "note": "Abbreviated as OS."
+    },
+    {
+        "word": "packet",
+        "pronunciation": "/ˈpæk.ɪt/",
+        "meaning": "gói dữ liệu",
+        "description_en": "A formatted unit of data carried by a packet-switched network.",
+        "example": "Network data is broken into packets before being sent.",
+        "note": "Used in IP networking."
+    },
+    {
+        "word": "runtime",
+        "pronunciation": "/ˈrʌn.taɪm/",
+        "meaning": "thời gian chạy",
+        "description_en": "The period during which a computer program is executing.",
+        "example": "The error only occurs at runtime, not during compile-time.",
+        "note": "Post-compilation phase."
+    }
+]

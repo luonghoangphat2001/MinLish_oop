@@ -1,0 +1,402 @@
+[
+    {
+        "word": "appetizer",
+        "pronunciation": "/ˈæp.ə.taɪ.zər/",
+        "meaning": "món khai vị",
+        "description_en": "A small dish of food or a drink taken before a meal or the main course of a meal to stimulate one's appetite.",
+        "example": "We ordered a plate of garlic bread as an appetizer.",
+        "note": "Also known as a starter."
+    },
+    {
+        "word": "beverage",
+        "pronunciation": "/ˈbev.ər.ɪdʒ/",
+        "meaning": "đồ uống",
+        "description_en": "A drink, especially one other than water.",
+        "example": "A wide variety of hot and cold beverages are available at the counter.",
+        "note": "Formal term for drinks."
+    },
+    {
+        "word": "cuisine",
+        "pronunciation": "/kwɪˈziːn/",
+        "meaning": "ẩm thực",
+        "description_en": "A style or method of cooking, especially as characteristic of a particular country, region, or establishment.",
+        "example": "I love Vietnamese cuisine because of its fresh ingredients and herbs.",
+        "note": "French origin word."
+    },
+    {
+        "word": "dessert",
+        "pronunciation": "/dɪˈzɜːt/",
+        "meaning": "món tráng miệng",
+        "description_en": "The sweet course eaten at the end of a meal.",
+        "example": "For dessert, we had a delicious chocolate cake with vanilla ice cream.",
+        "note": "Commonly served after the main course."
+    },
+    {
+        "word": "entree",
+        "pronunciation": "/ˈɒn.treɪ/",
+        "meaning": "món chính",
+        "description_en": "The main course of a meal.",
+        "example": "The restaurant's signature entree is grilled salmon with asparagus.",
+        "note": "In North America, it refers to the main course; in others, it can be a starter."
+    },
+    {
+        "word": "garnish",
+        "pronunciation": "/ˈɡɑː.nɪʃ/",
+        "meaning": "trang trí món ăn",
+        "description_en": "A small amount of food used to decorate other food.",
+        "example": "The chef added a sprig of parsley as a garnish.",
+        "note": "Adds aesthetic appeal to the dish."
+    },
+    {
+        "word": "ingredient",
+        "pronunciation": "/ɪnˈɡriː.di.ənt/",
+        "meaning": "nguyên liệu",
+        "description_en": "Any of the foods or substances that are combined to make a particular dish.",
+        "example": "Fresh ingredients are the secret to a great meal.",
+        "note": "Essential components of a recipe."
+    },
+    {
+        "word": "marinate",
+        "pronunciation": "/ˈmær.ɪ.neɪt/",
+        "meaning": "ướp",
+        "description_en": "Soak (meat, fish, or other food) in a marinade.",
+        "example": "You should marinate the chicken for at least two hours before grilling.",
+        "note": "Adds flavor and tenderizes food."
+    },
+    {
+        "word": "nutrition",
+        "pronunciation": "/njuːˈtrɪʃ.ən/",
+        "meaning": "dinh dưỡng",
+        "description_en": "The process of providing or obtaining the food necessary for health and growth.",
+        "example": "Good nutrition is essential for maintaining a healthy lifestyle.",
+        "note": "Study of how food affects the body."
+    },
+    {
+        "word": "recipe",
+        "pronunciation": "/ˈres.ɪ.pi/",
+        "meaning": "công thức nấu ăn",
+        "description_en": "A set of instructions for preparing a particular dish.",
+        "example": "I followed my grandmother's recipe for traditional apple pie.",
+        "note": "Includes ingredients and steps."
+    },
+    {
+        "word": "seasoning",
+        "pronunciation": "/ˈsiː.zən.ɪŋ/",
+        "meaning": "gia vị",
+        "description_en": "Salt, herbs, or spices added to food to enhance the flavor.",
+        "example": "The soup needs a bit More seasoning; maybe some salt and pepper.",
+        "note": "Enriches the taste of food."
+    },
+    {
+        "word": "utensil",
+        "pronunciation": "/juːˈten.sɪl/",
+        "meaning": "dụng cụ nhà bếp",
+        "description_en": "A tool, container, or other article, especially for household use.",
+        "example": "Kitchen utensils like spatulas and whisks are essential for baking.",
+        "note": "Includes forks, spoons, knives, etc."
+    },
+    {
+        "word": "vegetarian",
+        "pronunciation": "/ˌvedʒ.ɪˈteə.ri.ən/",
+        "meaning": "người ăn chay",
+        "description_en": "A person who does not eat meat.",
+        "example": "She has been a vegetarian for over five years.",
+        "note": "Some vegetarians eat eggs and dairy."
+    },
+    {
+        "word": "yeast",
+        "pronunciation": "/jiːst/",
+        "meaning": "men nấm",
+        "description_en": "A microscopic fungus used in baking and brewing.",
+        "example": "Yeast is what makes bread dough rise.",
+        "note": "Essential for fermented foods."
+    },
+    {
+        "word": "zest",
+        "pronunciation": "/zest/",
+        "meaning": "vỏ chanh; sự nhiệt huyết",
+        "description_en": "The outer colored part of the peel of citrus fruit, used as flavoring.",
+        "example": "Add a teaspoon of lemon zest to the cake batter.",
+        "note": "Provides a strong citrus flavor."
+    },
+    {
+        "word": "baking",
+        "pronunciation": "/ˈbeɪ.kɪŋ/",
+        "meaning": "nướng bánh",
+        "description_en": "Cook (food) by dry heat without direct exposure to a flame, typically in an oven.",
+        "example": "I love the smell of fresh bread baking in the morning.",
+        "note": "Common for bread, cakes, and cookies."
+    },
+    {
+        "word": "caffeine",
+        "pronunciation": "/ˈkæf.iːn/",
+        "meaning": "caffeine",
+        "description_en": "A stimulant found in coffee and tea.",
+        "example": "Too Much caffeine can make you feel jittery.",
+        "note": "Helps stay awake and alert."
+    },
+    {
+        "word": "delicacy",
+        "pronunciation": "/ˈdel.ɪ.kə.si/",
+        "meaning": "đặc sản; món ăn quý hiếm",
+        "description_en": "A choice or expensive food.",
+        "example": "Truffles are considered a luxury delicacy in many parts of the world.",
+        "note": "Often region-specific."
+    },
+    {
+        "word": "edible",
+        "pronunciation": "/ˈed.ə.bəl/",
+        "meaning": "có thể ăn được",
+        "description_en": "Fit to be eaten.",
+        "example": "Are these mushrooms edible or are they poisonous?",
+        "note": "Safe for human consumption."
+    },
+    {
+        "word": "flavor",
+        "pronunciation": "/ˈfleɪ.vər/",
+        "meaning": "hương vị",
+        "description_en": "The distinctive taste of a food or drink.",
+        "example": "The strawberry flavor in this ice cream is very subtle.",
+        "note": "Combination of taste and smell."
+    },
+    {
+        "word": "grilling",
+        "pronunciation": "/ˈɡrɪl.ɪŋ/",
+        "meaning": "nướng vỉ",
+        "description_en": "Cook (something) by radiant heat or over a fire.",
+        "example": "Grilling is a popular way to cook outdoors in the summer.",
+        "note": "Uses high direct heat."
+    },
+    {
+        "word": "herbal",
+        "pronunciation": "/ˈhɜː.bəl/",
+        "meaning": "/thuộc thảo mộc/",
+        "description_en": "Relating to or made from herbs.",
+        "example": "She prefers herbal tea to regular coffee.",
+        "note": "Natural plants used for flavor or medicine."
+    },
+    {
+        "word": "infusion",
+        "pronunciation": "/ɪnˈfjuː.ʒən/",
+        "meaning": "nước ngâm; trà",
+        "description_en": "A drink, remedy, or extract prepared by soaking the leaves of a plant or herb in liquid.",
+        "example": "This chamomile infusion is very relaxing before bed.",
+        "note": "Like tea but often with herbs or fruit."
+    },
+    {
+        "word": "juicy",
+        "pronunciation": "/ˈdʒuː.si/",
+        "meaning": "mọng nước",
+        "description_en": "Full of juice; succulent.",
+        "example": "The peach was incredibly sweet and juicy.",
+        "note": "Characteristic of fresh fruit and well-cooked meat."
+    },
+    {
+        "word": "knead",
+        "pronunciation": "/niːd/",
+        "meaning": "nhào bột",
+        "description_en": "Work (moistened flour or clay) into dough or paste with the hands.",
+        "example": "You need to knead the bread dough for about ten minutes.",
+        "note": "Develops gluten in bread making."
+    },
+    {
+        "word": "lactose",
+        "pronunciation": "/ˈlæk.təʊs/",
+        "meaning": "đường sữa",
+        "description_en": "A sugar present in milk.",
+        "example": "Many people are lactose intolerant and cannot digest dairy easily.",
+        "note": "Primary sugar in dairy products."
+    },
+    {
+        "word": "mince",
+        "pronunciation": "/mɪns/",
+        "meaning": "băm nhỏ",
+        "description_en": "Cut up or grind (food, especially meat) into very small pieces.",
+        "example": "Use a sharp knife to mince the garlic as fine as possible.",
+        "note": "Smaller than dicing or chopping."
+    },
+    {
+        "word": "organic",
+        "pronunciation": "/ɔːˈɡæn.ɪk/",
+        "meaning": "hữu cơ",
+        "description_en": "Produced without the use of chemical fertilizers, pesticides, or other artificial agents.",
+        "example": "They only buy organic vegetables from the local farmers' market.",
+        "note": "Grown naturally."
+    },
+    {
+        "word": "pastry",
+        "pronunciation": "/ˈpeɪ.stri/",
+        "meaning": "bánh ngọt",
+        "description_en": "A dough of flour, shortening, and water, used as a base and covering in baked dishes such as pies.",
+        "example": "The French are famous for their delicious pastries and croissants.",
+        "note": "Rich, buttery baked goods."
+    },
+    {
+        "word": "quencher",
+        "pronunciation": "/ˈkwentʃər/",
+        "meaning": "đồ uống giải khát",
+        "description_en": "A drink that satisfies one's thirst.",
+        "example": "A cold lemonade is the perfect thirst quencher on a hot day.",
+        "note": "Satisfies dehydration."
+    },
+    {
+        "word": "roasting",
+        "pronunciation": "/ˈrəʊ.stɪŋ/",
+        "meaning": "quay; nướng",
+        "description_en": "Cook (food, especially meat) by prolonged exposure to heat in an oven or over a fire.",
+        "example": "A slow roasting process makes the chicken tender and flavorful.",
+        "note": "Uses dry heat for large pieces of food."
+    },
+    {
+        "word": "saute",
+        "pronunciation": "/ˈsəʊ.teɪ/",
+        "meaning": "áp chảo; xào",
+        "description_en": "Fried quickly in a little hot fat.",
+        "example": "Saute the onions until they are soft and translucent.",
+        "note": "Fast cooking method with minimal oil."
+    },
+    {
+        "word": "thawing",
+        "pronunciation": "/ˈθɔː.ɪŋ/",
+        "meaning": "rã đông",
+        "description_en": "Become liquid or soft as a result of warming.",
+        "example": "The frozen turkey will take several hours for thawing.",
+        "note": "Preparing frozen food for cooking."
+    },
+    {
+        "word": "unprocessed",
+        "pronunciation": "/ˌʌnˈprəʊ.sest/",
+        "meaning": "chưa qua chế biến",
+        "description_en": "Not having undergone industrial processing.",
+        "example": "Unprocessed foods are generally considered healthier than highly refined ones.",
+        "note": "Natural state of food."
+    },
+    {
+        "word": "vanilla",
+        "pronunciation": "/vəˈnɪl.ə/",
+        "meaning": "vani",
+        "description_en": "A substance obtained from vanilla beans or produced artificially, used to flavor food.",
+        "example": "Vanilla is the Most popular flavor for ice cream worldwide.",
+        "note": "Key ingredient in baking."
+    },
+    {
+        "word": "whisk",
+        "pronunciation": "/wɪsk/",
+        "meaning": "đánh trứng; cây đánh trứng",
+        "description_en": "Beat or stir (a substance, especially cream or eggs) with a light, rapid movement.",
+        "example": "Use a whisk to beat the egg whites until they form stiff peaks.",
+        "note": "Both a verb and a kitchen tool."
+    },
+    {
+        "word": "zesty",
+        "pronunciation": "/ˈzes.ti/",
+        "meaning": "đậm đà; cay nồng",
+        "description_en": "Having a strong, pleasant, and somewhat spicy flavor.",
+        "example": "The salsa has a zesty flavor with a hint of lime.",
+        "note": "Relating to zest or citrus-like tang."
+    },
+    {
+        "word": "aroma",
+        "pronunciation": "/əˈrəʊ.mə/",
+        "meaning": "mùi thơm",
+        "description_en": "A distinctive, typically pleasant smell.",
+        "example": "The wonderful aroma of freshly brewed coffee filled the kitchen.",
+        "note": "Appetizing smell of food."
+    },
+    {
+        "word": "bitter",
+        "pronunciation": "/ˈbɪt.ər/",
+        "meaning": "đắng",
+        "description_en": "Having a sharp, pungent taste or smell; not sweet.",
+        "example": "Unsweetened dark chocolate has a very bitter taste.",
+        "note": "One of the basic tastes."
+    },
+    {
+        "word": "caramelize",
+        "pronunciation": "/ˈkær.ə.mə.laɪz/",
+        "meaning": "caramel hóa",
+        "description_en": "Cook (food with sugar) until it turns brown and develops a caramel flavor.",
+        "example": "The recipe says to caramelize the sugar in a heavy saucepan.",
+        "note": "Changes color and flavor profile."
+    },
+    {
+        "word": "deglaize",
+        "pronunciation": "/ˌdiːˈɡleɪz/",
+        "meaning": "khử chảo",
+        "description_en": "Dilute meat sediments in (a pan) in order to make a sauce or gravy, typically using wine or stock.",
+        "example": "After searing the steak, deglaize the pan with some red wine.",
+        "note": "Technique to make flavorful sauces."
+    },
+    {
+        "word": "emulsify",
+        "pronunciation": "/ɪˈmʌl.sɪ.faɪ/",
+        "meaning": "nhũ hóa",
+        "description_en": "Make into or become an emulsion.",
+        "example": "Whisking oil into vinegar will help to emulsify the salad dressing.",
+        "note": "Combining two unmixable liquids."
+    },
+    {
+        "word": "ferment",
+        "pronunciation": "/fəˈment/",
+        "meaning": "lên men",
+        "description_en": "Undergo fermentation.",
+        "example": "Cabbage is left to ferment to make traditional sauerkraut.",
+        "note": "Biological process used in bread, beer, and yogurt."
+    },
+    {
+        "word": "gourmet",
+        "pronunciation": "/ˈɡʊə.meɪ/",
+        "meaning": "người sành ăn; ẩm thực cao cấp",
+        "description_en": "A connoisseur of good food.",
+        "example": "He treats himself to a gourmet meal at a Michelin-star restaurant once a month.",
+        "note": "High quality or fine dining."
+    },
+    {
+        "word": "homogenize",
+        "pronunciation": "/həˈmɒdʒ.ə.naɪz/",
+        "meaning": "đồng nhất",
+        "description_en": "Subject (milk) to a process in which the fat droplets are emulsified and the cream does not separate.",
+        "example": "Most store-bought milk is homogenized for a uniform consistency.",
+        "note": "Used in dairy processing."
+    },
+    {
+        "word": "infuse",
+        "pronunciation": "/ɪnˈfjuːz/",
+        "meaning": "ngâm",
+        "description_en": "Soak (tea, herbs, or fruit) in liquid to extract the flavor.",
+        "example": "Let the tea leaves infuse for five minutes for the best flavor.",
+        "note": "Extracting flavor over time."
+    },
+    {
+        "word": "kebab",
+        "pronunciation": "/kɪˈbæb/",
+        "meaning": "thịt xiên nướng",
+        "description_en": "Pieces of meat, fish, or vegetables roasted or grilled on a skewer.",
+        "example": "We had grilled lamb kebabs for dinner at the Turkish restaurant.",
+        "note": "Middle Eastern origin."
+    },
+    {
+        "word": "leaven",
+        "pronunciation": "/ˈlev.ən/",
+        "meaning": "chất làm nở",
+        "description_en": "A substance, typically yeast or baking powder, added to dough or batter to make it rise.",
+        "example": "Baking soda acts as a leaven in this muffin recipe.",
+        "note": "Causes expansion of dough."
+    },
+    {
+        "word": "marinade",
+        "pronunciation": "/ˌmær.ɪˈneɪd/",
+        "meaning": "nước sốt ướp",
+        "description_en": "A liquid, typically made of oil, vinegar, herbs, and spices, in which food is soaked.",
+        "example": "The secret to the steak's flavor is the overnight marinade.",
+        "note": "The liquid used for marinating."
+    },
+    {
+        "word": "nourishment",
+        "pronunciation": "/ˈnʌr.ɪʃ.mənt/",
+        "meaning": "sự nuôi dưỡng; chất dinh dưỡng",
+        "description_en": "The food or other substances necessary for growth, health, and good condition.",
+        "example": "Plants get their nourishment from the soil and sunlight.",
+        "note": "Essential biological support."
+    }
+]

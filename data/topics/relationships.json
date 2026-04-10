@@ -1,0 +1,402 @@
+[
+    {
+        "word": "adoption",
+        "pronunciation": "/əˈdɒp.ʃən/",
+        "meaning": "sự nhận con nuôi",
+        "description_en": "The action or fact of legally taking another's child and bringing it up as one's own.",
+        "example": "They started the adoption process after learning they couldn't have biological children.",
+        "note": "Legal and emotional family bond."
+    },
+    {
+        "word": "ancestry",
+        "pronunciation": "/ˈæn.ses.tri/",
+        "meaning": "tổ tiên; dòng tộc",
+        "description_en": "One's family or ethnic descent.",
+        "example": "She traced her ancestry back to a small village in Ireland.",
+        "note": "Origin of a family."
+    },
+    {
+        "word": "brotherhood",
+        "pronunciation": "/ˈbrʌð.ə.hʊd/",
+        "meaning": "tình anh em",
+        "description_en": "The relationship between brothers.",
+        "example": "The soldiers shared a strong sense of brotherhood after surviving the battle.",
+        "note": "Bond of mutual support and friendship."
+    },
+    {
+        "word": "childhood",
+        "pronunciation": "/ˈtʃaɪld.hʊd/",
+        "meaning": "tuổi thơ",
+        "description_en": "The state of being a child.",
+        "example": "We had a very happy childhood growing up in the countryside.",
+        "note": "Formative years of life."
+    },
+    {
+        "word": "commitment",
+        "pronunciation": "/kəˈmɪt.mənt/",
+        "meaning": "sự cam kết",
+        "description_en": "The state or quality of being dedicated to a cause, activity, etc.",
+        "example": "A long-term relationship requires a high level of commitment from both partners.",
+        "note": "Pledge to stay together."
+    },
+    {
+        "word": "connection",
+        "pronunciation": "/kəˈnek.ʃən/",
+        "meaning": "sự kết nối; mối quan hệ",
+        "description_en": "A relationship in which a person, thing, or idea is linked or associated with something else.",
+        "example": "The mother and baby shared an instant, deep connection.",
+        "note": "Bond between individuals."
+    },
+    {
+        "word": "descendant",
+        "pronunciation": "/dɪˈsen.dənt/",
+        "meaning": "hậu duệ",
+        "description_en": "A person, plant, or animal that is descended from a particular ancestor.",
+        "example": "He is a direct descendant of the famous explorer.",
+        "note": "Offspring in later generations."
+    },
+    {
+        "word": "devotion",
+        "pronunciation": "/dɪˈvəʊ.ʃən/",
+        "meaning": "sự tận tâm; lòng thành kính",
+        "description_en": "Love, loyalty, or enthusiasm for a person, activity, or cause.",
+        "example": "Her devotion to her children was evident in everything she did.",
+        "note": "Deep commitment and care."
+    },
+    {
+        "word": "estrangement",
+        "pronunciation": "/ɪˈstreɪndʒ.mənt/",
+        "meaning": "sự ghẻ lạnh; sự ly biệt",
+        "description_en": "The fact of no longer being on friendly terms or part of a social group.",
+        "example": "The family went through a long period of estrangement after the argument.",
+        "note": "Breakdown of a relationship."
+    },
+    {
+        "word": "extended family",
+        "pronunciation": "/ɪkˈsten.dɪd ˈfæm.əl.i/",
+        "meaning": "đại gia đình",
+        "description_en": "A family that extends beyond the nuclear family, consisting of parents like aunts, uncles, and cousins.",
+        "example": "We gathered with our whole extended family for Thanksgiving.",
+        "note": "Includes relatives beyond parents and siblings."
+    },
+    {
+        "word": "fidelity",
+        "pronunciation": "/fɪˈdel.ə.ti/",
+        "meaning": "sự chung thủy",
+        "description_en": "Faithfulness to a person, cause, or belief, demonstrated by continuing loyalty and support.",
+        "example": "Marital fidelity is a core value in many cultures.",
+        "note": "Staying true to a partner."
+    },
+    {
+        "word": "foster",
+        "pronunciation": "/ˈfɒs.tər/",
+        "meaning": "nuôi dưỡng; chăm sóc",
+        "description_en": "Bring up (a child that is not one's own by birth).",
+        "example": "They have decided to foster children who are in need of a temporary home.",
+        "note": "Temporary or transitional care for children."
+    },
+    {
+        "word": "generation",
+        "pronunciation": "/ˌdʒen.əˈreɪ.ʃən/",
+        "meaning": "thế hệ",
+        "description_en": "All of the people born and living at about the same time, regarded collectively.",
+        "example": "The younger generation is more comfortable with technology.",
+        "note": "Group of individuals within a specific age range."
+    },
+    {
+        "word": "grandchild",
+        "pronunciation": "/ˈɡræn.tʃaɪld/",
+        "meaning": "cháu (nội/ngoại)",
+        "description_en": "A child of one's son or daughter.",
+        "example": "They love spending their weekends playing with their grandchildren.",
+        "note": "Second generation offspring."
+    },
+    {
+        "word": "heritage",
+        "pronunciation": "/ˈher.ɪ.tɪdʒ/",
+        "meaning": "di sản",
+        "description_en": "Property that is or may be inherited; an inheritance.",
+        "example": "The family has a rich cultural heritage that they passed down for generations.",
+        "note": "Traditions and history inherited from ancestors."
+    },
+    {
+        "word": "infatuation",
+        "pronunciation": "/ɪnˌfætʃ.uˈeɪ.ʃən/",
+        "meaning": "sự say mê (nhất thời)",
+        "description_en": "An intense but short-lived passion or admiration for someone or something.",
+        "example": "His crush on the new girl was just a brief infatuation.",
+        "note": "Often mistaken for deep love."
+    },
+    {
+        "word": "inheritance",
+        "pronunciation": "/ɪnˈher.ɪ.təns/",
+        "meaning": "sự thừa kế",
+        "description_en": "A thing that is inherited.",
+        "example": "She used her inheritance to start her own business.",
+        "note": "Assets or traits passed down after death."
+    },
+    {
+        "word": "intimacy",
+        "pronunciation": "/ˈɪn.tɪ.mə.si/",
+        "meaning": "sự thân mật",
+        "description_en": "Close familiarity or friendship; closeness.",
+        "example": "The couple shared a deep level of emotional intimacy.",
+        "note": "Sharing of personal thoughts and feelings."
+    },
+    {
+        "word": "kinship",
+        "pronunciation": "/ˈkɪn.ʃɪp/",
+        "meaning": "quan hệ họ hàng",
+        "description_en": "Blood relationship.",
+        "example": "Kinship ties remain strong in many rural communities.",
+        "note": "Connections by birth or marriage."
+    },
+    {
+        "word": "lineage",
+        "pronunciation": "/ˈlɪn.i.ɪdʒ/",
+        "meaning": "dòng dõi",
+        "description_en": "Lineal descent from an ancestor; ancestry or pedigree.",
+        "example": "She is proud of her royal lineage and family history.",
+        "note": "Direct line of descent."
+    },
+    {
+        "word": "maternity",
+        "pronunciation": "/məˈtɜː.nə.ti/",
+        "meaning": "tư cách làm mẹ; thuộc về sản khoa",
+        "description_en": "Motherhood.",
+        "example": "She is currently on maternity leave after giving birth to her son.",
+        "note": "State of being a mother."
+    },
+    {
+        "word": "monogamy",
+        "pronunciation": "/məˈnɒɡ.ə.mi/",
+        "meaning": "chế độ một vợ một chồng",
+        "description_en": "The practice or state of being married to one person at a time.",
+        "example": "Serial monogamy is common in modern Western societies.",
+        "note": "Relationship with only one partner."
+    },
+    {
+        "word": "nephew",
+        "pronunciation": "/ˈnef.juː/",
+        "meaning": "cháu trai (con của anh/chị/em)",
+        "description_en": "A son of one's brother or sister.",
+        "example": "My nephew is starting his first year at university this fall.",
+        "note": "Male child of a sibling."
+    },
+    {
+        "word": "niece",
+        "pronunciation": "/niːs/",
+        "meaning": "cháu gái (con của anh/chị/em)",
+        "description_en": "A daughter of one's brother or sister.",
+        "example": "Her niece is a talented young artist and painter.",
+        "note": "Female child of a sibling."
+    },
+    {
+        "word": "nuclear family",
+        "pronunciation": "/ˌnjuː.kli.ə ˈfæm.əl.i/",
+        "meaning": "gia đình hạt nhân",
+        "description_en": "A couple and their dependent children, regarded as a basic social unit.",
+        "example": "The nuclear family remains a dominant social structure.",
+        "note": "Smallest family unit (parents + children)."
+    },
+    {
+        "word": "nurture",
+        "pronunciation": "/ˈnɜː.tʃər/",
+        "meaning": "nuôi nấng; giáo dưỡng",
+        "description_en": "Care for and encourage the growth or development of.",
+        "example": "It's important to nurture talent and creativity in children.",
+        "note": "Emotional and physical support for growth."
+    },
+    {
+        "word": "offspring",
+        "pronunciation": "/ˈɒf.sprɪŋ/",
+        "meaning": "con cái",
+        "description_en": "A person's child or children.",
+        "example": "Birds defend their offspring with great courage.",
+        "note": "Generic term for children/progeny."
+    },
+    {
+        "word": "paternity",
+        "pronunciation": "/pəˈtɜː.nə.ti/",
+        "meaning": "tư cách làm cha",
+        "description_en": "The state of being a father.",
+        "example": "A paternity test was requested to confirm the biological father.",
+        "note": "State of being a father."
+    },
+    {
+        "word": "pedigree",
+        "pronunciation": "/ˈped.ɪ.ɡriː/",
+        "meaning": "phả hệ; dòng dõi thuần chủng",
+        "description_en": "The record of descent of an animal, showing it to be purebred.",
+        "example": "The family has a long and distinguished pedigree in the law profession.",
+        "note": "Record of ancestors (also used for animals)."
+    },
+    {
+        "word": "progeny",
+        "pronunciation": "/ˈprɒdʒ.ə.ni/",
+        "meaning": "con cháu; dòng dõi",
+        "description_en": "A descendant or the descendants of a person, animal, or plant; offspring.",
+        "example": "They are proud of their talented progeny.",
+        "note": "Formal term for descendants."
+    },
+    {
+        "word": "reconciliation",
+        "pronunciation": "/ˌrek.ənˌsɪl.iˈeɪ.ʃən/",
+        "meaning": "sự hòa giải",
+        "description_en": "The restoration of friendly relations.",
+        "example": "After years of silence, the brothers finally sought reconciliation.",
+        "note": "Ending a period of conflict."
+    },
+    {
+        "word": "relative",
+        "pronunciation": "/ˈrel.ə.tɪv/",
+        "meaning": "họ hàng",
+        "description_en": "A person connected by blood or marriage.",
+        "example": "All our close relatives gathered for the family reunion.",
+        "note": "Family member."
+    },
+    {
+        "word": "sibling",
+        "pronunciation": "/ˈsɪb.lɪŋ/",
+        "meaning": "anh chị em ruột",
+        "description_en": "Each of two or more children or offspring having one or both parents in common; a brother or sister.",
+        "example": "I have two siblings, one older brother and one younger sister.",
+        "note": "Does not specify gender."
+    },
+    {
+        "word": "sisterhood",
+        "pronunciation": "/ˈsɪs.tə.hʊd/",
+        "meaning": "tình chị em",
+        "description_en": "The relationship between sisters.",
+        "example": "The feminist movement emphasized the importance of global sisterhood.",
+        "note": "Bond of mutual support and friendship among women."
+    },
+    {
+        "word": "spouse",
+        "pronunciation": "/spaʊs/",
+        "meaning": "vợ hoặc chồng",
+        "description_en": "A husband or wife, considered in relation to their partner.",
+        "example": "You are welcome to invite your spouse to the office dinner.",
+        "note": "Formal term for a marriage partner."
+    },
+    {
+        "word": "stewardship",
+        "pronunciation": "/ˈstjuː.əd.ʃɪp/",
+        "meaning": "sự quản lý; sự chăm sóc",
+        "description_en": "The job of supervising or taking care of something.",
+        "example": "Good stewardship of family resources is important for future generations.",
+        "note": "Responsible management."
+    },
+    {
+        "word": "surrogate",
+        "pronunciation": "/ˈsʌr.ə.ɡət/",
+        "meaning": "người thay thế; người mang thai hộ",
+        "description_en": "A substitute, especially a person deputizing for another in a specific role or office.",
+        "example": "The couple used a surrogate mother to have their baby.",
+        "note": "Taking the place of someone else."
+    },
+    {
+        "word": "toddler",
+        "pronunciation": "/ˈtɒd.lər/",
+        "meaning": "trẻ tập đi",
+        "description_en": "A young child who is just beginning to walk.",
+        "example": "The park was full of noisy toddlers and their parents.",
+        "note": "Usually between ages 1 and 3."
+    },
+    {
+        "word": "upbringing",
+        "pronunciation": "/ˈʌpˌbrɪŋ.ɪŋ/",
+        "meaning": "sự nuôi dưỡng; giáo dục",
+        "description_en": "The treatment and instruction received by a child from its parents throughout its childhood.",
+        "example": "Their strict upbringing had a lasting effect on their behavior.",
+        "note": "Process of being raised."
+    },
+    {
+        "word": "widow",
+        "pronunciation": "/ˈwɪd.əʊ/",
+        "meaning": "người góa phụ",
+        "description_en": "A woman who has lost her spouse by death and has not remarried.",
+        "example": "The elderly widow lived alone in a large house.",
+        "note": "Female who has lost a husband."
+    },
+    {
+        "word": "widower",
+        "pronunciation": "/ˈwɪd.əʊ.ər/",
+        "meaning": "người góa vợ",
+        "description_en": "A man whose spouse has died and who has not remarried.",
+        "example": "The widower found it hard to adjust to living alone after 50 years of marriage.",
+        "note": "Male who has lost a wife."
+    },
+    {
+        "word": "yield",
+        "pronunciation": "/jiːld/",
+        "meaning": "nhường nhịn; chịu thua",
+        "description_en": "Give way to arguments, demands, or pressure.",
+        "example": "Successful families know when to yield and compromise in an argument.",
+        "note": "Giving in for the sake of harmony."
+    },
+    {
+        "word": "zygote",
+        "pronunciation": "/ˈzaɪ.ɡəʊt/",
+        "meaning": "hợp tử",
+        "description_en": "A diploid cell resulting from the fusion of two haploid gametes.",
+        "example": "The development of a human begins with a single zygote.",
+        "note": "Initial stage of a new organism."
+    },
+    {
+        "word": "bond",
+        "pronunciation": "/bɒnd/",
+        "meaning": "mối liên kết",
+        "description_en": "A relationship between people or groups based on shared feelings, interests, or experiences.",
+        "example": "The bond between twins is often said to be unbreakable.",
+        "note": "Strong emotional tie."
+    },
+    {
+        "word": "closeness",
+        "pronunciation": "/ˈkləʊs.nəs/",
+        "meaning": "sự gần gũi",
+        "description_en": "Familiarity or intimacy in a relationship.",
+        "example": "The brothers share a remarkable closeness despite living in different countries.",
+        "note": "Emotional proximity."
+    },
+    {
+        "word": "dependence",
+        "pronunciation": "/dɪˈpen.dəns/",
+        "meaning": "sự phụ thuộc",
+        "description_en": "The state of relying on or being controlled by someone or something else.",
+        "example": "Young children have a high level of dependence on their primary caregivers.",
+        "note": "Relying on others for support."
+    },
+    {
+        "word": "engagement",
+        "pronunciation": "/ɪnˈɡeɪdʒ.mənt/",
+        "meaning": "mối quan hệ; sự đính hôn",
+        "description_en": "A formal agreement to get married.",
+        "example": "We celebrated their engagement with a large family party.",
+        "note": "Commitment stage before marriage."
+    },
+    {
+        "word": "family reunion",
+        "pronunciation": "/ˈfæm.əl.i riːˌjuː.njən/",
+        "meaning": "cuộc đoàn tụ gia đình",
+        "description_en": "An occasion when many members of an extended family get together travel to see each other.",
+        "example": "We hold a family reunion at our grandparents' house every five years.",
+        "note": "Gathering of relatives."
+    },
+    {
+        "word": "heir",
+        "pronunciation": "/eər/",
+        "meaning": "người thừa kế",
+        "description_en": "A person legally entitled to the property or rank of another on that person's death.",
+        "example": "He is the sole heir to his father's vast estate.",
+        "note": "Recipient of an inheritance."
+    },
+    {
+        "word": "household",
+        "pronunciation": "/ˈhaʊs.həʊld/",
+        "meaning": "hộ gia đình",
+        "description_en": "A house and its occupants regarded as a unit.",
+        "example": "She manages the daily tasks of a large household.",
+        "note": "Includes all people living under one roof."
+    }
+]

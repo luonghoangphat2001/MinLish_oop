@@ -1,0 +1,402 @@
+[
+    {
+        "word": "absolution",
+        "pronunciation": "/ˌæb.səˈluː.ʃən/",
+        "meaning": "sự xá tội; sự trắng án",
+        "description_en": "Formal release from guilt, obligation, or punishment.",
+        "example": "The jury's verdict provided him with total absolution.",
+        "note": "Exoneration from a crime."
+    },
+    {
+        "word": "amendment",
+        "pronunciation": "/əˈmend.mənt/",
+        "meaning": "sửa đổi; bổ sung",
+        "description_en": "A minor change or addition designed to improve a text, piece of legislation, etc.",
+        "example": "The First Amendment protects the freedom of speech.",
+        "note": "Legal update to a document like a constitution."
+    },
+    {
+        "word": "appropriation",
+        "pronunciation": "/əˌprəʊ.priˈeɪ.ʃən/",
+        "meaning": "sự chiếm đoạt; sự phân bổ ngân sách",
+        "description_en": "The action of taking something for one's own use, typically without the owner's permission.",
+        "example": "The council approved a million-dollar appropriation for the new bridge.",
+        "note": "Can refer to funds or property."
+    },
+    {
+        "word": "bail",
+        "pronunciation": "/beɪl/",
+        "meaning": "tiền bảo lãnh",
+        "description_en": "The temporary release of an accused person awaiting trial, sometimes on condition that a sum of money is lodged to guarantee their appearance in court.",
+        "example": "The judge set bail at $50,000.",
+        "note": "Conditional release before trial."
+    },
+    {
+        "word": "coalition",
+        "pronunciation": "/ˌkəʊ.əˈlɪʃ.ən/",
+        "meaning": "liên minh",
+        "description_en": "An alliance for combined action, especially a temporary alliance of political parties forming a government or of states.",
+        "example": "The two minor parties formed a coalition to contest the election.",
+        "note": "Partnership for political power."
+    },
+    {
+        "word": "constitution",
+        "pronunciation": "/ˌkɒn.stɪˈtʃuː.ʃən/",
+        "meaning": "hiến pháp",
+        "description_en": "A body of fundamental principles or established precedents according to which a state or other organization is acknowledged to be governed.",
+        "example": "The current constitution was adopted in 1945.",
+        "note": "Supreme law of a country."
+    },
+    {
+        "word": "defendant",
+        "pronunciation": "/dɪˈfen.dənt/",
+        "meaning": "bị đơn; bị cáo",
+        "description_en": "An individual, company, or institution sued or accused in a court of law.",
+        "example": "The defendant pleaded not guilty to all charges.",
+        "note": "Opposite of plaintiff."
+    },
+    {
+        "word": "election",
+        "pronunciation": "/iˈlek.ʃən/",
+        "meaning": "cuộc bầu cử",
+        "description_en": "A formal and organized choice by vote of a person for a political office or other position.",
+        "example": "The presidential election will be held next November.",
+        "note": "Process of choosing leaders."
+    },
+    {
+        "word": "felony",
+        "pronunciation": "/ˈfel.ə.ni/",
+        "meaning": "tội trọng",
+        "description_en": "A crime, typically one involving violence, regarded as more serious than a misdemeanor, and usually punishable by imprisonment for more than one year or by death.",
+        "example": "Robbery with a weapon is classified as a felony.",
+        "note": "Serious criminal offense."
+    },
+    {
+        "word": "grievance",
+        "pronunciation": "/ˈɡriː.vəns/",
+        "meaning": "khiếu nại",
+        "description_en": "A real or imagined wrong or other cause for complaint or protest.",
+        "example": "The public expressed their deep grievances against the new tax law.",
+        "note": "Formal protest or complaint."
+    },
+    {
+        "word": "hegemony",
+        "pronunciation": "/hɪˈɡem.ə.ni/",
+        "meaning": "quyền bá chủ; sự thống trị",
+        "description_en": "Leadership or dominance, especially by one country or social group over others.",
+        "example": "The empire maintained its hegemony over the region for centuries.",
+        "note": "Total dominance."
+    },
+    {
+        "word": "impeachment",
+        "pronunciation": "/ɪmˈpiːtʃ.mənt/",
+        "meaning": "sự luận tội",
+        "description_en": "A charge of misconduct made against the holder of a public office.",
+        "example": "The president is facing possible impeachment over the scandal.",
+        "note": "Formal accusation against an official."
+    },
+    {
+        "word": "jurisdiction",
+        "pronunciation": "/ˌdʒʊə.rɪsˈdɪk.ʃən/",
+        "meaning": "quyền hạn pháp lý; phạm vi quyền hạn",
+        "description_en": "The official power to make legal decisions and judgments.",
+        "example": "The case falls under the jurisdiction of the federal court.",
+        "note": "Authority of a court or official."
+    },
+    {
+        "word": "legislature",
+        "pronunciation": "/ˈledʒ.ɪ.slə.tʃər/",
+        "meaning": "cơ quan lập pháp",
+        "description_en": "The legislative body of a country or state.",
+        "example": "The state legislature passed several new environmental laws today.",
+        "note": "Includes groups like Parliament or Congress."
+    },
+    {
+        "word": "monarchy",
+        "pronunciation": "/ˈmɒn.ə.ki/",
+        "meaning": "chế độ quân chủ",
+        "description_en": "A form of government with a monarch at the head.",
+        "example": "After the revolution, the monarchy was abolished.",
+        "note": "Rule by a king or queen."
+    },
+    {
+        "word": "notary",
+        "pronunciation": "/ˈnəʊ.tər.i/",
+        "meaning": "công chứng viên",
+        "description_en": "A person authorized to perform certain legal formalities, especially to draw up or certify contracts, deeds, and other documents for use in other jurisdictions.",
+        "example": "You need to have the document signed by a notary public.",
+        "note": "Official witness for documents."
+    },
+    {
+        "word": "ordinance",
+        "pronunciation": "/ˈɔː.dɪ.nəns/",
+        "meaning": "pháp lệnh; sắc lệnh",
+        "description_en": "An authoritative order; a decree.",
+        "example": "The city council passed an ordinance banning smoking in parks.",
+        "note": "Local level law."
+    },
+    {
+        "word": "parliament",
+        "pronunciation": "/ˈpɑː.lə.mənt/",
+        "meaning": "nghị viện; quốc hội",
+        "description_en": "The highest legislature, consisting of the Sovereign, the House of Lords, and the House of Commons.",
+        "example": "The Prime Minister addressed the members of parliament.",
+        "note": "Legislative body in many democratic systems."
+    },
+    {
+        "word": "quota",
+        "pronunciation": "/ˈkwəʊ.tə/",
+        "meaning": "hạn ngạch",
+        "description_en": "A fixed share of something that a person or group is entitled to receive or is bound to contribute.",
+        "example": "The government imposed a strict immigration quota.",
+        "note": "Assigned proportion or share."
+    },
+    {
+        "word": "referendum",
+        "pronunciation": "/ˌref.əˈren.dəm/",
+        "meaning": "trưng cầu dân ý",
+        "description_en": "A general vote by the electorate on a single political question which has been referred to them for a direct decision.",
+        "example": "The country is holding a referendum on whether to stay in the union.",
+        "note": "Direct vote by citizens."
+    },
+    {
+        "word": "statute",
+        "pronunciation": "/ˈstætʃ.uːt/",
+        "meaning": "đạo luật; quy chế",
+        "description_en": "A written law passed by a legislative body.",
+        "example": "Protection of privacy is guaranteed by federal statute.",
+        "note": "Formal written enactment."
+    },
+    {
+        "word": "testimony",
+        "pronunciation": "/ˈtes.tɪ.mə.ni/",
+        "meaning": "lời khai; nhân chứng",
+        "description_en": "A formal written or spoken statement, especially one given in a court of law.",
+        "example": "The witness provided crucial testimony that changed the course of the trial.",
+        "note": "Evidence given by a witness."
+    },
+    {
+        "word": "unanimous",
+        "pronunciation": "/juːˈnæn.ɪ.məs/",
+        "meaning": "nhất trí",
+        "description_en": "Fully in agreement.",
+        "example": "The jury reached a unanimous verdict of guilty.",
+        "note": "Total agreement by a group."
+    },
+    {
+        "word": "verdict",
+        "pronunciation": "/ˈvɜː.dɪkt/",
+        "meaning": "phán quyết",
+        "description_en": "A decision on a disputed issue in a civil or criminal case.",
+        "example": "The jury took only two hours to return their verdict.",
+        "note": "Formal decision of a jury or judge."
+    },
+    {
+        "word": "warrant",
+        "pronunciation": "/ˈwɒr.ənt/",
+        "meaning": "lệnh truy nã; lệnh khám xét",
+        "description_en": "A document issued by a legal or government official authorizing the police or some other body to make an arrest or search premises.",
+        "example": "The police had a warrant to search the suspect's house.",
+        "note": "Official authorization for law enforcement."
+    },
+    {
+        "word": "xenophobia",
+        "pronunciation": "/ˌzen.əˈfəʊ.bi.ə/",
+        "meaning": "bài ngoại",
+        "description_en": "Dislike of or prejudice against people from other countries.",
+        "example": "The rise of xenophobia in the region is a concerning political trend.",
+        "note": "Fear or hatred of foreigners."
+    },
+    {
+        "word": "yield",
+        "pronunciation": "/jiːld/",
+        "meaning": "nhượng bộ",
+        "description_en": "Give way to arguments, demands, or pressure.",
+        "example": "The government refused to yield to the protesters' demands.",
+        "note": "Surrender under pressure."
+    },
+    {
+        "word": "zealot",
+        "pronunciation": "/ˈzel.ət/",
+        "meaning": "người cuồng tín",
+        "description_en": "A person who is fanatical and uncompromising in pursuit of their religious, political, or other ideals.",
+        "example": "The movement was led by a handful of revolutionary zealots.",
+        "note": "Extreme and uncompromising supporter."
+    },
+    {
+        "word": "autocracy",
+        "pronunciation": "/ɔːˈtɒk.rə.si/",
+        "meaning": "chế độ độc tài",
+        "description_en": "A system of government by one person with absolute power.",
+        "example": "The country has been ruled as an autocracy for decades.",
+        "note": "Rule by a single person with unlimited power."
+    },
+    {
+        "word": "ballot",
+        "pronunciation": "/ˈbæl.ət/",
+        "meaning": "lá phiếu",
+        "description_en": "A process of voting, in writing and typically in secret.",
+        "example": "The result of the ballot will be announced tomorrow.",
+        "note": "Paper or system used to cast a vote."
+    },
+    {
+        "word": "censorship",
+        "pronunciation": "/ˈsen.sə.ʃɪp/",
+        "meaning": "sự kiểm duyệt",
+        "description_en": "The suppression or prohibition of any parts of books, films, news, etc. that are considered obscene, politically unacceptable, or a threat to security.",
+        "example": "The government has tightened its censorship of internet content.",
+        "note": "Suppression of information."
+    },
+    {
+        "word": "diplomacy",
+        "pronunciation": "/dɪˈpləʊ.mə.si/",
+        "meaning": "ngoại giao",
+        "description_en": "The profession, activity, or skill of managing international relations.",
+        "example": "They are trying to solve the conflict through quiet diplomacy.",
+        "note": "Art of international negotiation."
+    },
+    {
+        "word": "espionage",
+        "pronunciation": "/ˈes.pi.ə.nɑːʒ/",
+        "meaning": "gián điệp",
+        "description_en": "The practice of spying or of using spies, typically by governments to obtain political and military information.",
+        "example": "He was arrested and charged with industrial espionage.",
+        "note": "Spying activities."
+    },
+    {
+        "word": "franchise",
+        "pronunciation": "/ˈfræn.tʃaɪz/",
+        "meaning": "quyền bầu cử",
+        "description_en": "The right to vote in public, political elections.",
+        "example": "The struggle for women's franchise took decades.",
+        "note": "Suffix '-ment' often used as 'enfranchisement'."
+    },
+    {
+        "word": "governance",
+        "pronunciation": "/ˈɡʌv.ən.əns/",
+        "meaning": "sự quản trị; cách quản lý",
+        "description_en": "The action or manner of governing.",
+        "example": "The corporate governance of the bank is under intense scrutiny.",
+        "note": "Process of decision-making and implementation."
+    },
+    {
+        "word": "homage",
+        "pronunciation": "/ˈhɒm.ɪdʒ/",
+        "meaning": "sự tôn kính; lòng trung thành",
+        "description_en": "Special honor or respect shown publicly.",
+        "example": "The new president paid homage to the country's founding fathers.",
+        "note": "Tribute to a figure of authority."
+    },
+    {
+        "word": "indictment",
+        "pronunciation": "/ɪnˈdaɪt.mənt/",
+        "meaning": "bản cáo trạng",
+        "description_en": "A formal charge or accusation of a serious crime.",
+        "example": "Federal prosecutors handed down an indictment against the corporate executives.",
+        "note": "Formal criminal charge."
+    },
+    {
+        "word": "judicial",
+        "pronunciation": "/dʒuːˈdɪʃ.əl/",
+        "meaning": "thuộc tư pháp",
+        "description_en": "Of, by, or appropriate to a court or judge.",
+        "example": "The case is currently undergoing judicial review.",
+        "note": "Relating to the legal system and judges."
+    },
+    {
+        "word": "kilogram",
+        "pronunciation": "/ˈkɪl.ə.ɡræm/",
+        "meaning": "ki-lô-gam (ngữ cảnh: quy định đo lường)",
+        "description_en": "The SI unit of mass.",
+        "example": "The new international standards fixed the definition of a kilogram by physical constants.",
+        "note": "Included as part of legal weights and measures."
+    },
+    {
+        "word": "lobbying",
+        "pronunciation": "/ˈlɒb.i.ɪŋ/",
+        "meaning": "vận động hành lang",
+        "description_en": "Seek to influence (a politician or public official) on an issue.",
+        "example": "Environmental groups are lobbying against the construction of the new highway.",
+        "note": "Involved in political influence."
+    },
+    {
+        "word": "mandate",
+        "pronunciation": "/ˈmæn.deɪt/",
+        "meaning": "sự ủy nhiệm; mệnh lệnh",
+        "description_en": "An official order or commission to do something.",
+        "example": "The government has a clear mandate to reform the healthcare system.",
+        "note": "Authority given to a leader by voters."
+    },
+    {
+        "word": "nepotism",
+        "pronunciation": "/ˈnep.ə.tɪ.zəm/",
+        "meaning": "sự gia đình trị",
+        "description_en": "The practice among those with power or influence of favoring relatives or friends, especially by giving them jobs.",
+        "example": "The politician was accused of nepotism for hiring his son as an advisor.",
+        "note": "Unfair favoritism within power structures."
+    },
+    {
+        "word": "oligarchy",
+        "pronunciation": "/ˈɒl.ɪ.ɡɑː.ki/",
+        "meaning": "chế độ đầu sỏ",
+        "description_en": "A small group of people having control of a country, organization, or institution.",
+        "example": "The country is ruled by a powerful economic oligarchy.",
+        "note": "Government by a small elite group."
+    },
+    {
+        "word": "partisan",
+        "pronunciation": "/ˈpɑː.tɪ.zæn/",
+        "meaning": "đảng phái; thiên vị",
+        "description_en": "A strong supporter of a party, cause, or person.",
+        "example": "The debate was highly partisan and lacked constructive dialogue.",
+        "note": "Showing strong bias for a political party."
+    },
+    {
+        "word": "republic",
+        "pronunciation": "/rɪˈpʌb.lɪk/",
+        "meaning": "cộng hòa",
+        "description_en": "A state in which supreme power is held by the people and their elected representatives, and which has an elected or nominated president rather than a monarch.",
+        "example": "The ancient Roman Republic was a precursor to modern democracies.",
+        "note": "Government by elected officials."
+    },
+    {
+        "word": "sovereignty",
+        "pronunciation": "/ˈsɒv.rənty/",
+        "meaning": "chủ quyền",
+        "description_en": "The authority of a state to govern itself or another state.",
+        "example": "The islands' sovereignty has been disputed for centuries.",
+        "note": "Supreme independent power."
+    },
+    {
+        "word": "treaty",
+        "pronunciation": "/ˈtriː.ti/",
+        "meaning": "hiệp ước",
+        "description_en": "A formally concluded and ratified agreement between countries.",
+        "example": "The peace treaty was signed after months of negotiations.",
+        "note": "Legal agreement between nations."
+    },
+    {
+        "word": "usurpation",
+        "pronunciation": "/ˌjuː.zɜːˈpeɪ.ʃən/",
+        "meaning": "sự tiếm quyền",
+        "description_en": "Taking someone's power or property by force.",
+        "example": "The general was executed for his attempted usurpation of the throne.",
+        "note": "Illegally taking power."
+    },
+    {
+        "word": "veto",
+        "pronunciation": "/ˈviː.təʊ/",
+        "meaning": "quyền phủ quyết; phủ quyết",
+        "description_en": "A constitutional right to reject a decision or proposal made by a law-making body.",
+        "example": "The governor used her veto to block the bill.",
+        "note": "Power to stop a decision or law."
+    },
+    {
+        "word": "welfare",
+        "pronunciation": "/ˈwel.feər/",
+        "meaning": "phúc lợi xã hội",
+        "description_en": "Statutory procedure or social effort designed to promote the basic physical and material well-being of people in need.",
+        "example": "The government is reformulating its social welfare policy.",
+        "note": "Support provided by the state to citizens."
+    }
+]
