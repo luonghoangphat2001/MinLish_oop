@@ -54,21 +54,10 @@ jobs:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   port: ${{ secrets.SSH_PORT || 22 }}
-                  source: "*"
-                  strip_components: 1
+                  source: "./*"
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
                   rm: false
-                  exclude: |
-                      .git/
-                      .github/
-                      node_modules/
-                      tests/
-                      .env
-                      storage/logs/*
-                      storage/framework/cache/*
-                      storage/framework/sessions/*
-                      storage/framework/views/*
 
             # 8. Run command on server
             - name: ⚙️ Run Deployment Script
