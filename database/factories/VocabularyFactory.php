@@ -26,11 +26,11 @@ class VocabularyFactory extends Factory
             'word' => $word,
             'pronunciation' => $picked['pronunciation'],
             'meaning' => $picked['meaning'],
-            'description_en' => fake()->optional()->sentence(10),
+            'description_en' => $picked['description_en'] ?? null,
             'example' => $picked['example'],
             'collocation' => fake()->optional()->words(2, true),
             'related_words' => fake()->optional()->words(3, true),
-            'note' => fake()->optional()->sentence(8),
+            'note' => $picked['note'] ?? null,
         ];
     }
 }
