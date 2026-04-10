@@ -75,7 +75,7 @@ jobs:
             # Run Laravel tasks
             php artisan migrate --force
             php artisan optimize:clear
-            php artisan optimize
+            php artisan optimize 
             php artisan storage:link || echo "Storage link already exists."
             
             echo "✅ Deployment finished successfully at $(date)!"
