@@ -1,10 +1,18 @@
+# Force PHP 8.4 for cPanel
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php84 .php .php8 .phtml
+</IfModule>
+
 <IfModule mod_rewrite.c>
     # Disable directory browsing
     Options -Indexes
 
     RewriteEngine on
 
-    # Redirect all requests to the public directory
+    # If accessing the root, go straight to public/index.php
+    RewriteRule ^$ public/index.php [L]
+
+    # Redirect all other requests to the public directory
     RewriteCond %{REQUEST_URI} !^/public/
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
