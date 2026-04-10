@@ -134,6 +134,13 @@
                 </tbody>
             </table>
         </div>
+
+        {{-- Phân trang --}}
+        @if ($words->hasPages())
+            <div class="mt-8">
+                {{ $words->links() }}
+            </div>
+        @endif
     </div>
 </div>
     </div>

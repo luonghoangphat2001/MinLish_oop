@@ -5,6 +5,7 @@ namespace App\Livewire\Vocabulary;
 use App\Models\Vocabulary;
 use App\Models\VocabularySet;
 use Livewire\Component;
+use Livewire\Attributes\Url;
 use Livewire\WithPagination;
 use Livewire\WithFileUploads;
 
@@ -12,9 +13,16 @@ class VocabularyIndex extends Component
 {
     use WithPagination;
     use WithFileUploads;
-    
+
+    public function paginationView()
+    {
+        return 'vendor.pagination.minlish-vibe';
+    }
+
     public VocabularySet $set;
     public ?int $editingId = null;
+
+    #[Url]
     public string $search = '';
     public string $word = '';
     public string $pronunciation = '';
@@ -96,6 +104,7 @@ class VocabularyIndex extends Component
     {
         $word = Vocabulary::where('set_id', $this->set->id)->findOrFail($wordId);
         $word->delete();
+        $this->resetPage();
 
         if ($this->editingId === $wordId) {
             $this->resetForm();
@@ -169,7 +178,7 @@ class VocabularyIndex extends Component
                 });
             })
             ->latest()
-            ->paginate(20);
+            ->paginate(10);
 
         return view('livewire.vocabulary.vocabulary-index', [
             'words' => $words,

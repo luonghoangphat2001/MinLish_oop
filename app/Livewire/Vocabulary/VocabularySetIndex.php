@@ -7,13 +7,22 @@ use App\Models\User;
 use App\Services\StarterVocabularyService;
 use Livewire\Component;
 use Livewire\Attributes\On;
+use Livewire\Attributes\Url;
 use Livewire\WithPagination;
 
 class VocabularySetIndex extends Component
 {
     use WithPagination;
 
+    public function paginationView()
+    {
+        return 'vendor.pagination.minlish-vibe';
+    }
+
+    #[Url]
     public $search = '';
+
+    #[Url]
     public $tagFilter = '';
 
     public function updatingSearch()
@@ -41,7 +50,7 @@ class VocabularySetIndex extends Component
             })
             ->withCount('vocabularies')
             ->latest()
-            ->paginate(10);
+            ->paginate(6);
 
         return view('livewire.vocabulary.vocabulary-set-index', [
             'sets' => $sets,
@@ -55,6 +64,7 @@ class VocabularySetIndex extends Component
 
         $set = $user->vocabularySets()->findOrFail($id);
         $set->delete();
+        $this->resetPage();
 
         session()->flash('message', 'Đã xoá bộ từ vựng thành công.');
     }
