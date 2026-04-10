@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\StudyLog;
+use App\Observers\StudyLogObserver;
 use App\Services\StarterVocabularyService;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Event;
@@ -22,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        StudyLog::observe(StudyLogObserver::class);
+
         Event::listen(Registered::class, function (Registered $event) {
             app(StarterVocabularyService::class)->seedDefaultForUser($event->user);
         });
