@@ -21,7 +21,7 @@ class VocabularyFactory extends Factory
         }
 
         $picked = self::$samples[array_rand(self::$samples)];
-        $word = $picked['word'] ?? fake()->word();
+        $word = $picked['word'] ?? $this->faker->word();
 
         return [
             'set_id' => VocabularySet::factory(),
@@ -30,8 +30,8 @@ class VocabularyFactory extends Factory
             'meaning' => $picked['meaning'],
             'description_en' => $picked['description_en'] ?? null,
             'example' => $picked['example'],
-            'collocation' => fake()->optional()->words(2, true),
-            'related_words' => fake()->optional()->words(3, true),
+            'collocation' => $this->faker->optional()->words(2, true),
+            'related_words' => $this->faker->optional()->words(3, true),
             'note' => $picked['note'] ?? null,
         ];
     }

@@ -17,10 +17,10 @@ class VocabularySetFactory extends Factory
     {
         return [
             'user_id'     => User::factory(),
-            'name'        => fake()->unique()->words(3, true),
-            'description' => fake()->sentence(8),
-            'tags'        => fake()->words(fake()->numberBetween(2, 4)),
-            'is_public'   => fake()->boolean(20),
+            'name'        => $this->faker->unique()->words(3, true),
+            'description' => $this->faker->sentence(8),
+            'tags'        => $this->faker->words($this->faker->numberBetween(2, 4)),
+            'is_public'   => $this->faker->boolean(20),
         ];
     }
 }
