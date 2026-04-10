@@ -24,19 +24,20 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = app(\Faker\Generator::class);
         return [
-            'name'              => $this->faker->name(),
-            'email'             => $this->faker->unique()->safeEmail(),
+            'name'              => $faker->name(),
+            'email'             => $faker->unique()->safeEmail(),
             'google_id'         => null,
-            'level'             => $this->faker->randomElement(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
-            'goal'              => $this->faker->randomElement([
+            'level'             => $faker->randomElement(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
+            'goal'              => $faker->randomElement([
                 'Hoan thanh 20 tu moi moi ngay',
                 'On tap IELTS moi toi',
                 'Mo rong tu vung chu de cong viec',
                 'Luyen nghe ban tin hang ngay',
             ]),
-            'streak_days'       => $this->faker->numberBetween(0, 30),
-            'last_study_date'   => $this->faker->dateTimeBetween('-30 days', 'now'),
+            'streak_days'       => $faker->numberBetween(0, 30),
+            'last_study_date'   => $faker->dateTimeBetween('-30 days', 'now'),
             'email_verified_at' => now(),
             'password'          => static::$password ??= Hash::make('password'),
             'remember_token'    => Str::random(10),

@@ -15,12 +15,13 @@ class VocabularySetFactory extends Factory
 
     public function definition(): array
     {
+        $faker = app(\Faker\Generator::class);
         return [
             'user_id'     => User::factory(),
-            'name'        => $this->faker->unique()->words(3, true),
-            'description' => $this->faker->sentence(8),
-            'tags'        => $this->faker->words($this->faker->numberBetween(2, 4)),
-            'is_public'   => $this->faker->boolean(20),
+            'name'        => $faker->unique()->words(3, true),
+            'description' => $faker->sentence(8),
+            'tags'        => $faker->words($faker->numberBetween(2, 4)),
+            'is_public'   => $faker->boolean(20),
         ];
     }
 }

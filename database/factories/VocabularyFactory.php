@@ -15,13 +15,14 @@ class VocabularyFactory extends Factory
 
     public function definition(): array
     {
+        $faker = app(\Faker\Generator::class);
         if (is_null(self::$samples)) {
             $json = file_get_contents(base_path('data/vocabulary.json'));
             self::$samples = json_decode($json, true);
         }
 
         $picked = self::$samples[array_rand(self::$samples)];
-        $word = $picked['word'] ?? $this->faker->word();
+        $word = $picked['word'] ?? $faker->word();
 
         return [
             'set_id' => VocabularySet::factory(),
@@ -30,8 +31,8 @@ class VocabularyFactory extends Factory
             'meaning' => $picked['meaning'],
             'description_en' => $picked['description_en'] ?? null,
             'example' => $picked['example'],
-            'collocation' => $this->faker->optional()->words(2, true),
-            'related_words' => $this->faker->optional()->words(3, true),
+            'collocation' => $faker->optional()->words(2, true),
+            'related_words' => $faker->optional()->words(3, true),
             'note' => $picked['note'] ?? null,
         ];
     }
