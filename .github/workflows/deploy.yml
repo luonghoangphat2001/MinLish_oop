@@ -45,7 +45,7 @@ jobs:
           target: ${{ secrets.REMOTE_PATH }}
           rm: false
           strip_components: 0
-          overwrite: true
+          overwrite: true 
           exclude: |
             .git/
             .github/
