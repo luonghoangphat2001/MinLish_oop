@@ -45,7 +45,20 @@ jobs:
                   npm install
                   npm run build
 
-            # 7. Upload code (Optimized)
+            # 7. Clean up specific files before upload to avoid "File exists" errors
+            - name: 🧹 Clean up Server
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  script: |
+                      cd ${{ secrets.REMOTE_PATH }}
+                      rm -f .htaccess index.php
+
+            # 8. Upload code (Optimized)
             - name: 🚚 Upload to Server
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -54,7 +67,7 @@ jobs:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   port: ${{ secrets.SSH_PORT || 22 }}
-                  source: "./*, .htaccess" # Explicitly include .htaccess just in case
+                  source: "./*, .htaccess" 
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
                   rm: false
@@ -69,7 +82,7 @@ jobs:
                       storage/framework/views/*
                       storage/logs/*
 
-            # 8. Run command on server
+            # 9. Run command on server
             - name: ⚙️ Run Deployment Script
               uses: appleboy/ssh-action@v1.0.3
               with:
@@ -83,19 +96,25 @@ jobs:
                       PHP=/opt/cpanel/ea-php84/root/usr/bin/php
                       echo "🚀 Start post-deploy at $(date)"
 
-                      # 1. Ensure .env exists
-                      [ -f .env ] || cp .env.example .env
+                      # 1. Khởi tạo .env nếu chưa có
+                      if [ ! -f .env ]; then
+                          cp .env.example .env
+                      fi
 
-                      # 2. Ensure APP_KEY exists
-                      $PHP artisan key:generate --no-interaction
+                      # 2. Đảm bảo có APP_KEY
+                      if ! grep -q "APP_KEY=base64:" .env; then
+                          $PHP artisan key:generate --force
+                      fi
 
-                      # 3. Ensure permissions
+                      # 3. Phân quyền
                       chmod -R 775 storage bootstrap/cache
 
                       # 4. Laravel optimization
                       $PHP artisan migrate --force
                       $PHP artisan optimize:clear
-                      $PHP artisan optimize
+                      $PHP artisan config:clear
+                      $PHP artisan route:clear
+                      $PHP artisan view:clear
                       $PHP artisan storage:link || true
 
                       echo "✅ Deployment finished successfully at $(date)!"
