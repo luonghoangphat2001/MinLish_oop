@@ -96,35 +96,45 @@
 
         {{-- List Panel --}}
         <div class="lg:col-span-2">
-            <div class="bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm">
-                <h3 class="text-[18px] font-black text-slate-900 uppercase tracking-tight mb-6">DANH SÁCH TỪ VỰNG</h3>
-                <div class="overflow-hidden border border-slate-50 rounded-2xl">
-                    <table class="min-w-full divide-y divide-slate-50">
-                        <thead class="bg-slate-50/50">
-                            <tr>
-                                <th class="px-6 py-4 text-left text-[11px] font-black text-slate-400 uppercase tracking-widest">Từ vựng</th>
-                                <th class="px-6 py-4 text-left text-[11px] font-black text-slate-400 uppercase tracking-widest">Nghĩa</th>
-                                <th class="px-6 py-4 text-right text-[11px] font-black text-slate-400 uppercase tracking-widest">Thao tác</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-50 text-[14px]">
-                            @foreach ($words as $item)
-                            <tr class="hover:bg-slate-50 transition-colors">
-                                <td class="px-6 py-5 font-black text-slate-900 uppercase tracking-tight">{{ $item->word }}</td>
-                                <td class="px-6 py-5 font-black text-slate-600">{{ $item->meaning }}</td>
-                                <td class="px-6 py-5 text-right">
-                                    <button wire:click="editWord({{ $item->id }})" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <div class="bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm">
+        <h3 class="text-[18px] font-black text-slate-900 uppercase tracking-tight mb-6">DANH SÁCH TỪ VỰNG</h3>
+        <div class="overflow-hidden border border-slate-50 rounded-2xl">
+            <table class="min-w-full divide-y divide-slate-50">
+                <thead class="bg-slate-50/50">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-[11px] font-black text-slate-400 uppercase tracking-widest">Từ vựng</th>
+                        <th class="px-6 py-4 text-left text-[11px] font-black text-slate-400 uppercase tracking-widest">Nghĩa</th>
+                        <th class="px-6 py-4 text-right text-[11px] font-black text-slate-400 uppercase tracking-widest">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-50 text-[14px]">
+                    @foreach ($words as $item)
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-6 py-5 font-black text-slate-900 uppercase tracking-tight">{{ $item->word }}</td>
+                        <td class="px-6 py-5 font-black text-slate-600">{{ $item->meaning }}</td>
+                        <td class="px-6 py-5">
+                            <div class="flex items-center justify-end gap-2">
+                                <button wire:click="editWord({{ $item->id }})" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors" title="Sửa">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </button>
+
+                                <button wire:click="deleteWord({{ $item->id }})" 
+                                        wire:confirm="Bạn có chắc chắn muốn xóa từ vựng này không?" 
+                                        class="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors" title="Xóa">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
+    </div>
+</div>
     </div>
 </div>
