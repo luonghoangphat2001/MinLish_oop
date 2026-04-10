@@ -7,10 +7,12 @@ use App\Models\VocabularySet;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Livewire\WithFileUploads;
+
 class VocabularyIndex extends Component
 {
     use WithPagination;
     use WithFileUploads;
+    
     public VocabularySet $set;
     public ?int $editingId = null;
     public string $search = '';
