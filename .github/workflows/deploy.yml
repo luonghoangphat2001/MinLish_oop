@@ -1,4 +1,4 @@
-name: 🚀 Deploy to cPanel (Optimized)
+name: 🚀 Deploy to cPanel (Stable)
 
 on:
     push:
@@ -10,16 +10,17 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # 1. Checkout
+            # 1. Checkout code
             - name: 📥 Checkout Code
               uses: actions/checkout@v4
 
-            # 2. Cache Composer
-            - name: ⚡ Cache Composer
-              uses: actions/cache@v4
-              with:
-                  path: vendor
-                  key: composer-${{ hashFiles('composer.lock') }}
+            # 2. Debug (rất quan trọng để tránh lỗi empty archive)
+            - name: 🔍 Debug files
+              run: |
+                  echo "Current dir:"
+                  pwd
+                  echo "List files:"
+                  ls -la
 
             # 3. Setup PHP
             - name: 🐘 Setup PHP
@@ -28,30 +29,23 @@ jobs:
                   php-version: "8.4"
                   extensions: mbstring, bcmath, curl, openssl, xml, zip
 
-            # 4. Install PHP deps
+            # 4. Install Composer
             - name: 📦 Install Composer Dependencies
               run: composer install --no-dev --optimize-autoloader --no-interaction
 
-            # 5. Cache Node
-            - name: ⚡ Cache Node Modules
-              uses: actions/cache@v4
-              with:
-                  path: node_modules
-                  key: node-${{ hashFiles('package-lock.json') }}
-
-            # 6. Setup Node
+            # 5. Setup Node
             - name: 🟢 Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: "20"
 
-            # 7. Build FE
+            # 6. Build FE
             - name: 🛠 Build Assets
               run: |
                   npm install
                   npm run build
 
-            # 8. Deploy via SCP
+            # 7. Upload code (FIX lỗi empty archive ở đây)
             - name: 🚚 Upload to Server
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -60,26 +54,22 @@ jobs:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   port: ${{ secrets.SSH_PORT || 22 }}
-                  source: |
-                      app
-                      bootstrap
-                      config
-                      database
-                      public
-                      resources
-                      routes
-                      vendor
-                      artisan
-                      composer.json
-                      composer.lock
-                      package.json
-                      package-lock.json
-                      vite.config.js
+                  source: "./"
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
                   rm: false
+                  exclude: |
+                      .git/
+                      .github/
+                      node_modules/
+                      tests/
+                      .env
+                      storage/logs/*
+                      storage/framework/cache/*
+                      storage/framework/sessions/*
+                      storage/framework/views/*
 
-            # 9. SSH run commands
+            # 8. Run command on server
             - name: ⚙️ Run Deployment Script
               uses: appleboy/ssh-action@v1.0.3
               with:
@@ -93,7 +83,7 @@ jobs:
 
                       echo "🚀 Start deploy at $(date)"
 
-                      # Fix permissions
+                      # Fix permission
                       chmod -R 775 storage bootstrap/cache
 
                       # Laravel optimize
