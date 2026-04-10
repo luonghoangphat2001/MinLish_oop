@@ -80,7 +80,7 @@ jobs:
                   port: ${{ secrets.SSH_PORT || 22 }}
                   script: |
                       cd ${{ secrets.REMOTE_PATH }}
-
+                      PHP=/opt/cpanel/ea-php84/root/usr/bin/php
                       echo "🚀 Start post-deploy at $(date)"
 
                       # Ensure permissions
