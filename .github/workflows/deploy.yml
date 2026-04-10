@@ -57,7 +57,8 @@ jobs:
                   script: |
                       cd ${{ secrets.REMOTE_PATH }}
                       rm -f .htaccess index.php
-                      rm -f database/migrations/*.php
+                      # Nghỉ 5 giây để tránh lỗi handshake cho bước SCP tiếp theo
+                      sleep 5
 
             # 8. Upload code (Optimized)
             - name: 🚚 Upload to Server
@@ -72,16 +73,6 @@ jobs:
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
                   rm: false
-                  exclude: |
-                      .git/
-                      .github/
-                      node_modules/
-                      .env
-                      storage/*.key
-                      storage/framework/cache/*
-                      storage/framework/sessions/*
-                      storage/framework/views/*
-                      storage/logs/*
 
             # 9. Run command on server
             - name: ⚙️ Run Deployment Script
