@@ -34,6 +34,11 @@ class VocabularyIndex extends Component
         'note' => 'nullable|string|max:2000',
     ];
 
+<<<<<<< HEAD
+=======
+    public $importFile;
+
+>>>>>>> origin/main
     public function mount(VocabularySet $set): void
     {
         abort_unless($set->user_id === auth()->id(), 403);
@@ -105,6 +110,55 @@ class VocabularyIndex extends Component
         $this->resetForm();
     }
 
+<<<<<<< HEAD
+=======
+    public function updatedImportFile()
+    {
+        $this->import();
+    }
+
+    public function import()
+    {
+        if (!$this->importFile) return;
+
+        try {
+            \Maatwebsite\Excel\Facades\Excel::import(
+                new \App\Imports\VocabularyImport($this->set->id),
+                $this->importFile
+            );
+
+            session()->flash('message', 'Import thành công!');
+            $this->dispatch('notify', ['type' => 'success', 'message' => 'Đã import thành công!']);
+            $this->importFile = null;
+        } catch (\Exception $e) {
+            session()->flash('error', 'Import thất bại: ' . $e->getMessage());
+            $this->dispatch('notify', ['type' => 'error', 'message' => 'Import thất bại!']);
+        }
+    }
+
+    public function export()
+    {
+        return \Maatwebsite\Excel\Facades\Excel::download(
+            new \App\Exports\VocabularyExport($this->set->id),
+            $this->set->name . '-vocabulary.xlsx'
+        );
+    }
+
+    public function downloadTemplate()
+    {
+        $template = new \App\Exports\VocabularyExport(0); // Dummy set_id
+        $headings = $template->headings();
+
+        return response()->streamDownload(function () use ($headings) {
+            $handle = fopen('php://output', 'w+');
+            fputcsv($handle, $headings);
+            fclose($handle);
+        }, 'vocabulary-template.csv', [
+            'Content-Type' => 'text/csv',
+        ]);
+    }
+
+>>>>>>> origin/main
     public function render()
     {
         $words = Vocabulary::where('set_id', $this->set->id)

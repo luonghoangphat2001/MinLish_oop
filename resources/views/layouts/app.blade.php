@@ -1,88 +1,135 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>{{ config('app.name', 'MinLish') }} — Học từ vựng</title>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased bg-gray-50">
-        <div class="min-h-screen flex">
-            {{-- Sidebar --}}
-            <aside class="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0 hidden lg:flex">
-                {{-- Logo --}}
-                <div class="px-6 py-5 border-b border-gray-100">
-                    <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-2">
-                        <span class="text-xl font-bold text-indigo-600">MinLish</span>
-                        <span class="text-xs text-gray-400 font-medium">Learn Vocab</span>
-                    </a>
-                </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-                {{-- Nav --}}
-                <nav class="flex-1 px-4 py-4 space-y-1">
-                    <a href="{{ route('dashboard') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                        Dashboard
-                    </a>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
-                    <a href="{{ route('profile') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                        Hồ sơ
-                    </a>
+<body class="font-sans antialiased bg-[#EEF2FF] text-slate-800">
 
-                    <a href="{{ route('vocabulary.sets') }}" wire:navigate
-                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        Bộ từ vựng
-                    </a>
-                </nav>
+    <div class="min-h-screen flex">
 
-                {{-- User + Logout --}}
-                <div class="px-4 py-4 border-t border-gray-100">
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-600 truncate">{{ auth()->user()->name }}</span>
+        {{-- SIDEBAR --}}
+        <aside class="w-96 bg-white flex flex-col flex-shrink-0 hidden lg:flex shadow-sm border-r border-slate-100">
+
+
+            <div class="px-6 py-6 border-b border-slate-50">
+
+                {{-- LOGO --}}
+                <a href="{{ route('dashboard') }}" wire:navigate class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-200">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-slate-900 tracking-tight uppercase">MinLish</span>
+                        <span class="block text-[10px] text-slate-400 font-black uppercase tracking-widest">ECOSYSTEM</span>
+                    </div>
+                </a>
+            </div>
+
+            {{-- NAV --}}
+            <nav class="flex-1 px-4 py-8 space-y-2">
+                @php
+                $navLinks = [
+                ['route' => 'dashboard','label' => 'BẢNG ĐIỀU KHIỂN','icon' => '
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />'],
+                ['route' => 'vocabulary.sets','label' => 'QUẢN LÝ BỘ TỪ','icon' => '
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />'],
+                ['route' => 'profile','label' => 'HỒ SƠ CÁ NHÂN','icon' => '
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />'],
+                ];
+                @endphp
+
+                @foreach($navLinks as $link)
+                @php $active = request()->routeIs($link['route']); @endphp
+                <a href="{{ route($link['route']) }}" wire:navigate
+                    class="flex items-center gap-4 px-5 py-4 rounded-2xl text-[13px] font-black transition-all
+                   {{ $active ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-200' : 'text-slate-500 hover:bg-indigo-50 hover:text-indigo-700' }}">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor">{!! $link['icon'] !!}</svg>
+                    <span class="tracking-widest">{{ $link['label'] }}</span>
+                </a>
+                @endforeach
+            </nav>
+
+            {{-- USER --}}
+            <div class="px-4 py-6 border-t border-slate-100">
+                <div class="flex items-center gap-4 px-4 py-4 rounded-3xl bg-slate-50 border">
+                    <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-black">
+                        {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-black uppercase">{{ auth()->user()->name }}</p>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="text-xs text-gray-400 hover:text-red-500 transition-colors cursor-pointer">
+                            <button class="text-xs text-slate-400 hover:text-red-500 uppercase">
                                 Đăng xuất
                             </button>
                         </form>
                     </div>
                 </div>
-            </aside>
-
-            {{-- Main content --}}
-            <div class="flex-1 flex flex-col min-w-0">
-                {{-- Top bar for mobile --}}
-                <div class="lg:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-                    <span class="text-lg font-bold text-indigo-600">MinLish</span>
-                    <livewire:layout.navigation />
-                </div>
-
-                {{-- Page Heading --}}
-                @if (isset($header))
-                    <header class="bg-white shadow-sm">
-                        <div class="px-6 py-4">
-                            {{ $header }}
-                        </div>
-                    </header>
-                @endif
-
-                {{-- Page Content --}}
-                <main class="flex-1 p-6">
-                    {{ $slot }}
-                </main>
             </div>
+
+        </aside>
+
+        {{-- MAIN --}}
+        <div class="flex-1 flex flex-col">
+
+            {{-- GLOBAL TOP BAR --}}
+            <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-slate-100 px-6 py-4">
+                <div class="flex items-center justify-between gap-4">
+
+                    {{-- Left: Page Title or Mobile Logo --}}
+                    <div class="flex items-center gap-4">
+                        <span class="lg:hidden font-black text-indigo-600 text-lg uppercase tracking-tight">MinLish</span>
+                        <h2 class="hidden lg:block text-sm font-black text-slate-400 uppercase tracking-widest">
+                            @yield('title', 'Hệ sinh thái học tập')
+                        </h2>
+                    </div>
+
+                    {{-- Right: Search & Actions --}}
+                    <div class="flex items-center gap-3">
+                        <button
+                            @click="$dispatch('open-search-modal')"
+                            class="group flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-100 transition-all duration-300">
+                            <span class="text-indigo-500 group-hover:scale-110 transition-transform duration-300">🔍</span>
+                            <span class="text-[13px] font-black text-slate-500 group-hover:text-indigo-600 uppercase tracking-tight">Tìm từ vựng...</span>
+                            <div class="hidden sm:flex items-center gap-1 ml-4 bg-white px-2 py-1 rounded-lg border border-slate-100 text-[10px] font-black text-slate-400 shadow-sm">
+                                <span class="text-[8px]">⌘</span> K
+                            </div>
+                        </button>
+
+                        <livewire:dashboard.notification-bell />
+                    </div>
+
+                </div>
+            </header>
+
+            {{-- CONTENT --}}
+            <main class="flex-1 overflow-y-auto p-6">
+                {{ $slot }}
+            </main>
+
         </div>
-    </body>
+
+    </div>
+
+    {{-- GLOBAL SEARCH --}}
+    <livewire:global-search />
+
+</body>
+
 </html>

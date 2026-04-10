@@ -55,6 +55,7 @@ php artisan migrate
 ```
 
 Migrations sẽ tạo các bảng:
+
 - `users` — user account + trình độ, mục tiêu, streak
 - `vocabulary_sets` — bộ từ vựng
 - `vocabularies` — từ vựng trong bộ
@@ -75,22 +76,6 @@ php artisan serve
 ```
 
 Truy cập: http://localhost:8000
-
----
-
-## Các Tính Năng Đã Hoàn Thành (Sprint 1)
-
-| Task | Mô tả | Trạng thái |
-|------|-------|-----------|
-| T01 | Setup Laravel + Breeze + packages | ✅ |
-| T02 | Layout sidebar (app.blade.php, guest.blade.php) | ✅ |
-| T03 | Migration: users profile fields | ✅ |
-| T04 | Migration: vocabulary, srs_progress, study_logs, daily_goals | ✅ |
-| T05 | Eloquent Models + relationships | ✅ |
-| T06 | Login / Register / Logout (Breeze) | ✅ |
-| T07 | Trang Profile (level, goal, daily goal settings) | ✅ |
-
----
 
 ## Luồng Đăng Ký / Đăng Nhập
 

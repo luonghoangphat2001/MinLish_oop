@@ -3,6 +3,10 @@
 namespace App\Livewire\Vocabulary;
 
 use App\Models\VocabularySet;
+<<<<<<< HEAD
+=======
+use App\Models\User;
+>>>>>>> origin/main
 use App\Services\StarterVocabularyService;
 use Livewire\Component;
 use Livewire\Attributes\On;
@@ -28,7 +32,10 @@ class VocabularySetIndex extends Component
     #[On('set-saved')]
     public function render()
     {
-        $sets = auth()->user()->vocabularySets()
+        /** @var User $user */
+        $user = request()->user();
+
+        $sets = $user->vocabularySets()
             ->when($this->search, function ($query) {
                 $query->where('name', 'like', '%' . $this->search . '%');
             })
@@ -46,13 +53,21 @@ class VocabularySetIndex extends Component
 
     public function deleteSet($id)
     {
-        $set = auth()->user()->vocabularySets()->findOrFail($id);
+        /** @var User $user */
+        $user = request()->user();
+
+        $set = $user->vocabularySets()->findOrFail($id);
         $set->delete();
     }
 
     public function createStarterSets(StarterVocabularyService $starterVocabularyService): void
     {
+<<<<<<< HEAD
         $user = auth()->user();
+=======
+        /** @var User $user */
+        $user = request()->user();
+>>>>>>> origin/main
 
         if ($user->vocabularySets()->exists()) {
             session()->flash('message', 'Tài khoản đã có bộ từ. Bạn có thể tạo bộ mới thủ công.');
@@ -63,4 +78,8 @@ class VocabularySetIndex extends Component
 
         session()->flash('message', 'Đã tạo 2 bộ mặc định Learning và Working.');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,17 @@
 
 @layer base {
   :root {
+    /* ─── Brand tokens gốc ─── */
     --color-primary: #4F46E5;
     --color-secondary: #818CF8;
     --color-cta: #22C55E;
     --color-bg: #EEF2FF;
     --color-text: #312E81;
+  }
+
+  /* Font mặc định 14px theo yêu cầu mới nhất */
+  html {
+    font-size: 14px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -20,12 +26,54 @@
   }
 
   body {
+    font-size: 1rem;
+    /* 14px */
+    line-height: 1.5;
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: 'Inter', 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Tiêu đề 18px mặc định cho các thẻ heading chính */
+  h1,
+  h2,
+  h3 {
+    font-size: 1.285rem;
+    /* ~18px khi gốc là 14px */
+    font-weight: 800;
   }
 }
 
 @layer utilities {
+
+  /* ─── 3D Card Flip (flashcard) ─── */
+  .card-flip-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-flip-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .card-face-back {
+    transform: rotateY(180deg);
+  }
+
+  /* ─── Text gradient ─── */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Glass helpers ─── */
   .glass {
     @apply backdrop-blur-md bg-white/60 border border-white/30 shadow-lg;
   }
@@ -38,10 +86,47 @@
     background: linear-gradient(135deg, var(--color-bg) 0%, #E0E7FF 40%, #C7D2FE 100%);
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* ─── Antigravity Core ─── */
+  .antigravity-floating {
+    box-shadow:
+      0 10px 30px -5px rgba(0, 0, 0, 0.05),
+      0 20px 60px -10px rgba(0, 0, 0, 0.08),
+      0 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .glass-premium {
+    @apply backdrop-blur-3xl bg-white border border-white/40 shadow-2xl;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.1),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes notification-pop {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95) rotateX(-15deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateX(0deg);
+    }
+  }
+
+  .animate-notification-pop {
+    animation: notification-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .card-flip-inner,
+    .animate-notification-pop {
+      transition: none;
+      animation: none;
+    }
   }
 }
