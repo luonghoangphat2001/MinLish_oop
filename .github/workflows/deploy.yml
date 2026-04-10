@@ -45,7 +45,7 @@ jobs:
                   npm install
                   npm run build
 
-            # 7. Upload code (FIX lỗi empty archive ở đây)
+            # 7. Upload code (Optimized)
             - name: 🚚 Upload to Server
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -54,10 +54,20 @@ jobs:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: ${{ secrets.SSH_PASSPHRASE }}
                   port: ${{ secrets.SSH_PORT || 22 }}
-                  source: "./*"
+                  source: "./*, .htaccess" # Explicitly include .htaccess just in case
                   target: ${{ secrets.REMOTE_PATH }}
                   overwrite: true
                   rm: false
+                  exclude: |
+                      .git/
+                      .github/
+                      node_modules/
+                      .env
+                      storage/*.key
+                      storage/framework/cache/*
+                      storage/framework/sessions/*
+                      storage/framework/views/*
+                      storage/logs/*
 
             # 8. Run command on server
             - name: ⚙️ Run Deployment Script
@@ -71,17 +81,15 @@ jobs:
                   script: |
                       cd ${{ secrets.REMOTE_PATH }}
 
-                      echo "🚀 Start deploy at $(date)"
+                      echo "🚀 Start post-deploy at $(date)"
 
-                      # Fix permission
+                      # Ensure permissions
                       chmod -R 775 storage bootstrap/cache
 
-                      # Laravel optimize
+                      # Laravel optimization
                       php artisan migrate --force
                       php artisan optimize:clear
                       php artisan optimize
-
-                      # Storage link
                       php artisan storage:link || true
 
-                      echo "✅ Deploy done at $(date)"
+                      echo "✅ Deployment finished successfully at $(date)!"
