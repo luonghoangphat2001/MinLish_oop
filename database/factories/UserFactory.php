@@ -24,19 +24,36 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        // Fallback if Faker is not installed (Production)
+        if (!class_exists('Faker\Factory')) {
+            return [
+                'name'              => 'Sample User ' . Str::random(5),
+                'email'             => 'user_' . Str::random(10) . '@example.com',
+                'google_id'         => null,
+                'level'             => collect(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'])->random(),
+                'goal'              => 'Study English daily',
+                'streak_days'       => rand(0, 30),
+                'last_study_date'   => now()->subDays(rand(0, 30)),
+                'email_verified_at' => now(),
+                'password'          => static::$password ??= Hash::make('password'),
+                'remember_token'    => Str::random(10),
+            ];
+        }
+
+        $faker = app(\Faker\Generator::class);
         return [
-            'name'              => fake()->name(),
-            'email'             => fake()->unique()->safeEmail(),
+            'name'              => $faker->name(),
+            'email'             => $faker->unique()->safeEmail(),
             'google_id'         => null,
-            'level'             => fake()->randomElement(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
-            'goal'              => fake()->randomElement([
+            'level'             => $faker->randomElement(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
+            'goal'              => $faker->randomElement([
                 'Hoan thanh 20 tu moi moi ngay',
                 'On tap IELTS moi toi',
                 'Mo rong tu vung chu de cong viec',
                 'Luyen nghe ban tin hang ngay',
             ]),
-            'streak_days'       => fake()->numberBetween(0, 30),
-            'last_study_date'   => fake()->dateTimeBetween('-30 days', 'now'),
+            'streak_days'       => $faker->numberBetween(0, 30),
+            'last_study_date'   => $faker->dateTimeBetween('-30 days', 'now'),
             'email_verified_at' => now(),
             'password'          => static::$password ??= Hash::make('password'),
             'remember_token'    => Str::random(10),

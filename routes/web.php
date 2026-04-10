@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\ProfileEdit;
 use App\Http\Controllers\GoogleController;
+use App\Livewire\Learning\DailyQuiz;
 use App\Livewire\Learning\LearningSession;
 use App\Livewire\Learning\FlashCard;
 use App\Livewire\Vocabulary\VocabularyIndex;
@@ -17,6 +18,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('vocabulary/sets/{set}/words', VocabularyIndex::class)->name('vocabulary.words');
     Route::get('learning/sets/{set}/flashcards', FlashCard::class)->name('learning.flashcards');
     Route::get('learning/sets/{set}/context', \App\Livewire\Learning\ContextLearning::class)->name('learning.context');
+    Route::get('learning/daily-quiz', DailyQuiz::class)->name('learning.daily-quiz');
 });
 
 

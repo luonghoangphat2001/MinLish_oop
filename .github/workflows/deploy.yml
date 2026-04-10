@@ -1,81 +1,113 @@
-name: Deploy to cPanel (Appleboy Style)
+name: 🚀 Deploy to cPanel (Stable)
 
 on:
-  push:
-    branches:
-      - main
-      - feat/TO452
+    push:
+        branches:
+            - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+    deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+        steps:
+            # 1. Checkout code
+            - name: 📥 Checkout Code
+              uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
-          extensions: mbstring, bcmath, curl, openssl, xml, zip
+            # 2. Debug (rất quan trọng để tránh lỗi empty archive)
+            - name: 🔍 Debug files
+              run: |
+                  echo "Current dir:"
+                  pwd
+                  echo "List files:"
+                  ls -la
 
-      - name: Install Composer Dependencies
-        run: composer install --no-dev --optimize-autoloader --no-progress --no-interaction
+            # 3. Setup PHP
+            - name: 🐘 Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.4"
+                  extensions: mbstring, bcmath, curl, openssl, xml, zip
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+            # 4. Install Composer
+            - name: 📦 Install Composer Dependencies
+              run: composer install --no-dev --optimize-autoloader --no-interaction
 
-      - name: Install NPM Dependencies & Build
-        run: |
-          npm install
-          npm run build
+            # 5. Setup Node
+            - name: 🟢 Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
 
-      - name: Setup SSH Key
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          source: "./*"
-          target: ${{ secrets.REMOTE_PATH }}
-          rm: false
-          strip_components: 0
-          overwrite: true
-          exclude: |
-            .git/
-            .github/
-            node_modules/
-            .env
-            storage/*.key
-            storage/framework/cache/*
-            storage/framework/sessions/*
-            storage/framework/views/*
-            storage/logs/*
+            # 6. Build FE
+            - name: 🛠 Build Assets
+              run: |
+                  npm install
+                  npm run build
 
-      - name: Post-Deployment Commands via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            cd ${{ secrets.REMOTE_PATH }}
-            echo "🚀 Running post-deployment tasks..."
-            
-            # Ensure folder permissions
-            chmod -R 775 storage bootstrap/cache
-            
-            # Run Laravel tasks
-            php artisan migrate --force
-            php artisan optimize:clear
-            php artisan optimize
-            php artisan storage:link || echo "Storage link already exists."
-            
-            echo "✅ Deployment finished successfully at $(date)!"
+            # 7. Clean up specific files before upload to avoid "File exists" errors
+            - name: 🧹 Clean up Server
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  script: |
+                      cd ${{ secrets.REMOTE_PATH }}
+                      rm -f .htaccess index.php
+                      # Nghỉ 5 giây để tránh lỗi handshake cho bước SCP tiếp theo
+                      sleep 5
+
+            # 8. Upload code (Optimized)
+            - name: 🚚 Upload to Server
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  source: "./*, .htaccess" 
+                  target: ${{ secrets.REMOTE_PATH }}
+                  overwrite: true
+                  rm: false
+
+            # 9. Run command on server
+            - name: ⚙️ Run Deployment Script
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  script: |
+                      cd ${{ secrets.REMOTE_PATH }}
+                      PHP=/opt/cpanel/ea-php84/root/usr/bin/php
+                      echo "🚀 Start post-deploy at $(date)"
+
+                      # 1. Khởi tạo .env nếu chưa có
+                      if [ ! -f .env ]; then
+                          cp .env.example .env
+                      fi
+
+                      # 2. Đảm bảo có APP_KEY
+                      if ! grep -q "APP_KEY=base64:" .env; then
+                          $PHP artisan key:generate --force
+                      fi
+
+                      # 3. Phân quyền
+                      chmod -R 775 storage bootstrap/cache
+
+                      # 4. Laravel optimization
+                      $PHP artisan migrate --force
+                      $PHP artisan db:seed --force
+                      $PHP artisan optimize:clear
+                      $PHP artisan config:clear
+                      $PHP artisan route:clear
+                      $PHP artisan view:clear
+                      $PHP artisan storage:link || true
+
+                      echo "✅ Deployment finished successfully at $(date)!"

@@ -93,9 +93,9 @@ class DatabaseSeeder extends Seeder
                 });
                 SrsProgress::insert($srsPayload->all());
 
-                // 2. Tạo lịch sử học tập (Study Logs) trong 30 ngày qua
+                // 2. Tạo lịch sử học tập (Study Logs) trong 7 ngày qua
                 $logsPayload = [];
-                for ($i = 0; $i < 30; $i++) {
+                for ($i = 0; $i < 7; $i++) {
                     $date = $now->copy()->subDays($i);
                     // Mỗi ngày học từ 5-15 từ ngẫu nhiên trong bộ này
                     $dailyVocabs = $vocabularies->random(rand(5, 15));

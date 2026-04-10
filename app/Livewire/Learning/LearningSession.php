@@ -30,8 +30,6 @@ class LearningSession extends Component
 
     public function loadQueue()
     {
-        $userId = Auth::id();
-
         $newWordIds = Vocabulary::inRandomOrder()->limit(5)->pluck('id')->toArray();
 
         $reviewWordIds = Vocabulary::orderBy('id', 'desc')->limit(5)->pluck('id')->toArray();
@@ -56,6 +54,7 @@ class LearningSession extends Component
             'user_id'       => Auth::id(),
             'vocabulary_id' => $wordId,
             'rating'        => $rating,
+            'studied_at'    => now(),
         ]);
 
         if (isset($this->ratingStats[$rating])) {

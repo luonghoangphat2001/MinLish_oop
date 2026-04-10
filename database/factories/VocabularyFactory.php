@@ -11,26 +11,44 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class VocabularyFactory extends Factory
 {
-    protected $model = Vocabulary::class;
+    protected static $samples = null;
 
     public function definition(): array
     {
-        $json = file_get_contents(base_path('data/vocabulary.json'));
-        $samples = json_decode($json, true);
+        if (is_null(self::$samples)) {
+            $json = file_get_contents(base_path('data/vocabulary.json'));
+            self::$samples = json_decode($json, true);
+        }
 
-        $picked = $samples[array_rand($samples)];
-        $word = $picked['word'] ?? fake()->word();
+        $picked = self::$samples[array_rand(self::$samples)];
+        $word = $picked['word'] ?? 'sample';
 
+        // Fallback if Faker is not installed (Production)
+        if (!class_exists('Faker\Factory')) {
+            return [
+                'set_id' => VocabularySet::factory(),
+                'word' => $word,
+                'pronunciation' => $picked['pronunciation'] ?? '',
+                'meaning' => $picked['meaning'] ?? '',
+                'description_en' => $picked['description_en'] ?? null,
+                'example' => $picked['example'] ?? '',
+                'collocation' => 'sample collocation',
+                'related_words' => 'related, words',
+                'note' => $picked['note'] ?? null,
+            ];
+        }
+
+        $faker = app(\Faker\Generator::class);
         return [
             'set_id' => VocabularySet::factory(),
             'word' => $word,
             'pronunciation' => $picked['pronunciation'],
             'meaning' => $picked['meaning'],
-            'description_en' => fake()->optional()->sentence(10),
+            'description_en' => $picked['description_en'] ?? null,
             'example' => $picked['example'],
-            'collocation' => fake()->optional()->words(2, true),
-            'related_words' => fake()->optional()->words(3, true),
-            'note' => fake()->optional()->sentence(8),
+            'collocation' => $faker->optional()->words(2, true),
+            'related_words' => $faker->optional()->words(3, true),
+            'note' => $picked['note'] ?? null,
         ];
     }
 }
