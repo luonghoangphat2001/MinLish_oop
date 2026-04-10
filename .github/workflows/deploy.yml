@@ -87,9 +87,9 @@ jobs:
                       chmod -R 775 storage bootstrap/cache
 
                       # Laravel optimization
-                      php artisan migrate --force
-                      php artisan optimize:clear
-                      php artisan optimize
-                      php artisan storage:link || true
+                      $PHP artisan migrate --force
+                      $PHP artisan optimize:clear
+                      $PHP artisan optimize
+                      $PHP artisan storage:link || true
 
                       echo "✅ Deployment finished successfully at $(date)!"
