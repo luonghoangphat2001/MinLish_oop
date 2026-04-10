@@ -1,81 +1,107 @@
-name: Deploy to cPanel (Appleboy Style)
+name: 🚀 Deploy to cPanel (Optimized)
 
 on:
-  push:
-    branches:
-      - main
-      - feat/TO452
+    push:
+        branches:
+            - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+    deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+        steps:
+            # 1. Checkout
+            - name: 📥 Checkout Code
+              uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
-          extensions: mbstring, bcmath, curl, openssl, xml, zip
+            # 2. Cache Composer
+            - name: ⚡ Cache Composer
+              uses: actions/cache@v4
+              with:
+                  path: vendor
+                  key: composer-${{ hashFiles('composer.lock') }}
 
-      - name: Install Composer Dependencies
-        run: composer install --no-dev --optimize-autoloader --no-progress --no-interaction
+            # 3. Setup PHP
+            - name: 🐘 Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.4"
+                  extensions: mbstring, bcmath, curl, openssl, xml, zip
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+            # 4. Install PHP deps
+            - name: 📦 Install Composer Dependencies
+              run: composer install --no-dev --optimize-autoloader --no-interaction
 
-      - name: Install NPM Dependencies & Build
-        run: |
-          npm install
-          npm run build
+            # 5. Cache Node
+            - name: ⚡ Cache Node Modules
+              uses: actions/cache@v4
+              with:
+                  path: node_modules
+                  key: node-${{ hashFiles('package-lock.json') }}
 
-      - name: Setup SSH Key
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          source: "./*"
-          target: ${{ secrets.REMOTE_PATH }}
-          rm: false
-          strip_components: 0
-          overwrite: true 
-          exclude: |
-            .git/
-            .github/
-            node_modules/
-            .env
-            storage/*.key
-            storage/framework/cache/*
-            storage/framework/sessions/*
-            storage/framework/views/*
-            storage/logs/*
+            # 6. Setup Node
+            - name: 🟢 Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
 
-      - name: Post-Deployment Commands via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            cd ${{ secrets.REMOTE_PATH }}
-            echo "🚀 Running post-deployment tasks..."
-            
-            # Ensure folder permissions
-            chmod -R 775 storage bootstrap/cache
-            
-            # Run Laravel tasks
-            php artisan migrate --force
-            php artisan optimize:clear
-            php artisan optimize
-            php artisan storage:link || echo "Storage link already exists."
-            
-            echo "✅ Deployment finished successfully at $(date)!"
+            # 7. Build FE
+            - name: 🛠 Build Assets
+              run: |
+                  npm install
+                  npm run build
+
+            # 8. Deploy via SCP
+            - name: 🚚 Upload to Server
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  source: |
+                      app
+                      bootstrap
+                      config
+                      database
+                      public
+                      resources
+                      routes
+                      vendor
+                      artisan
+                      composer.json
+                      composer.lock
+                      package.json
+                      package-lock.json
+                      vite.config.js
+                  target: ${{ secrets.REMOTE_PATH }}
+                  overwrite: true
+                  rm: false
+
+            # 9. SSH run commands
+            - name: ⚙️ Run Deployment Script
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.SSH_HOST }}
+                  username: ${{ secrets.SSH_USER }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  port: ${{ secrets.SSH_PORT || 22 }}
+                  script: |
+                      cd ${{ secrets.REMOTE_PATH }}
+
+                      echo "🚀 Start deploy at $(date)"
+
+                      # Fix permissions
+                      chmod -R 775 storage bootstrap/cache
+
+                      # Laravel optimize
+                      php artisan migrate --force
+                      php artisan optimize:clear
+                      php artisan optimize
+
+                      # Storage link
+                      php artisan storage:link || true
+
+                      echo "✅ Deploy done at $(date)"
