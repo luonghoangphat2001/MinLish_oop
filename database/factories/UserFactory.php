@@ -24,6 +24,22 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        // Fallback if Faker is not installed (Production)
+        if (!class_exists('Faker\Factory')) {
+            return [
+                'name'              => 'Sample User ' . Str::random(5),
+                'email'             => 'user_' . Str::random(10) . '@example.com',
+                'google_id'         => null,
+                'level'             => collect(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'])->random(),
+                'goal'              => 'Study English daily',
+                'streak_days'       => rand(0, 30),
+                'last_study_date'   => now()->subDays(rand(0, 30)),
+                'email_verified_at' => now(),
+                'password'          => static::$password ??= Hash::make('password'),
+                'remember_token'    => Str::random(10),
+            ];
+        }
+
         $faker = app(\Faker\Generator::class);
         return [
             'name'              => $faker->name(),

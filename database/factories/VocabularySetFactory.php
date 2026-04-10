@@ -15,6 +15,17 @@ class VocabularySetFactory extends Factory
 
     public function definition(): array
     {
+        // Fallback if Faker is not installed (Production)
+        if (!class_exists('Faker\Factory')) {
+            return [
+                'user_id'     => User::factory(),
+                'name'        => 'Set ' . Str::random(10),
+                'description' => 'Sample description for this vocabulary set.',
+                'tags'        => ['english', 'basic'],
+                'is_public'   => true,
+            ];
+        }
+
         $faker = app(\Faker\Generator::class);
         return [
             'user_id'     => User::factory(),
