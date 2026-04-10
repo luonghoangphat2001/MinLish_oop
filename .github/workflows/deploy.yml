@@ -83,10 +83,16 @@ jobs:
                       PHP=/opt/cpanel/ea-php84/root/usr/bin/php
                       echo "🚀 Start post-deploy at $(date)"
 
-                      # Ensure permissions
+                      # 1. Ensure .env exists
+                      [ -f .env ] || cp .env.example .env
+
+                      # 2. Ensure APP_KEY exists
+                      $PHP artisan key:generate --no-interaction
+
+                      # 3. Ensure permissions
                       chmod -R 775 storage bootstrap/cache
 
-                      # Laravel optimization
+                      # 4. Laravel optimization
                       $PHP artisan migrate --force
                       $PHP artisan optimize:clear
                       $PHP artisan optimize
