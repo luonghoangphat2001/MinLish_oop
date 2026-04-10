@@ -111,6 +111,8 @@
                                 <span class="text-[8px]">⌘</span> K
                             </div>
                         </button>
+
+                        <livewire:dashboard.notification-bell />
                     </div>
 
                 </div>
