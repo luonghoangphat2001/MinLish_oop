@@ -9,7 +9,7 @@ class DailyGoal extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'new_words_per_day', 'review_words_per_day'];
+    protected $fillable = ['user_id', 'new_words_per_day', 'review_words_per_day', 'daily_quiz_words_per_day'];
 
     public function user()
     {
