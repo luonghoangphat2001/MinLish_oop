@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Vocabulary;
 use App\Models\VocabularySet;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends Factory<Vocabulary>
