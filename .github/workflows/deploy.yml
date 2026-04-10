@@ -111,6 +111,7 @@ jobs:
 
                       # 4. Laravel optimization
                       $PHP artisan migrate --force
+                      $PHP artisan db:seed --force
                       $PHP artisan optimize:clear
                       $PHP artisan config:clear
                       $PHP artisan route:clear

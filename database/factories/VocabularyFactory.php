@@ -11,14 +11,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class VocabularyFactory extends Factory
 {
-    protected $model = Vocabulary::class;
+    protected static $samples = null;
 
     public function definition(): array
     {
-        $json = file_get_contents(base_path('data/vocabulary.json'));
-        $samples = json_decode($json, true);
+        if (is_null(self::$samples)) {
+            $json = file_get_contents(base_path('data/vocabulary.json'));
+            self::$samples = json_decode($json, true);
+        }
 
-        $picked = $samples[array_rand($samples)];
+        $picked = self::$samples[array_rand(self::$samples)];
         $word = $picked['word'] ?? fake()->word();
 
         return [
