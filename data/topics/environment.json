@@ -1,0 +1,402 @@
+[
+    {
+        "word": "biodegradable",
+        "pronunciation": "/ˌbaɪ.əʊ.dɪˈɡreɪ.də.bəl/",
+        "meaning": "có thể phân hủy sinh học",
+        "description_en": "Capable of being decomposed by bacteria or other living organisms.",
+        "example": "Always try to use biodegradable packaging to reduce waste.",
+        "note": "Environmentally friendly quality."
+    },
+    {
+        "word": "conservation",
+        "pronunciation": "/ˌkɒn.səˈveɪ.ʃən/",
+        "meaning": "sự bảo tồn",
+        "description_en": "The action of conserving something, in particular preservation, protection, or restoration of the natural environment.",
+        "example": "Wildlife conservation is essential for maintaining biodiversity.",
+        "note": "Includes forest, water, and animal protection."
+    },
+    {
+        "word": "deforestation",
+        "pronunciation": "/ˌdiː.fɒr.ɪˈsteɪ.ʃən/",
+        "meaning": "sự phá rừng",
+        "description_en": "The action of clearing a wide area of trees.",
+        "example": "Deforestation in the Amazon is a major contributor to global warming.",
+        "note": "Primary cause of habitat loss."
+    },
+    {
+        "word": "ecosystem",
+        "pronunciation": "/ˈiː.kəʊˌsɪs.təm/",
+        "meaning": "hệ sinh thái",
+        "description_en": "A biological community of interacting organisms and their physical environment.",
+        "example": "The coral reef is a complex and fragile ecosystem.",
+        "note": "Balance of nature."
+    },
+    {
+        "word": "emissions",
+        "pronunciation": "/iˈmɪʃ.ənz/",
+        "meaning": "khí thải",
+        "description_en": "The production and discharge of something, especially gas or radiation.",
+        "example": "The new law aims to reduce carbon emissions from factories.",
+        "note": "Often associated with air pollution and climate change."
+    },
+    {
+        "word": "geothermal",
+        "pronunciation": "/ˌdʒiː.əʊˈθɜː.məl/",
+        "meaning": "địa nhiệt",
+        "description_en": "Relating to or produced by the internal heat of the earth.",
+        "example": "Iceland uses geothermal energy to heat Most of its homes.",
+        "note": "A source of renewable energy."
+    },
+    {
+        "word": "habitat",
+        "pronunciation": "/ˈhæb.ɪ.tæt/",
+        "meaning": "môi trường sống",
+        "description_en": "The natural home or environment of an animal, plant, or other organism.",
+        "example": "The polar bear's natural habitat is disappearing due to melting ice.",
+        "note": "Specific area where a species thrives."
+    },
+    {
+        "word": "insulation",
+        "pronunciation": "/ˌɪn.sjəˈleɪ.ʃən/",
+        "meaning": "sự cách nhiệt",
+        "description_en": "The action of insulating something or the state of being insulated.",
+        "example": "Good attic insulation can significantly reduce heating bills.",
+        "note": "Saves energy in buildings."
+    },
+    {
+        "word": "landfill",
+        "pronunciation": "/ˈlænd.fɪl/",
+        "meaning": "bãi chôn lấp rác",
+        "description_en": "The disposal of waste material by burying it, especially as a method of filling in or extending usable land.",
+        "example": "Too Much plastic ends up in landfills every year.",
+        "note": "Traditional waste management method."
+    },
+    {
+        "word": "pollution",
+        "pronunciation": "/pəˈluː.ʃən/",
+        "meaning": "sự ô nhiễm",
+        "description_en": "The presence in or introduction into the environment of a substance that has harmful or poisonous effects.",
+        "example": "Air pollution is a major problem in many industrial cities.",
+        "note": "Can affect air, water, or soil."
+    },
+    {
+        "word": "renewable",
+        "pronunciation": "/rɪˈnjuː.ə.bəl/",
+        "meaning": "có thể tái tạo",
+        "description_en": "Not depleted when used.",
+        "example": "Solar and wind are popular forms of renewable energy.",
+        "note": "Opposite of non-renewable/fossil fuels."
+    },
+    {
+        "word": "sustainability",
+        "pronunciation": "/səˌsteɪ.nəˈbɪl.ə.ti/",
+        "meaning": "sự bền vững",
+        "description_en": "The ability to be maintained at a certain rate or level.",
+        "example": "Sustainability is at the core of our business model.",
+        "note": "Meeting current needs without compromising future generations."
+    },
+    {
+        "word": "toxic",
+        "pronunciation": "/ˈtɒk.sɪk/",
+        "meaning": "độc hại",
+        "description_en": "Poisonous.",
+        "example": "Chemical runoff from farms can be toxic to fish.",
+        "note": "Harmful to life and environment."
+    },
+    {
+        "word": "wildlife",
+        "pronunciation": "/ˈwaɪld.laɪf/",
+        "meaning": "động vật hoang dã",
+        "description_en": "Wild animals collectively; the native fauna of a region.",
+        "example": "The national park is home to a wide variety of wildlife.",
+        "note": "Includes mammals, birds, reptiles, etc."
+    },
+    {
+        "word": "ozone layer",
+        "pronunciation": "/ˈəʊ.zəʊn ˌleɪ.ər/",
+        "meaning": "tầng ozone",
+        "description_en": "A layer in the earth's stratosphere that absorbs Most of the sun's ultraviolet radiation.",
+        "example": "The ozone layer protects us from harmful UV rays.",
+        "note": "Damage here leads to increased UV exposure."
+    },
+    {
+        "word": "recycle",
+        "pronunciation": "/ˌriːˈsaɪ.kəl/",
+        "meaning": "tái chế",
+        "description_en": "Convert waste into reusable material.",
+        "example": "We should all try to recycle paper, plastic, and glass.",
+        "note": "One of the 3 Rs (Reduce, Reuse, Recycle)."
+    },
+    {
+        "word": "aquifer",
+        "pronunciation": "/ˈækwɪfər/",
+        "meaning": "tầng ngậm nước",
+        "description_en": "A body of permeable rock which can contain or transmit groundwater.",
+        "example": "Many rural communities depend on aquifers for their drinking water.",
+        "note": "Important source of fresh water."
+    },
+    {
+        "word": "biodiversity",
+        "pronunciation": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+        "meaning": "đa dạng sinh học",
+        "description_en": "The variety of plant and animal life in the world or in a particular habitat.",
+        "example": "Tropical rainforests have incredibly high biodiversity.",
+        "note": "Indicator of ecosystem health."
+    },
+    {
+        "word": "catastrophic",
+        "pronunciation": "/ˌkæt.əˈstrɒf.ɪk/",
+        "meaning": "thảm khốc",
+        "description_en": "Involving or causing sudden great damage or suffering.",
+        "example": "The oil spill had catastrophic effects on the local marine life.",
+        "note": "Used for major disasters."
+    },
+    {
+        "word": "contamination",
+        "pronunciation": "/kənˌtæm.ɪˈneɪ.ʃən/",
+        "meaning": "sự nhiễm bẩn",
+        "description_en": "The action or state of making or being made impure by polluting or poisoning.",
+        "example": "The factory was closed due to soil contamination.",
+        "note": "Presence of harmful substances."
+    },
+    {
+        "word": "drought",
+        "pronunciation": "/draʊt/",
+        "meaning": "hạn hán",
+        "description_en": "A prolonged period of abnormally low rainfall, leading to a shortage of water.",
+        "example": "The severe drought led to widespread crop failure.",
+        "note": "Can last for months or years."
+    },
+    {
+        "word": "ecology",
+        "pronunciation": "/iˈkɒl.ə.dʒi/",
+        "meaning": "sinh thái học",
+        "description_en": "The branch of biology that deals with the relations of organisms to one another and to their physical surroundings.",
+        "example": "She is studying the ecology of the Great Barrier Reef.",
+        "note": "Scientific study of environments."
+    },
+    {
+        "word": "erosion",
+        "pronunciation": "/ɪˈrəʊ.ʒən/",
+        "meaning": "sự xói mòn",
+        "description_en": "The process of eroding or being eroded by wind, water, or other natural agents.",
+        "example": "Beach erosion is a major problem for coastal cities.",
+        "note": "Gradual wearing away of land."
+    },
+    {
+        "word": "fertilizer",
+        "pronunciation": "/ˈfɜː.tɪ.laɪ.zər/",
+        "meaning": "phân bón",
+        "description_en": "A chemical or natural substance added to soil or land to increase its fertility.",
+        "example": "Excessive use of chemical fertilizers can pollute groundwater.",
+        "note": "Used in agriculture."
+    },
+    {
+        "word": "glacier",
+        "pronunciation": "/ˈɡlæs.i.ər/",
+        "meaning": "sông băng",
+        "description_en": "A slowly moving mass or river of ice formed by the accumulation and compaction of snow on mountains or near the poles.",
+        "example": "Glaciers are melting at an alarming rate due to rising global temperatures.",
+        "note": "Indicator of climate change."
+    },
+    {
+        "word": "hazardous",
+        "pronunciation": "/ˈhæz.ə.dəs/",
+        "meaning": "nguy hiểm",
+        "description_en": "Risky; dangerous.",
+        "example": "Chemical waste must be disposed of in a specialized hazardous waste facility.",
+        "note": "Likely to cause harm."
+    },
+    {
+        "word": "irrigation",
+        "pronunciation": "/ˌɪr.ɪˈɡeɪ.ʃən/",
+        "meaning": "sự tưới tiêu",
+        "description_en": "The supply of water to land or crops to help growth, typically by means of channels.",
+        "example": "Efficient irrigation systems can save a lot of water.",
+        "note": "Agriculture technique."
+    },
+    {
+        "word": "landscape",
+        "pronunciation": "/ˈlænd.skeɪp/",
+        "meaning": "phong cảnh; cảnh quan",
+        "description_en": "All the visible features of an area of countryside or land.",
+        "example": "The volcanic landscape of the island is quite unique.",
+        "note": "Physical features of an area."
+    },
+    {
+        "word": "meteorology",
+        "pronunciation": "/ˌmiː.ti.əˈrɒl.ə.dʒi/",
+        "meaning": "khí tượng học",
+        "description_en": "The branch of science concerned with the processes and phenomena of the atmosphere, especially as a means of forecasting the weather.",
+        "example": "Advances in meteorology have improved our ability to predict hurricanes.",
+        "note": "Study of weather."
+    },
+    {
+        "word": "natural resources",
+        "pronunciation": "/ˈnætʃ.ər.əl rɪˈzɔːrsɪz/",
+        "meaning": "tài nguyên thiên nhiên",
+        "description_en": "Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.",
+        "example": "Countries should use their natural resources responsibly.",
+        "note": "Includes timber, oil, gas, etc."
+    },
+    {
+        "word": "organic",
+        "pronunciation": "/ɔːˈɡæn.ɪk/",
+        "meaning": "hữu cơ",
+        "description_en": "Produced or involving production without the use of chemical fertilizers, pesticides, or other artificial agents.",
+        "example": "Organic farming is better for the soil and local wildlife.",
+        "note": "Standard for food production."
+    },
+    {
+        "word": "pesticide",
+        "pronunciation": "/ˈpes.tɪ.saɪd/",
+        "meaning": "thuốc trừ sâu",
+        "description_en": "A substance used for destroying insects or other organisms harmful to cultivated plants or to animals.",
+        "example": "The use of pesticides has fallen significantly as farmers switch to organic methods.",
+        "note": "Can have harmful ecological side effects."
+    },
+    {
+        "word": "quarry",
+        "pronunciation": "/ˈkwɒr.i/",
+        "meaning": "mỏ đá",
+        "description_en": "A place, typically a large, deep pit, from which stone or other materials are or have been extracted.",
+        "example": "The old limestone quarry has been turned into a nature reserve.",
+        "note": "Mining site for rock/minerals."
+    },
+    {
+        "word": "radiant",
+        "pronunciation": "/ˈreɪ.di.ənt/",
+        "meaning": "bức xạ; rạng rỡ",
+        "description_en": "Sending out light; shining or glowing brightly.",
+        "example": "The sun is a source of radiant energy.",
+        "note": "Usually refers to light or heat energy."
+    },
+    {
+        "word": "sanctuary",
+        "pronunciation": "/ˈsæŋk.tʃu.ə.ri/",
+        "meaning": "khu bảo tồn; nơi trú ẩn",
+        "description_en": "A place of refuge or safety.",
+        "example": "The island is a sanctuary for endangered sea birds.",
+        "note": "Safe haven for wildlife."
+    },
+    {
+        "word": "tributary",
+        "pronunciation": "/ˈtrɪb.jə.tər.i/",
+        "meaning": "nhánh sông",
+        "description_en": "A river or stream flowing into a larger river or lake.",
+        "example": "The Missouri River is a major tributary of the Mississippi.",
+        "note": "Feeder stream."
+    },
+    {
+        "word": "underbrush",
+        "pronunciation": "/ˈʌn.də.brʌʃ/",
+        "meaning": "bụi cây thấp",
+        "description_en": "Shrubs and small trees forming the undergrowth in a forest.",
+        "example": "The deer disappeared into the thick underbrush.",
+        "note": "Lower layer of forest vegetation."
+    },
+    {
+        "word": "ventilation",
+        "pronunciation": "/ˌven.tɪˈleɪ.ʃən/",
+        "meaning": "sự thông gió",
+        "description_en": "The provision of fresh air to a room or building.",
+        "example": "Good ventilation is important to maintain indoor air quality.",
+        "note": "Air circulation."
+    },
+    {
+        "word": "wetland",
+        "pronunciation": "/ˈwet.lənd/",
+        "meaning": "vùng đất ngập nước",
+        "description_en": "Land consisting of marshes or swamps; saturated land.",
+        "example": "Wetlands are critical habitats for many migratory birds.",
+        "note": "Swamps, bogs, and marshes."
+    },
+    {
+        "word": "xylophagous",
+        "pronunciation": "/zaɪˈlɒf.ə.ɡəs/",
+        "meaning": "ăn gỗ",
+        "description_en": "Feeding on or boring into wood.",
+        "example": "Termites are xylophagous insects that can damage houses.",
+        "note": "Scientific term for wood-eating organisms."
+    },
+    {
+        "word": "yield",
+        "pronunciation": "/jiːld/",
+        "meaning": "sản lượng",
+        "description_en": "Produce or provide an agricultural or industrial product.",
+        "example": "The crop yield was lower than usual this year due to the lack of rain.",
+        "note": "Amount produced."
+    },
+    {
+        "word": "zoology",
+        "pronunciation": "/zuːˈɒl.ə.dʒi/",
+        "meaning": "động vật học",
+        "description_en": "The scientific study of the behavior, structure, physiology, classification, and distribution of animals.",
+        "example": "He decided to major in zoology because of his love for animals.",
+        "note": "Study of animal kingdom."
+    },
+    {
+        "word": "atmospheric",
+        "pronunciation": "/ˌæt.məsˈfer.ɪk/",
+        "meaning": "thuộc khí quyển",
+        "description_en": "Relating to the atmosphere of the earth or another planet.",
+        "example": "The increase in atmospheric CO2 is a major concern.",
+        "note": "Context of air and weather."
+    },
+    {
+        "word": "carbon footprint",
+        "pronunciation": "/ˌkɑː.bən ˈfʊt.prɪnt/",
+        "meaning": "dấu chân carbon",
+        "description_en": "The amount of carbon dioxide and other carbon compounds emitted due to the consumption of fossil fuels by a particular person, group, etc.",
+        "example": "Flying less is one of the best ways to reduce your carbon footprint.",
+        "note": "Measure of environmental impact."
+    },
+    {
+        "word": "decomposable",
+        "pronunciation": "/ˌdiː.kəmˈpəʊ.zə.bəl/",
+        "meaning": "có thể phân hủy",
+        "description_en": "Capable of being broken down into simpler parts.",
+        "example": "Most food waste is readily decomposable.",
+        "note": "Important for composting."
+    },
+    {
+        "word": "endangered",
+        "pronunciation": "/ɪnˈdeɪn.dʒərd/",
+        "meaning": "nguy cấp",
+        "description_en": "At serious risk of extinction.",
+        "example": "The giant panda is no longer an endangered species, but it is still vulnerable.",
+        "note": "Species at high risk of disappearing."
+    },
+    {
+        "word": "fossil fuel",
+        "pronunciation": "/ˈfɒs.əl ˌfjuː.əl/",
+        "meaning": "nhiên liệu hóa thạch",
+        "description_en": "A natural fuel such as coal or gas, formed in the geological past from the remains of living organisms.",
+        "example": "We need to transition away from fossil fuels to renewable energy.",
+        "note": "Non-renewable energy source."
+    },
+    {
+        "word": "geology",
+        "pronunciation": "/dʒiˈɒl.ə.dʒi/",
+        "meaning": "địa chất học",
+        "description_en": "The science that deals with the earth's physical structure and substance.",
+        "example": "The geology of the region explains why it is prone to earthquakes.",
+        "note": "Study of earth's history and rocks."
+    },
+    {
+        "word": "harvest",
+        "pronunciation": "/ˈhɑː.vɪst/",
+        "meaning": "thu hoạch",
+        "description_en": "The process or period of gathering in crops.",
+        "example": "The grape harvest begins in September.",
+        "note": "Agricultural gathering process."
+    },
+    {
+        "word": "leachate",
+        "pronunciation": "/ˈliː.tʃeɪt/",
+        "meaning": "nước rỉ rác",
+        "description_en": "Water that has percolated through a solid and leached out some of the constituents.",
+        "example": "Landfills must have liners to prevent leachate from contaminating groundwater.",
+        "note": "Polluted liquid from waste."
+    }
+]

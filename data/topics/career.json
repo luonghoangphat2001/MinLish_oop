@@ -1,0 +1,402 @@
+[
+    {
+        "word": "applicant",
+        "pronunciation": "/ˈæplɪkənt/",
+        "meaning": "người ứng tuyển",
+        "description_en": "A person who makes a formal application for something, especially a job.",
+        "example": "There were over 200 applicants for the junior developer position.",
+        "note": "Candidates seeking a role."
+    },
+    {
+        "word": "appraisal",
+        "pronunciation": "/əˈpreɪzl/",
+        "meaning": "đánh giá nhân viên",
+        "description_en": "An act of assessing something or someone.",
+        "example": "His annual performance appraisal was very positive.",
+        "note": "Evaluation of work performance."
+    },
+    {
+        "word": "bonus",
+        "pronunciation": "/ˈboʊnəs/",
+        "meaning": "tiền thưởng",
+        "description_en": "An amount of money added to a person's wages as a reward for good performance.",
+        "example": "Employees receive a performance-based bonus at the end of the year.",
+        "note": "Financial incentive beyond regular salary."
+    },
+    {
+        "word": "burnout",
+        "pronunciation": "/ˈbɜːrnaʊt/",
+        "meaning": "kiệt sức",
+        "description_en": "State of emotional, physical, and mental exhaustion caused by excessive and prolonged stress.",
+        "example": "Working 80 hours a week is a direct path to burnout.",
+        "note": "Serious workplace health issue."
+    },
+    {
+        "word": "compensation",
+        "pronunciation": "/ˌkɒmpenˈseɪʃn/",
+        "meaning": "bồi thường; tổng thù lao",
+        "description_en": "Something, typically money, awarded to someone as a recompense for loss, injury, or suffering.",
+        "example": "The total compensation package includes salary, health insurance, and stock options.",
+        "note": "Total pay and benefits."
+    },
+    {
+        "word": "deadline",
+        "pronunciation": "/ˈdedlaɪn/",
+        "meaning": "hạn chót",
+        "description_en": "The latest time or date by which something should be completed.",
+        "example": "We are working hard to meet the Friday deadline.",
+        "note": "Crucial for project management."
+    },
+    {
+        "word": "delegation",
+        "pronunciation": "/ˌdelɪˈɡeɪʃn/",
+        "meaning": "sự ủy quyền",
+        "description_en": "The assignment of any authority to another person to carry out specific activities.",
+        "example": "Effective delegation is a key skill for any manager.",
+        "note": "Sharing tasks and responsibilities."
+    },
+    {
+        "word": "employment",
+        "pronunciation": "/ɪmˈplɔɪmənt/",
+        "meaning": "việc làm",
+        "description_en": "The state of having paid work.",
+        "example": "Overall employment rates have increased this quarter.",
+        "note": "Paid work status."
+    },
+    {
+        "word": "flexibility",
+        "pronunciation": "/ˌflek.səˈbɪl.ə.ti/",
+        "meaning": "sự linh hoạt",
+        "description_en": "The quality of bending easily or the ability to be easily modified.",
+        "example": "Remote work offers more flexibility in balancing work and life.",
+        "note": "Valued trait in modern workplaces."
+    },
+    {
+        "word": "grievance",
+        "pronunciation": "/ˈɡriːvəns/",
+        "meaning": "khiếu nại",
+        "description_en": "A real or imagined wrong or other cause for complaint or protest, especially unfair treatment.",
+        "example": "The employee filed a grievance regarding his unfair dismissal.",
+        "note": "Formal complaint at work."
+    },
+    {
+        "word": "headquarter",
+        "pronunciation": "/ˈhedˌkwɔːrtər/",
+        "meaning": "trụ sở chính",
+        "description_en": "The place or building serving as the administrative center of an organization.",
+        "example": "The company's headquarters are located in New York City.",
+        "note": "Abbreviated as HQ."
+    },
+    {
+        "word": "interview",
+        "pronunciation": "/ˈɪntərvjuː/",
+        "meaning": "phỏng vấn",
+        "description_en": "A formal meeting in which one or more persons question, consult, or evaluate another person.",
+        "example": "I have a job interview for a marketing role tomorrow morning.",
+        "note": "Evaluation meeting for job candidates."
+    },
+    {
+        "word": "journeyman",
+        "pronunciation": "/ˈdʒɜːrnimən/",
+        "meaning": "người thợ lành nghề",
+        "description_en": "A worker or sports player who is reliable but not brilliant.",
+        "example": "He's a reliable journeyman plumber who knows his trade well.",
+        "note": "Experienced but standard professional."
+    },
+    {
+        "word": "knowledge worker",
+        "pronunciation": "/ˈnɑːlɪdʒ ˈwɜːrkər/",
+        "meaning": "nhân viên tri thức",
+        "description_en": "Someone whose job involves handling or using information.",
+        "example": "Software engineers and accountants are examples of knowledge workers.",
+        "note": "Jobs that require high-level education/skills."
+    },
+    {
+        "word": "layoff",
+        "pronunciation": "/ˈleɪˌɒf/",
+        "meaning": "sa thải (do tinh giảm biên chế)",
+        "description_en": "A discharge of a worker or workers because of economic conditions or a shortage of work.",
+        "example": "The tech company announced a 10% layoff due to falling revenues.",
+        "note": "Not due to poor individual performance."
+    },
+    {
+        "word": "mentor",
+        "pronunciation": "/ˈmentɔːr/",
+        "meaning": "người cố vấn",
+        "description_en": "An experienced and trusted adviser.",
+        "example": "She has been a mentor to many young engineers in the company.",
+        "note": "Provides guidance and career advice."
+    },
+    {
+        "word": "networking",
+        "pronunciation": "/ˈnetwɜːrkɪŋ/",
+        "meaning": "kết nối quan hệ",
+        "description_en": "The action or process of interacting with others to exchange information and develop professional or social contacts.",
+        "example": "Networking is essential for advancing in your career.",
+        "note": "Building professional connections."
+    },
+    {
+        "word": "onboarding",
+        "pronunciation": "/ˈɒnˌbɔːrdɪŋ/",
+        "meaning": "quy trình nhập môn",
+        "description_en": "The action or process of integrating a new employee into an organization.",
+        "example": "The company has a very structured onboarding process for new hires.",
+        "note": "Orientation and training period."
+    },
+    {
+        "word": "pension",
+        "pronunciation": "/ˈpenʃn/",
+        "meaning": "lương hưu",
+        "description_en": "A regular payment made during a person's retirement from an investment fund to which that person or their employer has contributed.",
+        "example": "He will receive a comfortable pension when he retires next year.",
+        "note": "Financial support for retirees."
+    },
+    {
+        "word": "qualification",
+        "pronunciation": "/ˌkwɒlɪfɪˈkeɪʃn/",
+        "meaning": "trình độ chuyên môn",
+        "description_en": "A quality or accomplishment that makes someone suitable for a particular job or activity.",
+        "example": "A PhD is a minimum qualification for this research position.",
+        "note": "Degrees or certificates."
+    },
+    {
+        "word": "recruitment",
+        "pronunciation": "/rɪˈkruːtmənt/",
+        "meaning": "sự tuyển dụng",
+        "description_en": "The action of finding new people to join an organization or body.",
+        "example": "The recruitment process can take up to three months.",
+        "note": "Finding and hiring talent."
+    },
+    {
+        "word": "salary",
+        "pronunciation": "/ˈsæləri/",
+        "meaning": "tiền lương",
+        "description_en": "A fixed regular payment, typically paid on a monthly basis but often expressed as an annual sum, made by an employer to an employee.",
+        "example": "My annual salary is $60,000.",
+        "note": "Regular monthly/yearly pay."
+    },
+    {
+        "word": "severance",
+        "pronunciation": "/ˈsevərəns/",
+        "meaning": "trợ cấp thôi việc",
+        "description_en": "The action of ending a connection or relationship.",
+        "example": "He received a generous severance package after his contract was terminated.",
+        "note": "Payment made upon leaving a company."
+    },
+    {
+        "word": "turnover",
+        "pronunciation": "/ˈtɜːrnəʊvər/",
+        "meaning": "tỷ lệ nghỉ việc; doanh số",
+        "description_en": "The rate at which employees leave a workforce and are replaced.",
+        "example": "High employee turnover can be a sign of a toxic workplace culture.",
+        "note": "Measure of employee retention."
+    },
+    {
+        "word": "upskilling",
+        "pronunciation": "/ˌʌpˈskɪlɪŋ/",
+        "meaning": "nâng cao kỹ năng",
+        "description_en": "The process of learning new skills or of teaching workers new skills.",
+        "example": "Upskilling is necessary to stay relevant in the age of AI.",
+        "note": "Continuous learning at work."
+    },
+    {
+        "word": "vacancy",
+        "pronunciation": "/ˈveɪkənsi/",
+        "meaning": "vị trí trống",
+        "description_en": "An unoccupied position or job.",
+        "example": "There is a vacancy for an assistant manager in the sales department.",
+        "note": "Unfilled job opening."
+    },
+    {
+        "word": "workload",
+        "pronunciation": "/ˈwɜːrkleʊd/",
+        "meaning": "khối lượng công việc",
+        "description_en": "The amount of work to be done by someone or something.",
+        "example": "The engineering team has a heavy workload this quarter.",
+        "note": "Total duties assigned."
+    },
+    {
+        "word": "x-efficiency",
+        "pronunciation": "/ˈeks ɪˈfɪʃ.ən.si/",
+        "meaning": "hiệu quả X",
+        "description_en": "The difference between the actual behavior of a firm and that predicted by economic theory.",
+        "example": "Improving x-efficiency is a key goal for the organizational restructuring.",
+        "note": "Focuses on internal productivity vs potential."
+    },
+    {
+        "word": "yearly review",
+        "pronunciation": "/ˈjɪərli rɪˈvjuː/",
+        "meaning": "đánh giá hàng năm",
+        "description_en": "Annual assessment of an employee's performance.",
+        "example": "My yearly review is scheduled for next Tuesday.",
+        "note": "Same as annual appraisal."
+    },
+    {
+        "word": "zero-tolerance",
+        "pronunciation": "/ˌzɪə.rəʊ ˈtɒl.ər.əns/",
+        "meaning": "không khoan nhượng",
+        "description_en": "A policy of giving the most severe punishment possible for every crime of a particular type.",
+        "example": "The company has a zero-tolerance policy towards harassment.",
+        "note": "Strict enforcement of rules."
+    },
+    {
+        "word": "absenteeism",
+        "pronunciation": "/ˌæbsənˈtiːɪzəm/",
+        "meaning": "nghiện nghỉ việc",
+        "description_en": "The practice of regularly staying away from work or school without good reason.",
+        "example": "High rates of absenteeism can significantly reduce team productivity.",
+        "note": "Frequent unauthorized absence."
+    },
+    {
+        "word": "benchmarking",
+        "pronunciation": "/ˈbentʃmɑːrkɪŋ/",
+        "meaning": "so sánh chuẩn",
+        "description_en": "Evaluate or check (something) by comparison with a standard.",
+        "example": "We use benchmarking to compare our sales performance with competitors.",
+        "note": "Setting standards based on industry leaders."
+    },
+    {
+        "word": "contractor",
+        "pronunciation": "/ˈkɒntræktər/",
+        "meaning": "nhà thầu; nhân viên hợp đồng",
+        "description_en": "A person or company that undertakes a contract to provide materials or labor to perform a service or do a job.",
+        "example": "The company hired a graphic design contractor for the project.",
+        "note": "Temporary or project-based worker."
+    },
+    {
+        "word": "diversity",
+        "pronunciation": "/daɪˈvɜːrsəti/",
+        "meaning": "sự đa dạng",
+        "description_en": "The practice or quality of including or involving people from a range of different social and ethnic backgrounds.",
+        "example": "Diversity and inclusion are priorities for our human resources team.",
+        "note": "DEI (Diversity, Equity, and Inclusion)."
+    },
+    {
+        "word": "evaluation",
+        "pronunciation": "/ɪˌvæljuˈeɪʃn/",
+        "meaning": "sự đánh giá",
+        "description_en": "The making of a judgment about the amount, number, or value of something; assessment.",
+        "example": "The final evaluation will determine if the pilot program was successful.",
+        "note": "Systematic assessment."
+    },
+    {
+        "word": "freelancer",
+        "pronunciation": "/ˈfriːˌlænsər/",
+        "meaning": "người làm nghề tự do",
+        "description_en": "A person who works as a writer, designer, performer, or the like, selling work or services by the hour, day, job, etc.",
+        "example": "He works as a freelancer for several tech magazines.",
+        "note": "Independent worker with multiple clients."
+    },
+    {
+        "word": "headhunter",
+        "pronunciation": "/ˈhedhʌntər/",
+        "meaning": "người săn đầu người",
+        "description_en": "A search of a person to identify and approach suitable candidates for a particular job.",
+        "example": "A headhunter approached her for a senior management position.",
+        "note": "Specialized recruiter for high-level roles."
+    },
+    {
+        "word": "income tax",
+        "pronunciation": "/ˈɪnkʌm tæks/",
+        "meaning": "thuế thu nhập",
+        "description_en": "Tax levied directly on personal income.",
+        "example": "A percentage of your salary is deducted for income tax every month.",
+        "note": "Contribution to government revenue."
+    },
+    {
+        "word": "job security",
+        "pronunciation": "/dʒɑːb sɪˈkjʊrəti/",
+        "meaning": "sự đảm bảo công việc",
+        "description_en": "The probability that an individual will keep their job.",
+        "example": "Job security is a major concern during an economic recession.",
+        "note": "Confidence in staying employed."
+    },
+    {
+        "word": "labor union",
+        "pronunciation": "/ˈleɪbər ˈjuːniən/",
+        "meaning": "công đoàn",
+        "description_en": "An organized association of workers formed to protect and further their rights and interests.",
+        "example": "The labor union negotiated for better pay and working conditions.",
+        "note": "Employee representative body."
+    },
+    {
+        "word": "manager",
+        "pronunciation": "/ˈmænɪdʒər/",
+        "meaning": "quản lý",
+        "description_en": "A person responsible for controlling or administering all or part of a company or similar organization.",
+        "example": "He was promoted to the position of project manager last month.",
+        "note": "Oversees people or processes."
+    },
+    {
+        "word": "negotiation",
+        "pronunciation": "/nɪˌɡoʊʃiˈeɪʃn/",
+        "meaning": "sự đàm phán",
+        "description_en": "Discussion aimed at reaching an agreement.",
+        "example": "Competitive salary negotiation is common during the hiring process.",
+        "note": "Discussing terms of employment."
+    },
+    {
+        "word": "outplacement",
+        "pronunciation": "/ˈaʊtˌpleɪsmənt/",
+        "meaning": "hỗ trợ tìm việc mới",
+        "description_en": "Placement of a person in a new job, typically done by a former employer after redundancy.",
+        "example": "The company offered outplacement services to employees who were laid off.",
+        "note": "Assistance for departing workers."
+    },
+    {
+        "word": "promotion",
+        "pronunciation": "/prəˈmoʊʃn/",
+        "meaning": "thăng chức",
+        "description_en": "The action of promoting someone or something to a higher position or rank.",
+        "example": "She received a well-deserved promotion to senior analyst.",
+        "note": "Career advancement."
+    },
+    {
+        "word": "redundancy",
+        "pronunciation": "/rɪˈdʌndənsi/",
+        "meaning": "sự dư thừa nhân viên",
+        "description_en": "The state of being no longer needed or useful.",
+        "example": "He was offered a voluntary redundancy package when the office closed.",
+        "note": "Leaving a job because the role is gone."
+    },
+    {
+        "word": "soft skills",
+        "pronunciation": "/sɔːft skɪlz/",
+        "meaning": "kỹ năng mềm",
+        "description_en": "Personal attributes that enable someone to interact effectively and harmoniously with other people.",
+        "example": "Communication and teamwork are essential soft skills.",
+        "note": "Interpersonal abilities."
+    },
+    {
+        "word": "supervisor",
+        "pronunciation": "/ˈsuːpərˌveɪzər/",
+        "meaning": "người giám sát",
+        "description_en": "A person who oversees a person or activity.",
+        "example": "Report any technical issues to your immediate supervisor.",
+        "note": "Direct manager."
+    },
+    {
+        "word": "trainee",
+        "pronunciation": "/ˌtreɪˈniː/",
+        "meaning": "thực tập sinh; nhân viên tập sự",
+        "description_en": "A person undergoing training for a particular job or profession.",
+        "example": "The management trainee program lasts for twelve months.",
+        "note": "Entry-level learner."
+    },
+    {
+        "word": "up-to-date",
+        "pronunciation": "/ˌʌp tə ˈdeɪt/",
+        "meaning": "cập nhật mới nhất",
+        "description_en": "Incorporating the latest developments and trends.",
+        "example": "It's important to keep your technical skills up-to-date.",
+        "note": "Current and relevant."
+    },
+    {
+        "word": "wage",
+        "pronunciation": "/weɪdʒ/",
+        "meaning": "tiền công",
+        "description_en": "A fixed regular payment made by an employer to an employee, especially to a manual or unskilled worker which is typically paid daily or weekly.",
+        "example": "The minimum wage has been increased recently.",
+        "note": "Often refers to hourly or weekly pay."
+    }
+]

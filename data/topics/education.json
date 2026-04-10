@@ -1,0 +1,402 @@
+[
+    {
+        "word": "academic",
+        "pronunciation": "/ˌæk.əˈdem.ɪk/",
+        "meaning": "thuộc học thuật",
+        "description_en": "Relating to education and scholarship.",
+        "example": "The school has very high academic standards.",
+        "note": "Focuses on theory and research."
+    },
+    {
+        "word": "curriculum",
+        "pronunciation": "/kəˈrɪk.jə.ləm/",
+        "meaning": "chương trình học",
+        "description_en": "The subjects comprising a course of study in a school or college.",
+        "example": "The history curriculum covers ancient civilizations.",
+        "note": "Plural is curricula."
+    },
+    {
+        "word": "pedagogy",
+        "pronunciation": "/ˈped.ə.ɡɒdʒ.i/",
+        "meaning": "sư phạm",
+        "description_en": "The method and practice of teaching, especially as an academic subject or theoretical concept.",
+        "example": "Innovation in pedagogy is necessary for modern students.",
+        "note": "Art and science of teaching."
+    },
+    {
+        "word": "literacy",
+        "pronunciation": "/ˈlɪt.ər.ə.si/",
+        "meaning": "biết chữ; trình độ học vấn",
+        "description_en": "The ability to read and write.",
+        "example": "The government is working to improve adult literacy rates.",
+        "note": "Can also refer to knowledge in a specific area (e.g., digital literacy)."
+    },
+    {
+        "word": "scholarship",
+        "pronunciation": "/ˈskɒl.ə.ʃɪp/",
+        "meaning": "học bổng",
+        "description_en": "A grant or payment made to support a student's education, awarded on the basis of academic or other achievement.",
+        "example": "She won a full scholarship to study at Harvard.",
+        "note": "Financial aid based on merit."
+    },
+    {
+        "word": "tuition",
+        "pronunciation": "/tʃuːˈɪʃ.ən/",
+        "meaning": "học phí; sự giảng dạy",
+        "description_en": "Sum of money charged for teaching or instruction by a school, college, or university.",
+        "example": "The university increased its tuition fees this year.",
+        "note": "Cost of education."
+    },
+    {
+        "word": "assignment",
+        "pronunciation": "/əˈsaɪn.mənt/",
+        "meaning": "bài tập; nhiệm vụ",
+        "description_en": "A task or piece of work assigned to someone as part of a job or course of study.",
+        "example": "The math assignment is due next Tuesday.",
+        "note": "Commonly used in schools and workplaces."
+    },
+    {
+        "word": "discipline",
+        "pronunciation": "/ˈdɪs.ə.plɪn/",
+        "meaning": "kỷ luật; chuyên ngành",
+        "description_en": "The practice of training people to obey rules or a code of behavior.",
+        "example": "Sociology is a relatively young academic discipline.",
+        "note": "Refers to both behavior and fields of study."
+    },
+    {
+        "word": "enrollment",
+        "pronunciation": "/ɪnˈrəʊl.mənt/",
+        "meaning": "sự ghi danh; nhập học",
+        "description_en": "The action of enrolling or being enrolled.",
+        "example": "Course enrollment opens online next Monday.",
+        "note": "The process of joining a course or school."
+    },
+    {
+        "word": "assessment",
+        "pronunciation": "/əˈses.mənt/",
+        "meaning": "sự đánh giá",
+        "description_en": "The evaluation or estimation of the nature, quality, or ability of someone or something.",
+        "example": "Periodic assessment helps track student progress.",
+        "note": "Includes tests, essays, and reports."
+    },
+    {
+        "word": "graduate",
+        "pronunciation": "/ˈɡrædʒ.u.ət/",
+        "meaning": "tốt nghiệp",
+        "description_en": "A person who has successfully completed a course of study or training.",
+        "example": "She is a graduate of Oxford University.",
+        "note": "Can be a noun or a verb."
+    },
+    {
+        "word": "lecturer",
+        "pronunciation": "/ˈlek.tʃər.ər/",
+        "meaning": "giảng viên",
+        "description_en": "A person who gives lectures, especially as an occupation at a university or college.",
+        "example": "The guest lecturer spoke about environmental policy.",
+        "note": "Higher education teaching role."
+    },
+    {
+        "word": "prospectus",
+        "pronunciation": "/prəˈspek.təs/",
+        "meaning": "bản cáo bạch; giới thiệu trường",
+        "description_en": "A printed booklet advertising a school or university.",
+        "example": "You should check the university prospectus for course details.",
+        "note": "Informational guide for prospective students."
+    },
+    {
+        "word": "syllabus",
+        "pronunciation": "/ˈsɪl.ə.bəs/",
+        "meaning": "đề cương khóa học",
+        "description_en": "The topics in a course of study or teaching.",
+        "example": "The syllabus lists all the required readings for the semester.",
+        "note": "Outline of a specific class."
+    },
+    {
+        "word": "thesis",
+        "pronunciation": "/ˈθiː.sɪs/",
+        "meaning": "luận văn; luận án",
+        "description_en": "A long essay or dissertation involving personal research, written by a candidate for a college degree.",
+        "example": "He is writing his PhD thesis on artificial intelligence.",
+        "note": "Major research project for advanced degrees."
+    },
+    {
+        "word": "vocational",
+        "pronunciation": "/vəʊˈkeɪ.ʃən.əl/",
+        "meaning": "thuộc hướng nghiệp",
+        "description_en": "Relating to an occupation or employment.",
+        "example": "The college offers vocational training in automotive repair.",
+        "note": "Focuses on practical skills for jobs."
+    },
+    {
+        "word": "workshop",
+        "pronunciation": "/ˈwɜːk.ʃɒp/",
+        "meaning": "hội thảo; xưởng",
+        "description_en": "A meeting at which a group of people engage in intensive discussion and activity on a particular subject or project.",
+        "example": "They attended a creative writing workshop.",
+        "note": "Emphasis on practical, hands-on learning."
+    },
+    {
+        "word": "attendance",
+        "pronunciation": "/əˈten.dəns/",
+        "meaning": "sự tham dự",
+        "description_en": "The action or state of going regularly to or being present at a place or event.",
+        "example": "Attendance is mandatory for all lab sessions.",
+        "note": "Record of being present."
+    },
+    {
+        "word": "diploma",
+        "pronunciation": "/dɪˈpləʊ.mə/",
+        "meaning": "bằng cấp",
+        "description_en": "A certificate awarded by an educational establishment to show that someone has successfully completed a course of study.",
+        "example": "He received his high school diploma last June.",
+        "note": "Proof of graduation."
+    },
+    {
+        "word": "faculty",
+        "pronunciation": "/ˈfæk.əl.ti/",
+        "meaning": "khoa; đội ngũ giảng viên",
+        "description_en": "The teaching staff of a university or college.",
+        "example": "The law faculty is known for its distinguished professors.",
+        "note": "Refers to both the staff and a department."
+    },
+    {
+        "word": "humanities",
+        "pronunciation": "/hjuːˈmæn.ə.tiz/",
+        "meaning": "nhân văn",
+        "description_en": "Learning or literature concerned with human culture.",
+        "example": "History and philosophy are part of the humanities.",
+        "note": "Study of human society and culture."
+    },
+    {
+        "word": "internship",
+        "pronunciation": "/ˈɪn.tɜːn.ʃɪp/",
+        "meaning": "thực tập",
+        "description_en": "The position of a student or trainee who works in an organization, sometimes without pay, in order to gain work experience.",
+        "example": "She did a summer internship at a law firm.",
+        "note": "Practical work experience for students."
+    },
+    {
+        "word": "mandatory",
+        "pronunciation": "/ˈmæn.də.tər.i/",
+        "meaning": "bắt buộc",
+        "description_en": "Required by law or rules; compulsory.",
+        "example": "The introductory course is mandatory for all first-year students.",
+        "note": "Not optional."
+    },
+    {
+        "word": "orientation",
+        "pronunciation": "/ˌɔː.ri.enˈteɪ.ʃən/",
+        "meaning": "sự định hướng",
+        "description_en": "A program of introduction for newcomers to a university or other institution.",
+        "example": "Student orientation starts a week before classes begin.",
+        "note": "Helps students acclimate to campus life."
+    },
+    {
+        "word": "plagiarism",
+        "pronunciation": "/ˈpleɪ.dʒər.ɪ.zəm/",
+        "meaning": "đạo văn",
+        "description_en": "The practice of taking someone else's work or ideas and passing them off as one's own.",
+        "example": "Plagiarism is a serious academic offense.",
+        "note": "Ethical and legal violation in research and writing."
+    },
+    {
+        "word": "prerequisite",
+        "pronunciation": "/ˌpriːˈrek.wɪ.zɪt/",
+        "meaning": "điều kiện tiên quyết",
+        "description_en": "A thing that is required as a prior condition for something else to happen or exist.",
+        "example": "Biology 101 is a prerequisite for the advanced genetics course.",
+        "note": "Must be completed before taking a higher-level course."
+    },
+    {
+        "word": "registrar",
+        "pronunciation": "/ˌredʒ.ɪˈstrɑːr/",
+        "meaning": "phòng đào tạo; người đăng ký",
+        "description_en": "An official responsible for keeping a register or official records.",
+        "example": "Contact the registrar's office to request a transcript.",
+        "note": "Handles records and enrollment."
+    },
+    {
+        "word": "semester",
+        "pronunciation": "/sɪˈmes.tər/",
+        "meaning": "học kỳ",
+        "description_en": "A half-year term in a school or college, typically lasting fifteen to eighteen weeks.",
+        "example": "The fall semester begins in late August.",
+        "note": "Common division of the academic year."
+    },
+    {
+        "word": "seminar",
+        "pronunciation": "/ˈsem.ɪ.nɑːr/",
+        "meaning": "hội thảo chuyên đề",
+        "description_en": "A conference or other meeting for discussion or training.",
+        "example": "The professor held a small seminar for his graduate students.",
+        "note": "Discussion-based academic meeting."
+    },
+    {
+        "word": "undergraduate",
+        "pronunciation": "/ˌʌn.dəˈɡrædʒ.u.ət/",
+        "meaning": "sinh viên đại học",
+        "description_en": "A university student who has not yet taken a first degree.",
+        "example": "The undergraduate program takes four years to complete.",
+        "note": "Student working towards a bachelor's degree."
+    },
+    {
+        "word": "validation",
+        "pronunciation": "/ˌvæl.ɪˈdeɪ.ʃən/",
+        "meaning": "xác nhận hợp lệ",
+        "description_en": "The action of checking or proving the validity or accuracy of something.",
+        "example": "The study needs further validation through controlled experiments.",
+        "note": "Proving the correctness of research results."
+    },
+    {
+        "word": "alumni",
+        "pronunciation": "/əˈlʌm.naɪ/",
+        "meaning": "cựu sinh viên",
+        "description_en": "Former students or graduates of a particular school, college, or university.",
+        "example": "The alumni association organizes yearly reunions.",
+        "note": "Singular is alumnus (male) or alumna (female)."
+    },
+    {
+        "word": "certification",
+        "pronunciation": "/ˌsɜː.tɪ.fɪˈkeɪ.ʃən/",
+        "meaning": "sự cấp chứng chỉ",
+        "description_en": "The action or process of providing someone or something with an official document attesting to a status or level of achievement.",
+        "example": "He received certification in project management.",
+        "note": "Official recognition of skills."
+    },
+    {
+        "word": "cognition",
+        "pronunciation": "/kɒɡˈnɪʃ.ən/",
+        "meaning": "nhận thức",
+        "description_en": "The mental action or process of acquiring knowledge and understanding through thought, experience, and the senses.",
+        "example": "The course explores human cognition and memory.",
+        "note": "Psychological process of knowing."
+    },
+    {
+        "word": "competence",
+        "pronunciation": "/ˈkɒm.pɪ.təns/",
+        "meaning": "năng lực",
+        "description_en": "The ability to do something successfully or efficiently.",
+        "example": "The exam tests your technical competence in the field.",
+        "note": "Demonstrated skill or knowledge."
+    },
+    {
+        "word": "credential",
+        "pronunciation": "/krɪˈden.ʃəl/",
+        "meaning": "chứng chỉ; bằng cấp",
+        "description_en": "A qualification, achievement, personal quality, or aspect of a person's background, typically used to indicate that they are suitable for something.",
+        "example": "Does he have the right credentials for the teaching position?",
+        "note": "Refers to degrees, certificates, etc."
+    },
+    {
+        "word": "deferred",
+        "pronunciation": "/dɪˈfɜːrd/",
+        "meaning": "trì hoãn; bảo lưu",
+        "description_en": "Put off (an action or event) to a later time; postpone.",
+        "example": "She deferred her admission to the university for a year.",
+        "note": "Often used for Gap years or taking time off."
+    },
+    {
+        "word": "dissertation",
+        "pronunciation": "/ˌdɪs.əˈteɪ.ʃən/",
+        "meaning": "luận văn tốt nghiệp",
+        "description_en": "A long essay on a particular subject, especially one written as a requirement for the award of a university degree.",
+        "example": "He defended his doctoral dissertation in May.",
+        "note": "Extensive research paper."
+    },
+    {
+        "word": "elective",
+        "pronunciation": "/iˈlek.tɪv/",
+        "meaning": "môn tự chọn",
+        "description_en": "Optional course of study.",
+        "example": "She chose photography as an elective this semester.",
+        "note": "Opposite of a required course."
+    },
+    {
+        "word": "extracurricular",
+        "pronunciation": "/ˌek.strə.kəˈrɪk.jə.lər/",
+        "meaning": "ngoại khóa",
+        "description_en": "Pursued in addition to the normal course of study.",
+        "example": "Playing sports is a popular extracurricular activity.",
+        "note": "Activities outside the regular syllabus."
+    },
+    {
+        "word": "foundation",
+        "pronunciation": "/faʊnˈdeɪ.ʃən/",
+        "meaning": "nền tảng",
+        "description_en": "The base on which something is built.",
+        "example": "The course provides a strong foundation in calculus.",
+        "note": "The basic concepts or skills."
+    },
+    {
+        "word": "incentive",
+        "pronunciation": "/ɪnˈsen.tɪv/",
+        "meaning": "khuyến khích",
+        "description_en": "A thing that motivates or encourages someone to do something.",
+        "example": "The university offers financial incentives for researchers.",
+        "note": "Motivation to achieve."
+    },
+    {
+        "word": "interdisciplinary",
+        "pronunciation": "/ˌɪn.təˈdɪs.ə.plɪ.ner.i/",
+        "meaning": "liên ngành",
+        "description_en": "Relating to more than one branch of knowledge.",
+        "example": "The program is interdisciplinary, combining art and science.",
+        "note": "Integrates different fields of study."
+    },
+    {
+        "word": "mentorship",
+        "pronunciation": "/ˈmen.tɔː.ʃɪp/",
+        "meaning": "sự cố vấn",
+        "description_en": "The guidance provided by a mentor, especially an experienced person in a company or educational institution.",
+        "example": "The mentorship program pairs students with industry professionals.",
+        "note": "Learning through a mentor-mentee relationship."
+    },
+    {
+        "word": "objective",
+        "pronunciation": "/əbˈdʒek.tɪv/",
+        "meaning": "mục tiêu",
+        "description_en": "A thing aimed at or sought; a goal.",
+        "example": "What are the learning objectives of this module?",
+        "note": "Specific target to be achieved."
+    },
+    {
+        "word": "proficiency",
+        "pronunciation": "/prəˈfɪʃ.ən.si/",
+        "meaning": "sự thành thạo",
+        "description_en": "A high degree of skill; expertise.",
+        "example": "The job requires proficiency in at least two languages.",
+        "note": "Demonstrated high level of skill."
+    },
+    {
+        "word": "referencing",
+        "pronunciation": "/ˈref.ər.ən.sɪŋ/",
+        "meaning": "trích dẫn",
+        "description_en": "The action of providing source information for facts and ideas used in a text.",
+        "example": "Correct referencing is essential to avoid plagiarism.",
+        "note": "Identifying sources in academic writing (e.g., APA, MLA)."
+    },
+    {
+        "word": "rubric",
+        "pronunciation": "/ˈruː.brɪk/",
+        "meaning": "tiêu chí đánh giá",
+        "description_en": "A scoring guide used to evaluate the quality of students' constructed responses.",
+        "example": "The professor handed out a rubric for the final project.",
+        "note": "Defines what's expected for each grade layer."
+    },
+    {
+        "word": "transcript",
+        "pronunciation": "/ˈtræn.skrɪpt/",
+        "meaning": "bảng điểm",
+        "description_en": "An official record of a student's work, showing courses taken and grades achieved.",
+        "example": "The employer asked for an official university transcript.",
+        "note": "Official academic record."
+    },
+    {
+        "word": "vocation",
+        "pronunciation": "/vəʊˈkeɪ.ʃən/",
+        "meaning": "nghề nghiệp; thiên hướng",
+        "description_en": "A strong feeling of suitability for a particular career or occupation.",
+        "example": "He felt a vocation for nursing from a young age.",
+        "note": "Often implies a calling or deep passion for a job."
+    }
+]

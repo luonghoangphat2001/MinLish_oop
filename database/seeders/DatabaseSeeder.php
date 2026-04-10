@@ -41,7 +41,6 @@ class DatabaseSeeder extends Seeder
                 ]
             );
 
-            // Tạo mục tiêu hàng ngày
             DailyGoal::updateOrCreate(
                 ['user_id' => $user->id],
                 [
@@ -53,29 +52,49 @@ class DatabaseSeeder extends Seeder
             return $user;
         });
 
-        $users->each(function (User $user) {
-            // Tạo 5 bộ từ cho mỗi người dùng
-            $sets = VocabularySet::factory()
-                ->count(5)
-                ->for($user)
-                ->create();
+        // Get all topic files
+        $topicFiles = glob(base_path('data/topics/*.json'));
+        $firstUser = $users->first();
 
-            $sets->each(function (VocabularySet $set) use ($user) {
-                // Mỗi bộ 40 từ
-                $vocabularies = Vocabulary::factory()
-                    ->count(40)
-                    ->for($set, 'set')
-                    ->create();
+        foreach ($topicFiles as $file) {
+            $topicName = ucfirst(basename($file, '.json'));
+            $data = json_decode(file_get_contents($file), true);
 
+            // Create a public vocabulary set for each topic
+            $set = VocabularySet::create([
+                'user_id' => $firstUser->id,
+                'name' => $topicName,
+                'description' => "Bộ từ vựng chủ đề $topicName với 50 từ chuyên sâu.",
+                'is_public' => true,
+                'tags' => [$topicName, 'Official'],
+            ]);
+
+            $vocabularies = collect($data)->map(function ($wordData) use ($set) {
+                return Vocabulary::create([
+                    'set_id' => $set->id,
+                    'word' => $wordData['word'],
+                    'pronunciation' => $wordData['pronunciation'],
+                    'meaning' => $wordData['meaning'],
+                    'description_en' => $wordData['description_en'] ?? null,
+                    'example' => $wordData['example'],
+                    'note' => $wordData['note'] ?? null,
+                    'collocation' => null,
+                    'related_words' => null,
+                ]);
+            });
+
+            // For each user, create some simulated progress for this set
+            $users->each(function (User $user) use ($vocabularies) {
                 $now = now();
 
-                // 1. Tạo tiến độ SRS với phân bố trạng thái đa dạng
-                $srsPayload = $vocabularies->map(function (Vocabulary $vocab, int $idx) use ($user, $now) {
+                // Select 30 random words from this set to have progress for this user
+                $selectedVocabs = $vocabularies->random(30);
+
+                $srsPayload = $selectedVocabs->map(function (Vocabulary $vocab, int $idx) use ($user, $now) {
                     $status = match (true) {
                         $idx < 5 => 'mastered',
                         $idx < 15 => 'review',
-                        $idx < 25 => 'learning',
-                        default => 'new',
+                        default => 'learning',
                     };
 
                     return [
@@ -84,21 +103,21 @@ class DatabaseSeeder extends Seeder
                         'status' => $status,
                         'ease_factor' => 2.5,
                         'interval_days' => $status === 'mastered' ? 30 : ($status === 'review' ? 7 : 1),
-                        'repetitions' => $status === 'new' ? 0 : 5,
-                        'next_review_at' => $status === 'new' ? null : $now->copy()->addDays(rand(1, 10)),
-                        'last_reviewed_at' => $status === 'new' ? null : $now->copy()->subDays(rand(1, 5)),
+                        'repetitions' => $status === 'learning' ? 1 : 5,
+                        'next_review_at' => $status === 'learning' ? $now->copy()->addDay() : $now->copy()->addDays(rand(1, 15)),
+                        'last_reviewed_at' => $now->copy()->subDays(rand(1, 5)),
                         'created_at' => $now,
                         'updated_at' => $now,
                     ];
                 });
+
                 SrsProgress::insert($srsPayload->all());
 
                 // 2. Tạo lịch sử học tập (Study Logs) trong 7 ngày qua
                 $logsPayload = [];
                 for ($i = 0; $i < 7; $i++) {
                     $date = $now->copy()->subDays($i);
-                    // Mỗi ngày học từ 5-15 từ ngẫu nhiên trong bộ này
-                    $dailyVocabs = $vocabularies->random(rand(5, 15));
+                    $dailyVocabs = $selectedVocabs->random(rand(2, 5));
 
                     foreach ($dailyVocabs as $vocab) {
                         $logsPayload[] = [
@@ -112,11 +131,10 @@ class DatabaseSeeder extends Seeder
                     }
                 }
 
-                // Insert thành từng đợt để tránh quá tải
                 foreach (array_chunk($logsPayload, 100) as $chunk) {
                     StudyLog::insert($chunk);
                 }
             });
-        });
+        }
     }
 }

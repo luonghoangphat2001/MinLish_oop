@@ -1,5 +1,4 @@
-<div
-    x-data="{
+<div x-data="{
         barChart: null,
         doughnutChart: null,
         labels: @js($labels),
@@ -94,20 +93,20 @@
                 this.status['mastered'] ?? 0
             ];
         }
-    }"
-    class="space-y-6"
->
+    }" class="space-y-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {{-- Activity Bar Chart --}}
         <div class="bg-white rounded-[32px] border border-slate-100 shadow-sm p-8">
             <div class="flex items-center justify-between mb-8">
                 <div>
                     <h3 class="text-[15px] font-black text-slate-900 uppercase tracking-tight">HOẠT ĐỘNG 30 NGÀY</h3>
-                    <p class="text-[10px] font-black text-slate-400 mt-1 uppercase tracking-widest">SỐ TỪ ĐÃ HỌC MỖI NGÀY</p>
+                    <p class="text-[10px] font-black text-slate-400 mt-1 uppercase tracking-widest">SỐ TỪ ĐÃ HỌC MỖI
+                        NGÀY</p>
                 </div>
                 <div class="w-10 h-10 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                 </div>
             </div>
@@ -121,12 +120,15 @@
             <div class="flex items-center justify-between mb-8">
                 <div>
                     <h3 class="text-[15px] font-black text-slate-900 uppercase tracking-tight">PHÂN BỔ SRS</h3>
-                    <p class="text-[10px] font-black text-slate-400 mt-1 uppercase tracking-widest">TRẠNG THÁI TỪ VỰNG TRONG HỆ THỐNG</p>
+                    <p class="text-[10px] font-black text-slate-400 mt-1 uppercase tracking-widest">TRẠNG THÁI TỪ VỰNG
+                        TRONG HỆ THỐNG</p>
                 </div>
                 <div class="w-10 h-10 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
                     </svg>
                 </div>
             </div>

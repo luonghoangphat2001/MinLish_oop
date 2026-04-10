@@ -1,0 +1,402 @@
+[
+    {
+        "word": "abstract",
+        "pronunciation": "/ˈæb.strækt/",
+        "meaning": "trừu tượng",
+        "description_en": "Existing in thought or as an idea but not having a physical or concrete existence.",
+        "example": "The artist is famous for her colorful abstract paintings.",
+        "note": "Type of art that doesn't represent reality."
+    },
+    {
+        "word": "audience",
+        "pronunciation": "/ˈɔː.di.əns/",
+        "meaning": "khán giả",
+        "description_en": "The assembled spectators or listeners at a public event such as a play, movie, concert, or meeting.",
+        "example": "The audience cheered loudly at the end of the performance.",
+        "note": "Collective group of viewers."
+    },
+    {
+        "word": "masterpiece",
+        "pronunciation": "/ˈmɑː.stə.piːs/",
+        "meaning": "kiệt tác",
+        "description_en": "A work of outstanding artistry, skill, or workmanship.",
+        "example": "The Mona Lisa is considered Leonardo da Vinci's masterpiece.",
+        "note": "An artist's best work."
+    },
+    {
+        "word": "genre",
+        "pronunciation": "/ˈʒɑ̃ː.rə/",
+        "meaning": "thể loại",
+        "description_en": "A category of artistic composition, as in music or literature.",
+        "example": "My favorite movie genre is science fiction.",
+        "note": "French origin word."
+    },
+    {
+        "word": "performance",
+        "pronunciation": "/pəˈfɔː.məns/",
+        "meaning": "buổi trình diễn",
+        "description_en": "An act of staging or presenting a play, concert, or other form of entertainment.",
+        "example": "The singer gave a moving performance of her latest hit.",
+        "note": "Can be live or recorded."
+    },
+    {
+        "word": "exhibition",
+        "pronunciation": "/ˌek.sɪˈbɪʃ.ən/",
+        "meaning": "triển lãm",
+        "description_en": "A public display of works of art or other items of interest.",
+        "example": "There is a new exhibition of modern art at the city gallery.",
+        "note": "Organized display for the public."
+    },
+    {
+        "word": "reproduction",
+        "pronunciation": "/ˌriː.prəˈdʌk.ʃən/",
+        "meaning": "bản sao; sự mô phỏng",
+        "description_en": "A copy of a work of art.",
+        "example": "I bought a high-quality reproduction of a Van Gogh painting.",
+        "note": "Mass-produced copy of original."
+    },
+    {
+        "word": "script",
+        "pronunciation": "/skrɪpt/",
+        "meaning": "kịch bản",
+        "description_en": "The written text of a play, movie, or broadcast.",
+        "example": "The actors spent weeks memorizing their lines from the script.",
+        "note": "Foundation for theatrical/film works."
+    },
+    {
+        "word": "symphony",
+        "pronunciation": "/ˈsɪm.fə.ni/",
+        "meaning": "bản giao hưởng",
+        "description_en": "An elaborate musical composition for full orchestra, typically in four movements.",
+        "example": "Beethoven's Ninth Symphony is one of the most famous pieces of classical music.",
+        "note": "Complex orchestral work."
+    },
+    {
+        "word": "theater",
+        "pronunciation": "/ˈθɪə.tər/",
+        "meaning": "nhà hát; rạp hát",
+        "description_en": "A building or outdoor area in which plays and other dramatic performances are given.",
+        "example": "We are going to the theater to see a musical tonight.",
+        "note": "Venue for live performances."
+    },
+    {
+        "word": "gallery",
+        "pronunciation": "/ˈɡæl.ər.i/",
+        "meaning": "phòng trưng bày nghệ thuật",
+        "description_en": "A room or building for the display or sale of works of art.",
+        "example": "The city art gallery is hosting a collection of local landscape paintings.",
+        "note": "Space for temporary or permanent art display."
+    },
+    {
+        "word": "critics",
+        "pronunciation": "/ˈkrɪt.ɪks/",
+        "meaning": "nhà phê bình",
+        "description_en": "A person who expresses an unfavorable opinion of something or someone.",
+        "example": "The new film received mostly positive reviews from the critics.",
+        "note": "Professionals who evaluate art/media."
+    },
+    {
+        "word": "broadcast",
+        "pronunciation": "/ˈbrɔːd.kɑːst/",
+        "meaning": "phát sóng; chương trình phát thanh",
+        "description_en": "Transmit (a program or some information) by radio or television.",
+        "example": "The news is broadcast live every evening at 6 p.m.",
+        "note": "Distribution of media via signals."
+    },
+    {
+        "word": "creativity",
+        "pronunciation": "/ˌkriː.eɪˈtɪv.ə.ti/",
+        "meaning": "sự sáng tạo",
+        "description_en": "The use of the imagination or original ideas, especially in the production of an artistic work.",
+        "example": "Visual arts are a great way for children to express their creativity.",
+        "note": "Quality of being original and imaginative."
+    },
+    {
+        "word": "ensemble",
+        "pronunciation": "/ɒnˈsɒm.bəl/",
+        "meaning": "nhóm biểu diễn; ban nhạc",
+        "description_en": "A group of musicians, actors, or dancers who perform together.",
+        "example": "The jazz ensemble played until midnight.",
+        "note": "Harmonious group of performers."
+    },
+    {
+        "word": "orchestra",
+        "pronunciation": "/ˈɔː.kɪ.strə/",
+        "meaning": "dàn nhạc giao hưởng",
+        "description_en": "A large group of musicians who play many different instruments together.",
+        "example": "The symphony orchestra consists of over 100 musicians.",
+        "note": "Includes strings, woodwinds, brass, and percussion."
+    },
+    {
+        "word": "climax",
+        "pronunciation": "/ˈklaɪ.mæks/",
+        "meaning": "cao trào; điểm cực đỉnh",
+        "description_en": "The most intense, exciting, or important point of something.",
+        "example": "The plot reached its climax in the final chapter of the book.",
+        "note": "Turning point of a story."
+    },
+    {
+        "word": "cinematography",
+        "pronunciation": "/ˌsɪn.ə.məˈtɒɡ.rə.fi/",
+        "meaning": "kỹ thuật quay phim",
+        "description_en": "The art of making motion pictures.",
+        "example": "The cinematography in that movie was absolutely breathtaking.",
+        "note": "Focuses on lighting, framing, and camera movement."
+    },
+    {
+        "word": "foyer",
+        "pronunciation": "/ˈfɔɪ.eɪ/",
+        "meaning": "tiền sảnh; sảnh đợi",
+        "description_en": "An entrance hall or other open area in a building used by the public, especially a hotel or theater.",
+        "example": "We met in the theater foyer before the show started.",
+        "note": "Waiting area at a venue."
+    },
+    {
+        "word": "highlight",
+        "pronunciation": "/ˈhaɪ.laɪt/",
+        "meaning": "điểm nhấn; làm nổi bật",
+        "description_en": "An outstanding part of an event or period of time.",
+        "example": "The fireworks were the highlight of the festival.",
+        "note": "The most memorable part."
+    },
+    {
+        "word": "improvisation",
+        "pronunciation": "/ˌɪm.prə.vaɪˈzeɪ.ʃən/",
+        "meaning": "sự ứng biến; ngẫu hứng",
+        "description_en": "The action of improvising.",
+        "example": "Jazz is known for its extensive use of musical improvisation.",
+        "note": "Creating art or performance without preparation."
+    },
+    {
+        "word": "lyrics",
+        "pronunciation": "/ˈlɪr.ɪks/",
+        "meaning": "lời bài hát",
+        "description_en": "The words of a song.",
+        "example": "He writes meaningful lyrics that resonate with many people.",
+        "note": "Vocal content of music."
+    },
+    {
+        "word": "manuscript",
+        "pronunciation": "/ˈmæn.jə.skrɪpt/",
+        "meaning": "bản thảo",
+        "description_en": "A book, document, or piece of music written by hand rather than typed or printed.",
+        "example": "The museum holds several rare medieval manuscripts.",
+        "note": "Original written version of a work."
+    },
+    {
+        "word": "notoriety",
+        "pronunciation": "/ˌnəʊ.təˈraɪ.ə.ti/",
+        "meaning": "sự tai tiếng",
+        "description_en": "The state of being famous or well known for some bad quality or deed.",
+        "example": "The artist gained notoriety for his controversial public statements.",
+        "note": "Fame for the wrong reasons."
+    },
+    {
+        "word": "premiere",
+        "pronunciation": "/ˈprem.i.eər/",
+        "meaning": "buổi công chiếu đầu tiên",
+        "description_en": "The first performance of a musical or theatrical work or the first showing of a movie.",
+        "example": "The world premiere of the movie was held in Los Angeles last night.",
+        "note": "First public release."
+    },
+    {
+        "word": "protagonist",
+        "pronunciation": "/prəˈtæɡ.ən.ɪst/",
+        "meaning": "nhân vật chính",
+        "description_en": "The main figure or one of the most prominent figures in a real situation or a literary text.",
+        "example": "The story follows the journey of the protagonist as he seeks justice.",
+        "note": "Central character of a narrative."
+    },
+    {
+        "word": "quartet",
+        "pronunciation": "/kwɔːˈtet/",
+        "meaning": "nhóm bốn người; bộ tứ",
+        "description_en": "A group of four people playing music or singing together.",
+        "example": "The string quartet played a piece by Mozart.",
+        "note": "Musical group of four members."
+    },
+    {
+        "word": "repertoire",
+        "pronunciation": "/ˈrep.ə.twɑːr/",
+        "meaning": "vốn tiết mục",
+        "description_en": "A stock of plays, dances, or pieces that a company or a performer knows or is prepared to perform.",
+        "example": "The pianist has a large repertoire of classical and jazz music.",
+        "note": "Collection of works a performer can do."
+    },
+    {
+        "word": "scriptwriter",
+        "pronunciation": "/ˈskrɪptˌraɪ.tər/",
+        "meaning": "biên kịch",
+        "description_en": "A person who writes scripts for movies or television.",
+        "example": "She won an award for best original screenplay as a scriptwriter.",
+        "note": "Writes descriptions of action and dialogue."
+    },
+    {
+        "word": "tribute",
+        "pronunciation": "/ˈtrɪb.juːt/",
+        "meaning": "sự tri ân; vật phẩm tưởng niệm",
+        "description_en": "An act, statement, or gift that is intended to show gratitude, respect, or admiration.",
+        "example": "The concert was a tribute to the legendary singer who passed away recently.",
+        "note": "Honor or respect shown to someone."
+    },
+    {
+        "word": "upcoming",
+        "pronunciation": "/ˈʌpˌkʌm.ɪŋ/",
+        "meaning": "sắp tới",
+        "description_en": "Forthcoming; about to happen.",
+        "example": "Tickets for the upcoming music festival go on sale tomorrow.",
+        "note": "Something planned for the near future."
+    },
+    {
+        "word": "vocalist",
+        "pronunciation": "/ˈvəʊ.kəl.ɪst/",
+        "meaning": "ca sĩ",
+        "description_en": "A singer, typically one who performs with a jazz or pop group.",
+        "example": "The band's lead vocalist has an amazing range and power.",
+        "note": "Professional singer."
+    },
+    {
+        "word": "aesthetic",
+        "pronunciation": "/esˈθet.ɪk/",
+        "meaning": "thẩm mỹ; mỹ học",
+        "description_en": "Concerned with beauty or the appreciation of beauty.",
+        "example": "Minimalist architecture focuses on a clean and simple aesthetic.",
+        "note": "A set of principles underlying art or style."
+    },
+    {
+        "word": "best-seller",
+        "pronunciation": "/ˌbestˈsel.ər/",
+        "meaning": "sách bán chạy nhất",
+        "description_en": "A book that is among those having the largest sales in a given period.",
+        "example": "His latest novel reached the best-seller list within a week.",
+        "note": "Indicator of commercial success."
+    },
+    {
+        "word": "casting",
+        "pronunciation": "/ˈkɑː.stɪŋ/",
+        "meaning": "tuyển diễn viên",
+        "description_en": "The act or process of choosing actors for a play or movie.",
+        "example": "The casting for the new superhero movie took three months.",
+        "note": "Selecting performers for specific roles."
+    },
+    {
+        "word": "curator",
+        "pronunciation": "/kjʊˈreɪ.tər/",
+        "meaning": "quản lý bảo tàng/triển lãm",
+        "description_en": "A keeper or custodian of a museum or other collection.",
+        "example": "The museum curator organized the special exhibition of Egyptian artifacts.",
+        "note": "Professional in charge of a collection."
+    },
+    {
+        "word": "decibel",
+        "pronunciation": "/ˈdes.ɪ.bel/",
+        "meaning": "đề-xi-ben",
+        "description_en": "A unit used to measure the intensity of a sound.",
+        "example": "The concert was so loud that the sound reached 110 decibels.",
+        "note": "Unit of sound measurement."
+    },
+    {
+        "word": "encore",
+        "pronunciation": "/ˈɒŋ.kɔːr/",
+        "meaning": "tiết mục biểu diễn thêm",
+        "description_en": "A repeated or additional performance of an item at the end of a concert.",
+        "example": "The audience cheered until the band came back for an encore.",
+        "note": "Requested extra performance."
+    },
+    {
+        "word": "fame",
+        "pronunciation": "/feɪm/",
+        "meaning": "sự nổi tiếng",
+        "description_en": "The state of being known or talked about by many people, especially on account of notable achievements.",
+        "example": "He achieved worldwide fame after his first movie was released.",
+        "note": "Public recognition."
+    },
+    {
+        "word": "guest",
+        "pronunciation": "/ɡest/",
+        "meaning": "khách mời",
+        "description_en": "A person who is invited to visit someone's home or attend a particular social occasion.",
+        "example": "Many famous actors were invited as guests to the red carpet event.",
+        "note": "Visitor or invited participant."
+    },
+    {
+        "word": "harmonic",
+        "pronunciation": "/hɑːˈmɒn.ɪk/",
+        "meaning": "thuộc âm hợp; hòa âm",
+        "description_en": "Relating to or characterized by musical harmony.",
+        "example": "The song has a beautiful harmonic structure.",
+        "note": "Pleasing combination of sounds."
+    },
+    {
+        "word": "illustrator",
+        "pronunciation": "/ˈɪl.ə.streɪ.tər/",
+        "meaning": "người minh họa",
+        "description_en": "A person who draws or creates pictures for magazines, books, advertising, etc.",
+        "example": "The children's book was brought to life by a talented illustrator.",
+        "note": "Artist who visualizes text."
+    },
+    {
+        "word": "jazz",
+        "pronunciation": "/dʒæz/",
+        "meaning": "nhạc jazz",
+        "description_en": "A type of music of black American origin characterized by improvisation, syncopation, and usually a regular or forceful rhythm.",
+        "example": "Jazz clubs are very popular in this part of town.",
+        "note": "Genre with emphasis on improvisation."
+    },
+    {
+        "word": "keynote",
+        "pronunciation": "/ˈkiː.nəʊt/",
+        "meaning": "phát biểu chủ đạo",
+        "description_en": "A prevailing tone or central theme.",
+        "example": "The keynote speaker at the conference was a Nobel laureate.",
+        "note": "Sets the theme for an event."
+    },
+    {
+        "word": "legend",
+        "pronunciation": "/ˈledʒ.ənd/",
+        "meaning": "huyền thoại",
+        "description_en": "An extremely famous or notorious person, especially in a particular field.",
+        "example": "The late guitarist was a true rock and roll legend.",
+        "note": "Historical or highly famous figure."
+    },
+    {
+        "word": "melodrama",
+        "pronunciation": "/ˈmel.əˌdrɑː.mə/",
+        "meaning": "vở kịch tâm lý xã hội; phim sướt mướt",
+        "description_en": "A sensational dramatic piece with exaggerated characters and exciting events intended to appeal to the emotions.",
+        "example": "The film was a classic melodrama with a lot of tears and heartbreak.",
+        "note": "Focuses on exaggerated emotion."
+    },
+    {
+        "word": "nomination",
+        "pronunciation": "/ˌnɒm.ɪˈneɪ.ʃən/",
+        "meaning": "sự đề cử",
+        "description_en": "The action of nominating or being nominated for an award or a position.",
+        "example": "She received an Academy Award nomination for Best Actress.",
+        "note": "Initial stage of becoming an award winner."
+    },
+    {
+        "word": "opening",
+        "pronunciation": "/ˈəʊ.pən.ɪŋ/",
+        "meaning": "buổi khai mạc",
+        "description_en": "The first public performance or showing of a play, movie, or art exhibition.",
+        "example": "The grand opening of the new art gallery was a success.",
+        "note": "First day of an event for the public."
+    },
+    {
+        "word": "plot",
+        "pronunciation": "/plɒt/",
+        "meaning": "cốt truyện",
+        "description_en": "The main events of a play, movie, or similar work.",
+        "example": "The movie has a very complex plot with many unexpected twists.",
+        "note": "Sequence of events in a story."
+    },
+    {
+        "word": "quotation",
+        "pronunciation": "/kwəʊˈteɪ.ʃən/",
+        "meaning": "trích dẫn",
+        "description_en": "A group of words taken from a text or speech and repeated by someone other than the original author or speaker.",
+        "example": "The book starts with a famous quotation from William Shakespeare.",
+        "note": "Repetition of another's words."
+    }
+]

@@ -1,0 +1,310 @@
+<mxfile host="app.diagrams.net" agent="Antigravity">
+  <diagram name="MinLish Class Diagram" id="minlish-uml">
+    <mxGraphModel dx="673" dy="1434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="1" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="MinLish — UML Class Diagram" vertex="1">
+          <mxGeometry height="40" width="400" x="720" y="-320" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_level_title" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;rounded=0;arcSize=10;labelBackgroundColor=none;fontColor=#143642;" value="«enumeration»&#xa;LevelEnum" vertex="1">
+          <mxGeometry height="45" width="160" x="10" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_level_body" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=10;fontSize=10;html=1;whiteSpace=wrap;rounded=0;arcSize=5;labelBackgroundColor=none;fontColor=#143642;" value="A1&#xa;A2&#xa;B1&#xa;B2&#xa;C1&#xa;C2" vertex="1">
+          <mxGeometry height="90" width="160" x="10" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_status_title" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;rounded=0;arcSize=10;labelBackgroundColor=none;fontColor=#143642;" value="«enumeration»&#xa;SrsStatusEnum" vertex="1">
+          <mxGeometry height="45" width="160" x="10" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_status_body" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=10;fontSize=10;html=1;whiteSpace=wrap;rounded=0;arcSize=5;labelBackgroundColor=none;fontColor=#143642;" value="new&#xa;learning&#xa;review&#xa;mastered" vertex="1">
+          <mxGeometry height="70" width="160" x="10" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_rating_title" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;rounded=0;arcSize=10;labelBackgroundColor=none;fontColor=#143642;" value="«enumeration»&#xa;RatingEnum" vertex="1">
+          <mxGeometry height="45" width="160" x="1240" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_rating_body" parent="1" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=10;fontSize=10;html=1;whiteSpace=wrap;rounded=0;arcSize=5;labelBackgroundColor=none;fontColor=#143642;" value="again&#xa;hard&#xa;good&#xa;easy" vertex="1">
+          <mxGeometry height="70" width="160" x="1240" y="885" as="geometry" />
+        </mxCell>
+        <mxCell id="user_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="User" vertex="1">
+          <mxGeometry height="430" width="280" x="230" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="user_attr_sep" parent="user_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="user_attrs" parent="user_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ name : string&#xa;+ email : string  «unique»&#xa;+ emailVerifiedAt : DateTime?&#xa;~ password : string  «hashed»&#xa;~ rememberToken : string?&#xa;+ googleId : string?&#xa;+ level : LevelEnum = A1&#xa;+ goal : string?&#xa;+ streakDays : int = 0&#xa;+ lastStudyDate : Date?&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime&#xa;————————————————&#xa;+ totalLearnedWords : int  «get»" vertex="1">
+          <mxGeometry height="210" width="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="user_method_sep" parent="user_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="280" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="user_methods" parent="user_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ vocabularySets() : Collection&#xa;+ srsProgresses() : Collection&#xa;+ studyLogs() : Collection&#xa;+ dailyGoal() : DailyGoal?&#xa;+ updateStreak() : void&#xa;+ isStreakActive() : bool&#xa;+ getTodayProgress() : array&#xa;+ getWordsLearned() : int&#xa;+ getWordsMastered() : int" vertex="1">
+          <mxGeometry height="145" width="280" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="daily_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="DailyGoal" vertex="1">
+          <mxGeometry height="280" width="280" x="230" y="489.92" as="geometry" />
+        </mxCell>
+        <mxCell id="daily_attr_sep" parent="daily_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daily_attrs" parent="daily_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ userId : int  «FK - User»  «unique»&#xa;+ newWordsPerDay : int = 10&#xa;+ reviewWordsPerDay : int = 20&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime" vertex="1">
+          <mxGeometry height="100" width="280" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="daily_method_sep" parent="daily_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="daily_methods" parent="daily_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ user() : User&#xa;+ isNewWordsGoalMet(learnedToday: int) : bool&#xa;+ isReviewGoalMet(reviewedToday: int) : bool&#xa;+ getTotalDailyTarget() : int" vertex="1">
+          <mxGeometry height="105" width="280" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="vocset_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="VocabularySet" vertex="1">
+          <mxGeometry height="330" width="290" x="670" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="vocset_attr_sep" parent="vocset_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vocset_attrs" parent="vocset_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ userId : int  «FK - User»&#xa;+ name : string&#xa;+ description : string?&#xa;+ tags : array?  «json»&#xa;+ isPublic : bool = false&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime&#xa;————————————————&#xa;+ wordCount : int  «get»" vertex="1">
+          <mxGeometry height="150" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vocset_method_sep" parent="vocset_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="290" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vocset_methods" parent="vocset_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ user() : User&#xa;+ vocabularies() : Collection&#xa;+ publish() : void&#xa;+ unpublish() : void&#xa;+ addTag(tag: string) : void&#xa;+ getProgressSummary(userId: int) : array" vertex="1">
+          <mxGeometry height="105" width="290" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="voc_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Vocabulary" vertex="1">
+          <mxGeometry height="360" width="290" x="670" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="voc_attr_sep" parent="voc_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="voc_attrs" parent="voc_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ setId : int  «FK - VocabularySet»&#xa;+ word : string&#xa;+ pronunciation : string?&#xa;+ meaning : string&#xa;+ descriptionEn : string?&#xa;+ example : string?&#xa;+ collocation : string?&#xa;+ relatedWords : string?&#xa;+ note : string?&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime" vertex="1">
+          <mxGeometry height="180" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="voc_method_sep" parent="voc_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="290" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="voc_methods" parent="voc_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ set() : VocabularySet&#xa;+ srsProgress() : Collection&#xa;+ studyLogs() : Collection&#xa;+ userProgress(userId: int) : SrsProgress?&#xa;+ isDueForReview(userId: int) : bool&#xa;+ hasBeenStudied(userId: int) : bool" vertex="1">
+          <mxGeometry height="105" width="290" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="srs_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="SrsProgress" vertex="1">
+          <mxGeometry height="390" width="300" x="1160" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="srs_attr_sep" parent="srs_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="srs_attrs" parent="srs_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ userId : int  «FK - User»&#xa;+ vocabularyId : int  «FK - Vocabulary»&#xa;  «UNIQUE(userId, vocabularyId)»&#xa;+ easeFactor : float = 2.5&#xa;+ intervalDays : int = 1&#xa;+ repetitions : int = 0&#xa;+ nextReviewAt : DateTime?&#xa;+ lastReviewedAt : DateTime?&#xa;+ status : SrsStatusEnum = new&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime" vertex="1">
+          <mxGeometry height="185" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="srs_method_sep" parent="srs_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="300" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="srs_methods" parent="srs_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ user() : User&#xa;+ vocabulary() : Vocabulary&#xa;+ isDueForReview() : bool&#xa;+ isNew() : bool&#xa;+ isMastered() : bool&#xa;+ applyRating(rating: RatingEnum) : void&#xa;+ reset() : void" vertex="1">
+          <mxGeometry height="130" width="300" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="log_header" parent="1" style="swimlane;startSize=30;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=1;fontSize=13;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="StudyLog" vertex="1">
+          <mxGeometry height="290" width="300" x="1160" y="489.91999999999996" as="geometry" />
+        </mxCell>
+        <mxCell id="log_attr_sep" parent="log_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Attributes —" vertex="1">
+          <mxGeometry height="20" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log_attrs" parent="log_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ id : int  «PK»&#xa;+ userId : int  «FK - User»&#xa;+ vocabularyId : int  «FK - Vocabulary»&#xa;+ rating : RatingEnum&#xa;+ studiedAt : DateTime&#xa;+ createdAt : DateTime&#xa;+ updatedAt : DateTime" vertex="1">
+          <mxGeometry height="120" width="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="log_method_sep" parent="log_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods —" vertex="1">
+          <mxGeometry height="20" width="300" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="log_methods" parent="log_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ user() : User&#xa;+ vocabulary() : Vocabulary&#xa;+ wasCorrect() : bool&#xa;+ getDifficulty() : string" vertex="1">
+          <mxGeometry height="95" width="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_header" parent="1" style="swimlane;startSize=40;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontStyle=3;fontSize=12;align=center;arcSize=5;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="«Service»&#xa;SpacedRepetitionService" vertex="1">
+          <mxGeometry height="350" width="320" x="1580" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_const_sep" parent="svc_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Constants —" vertex="1">
+          <mxGeometry height="20" width="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_attrs" parent="svc_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="- RATING_TO_QUALITY : array&#xa;  { again=0, hard=2, good=4, easy=5 }" vertex="1">
+          <mxGeometry height="50" width="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_method_sep" parent="svc_header" style="text;strokeColor=none;fillColor=#FAE5C7;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;html=1;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="— Methods (SM-2 Algorithm) —" vertex="1">
+          <mxGeometry height="20" width="320" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="svc_methods" parent="svc_header" style="text;strokeColor=#0F8B8D;fillColor=#FAE5C7;align=left;verticalAlign=top;spacingLeft=8;fontSize=10;html=1;whiteSpace=wrap;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="+ calculate(&#xa;    easeFactor: float,&#xa;    intervalDays: int,&#xa;    repetitions: int,&#xa;    rating: string&#xa;  ) : array&#xa;- buildResult(...) : array&#xa;+ initializeProgress(&#xa;    user: User,&#xa;    set: VocabularySet&#xa;  ) : void&#xa;+ getWordsForReview(&#xa;    user: User, setId: int?&#xa;  ) : Collection&#xa;+ getNewWords(&#xa;    user: User, limit: int, setId: int?&#xa;  ) : Collection" vertex="1">
+          <mxGeometry height="220" width="320" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="note_composite" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#FAE5C7;strokeColor=#0F8B8D;align=left;spacingLeft=6;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Ràng buộc UNIQUE kép:&#xa;(userId, vocabularyId)&#xa;Mỗi người dùng chỉ có đúng&#xa;1 bản ghi SrsProgress cho&#xa;mỗi từ vựng." vertex="1">
+          <mxGeometry height="80" width="200" x="1550" y="479.99999999999994" as="geometry" />
+        </mxCell>
+        <mxCell id="note_sm2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#FAE5C7;strokeColor=#0F8B8D;align=left;spacingLeft=6;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Thuật toán SM-2:&#xa;again =&gt; đặt lại, khoảng cách = 1 ngày&#xa;hard  =&gt; khoảng cách x 1.2&#xa;good  =&gt; khoảng cách x easeFactor&#xa;easy  =&gt; đã thuộc lòng (mastered)" vertex="1">
+          <mxGeometry height="90" width="200" x="1560" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_daily" edge="1" parent="1" source="user_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=1;endArrow=diamond;endFill=1;labelBackgroundColor=none;fontColor=default;" target="daily_header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_daily_label" connectable="0" parent="rel_user_daily" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp chặt (Composition)&#xa;1 User sở hữu 0..1 DailyGoal" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint x="-70" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_vocset" edge="1" parent="1" source="user_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=1;endArrow=diamond;endFill=1;labelBackgroundColor=none;fontColor=default;" target="vocset_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="125" />
+              <mxPoint x="580" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_vocset_label" connectable="0" parent="rel_user_vocset" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp chặt (Composition)&#xa;1 User sở hữu 0..* VocabularySet" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint x="16" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_vocset_voc" edge="1" parent="1" source="vocset_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=1;endArrow=diamond;endFill=1;labelBackgroundColor=none;fontColor=default;" target="voc_header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_vocset_voc_label" connectable="0" parent="rel_vocset_voc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp chặt (Composition)&#xa;1 VocabularySet chứa 1..* Vocabulary" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_srs" edge="1" parent="1" source="user_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=diamond;endFill=0;labelBackgroundColor=none;fontColor=default;" target="srs_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="-110" />
+              <mxPoint x="1170" y="-110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_srs_label" connectable="0" parent="rel_user_srs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp (Aggregation)&#xa;1 User theo dõi 0..* SrsProgress" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_voc_srs" edge="1" parent="1" source="voc_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=diamond;endFill=0;labelBackgroundColor=none;fontColor=default;" target="srs_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="500" />
+              <mxPoint x="1110" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_voc_srs_label" connectable="0" parent="rel_voc_srs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp (Aggregation)&#xa;1 Vocabulary được theo dõi 0..* lần" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_log" edge="1" parent="1" source="user_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=2;startArrow=ERmandOne;startFill=0;endArrow=diamond;endFill=0;labelBackgroundColor=none;fontColor=default;" target="log_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="-150" />
+              <mxPoint x="1010" y="-150" />
+              <mxPoint x="1010" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_log_label" connectable="0" parent="rel_user_log" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Kết hợp (Aggregation)&#xa;1 User ghi lại 0..* StudyLog" vertex="1">
+          <mxGeometry relative="1" x="0.2" as="geometry">
+            <mxPoint x="60" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_voc_log" edge="1" parent="1" source="voc_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#A8201A;strokeWidth=1.5;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;labelBackgroundColor=none;fontColor=default;" target="log_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="650" />
+              <mxPoint x="1050" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_voc_log_label" connectable="0" parent="rel_voc_log" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=2;labelBackgroundColor=none;fontColor=#143642;rounded=0;" value="Liên kết (Association)&#xa;1 Vocabulary xuất hiện trong 0..* StudyLog" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_srs_enum_status" edge="1" parent="1" source="srs_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="enum_status_title">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1240" y="-230" />
+              <mxPoint x="120" y="-230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_srs_enum_label" connectable="0" parent="rel_srs_enum_status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«sử dụng»" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_log_enum_rating" edge="1" parent="1" source="log_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="enum_rating_title">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="833" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_log_enum_label" connectable="0" parent="rel_log_enum_rating" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«sử dụng»" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3OwOxoBHT11IHAvbn1cf-1" connectable="0" parent="rel_log_enum_rating" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.1272" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_enum_level" edge="1" parent="1" source="user_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="enum_level_title">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="188" />
+              <mxPoint x="250" y="188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_user_enum_label" connectable="0" parent="rel_user_enum_level" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«sử dụng»" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint x="-6" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_srs" edge="1" parent="1" source="svc_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1.5;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="srs_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="-10" />
+              <mxPoint x="1490" y="-10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_srs_label" connectable="0" parent="rel_svc_srs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«tạo mới / cập nhật»" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_user" edge="1" parent="1" source="svc_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1.5;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="user_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1520" y="135" />
+              <mxPoint x="1520" y="-190" />
+              <mxPoint x="410" y="-190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_user_label" connectable="0" parent="rel_svc_user" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«phụ thuộc vào»" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_vocset" edge="1" parent="1" source="svc_header" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#A8201A;strokeWidth=1.5;startArrow=none;endArrow=open;endFill=0;labelBackgroundColor=none;fontColor=default;rounded=0;" target="vocset_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1740" y="390" />
+              <mxPoint x="880" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_svc_vocset_label" connectable="0" parent="rel_svc_vocset" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=3;fontColor=#143642;labelBackgroundColor=none;rounded=0;" value="«phụ thuộc vào»" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_note_srs" edge="1" parent="1" source="note_composite" style="edgeStyle=none;dashed=1;strokeColor=#A8201A;strokeWidth=1;labelBackgroundColor=none;fontColor=default;rounded=0;" target="srs_header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

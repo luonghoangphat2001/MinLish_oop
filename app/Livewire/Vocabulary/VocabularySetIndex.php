@@ -55,6 +55,8 @@ class VocabularySetIndex extends Component
 
         $set = $user->vocabularySets()->findOrFail($id);
         $set->delete();
+
+        session()->flash('message', 'Đã xoá bộ từ vựng thành công.');
     }
 
     public function createStarterSets(StarterVocabularyService $starterVocabularyService): void

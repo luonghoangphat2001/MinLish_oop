@@ -1,0 +1,402 @@
+[
+    {
+        "word": "affection",
+        "pronunciation": "/əˈfek.ʃən/",
+        "meaning": "sự yêu mến; tình cảm",
+        "description_en": "A gentle feeling of fondness or liking.",
+        "example": "He has a deep affection for his grandmother.",
+        "note": "Positive emotional bond."
+    },
+    {
+        "word": "ambivalence",
+        "pronunciation": "/æmˈbɪv.ə.ləns/",
+        "meaning": "sự mâu thuẫn trong tư tưởng",
+        "description_en": "The state of having mixed feelings or contradictory ideas about something or someone.",
+        "example": "The law's effects have been greeted with some ambivalence.",
+        "note": "Psychological state of uncertainty."
+    },
+    {
+        "word": "anxiety",
+        "pronunciation": "/æŋˈzaɪ.ə.ti/",
+        "meaning": "lo âu",
+        "description_en": "A feeling of worry, nervousness, or unease, typically about an upcoming event or something with an uncertain outcome.",
+        "example": "Tests and exams often cause a lot of anxiety for students.",
+        "note": "Common stress response."
+    },
+    {
+        "word": "compassion",
+        "pronunciation": "/kəmˈpæʃ.ən/",
+        "meaning": "lòng trắc ẩn",
+        "description_en": "Sympathetic pity and concern for the sufferings or misfortunes of others.",
+        "example": "She felt deep compassion for the victims of the earthquake.",
+        "note": "Active wishing to alleviate others' suffering."
+    },
+    {
+        "word": "depression",
+        "pronunciation": "/dɪˈpreʃ.ən/",
+        "meaning": "trầm cảm; sự chán nản",
+        "description_en": "Feelings of severe despondency and dejection.",
+        "example": "The persistent sadness can be a symptom of clinical depression.",
+        "note": "Serious mental health condition."
+    },
+    {
+        "word": "empathy",
+        "pronunciation": "/ˈem.pə.θi/",
+        "meaning": "sự thấu cảm",
+        "description_en": "The ability to understand and share the feelings of another.",
+        "example": "Great leaders often have a high level of empathy for their team.",
+        "note": "Understanding others' perspectives/feelings."
+    },
+    {
+        "word": "frustration",
+        "pronunciation": "/frʌsˈtreɪ.ʃən/",
+        "meaning": "sự thất vọng; bực bội",
+        "description_en": "The feeling of being upset or annoyed, especially because of inability to change or achieve something.",
+        "example": "He slammed the door in frustration when the computer crashed.",
+        "note": "Result of blocked goals."
+    },
+    {
+        "word": "gratitude",
+        "pronunciation": "/ˈɡræt.ɪ.tʃuːd/",
+        "meaning": "lòng biết ơn",
+        "description_en": "The quality of being thankful; readiness to show appreciation for and to return kindness.",
+        "example": "Expressing gratitude can significantly improve your mental well-being.",
+        "note": "Positive acknowledgment of benefits received."
+    },
+    {
+        "word": "hostility",
+        "pronunciation": "/hɒsˈtɪl.ə.ti/",
+        "meaning": "sự thù địch",
+        "description_en": "Hostile behavior; unfriendliness or opposition.",
+        "example": "The proposal was met with open hostility from the local residents.",
+        "note": "Aggressive emotional state."
+    },
+    {
+        "word": "intuition",
+        "pronunciation": "/ˌɪn.tʃuːˈɪʃ.ən/",
+        "meaning": "trực giác",
+        "description_en": "The ability to understand something immediately, without the need for conscious reasoning.",
+        "example": "Sometimes you just have to trust your intuition when making a decision.",
+        "note": "The 'gut feeling'."
+    },
+    {
+        "word": "jealousy",
+        "pronunciation": "/ˈdʒel.ə.si/",
+        "meaning": "sự ghen tuông",
+        "description_en": "The state or feeling of being jealous.",
+        "example": "Her professional success was a cause of jealousy among her colleagues.",
+        "note": "Negative emotion about others' advantages/belongings."
+    },
+    {
+        "word": "loneliness",
+        "pronunciation": "/ˈləʊn.li.nəs/",
+        "meaning": "sự cô đơn",
+        "description_en": "Sadness because one has no friends or company.",
+        "example": "Older people often suffer from extreme loneliness after their spouse passes away.",
+        "note": "Subjective feeling of being alone."
+    },
+    {
+        "word": "melancholy",
+        "pronunciation": "/ˈmel.əŋ.kɒl.i/",
+        "meaning": "u sầu; nỗi buồn man mác",
+        "description_en": "A feeling of pensive sadness, typically with no obvious cause.",
+        "example": "The rainy weather puts me in a state of soft melancholy.",
+        "note": "Quiet, reflective type of sadness."
+    },
+    {
+        "word": "narcissism",
+        "pronunciation": "/ˈnɑː.sɪ.sɪ.zəm/",
+        "meaning": "tự phụ; ái kỷ",
+        "description_en": "Excessive interest in or admiration of oneself and one's physical appearance.",
+        "example": "Social media is often criticized for encouraging narcissism among teenagers.",
+        "note": "Excessive self-focus."
+    },
+    {
+        "word": "optimism",
+        "pronunciation": "/ˈɒp.tɪ.mɪ.zəm/",
+        "meaning": "sự lạc quan",
+        "description_en": "Hopefulness and confidence about the future or the successful outcome of something.",
+        "example": "Despite the setbacks, she maintained a sense of optimism about the project.",
+        "note": "Mindset of expecting the best."
+    },
+    {
+        "word": "pessimism",
+        "pronunciation": "/ˈpes.ɪ.mɪ.zəm/",
+        "meaning": "sự bi quan",
+        "description_en": "A tendency to see the worst aspect of things or believe that the worst will happen.",
+        "example": "His constant pessimism made it difficult for the team to stay motivated.",
+        "note": "Opposite of optimism."
+    },
+    {
+        "word": "resentment",
+        "pronunciation": "/rɪˈzent.mənt/",
+        "meaning": "sự phẫn nộ; oán giận",
+        "description_en": "Bitter indignation at having been treated unfairly.",
+        "example": "Long-term resentment can damage even the strongest relationships.",
+        "note": "Feeling of bitterness over perceived injustice."
+    },
+    {
+        "word": "satisfaction",
+        "pronunciation": "/ˌsæt.ɪsˈfæk.ʃən/",
+        "meaning": "sự hài lòng",
+        "description_en": "Fulfillment of one's wishes, expectations, or needs, or the pleasure derived from this.",
+        "example": "She gets great satisfaction from helping others in need.",
+        "note": "Pleasure from achievement or contentment."
+    },
+    {
+        "word": "trauma",
+        "pronunciation": "/ˈtrɔː.mə/",
+        "meaning": "chấn thương tâm lý",
+        "description_en": "A deeply distressing or disturbing experience.",
+        "example": "Many veterans suffer from psychological trauma after returning from war.",
+        "note": "Can have long-lasting effects on mental health."
+    },
+    {
+        "word": "vulnerability",
+        "pronunciation": "/ˌvʌl.nər.əˈbɪl.ə.ti/",
+        "meaning": "sự dễ bị tổn thương",
+        "description_en": "The quality or state of being exposed to the possibility of being attacked or harmed.",
+        "example": "Admitting your mistakes is a sign of healthy vulnerability.",
+        "note": "Willingness to show your true self."
+    },
+    {
+        "word": "altruism",
+        "pronunciation": "/ˈæl.tru.ɪ.zəm/",
+        "meaning": "chủ nghĩa vị tha",
+        "description_en": "The belief in or practice of disinterested and selfless concern for the well-being of others.",
+        "example": "His life was a model of altruism and service to his community.",
+        "note": "Putting others first without expecting anything in return."
+    },
+    {
+        "word": "bias",
+        "pronunciation": "/ˈbaɪ.əs/",
+        "meaning": "thành kiến; sự thiên lệch",
+        "description_en": "Prejudice in favor of or against one thing, person, or group compared with another.",
+        "example": "The judge was accused of showing bias against the defendant.",
+        "note": "Can be conscious or unconscious."
+    },
+    {
+        "word": "cognitive",
+        "pronunciation": "/ˈkɒɡ.nə.tɪv/",
+        "meaning": "thuộc về nhận thức",
+        "description_en": "Relating to the mental action or process of acquiring knowledge and understanding.",
+        "example": "The patient's cognitive functions were impaired after the accident.",
+        "note": "Includes thinking, learning, and memory."
+    },
+    {
+        "word": "delusion",
+        "pronunciation": "/dɪˈluː.ʒən/",
+        "meaning": "ảo tưởng",
+        "description_en": "An idiosyncratic belief or impression that is firmly maintained despite being contradicted by what is generally accepted as reality.",
+        "example": "He is under the delusion that he is always right.",
+        "note": "Common in some psychological disorders."
+    },
+    {
+        "word": "euphoria",
+        "pronunciation": "/juːˈfɔː.ri.ə/",
+        "meaning": "trạng thái hưng phấn",
+        "description_en": "A feeling or state of intense excitement and happiness.",
+        "example": "The team was in a state of euphoria after winning the championship.",
+        "note": "Extreme positive emotion."
+    },
+    {
+        "word": "fixation",
+        "pronunciation": "/fɪkˈseɪ.ʃən/",
+        "meaning": "sự ám ảnh; sự cố chấp",
+        "description_en": "An obsessive interest in or feeling about someone or something.",
+        "example": "The media's fixation on celebrity gossip is often criticized.",
+        "note": "Concentrating on one thing to an unhealthy degree."
+    },
+    {
+        "word": "guilt",
+        "pronunciation": "/ɡɪlt/",
+        "meaning": "tội lỗi",
+        "description_en": "A feeling of having committed a wrong or failed in an obligation.",
+        "example": "He was overwhelmed with guilt after lying to his best friend.",
+        "note": "Emotional response to violating one's own standards."
+    },
+    {
+        "word": "hallucination",
+        "pronunciation": "/həˌluː.sɪˈneɪ.ʃən/",
+        "meaning": "ảo giác",
+        "description_en": "An experience involving the apparent perception of something not present.",
+        "example": "High fever can sometimes cause vivid hallucinations.",
+        "note": "Perceiving something that isn't there."
+    },
+    {
+        "word": "inhibition",
+        "pronunciation": "/ˌɪn.hɪˈbɪʃ.ən/",
+        "meaning": "sự ức chế; sự tự ti",
+        "description_en": "A feeling that makes one self-conscious and unable to act in a relaxed and natural way.",
+        "example": "Excessive drinking often leads to a loss of social inhibition.",
+        "note": "Mental block preventing natural behavior."
+    },
+    {
+        "word": "joy",
+        "pronunciation": "/dʒɔɪ/",
+        "meaning": "niềm vui lớn",
+        "description_en": "A feeling of great pleasure and happiness.",
+        "example": "The birth of their first child brought them immense joy.",
+        "note": "Deep and fulfilling happiness."
+    },
+    {
+        "word": "kinship",
+        "pronunciation": "/ˈkɪn.ʃɪp/",
+        "meaning": "mối quan hệ họ hàng; sự tương đồng",
+        "description_en": "Blood relationship or a sharing of characteristics or origins.",
+        "example": "They felt a strong sense of kinship despite having just met.",
+        "note": "Feeling of belonging to a group or family."
+    },
+    {
+        "word": "libido",
+        "pronunciation": "/lɪˈbiː.dəʊ/",
+        "meaning": "ham muốn tình dục",
+        "description_en": "Sexual desire.",
+        "example": "Certain medications can have a negative effect on a person's libido.",
+        "note": "Psychological/biological drive."
+    },
+    {
+        "word": "masochism",
+        "pronunciation": "/ˈmæs.ə.kɪ.zəm/",
+        "meaning": "chủ nghĩa khổ dâm",
+        "description_en": "The tendency to derive pleasure, especially sexual gratification, from one's own pain or humiliation.",
+        "example": "His choice to constantly work 100-hour weeks felt like a form of masochism.",
+        "note": "Finding pleasure in pain (can be metaphorical)."
+    },
+    {
+        "word": "neurosis",
+        "pronunciation": "/njʊˈrəʊ.sɪs/",
+        "meaning": "bệnh suy nhược thần kinh",
+        "description_en": "A relatively mild mental illness that is not caused by organic disease.",
+        "example": "Perfectionism can sometimes develop into a full-scale neurosis.",
+        "note": "Often involves chronic distress but without delusions."
+    },
+    {
+        "word": "obsessive",
+        "pronunciation": "/əbˈses.ɪv/",
+        "meaning": "ám ảnh",
+        "description_en": "Preoccupied with an idea or someone to a troubling extent.",
+        "example": "She has an obsessive preoccupation with cleanliness.",
+        "note": "Relates to OCD (Obsessive-Compulsive Disorder)."
+    },
+    {
+        "word": "paranoia",
+        "pronunciation": "/ˌpær.əˈnɔɪ.ə/",
+        "meaning": "sự hoang tưởng",
+        "description_en": "A mental condition characterized by delusions of persecution.",
+        "example": "Extreme stress can sometimes lead to feelings of paranoia.",
+        "note": "Unjustified suspicion of others."
+    },
+    {
+        "word": "qualm",
+        "pronunciation": "/kwɑːm/",
+        "meaning": "sự băn khoăn; mối lo ngại",
+        "description_en": "An uneasy feeling of doubt, worry, or fear, especially about one's own conduct.",
+        "example": "He had no qualms about telling a white lie to protect his friend's feelings.",
+        "note": "A small feeling of unease about the morality of an action."
+    },
+    {
+        "word": "resilience",
+        "pronunciation": "/rɪˈzɪl.i.əns/",
+        "meaning": "khả năng phục hồi; sự kiên cường",
+        "description_en": "The capacity to recover quickly from difficulties.",
+        "example": "The community showed great resilience after the devastating flood.",
+        "note": "The ability to 'bounce back'."
+    },
+    {
+        "word": "subconscious",
+        "pronunciation": "/ˌsʌbˈkɒn.ʃəs/",
+        "meaning": "tiềm thức",
+        "description_en": "Relating to or being part of the mind that one is not fully aware of but that influences one's actions.",
+        "example": "Our childhood experiences often stay buried in our subconscious.",
+        "note": "Underlying mental processes."
+    },
+    {
+        "word": "temperament",
+        "pronunciation": "/ˈtem.pər.ə.mənt/",
+        "meaning": "tính khí",
+        "description_en": "A person's or animal's nature, especially as it permanently affects their behavior.",
+        "example": "She has a calm and patient temperament, which makes her a great teacher.",
+        "note": "Innate personality trait."
+    },
+    {
+        "word": "unconscious",
+        "pronunciation": "/ʌnˈkɒn.ʃəs/",
+        "meaning": "vô thức",
+        "description_en": "The part of the mind which is inaccessible to the conscious mind but which affects behavior and emotions.",
+        "example": "Freud believed that dreams were a window into the unconscious mind.",
+        "note": "Deeper than subconscious in many psychological theories."
+    },
+    {
+        "word": "validation",
+        "pronunciation": "/ˌvæl.ɪˈdeɪ.ʃən/",
+        "meaning": "sự công nhận; sự xác nhận",
+        "description_en": "Recognition or affirmation that a person or their feelings or opinions are valid or worthwhile.",
+        "example": "Everyone needs a certain amount of social validation from their peers.",
+        "note": "Emotional support through acknowledgment."
+    },
+    {
+        "word": "willpower",
+        "pronunciation": "/ˈwɪlˌpaʊ.ər/",
+        "meaning": "nghị lực",
+        "description_en": "Control exerted to do something or restrain impulses.",
+        "example": "It takes a lot of willpower to quit smoking.",
+        "note": "Self-discipline."
+    },
+    {
+        "word": "xenophobia",
+        "pronunciation": "/ˌzen.əˈfəʊ.bi.ə/",
+        "meaning": "nỗi sợ người lạ",
+        "description_en": "Dislike of or prejudice against people from other countries.",
+        "example": "Education is the best weapon against ignorance and xenophobia.",
+        "note": "Social/psychological fear of the 'other'."
+    },
+    {
+        "word": "yearning",
+        "pronunciation": "/ˈjɜː.nɪŋ/",
+        "meaning": "sự khao khát",
+        "description_en": "A feeling of intense longing for something.",
+        "example": "He felt a deep yearning for a sense of belonging.",
+        "note": "Strong emotional desire."
+    },
+    {
+        "word": "zeal",
+        "pronunciation": "/ziːl/",
+        "meaning": "sự nhiệt huyết; lòng hăng hái",
+        "description_en": "Great energy or enthusiasm in pursuit of a cause or an objective.",
+        "example": "She approached her volunteer work with great zeal and passion.",
+        "note": "High dedication and energy."
+    },
+    {
+        "word": "apathy",
+        "pronunciation": "/ˈæp.ə.θi/",
+        "meaning": "sự thờ ơ",
+        "description_en": "Lack of interest, enthusiasm, or concern.",
+        "example": "Voter apathy is a major problem in modern democracies.",
+        "note": "Lack of emotion or motivation."
+    },
+    {
+        "word": "bipolar",
+        "pronunciation": "/baɪˈpəʊ.lər/",
+        "meaning": "rối loạn lưỡng cực",
+        "description_en": "A mental condition marked by alternating periods of elation and depression.",
+        "example": "He manages his bipolar disorder with medication and regular therapy.",
+        "note": "Significant mood swings."
+    },
+    {
+        "word": "conditioning",
+        "pronunciation": "/kənˈdɪʃ.ən.ɪŋ/",
+        "meaning": "sự điều kiện hóa",
+        "description_en": "The process of training or accustoming a person or animal to behave in a certain way.",
+        "example": "In psychology, classical conditioning was famously studied by Pavlov.",
+        "note": "Learning through association."
+    },
+    {
+        "word": "dissonance",
+        "pronunciation": "/ˈdɪs.ə.nəns/",
+        "meaning": "sự bất hòa; sự không nhất quán",
+        "description_en": "A tension or clash resulting from the combination of two disharmonious or unsuitable elements.",
+        "example": "Cognitive dissonance occurs when your beliefs clash with your actions.",
+        "note": "Mental discomfort from inconsistency."
+    }
+]
