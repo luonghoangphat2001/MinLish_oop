@@ -77,9 +77,7 @@
         }
     },
     "config": {
-        "platform": {
-            "php": "8.4.0"
-        },
+        "platform-check": false,
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
