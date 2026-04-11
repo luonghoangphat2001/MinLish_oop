@@ -67,7 +67,7 @@ new #[Layout('layouts.guest')] class extends Component
             @endif
         </div>
 
-        <!-- Submit Button: Antigravity Floating -->
+        <!-- Submit Button: Minlish Floating -->
         <div class="mt-8 flex justify-center">
             <button type="submit" class="group relative inline-flex justify-center items-center py-2.5 px-8 border border-transparent text-sm font-bold rounded-xl text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-[center_right_1rem] shadow-[0_4px_15px_rgb(99,102,241,0.4)] hover:shadow-[0_8px_25px_rgb(99,102,241,0.6)] hover:-translate-y-1 transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 overflow-hidden z-10">
                 <div class="absolute inset-0 w-full h-full bg-white/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-in-out z-0"></div>
@@ -89,7 +89,7 @@ new #[Layout('layouts.guest')] class extends Component
             </a>
         </div>
 
-        <!-- Antigravity Design Google Login -->
+        <!-- Minlish Design Google Login -->
         <div class="mt-6">
             <div class="relative mb-6">
                 <div class="absolute inset-0 flex items-center">
@@ -105,7 +105,7 @@ new #[Layout('layouts.guest')] class extends Component
                 <!-- Border Bottom Gradient Line -->
                 <span class="absolute inset-x-0 bottom-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);"></span>
 
-                <!-- Shine Reflection (Antigravity Glossy Effect) -->
+                <!-- Shine Reflection (Minlish Glossy Effect) -->
                 <div class="absolute inset-0 w-full h-full bg-gradient-to-t from-slate-50/80 to-transparent scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0"></div>
 
                 <div class="relative flex items-center gap-3 z-10">

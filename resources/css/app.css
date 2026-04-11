@@ -86,8 +86,8 @@
     background: linear-gradient(135deg, var(--color-bg) 0%, #E0E7FF 40%, #C7D2FE 100%);
   }
 
-  /* ─── Antigravity Core ─── */
-  .antigravity-floating {
+  /* ─── Minlish Core ─── */
+  .minlish-floating {
     box-shadow:
       0 10px 30px -5px rgba(0, 0, 0, 0.05),
       0 20px 60px -10px rgba(0, 0, 0, 0.08),
