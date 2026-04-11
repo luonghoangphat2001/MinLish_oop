@@ -13,12 +13,15 @@ class GlobalSearch extends Component
 
     public function updatedQuery()
     {
-        if (trim($this->query) === '') {
+        $search = trim($this->query);
+
+        if ($search === '') {
             $this->results = [];
+            $this->showResults = false;
             return;
         }
 
-        $this->results = Vocabulary::where('word', 'like', '%' . $this->query . '%')
+        $this->results = Vocabulary::where('word', 'like', "%{$search}%")
             ->limit(10)
             ->get()
             ->map(function ($item) {
@@ -28,6 +31,8 @@ class GlobalSearch extends Component
                     'meaning' => $item->meaning,
                 ];
             });
+
+        $this->showResults = true;
     }
 
     public function closeSearch()
@@ -37,10 +42,16 @@ class GlobalSearch extends Component
         $this->results = [];
     }
 
-    public function goToResult($id)
+   public function goToResult($id)
     {
         $vocab = Vocabulary::findOrFail($id);
-        return redirect()->route('vocabulary.words', $vocab->set_id);
+
+        $this->closeSearch();
+
+        return redirect()->route('vocabulary.words', [
+            'set' => $vocab->set_id,
+            'search' => $vocab->word,
+        ]);
     }
 
     public function render()
