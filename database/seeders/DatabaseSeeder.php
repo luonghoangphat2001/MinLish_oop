@@ -11,6 +11,8 @@ use App\Models\DailyGoal;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
@@ -134,6 +136,32 @@ class DatabaseSeeder extends Seeder
                 foreach (array_chunk($logsPayload, 100) as $chunk) {
                     StudyLog::insert($chunk);
                 }
+
+                // 3. Tạo thông báo (Notifications)
+                $notifications = [
+                    [
+                        'id' => Str::uuid(),
+                        'type' => 'App\\Notifications\\WelcomeNotification',
+                        'notifiable_type' => User::class,
+                        'notifiable_id' => $user->id,
+                        'data' => json_encode(['message' => 'Chào mừng bạn đến với MinLish! Hãy bắt đầu học từ mới ngay hôm nay.']),
+                        'read_at' => $now->copy()->subDays(6),
+                        'created_at' => $now->copy()->subDays(7),
+                        'updated_at' => $now->copy()->subDays(7),
+                    ],
+                    [
+                        'id' => Str::uuid(),
+                        'type' => 'App\\Notifications\\DailyGoalReached',
+                        'notifiable_type' => User::class,
+                        'notifiable_id' => $user->id,
+                        'data' => json_encode(['message' => 'Chúc mừng! Bạn đã hoàn thành mục tiêu học tập ngày hôm qua.']),
+                        'read_at' => null,
+                        'created_at' => $now->copy()->subDay(),
+                        'updated_at' => $now->copy()->subDay(),
+                    ],
+                ];
+
+                DB::table('notifications')->insert($notifications);
             });
         }
     }
